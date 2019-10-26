@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'frontEnd';
+  val = 1;
+  isNavbarCollapsed = true;
 }
