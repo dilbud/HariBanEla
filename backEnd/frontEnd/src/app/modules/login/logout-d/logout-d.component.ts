@@ -2,19 +2,19 @@ import { Component, OnInit, Inject } from '@angular/core';
 import {MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 export interface DialogData {
-  animal: string;
-  name: string;
+  email: string;
+  password: string;
 }
 
 @Component({
-  selector: 'app-dialog',
-  templateUrl: './dialog.component.html',
-  styleUrls: ['./dialog.component.scss']
+  selector: 'app-logout-d',
+  templateUrl: './logout-d.component.html',
+  styleUrls: ['./logout-d.component.scss']
 })
-export class DialogComponent implements OnInit {
+export class LogoutDComponent implements OnInit {
 
   constructor(
-    public dialogRef: MatDialogRef<DialogComponent>,
+    public dialogRef: MatDialogRef<LogoutDComponent>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
 
     onNoClick(): void {
@@ -23,5 +23,4 @@ export class DialogComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

@@ -1,6 +1,8 @@
 import { Component} from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
-import { DialogComponent } from './dialog/dialog.component';
+import { LoginDComponent } from './login-d/login-d.component';
+import { UserService } from '../../data/services/user.service';
+
 
 @Component({
   selector: 'app-login',
@@ -9,25 +11,35 @@ import { DialogComponent } from './dialog/dialog.component';
 })
 export class LoginComponent {
 
-  animal: string;
-  name: string;
 
-  constructor(public dialog: MatDialog) {}
+
+  mode = true;
+
+  email: string;
+  password: string;
+
+  // tslint:disable-next-line: no-shadowed-variable
+  constructor(public dialog: MatDialog, public UserService: UserService) {}
 
   loginDialog(): void {
-    const dialogRef = this.dialog.open(DialogComponent, {
-      width: '250px',
-      data: {name: this.name, animal: this.animal}
+    const dialogRef = this.dialog.open(LoginDComponent, {
+      width: '500px',
+      data: {email: this.email, password: this.password}
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      this.animal = result;
+      alert(result.email + result.password);
+      this.email = result.email;
+      this.password = result.password;
+      this.mode = !this.mode;
+      this.UserService.login(this.email, this.password);
     });
   }
   logoutDialog(): void {
-    console.log('The dialog wasdsdfdsffffffffffffs closed');
+    this.mode = !this.mode;
   }
+
+
 
 }
 

@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import { Alert } from 'selenium-webdriver';
-
+import { UserService } from '../../data/services/user.service';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -11,28 +10,35 @@ import { Alert } from 'selenium-webdriver';
 export class SignupComponent implements OnInit {
 
   isLinear = false;
-  firstFormGroup: FormGroup;
-  secondFormGroup: FormGroup;
-  thirdFormGroup: FormGroup;
-  alert = '';
+  // formName: FormGroup;
+  // formAddress: FormGroup;
+  formEmail: FormGroup;
+  formPassword: FormGroup;
+  email = '';
+  pass = '';
 
-  // tslint:disable-next-line: variable-name
-  constructor(private _formBuilder: FormBuilder) {}
+
+  constructor(private _formBuilder: FormBuilder, public UserService: UserService) {}
 
   ngOnInit() {
-    this.firstFormGroup = this._formBuilder.group({
-      firstCtrl: ['', Validators.required]
+    // this.formName = this._formBuilder.group({
+    //   Ctrl_1: ['', Validators.required]
+    // });
+    // this.formAddress = this._formBuilder.group({
+    //   Ctrl_1: ['', Validators.required]
+    // });
+    this.formEmail = this._formBuilder.group({
+      Ctrl_1: []
     });
-    this.secondFormGroup = this._formBuilder.group({
-      secondCtrl: ['', Validators.required]
-    });
-    this.thirdFormGroup = this._formBuilder.group({
-      thirdCtrl: ['', Validators.required]
+    this.formPassword = this._formBuilder.group({
+      Ctrl_2: []
     });
   }
 
-  submit() {
-    this.alert = 'done';
+  submit(f : any) {
+    console.dir(f);
+    alert(this.formEmail.value.email + ' ' + this.formPassword.value.password);
+    this.UserService.createUser(this.formEmail.value.email, this.formPassword.value.password);
   }
 }
 

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { UserService } from './data/services/user.service';
 
 @Component({
   selector: 'app-root',
@@ -9,4 +10,9 @@ export class AppComponent {
   title = 'frontEnd';
   val = 1;
   isNavbarCollapsed = true;
+  constructor(private authService: UserService) {}
+
+  OnInit() {
+    this.authService.autoAuthUser();
+  }
 }

@@ -1,4 +1,4 @@
 
-<button *ngIf="false" mat-raised-button (click)="loginDialog()">Pick one</button>
+<button *ngIf="mode" mat-raised-button (click)="loginDialog()">login</button>
 
-<button *ngIf="true" mat-raised-button (click)="logoutDialog()">Pick one</button>
+<button mat-raised-button color="primary" *ngIf="!mode" (click)="logoutDialog()">logout</button>

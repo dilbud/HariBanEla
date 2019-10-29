@@ -16,7 +16,12 @@ import { MainComponent } from './modules/main/main.component';
 import { DataModule } from './data/data.module';
 import { AlertsComponent } from './modules/alerts/alerts.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { DialogComponent } from './modules/login/dialog/dialog.component';
+import { LoginDComponent } from './modules/login/login-d/login-d.component';
+import { LogoutDComponent } from './modules/login/logout-d/logout-d.component';
+
+
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './core/auth-interceptor';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,8 @@ import { DialogComponent } from './modules/login/dialog/dialog.component';
     ProfileComponent,
     MainComponent,
     AlertsComponent,
-    DialogComponent
+    LoginDComponent,
+    LogoutDComponent
   ],
   imports: [
     BrowserModule,
@@ -42,9 +48,18 @@ import { DialogComponent } from './modules/login/dialog/dialog.component';
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
-  bootstrap: [AppComponent],
-  entryComponents: [LoginComponent, DialogComponent],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+  ],
+  bootstrap: [
+    AppComponent
+  ],
+  entryComponents: [
+    LoginComponent,
+    LoginDComponent,
+    LogoutDComponent
+  ],
 })
 export class AppModule { }
