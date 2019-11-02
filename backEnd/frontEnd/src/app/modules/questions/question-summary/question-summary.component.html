@@ -1,0 +1,25 @@
+<div *ngIf="question" class="row border border-secondary m-1 p-1">
+  <div class="col-2 row">
+    <div class="m-1 text-center">
+      {{question.votes}} <br>
+      <small>votes</small>
+    </div>
+    <div class="m-1 text-center">
+        {{question.answerCount}} <br>
+        <small>answers</small>
+    </div>
+    <div class="m-1 text-center">
+        {{question.views}} <br>
+        <small>views</small>
+    </div>
+  </div>
+  <div class="col-10">
+    <div>
+      <h4 (click)="onQuestion()">{{question.title}}</h4>
+    </div>
+    <div>
+      <span class="badge badge-pill badge-secondary m-1" *ngFor="let tag of question.tags"> {{tag.value}} </span>
+    </div>
+    <div class="text-right col-12"><small>Last modified x sec ago @Username rep points</small></div>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+<div *ngIf="question" class="container">
+  <div class="row">
+    <h4>{{question.category}}</h4>
+    <span class="badge badge-pill badge-secondary m-1" *ngFor="let tag of question.tags">
+      {{tag.value}}
+    </span>
+  </div>
+  <div class="border rounded p-3">
+      <div class="row">
+          <div class="col">
+            <h2>{{question.title}}</h2>
+          </div>
+        </div>
+        <p>{{question.body}}</p>
+      
+        <div class="row">
+          <div class="col">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-secondary">
+                <i class="fa fa-thumbs-up text-white"></i>
+                {{question.votes}}
+              </button>
+              <button type="button" class="btn btn-secondary">
+                <i class="fa fa-thumbs-down text-white"></i>
+              </button>
+            </div>
+          </div>
+          <div class="d-flex flex-row btn-group mr-3">
+            <button class="btn btn-warning" (click)="onEdit()">Edit</button>
+            <button class="btn btn-danger" (click)="onDelete()">Delete</button>
+          </div>
+        </div>
+  </div>
+
+  <h4>
+    <span>{{question.answerCount}}</span>
+    <span *ngIf="question.answerCount==1"> Answer </span>
+    <span *ngIf="question.answerCount!=1"> Answers </span>
+  </h4>
+  <div *ngIf="question.answerCount>0">
+    <div *ngFor="let answer of question.answers">
+      <app-answer-detail [answer]="answer"></app-answer-detail>
+    </div>
+  </div>
+  <app-answer-create [questionId]="question._id"></app-answer-create>
+</div>
