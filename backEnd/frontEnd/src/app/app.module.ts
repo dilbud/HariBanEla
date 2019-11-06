@@ -14,7 +14,6 @@ import { SignupComponent } from './modules/signup/signup.component';
 import { ProfileComponent } from './modules/profile/profile.component';
 import { MainComponent } from './modules/main/main.component';
 import { DataModule } from './data/data.module';
-// import { AlertsComponent } from './modules/alerts/alerts.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginDComponent } from './modules/login/login-d/login-d.component';
 import { LogoutDComponent } from './modules/login/logout-d/logout-d.component';
@@ -34,7 +33,6 @@ import { ProfessionalComponent } from './modules/profile/professional/profession
     MainComponent,
     FooterComponent,
     ProfileComponent,
-    // AlertsComponent,
     SignupComponent,
     LoginComponent,
     LoginDComponent,
