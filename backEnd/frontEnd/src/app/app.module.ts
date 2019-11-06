@@ -14,7 +14,7 @@ import { SignupComponent } from './modules/signup/signup.component';
 import { ProfileComponent } from './modules/profile/profile.component';
 import { MainComponent } from './modules/main/main.component';
 import { DataModule } from './data/data.module';
-import { AlertsComponent } from './modules/alerts/alerts.component';
+// import { AlertsComponent } from './modules/alerts/alerts.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginDComponent } from './modules/login/login-d/login-d.component';
 import { LogoutDComponent } from './modules/login/logout-d/logout-d.component';
@@ -22,19 +22,27 @@ import { LogoutDComponent } from './modules/login/logout-d/logout-d.component';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './core/auth-interceptor';
+import { ReportComponent } from './modules/report/report.component';
+import { CalendarComponent } from './modules/calendar/calendar.component';
+import { AdminComponent } from './modules/profile/admin/admin.component';
+import { ProfessionalComponent } from './modules/profile/professional/professional.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent,
-    LoginComponent,
-    SignupComponent,
-    ProfileComponent,
     MainComponent,
-    AlertsComponent,
+    FooterComponent,
+    ProfileComponent,
+    // AlertsComponent,
+    SignupComponent,
+    LoginComponent,
     LoginDComponent,
-    LogoutDComponent
+    LogoutDComponent,
+    ReportComponent,
+    CalendarComponent,
+    AdminComponent,
+    ProfessionalComponent
   ],
   imports: [
     BrowserModule,
@@ -51,13 +59,12 @@ import { AuthInterceptor } from './core/auth-interceptor';
     HttpClientModule
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
   ],
   bootstrap: [
     AppComponent
   ],
   entryComponents: [
-    LoginComponent,
     LoginDComponent,
     LogoutDComponent
   ],

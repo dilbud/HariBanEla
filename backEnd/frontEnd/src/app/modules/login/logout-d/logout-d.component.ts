@@ -1,9 +1,8 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import {MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
-export interface DialogData {
-  email: string;
-  password: string;
+interface DialogData {
+  name: string;
 }
 
 @Component({
@@ -19,6 +18,9 @@ export class LogoutDComponent implements OnInit {
 
     onNoClick(): void {
       this.dialogRef.close();
+    }
+    send(): string {
+      return 'yes';
     }
 
   ngOnInit() {

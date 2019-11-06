@@ -1,15 +1,26 @@
-<h1 mat-dialog-title>Hi</h1>
-<div mat-dialog-content>
-  <p>Please login !</p>
-  <mat-form-field>
-    <input matInput type="email" [(ngModel)]="data.email">
-  </mat-form-field>
-  <br>
-  <mat-form-field>
-      <input matInput type="password" [(ngModel)]="data.password">
-    </mat-form-field>
+<div class="container">
+  <h1 mat-dialog-title>Hi</h1>
+  <div mat-dialog-content class="a d-flex flex-column">
+    <p>Please login !</p>
+    <form [formGroup]="login">
+        <mat-form-field>
+          <input matInput
+            type="email"
+            formControlName="Ctrl_1"
+            placeholder="Email">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput
+            type="password"
+            formControlName="Ctrl_2"
+            placeholder="Password">
+        </mat-form-field>
+    </form>
+  </div>
+  <div mat-dialog-actions class="m-auto float-right border rounded shadow-sm" [ngClass]="{'border-danger': !login.valid ,'border-success': login.valid}">
+    <button mat-button (click)="onNoClick()" class="m-1">No Thanks</button>
+    <button mat-button [mat-dialog-close]="send()" class="m-1" [disabled]="!login.valid">LOGIN</button>
+  </div>
 </div>
-<div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">No Thanks</button>
-  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>LOGIN</button>
-</div>
+
+

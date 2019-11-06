@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Subject } from 'rxjs';
+import { UserData } from '../models/userData';
+import { AlertService } from './alert.service';
 
 export interface AuthData {
   email: string;
@@ -15,7 +17,11 @@ export class UserService {
   private tokenTimer: any;
   private authStatusListener = new Subject<boolean>();
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(
+    // tslint:disable-next-line: no-shadowed-variable
+    private AlertService: AlertService ,
+    private http: HttpClient,
+    private router: Router) {}
 
   getToken() {
     return this.token;
@@ -29,37 +35,54 @@ export class UserService {
     return this.authStatusListener.asObservable();
   }
 
-  createUser(email: string, password: string) {
-    alert(email + ' ' + password);
-    const authData: AuthData = { email: email, password: password };
+  // -------------------------------------------------------- signup begin
+  // create Admin
+  createAdmin(data: UserData) {
+    console.log(data.email + ' xx ' + data.password);
     this.http
-      .post("http://localhost:3000/api/user/signup", authData)
+      .post('http://localhost:3000/api/user/signup', data)
       .subscribe(response => {
         console.log(response);
+        this.AlertService.setAlert(data.firstName + 'user created');
+        this.router.navigate(['/']);
       });
   }
+  // create General
+  createGeneral(data: UserData) {
+    console.log(data.email + ' xx ' + data.password);
+    this.http
+      .post('http://localhost:3000/api/user/signup', data)
+      .subscribe(response => {
+        console.log(response);
+        this.AlertService.setAlert("user created");
+        this.router.navigate(['/']);
+      });
+  }
+    // create professional
+    createProfessional(data: UserData) {
+      console.log(data.email + ' xx ' + data.password);
+      this.http
+        .post('http://localhost:3000/api/user/signup', data)
+        .subscribe(response => {
+          console.log(response);
+          this.AlertService.setAlert("user created");
+          this.router.navigate(['/']);
+        });
+    }
+  // -------------------------------------------------------- signup end
+
+
 
   login(email: string, password: string) {
-    const authData: AuthData = { email: email, password: password };
+    const authData: AuthData = { email, password };
+    this.http.get('http://localhost:3000/api/user/key').subscribe(response => {
+      console.dir(response);
+    });
     this.http
-      .post<{ token: string; expiresIn: number }>(
-        "http://localhost:3000/api/user/login",
-        authData
-      )
+      .post('http://localhost:3000/api/user/login', authData)
       .subscribe(response => {
-        const token = response.token;
-        this.token = token;
-        if (token) {
-          const expiresInDuration = response.expiresIn;
-          this.setAuthTimer(expiresInDuration);
-          this.isAuthenticated = true;
-          this.authStatusListener.next(true);
-          const now = new Date();
-          const expirationDate = new Date(now.getTime() + expiresInDuration * 1000);
-          console.log(expirationDate);
-          this.saveAuthData(token, expirationDate);
-          this.router.navigate(['/']);
-        }
+        console.log(response);
+        this.router.navigate(['/']);
       });
   }
 
@@ -84,7 +107,7 @@ export class UserService {
     this.authStatusListener.next(false);
     clearTimeout(this.tokenTimer);
     this.clearAuthData();
-    this.router.navigate(["/"]);
+    this.router.navigate(['/']);
   }
 
   private setAuthTimer(duration: number) {
@@ -95,24 +118,24 @@ export class UserService {
   }
 
   private saveAuthData(token: string, expirationDate: Date) {
-    localStorage.setItem("token", token);
-    localStorage.setItem("expiration", expirationDate.toISOString());
+    localStorage.setItem('token', token);
+    localStorage.setItem('expiration', expirationDate.toISOString());
   }
 
   private clearAuthData() {
-    localStorage.removeItem("token");
-    localStorage.removeItem("expiration");
+    localStorage.removeItem('token');
+    localStorage.removeItem('expiration');
   }
 
   private getAuthData() {
-    const token = localStorage.getItem("token");
-    const expirationDate = localStorage.getItem("expiration");
+    const token = localStorage.getItem('token');
+    const expirationDate = localStorage.getItem('expiration');
     if (!token || !expirationDate) {
       return;
     }
     return {
-      token: token,
+      token,
       expirationDate: new Date(expirationDate)
-    }
+    };
   }
 }

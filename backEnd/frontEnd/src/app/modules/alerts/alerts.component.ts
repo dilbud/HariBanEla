@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { AlertService } from '../../data/services/alert.service';
 
 @Component({
   selector: 'app-alerts',
@@ -10,14 +11,16 @@ export class AlertsComponent implements OnInit {
   message = 'login success';
   action = 'ok';
 
-  // tslint:disable-next-line: variable-name
-  constructor(private _snackBar: MatSnackBar) { }
+  constructor(
+    private snackBar: MatSnackBar) { }
 
   ngOnInit() {
-    this.openSnackBar(this.message , this.action);
+
   }
+
+
   openSnackBar(message: string, action: string) {
-    this._snackBar.open(message, action, {
+    this.snackBar.open(message, action, {
       duration: 0,
     });
   }

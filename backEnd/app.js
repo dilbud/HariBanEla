@@ -3,22 +3,23 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var xcors = require('./middleware/xcors'); // custom middleware with cors
 const db = require('./config/database')
 const bodyParser = require("body-parser");
+
+
 
 // ---------------------------------------------------------
 // import router file
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-// controllers
-const head = require('./controllers/header');
+
 // ---------------------------------------------------------
 // use express app
 var app = express();
-db.connection();
 
-// CROSS
-app.use(head.head);
+// cors
+app.use(xcors);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -37,11 +38,14 @@ app.use('/',express.static(path.join(__dirname, 'frontEnd/dist/frontEnd')));
 
 // using router
 app.use('/', indexRouter);
-app.use("/api/user", usersRouter);
+app.use('/api/user', usersRouter);
+
+// database connection
+db.connection();
 
 
-// app.use('/users', usersRouter);
 
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
