@@ -1,34 +1,53 @@
+// public method
+// setAlert(string)
+// showAlert(void);
+// import { AlertService } from './alert.service' to use
 import { Injectable } from '@angular/core';
-import { Observable, Subscriber } from 'rxjs';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import {
+  MatSnackBar,
+  MatSnackBarRef,
+  SimpleSnackBar
+} from '@angular/material/snack-bar';
 
 @Injectable({ providedIn: 'root' })
 export class AlertService {
-
   private action = 'ok';
+  private snackBarRef: MatSnackBarRef<SimpleSnackBar>;
 
-  constructor(
-    private snackBar: MatSnackBar
-  ) {}
-  alert: string[] = [];
+  constructor(private snackBar: MatSnackBar) {}
+  private alert: string[] = [];
 
-  pushAlert(alert: string): void {
+  private pushAlert(alert: string): void {
     this.alert.push(alert);
   }
-  popAlert(): string {
-    return this.alert.pop();
+  private popAlert(): string {
+    if (this.alert.length !== 0) {
+      return this.alert.shift();
+    } else {
+      return null;
+    }
   }
-  showAlert(): string {
-    return this.popAlert();
-  }
-  setAlert(alert: string): void {
-    this.openSnackBar(alert, this.action);
+  public showAlert(): void {
+    const alert = this.popAlert();
+    if (alert === null) {
+      return;
+    }
+    this.snackBarRef = this.openSnackBar(alert, this.action);
+    this.snackBarRef.onAction().subscribe(() => {
+      this.snackBarRef.dismiss();
+    });
+    this.snackBarRef.afterDismissed().subscribe(() => {
+      this.showAlert();
+    });
   }
 
+  public setAlert(alert: string): void {
+    this.pushAlert(alert);
+  }
 
-  openSnackBar(message: string, action: string) {
-    this.snackBar.open(message, action, {
-      duration: 0,
+  private openSnackBar(message: string, action: string): any {
+    return this.snackBar.open(message, action, {
+      duration: 6000
     });
   }
 }

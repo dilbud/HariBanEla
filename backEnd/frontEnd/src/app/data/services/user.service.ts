@@ -44,6 +44,8 @@ export class UserService {
       .subscribe(response => {
         console.log(response);
         this.AlertService.setAlert(data.firstName + 'user created');
+        this.AlertService.setAlert("fffffffff");
+        this.AlertService.showAlert();
         this.router.navigate(['/']);
       });
   }

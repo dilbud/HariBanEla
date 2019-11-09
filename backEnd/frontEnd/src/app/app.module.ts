@@ -25,6 +25,7 @@ import { ReportComponent } from './modules/report/report.component';
 import { CalendarComponent } from './modules/calendar/calendar.component';
 import { AdminComponent } from './modules/profile/admin/admin.component';
 import { ProfessionalComponent } from './modules/profile/professional/professional.component';
+import { GeneralComponent } from '@modules/profile/general/general.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { ProfessionalComponent } from './modules/profile/professional/profession
     ReportComponent,
     CalendarComponent,
     AdminComponent,
+    GeneralComponent,
     ProfessionalComponent
   ],
   imports: [
