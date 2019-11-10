@@ -4,7 +4,8 @@
 // general 1
 // Professional 2
 
-export interface tokenData {
+
+export interface TokenData {
   userId: number ;
   userType: number ;
   jwtExist: boolean ;

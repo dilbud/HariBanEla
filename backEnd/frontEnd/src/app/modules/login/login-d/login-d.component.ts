@@ -31,8 +31,8 @@ export class LoginDComponent implements OnInit {
 
   ngOnInit() {
     this.login = this.formBuilder.group({
-      Ctrl_1: ['email@email.com', [Validators.required, Validators.email]],
-      Ctrl_2: ['ggggggggggggggg', [Validators.required, Validators.minLength(8)]]
+      Ctrl_1: ['abc@email.com', [Validators.required, Validators.email]],
+      Ctrl_2: ['12345678', [Validators.required, Validators.minLength(8)]]
     });
   }
 

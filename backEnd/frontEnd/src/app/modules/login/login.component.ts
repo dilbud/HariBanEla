@@ -29,7 +29,11 @@ export class LoginComponent {
         this.email = result.email;
         this.password = result.password;
         this.UserService.login(this.email, this.password);
-        this.mode = !this.mode; // MUST CALL RXJX
+        if(false) {
+          this.mode = !this.mode;
+        }else {
+          this.loginDialog();
+        }
       }
     });
   }

@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Subject } from 'rxjs';
 import { UserData } from '../models/userData';
 import { AlertService } from './alert.service';
+import { stringify } from 'querystring';
 
 export interface AuthData {
   email: string;
@@ -19,9 +20,10 @@ export class UserService {
 
   constructor(
     // tslint:disable-next-line: no-shadowed-variable
-    private AlertService: AlertService ,
+    private AlertService: AlertService,
     private http: HttpClient,
-    private router: Router) {}
+    private router: Router
+  ) {}
 
   getToken() {
     return this.token;
@@ -37,56 +39,81 @@ export class UserService {
 
   // -------------------------------------------------------- signup begin
   // create Admin
-  createAdmin(data: UserData) {
+  public createAdmin(data: UserData) {
+    console.log(data.email + ' xx ' + data.password);
+
+    this.http.post('http://localhost:3000/api/user/signup', data, { params: { type: 'admin' } }).subscribe(
+      response => {},
+      error => {
+        this.AlertService.setAlert('Something wrong !');
+        this.AlertService.showAlert();
+      },
+      () => {
+        this.router.navigate(['/']);
+        this.AlertService.setAlert(
+          'Hi ' + data.firstName + ' your account is created'
+        );
+        this.AlertService.setAlert('please login');
+        this.AlertService.showAlert();
+      }
+    );
+  }
+  // create General
+  public createGeneral(data: UserData) {
     console.log(data.email + ' xx ' + data.password);
     this.http
-      .post('http://localhost:3000/api/user/signup', data)
+      .post('http://localhost:3000/api/user/signup', data, { params: { type: 'general' } })
       .subscribe(response => {
         console.log(response);
-        this.AlertService.setAlert(data.firstName + 'user created');
-        this.AlertService.setAlert("fffffffff");
+        this.AlertService.setAlert('user created');
+        this.router.navigate(['/']);
+      });
+  }
+  // create professional
+  public createProfessional(data: UserData) {
+    console.log(data.email + ' xx ' + data.password);
+    this.http
+    .post('http://localhost:3000/api/user/signup', data, { params: { type: 'professional' } })
+      .subscribe(response => {
+        // console.log(response);
+        this.AlertService.setAlert('user created');
+        this.router.navigate(['/']);
+      }, error => {
+        console.log(fggggggggggggggggggggggggggggggggggggggggggggggggggg);
+      });
+  }
+  // -------------------------------------------------------- signup end
+  // -------------------------------------------------------- login start
+  public login(email: string, password: string) {
+    const authData: AuthData = { email, password };
+    let data: any = {};
+    let payload: any = {
+      userId: Number
+    };
+    let storageData: any = {
+      firstName: String,
+      lastName: String,
+      payload,
+      token: String,
+      exp: Number
+    };
+
+    this.http
+      .post('http://localhost:3000/api/user/login', authData)
+      .subscribe((response) => {
+        data = response;
+        console.log(data);
+      },(error) => {
+        console.log(error.error);
+        this.AlertService.setAlert(error.error.msg);
+        this.AlertService.showAlert();
+      }, () => {
+        this.AlertService.setAlert('you\'re welcome');
         this.AlertService.showAlert();
         this.router.navigate(['/']);
       });
   }
-  // create General
-  createGeneral(data: UserData) {
-    console.log(data.email + ' xx ' + data.password);
-    this.http
-      .post('http://localhost:3000/api/user/signup', data)
-      .subscribe(response => {
-        console.log(response);
-        this.AlertService.setAlert("user created");
-        this.router.navigate(['/']);
-      });
-  }
-    // create professional
-    createProfessional(data: UserData) {
-      console.log(data.email + ' xx ' + data.password);
-      this.http
-        .post('http://localhost:3000/api/user/signup', data)
-        .subscribe(response => {
-          console.log(response);
-          this.AlertService.setAlert("user created");
-          this.router.navigate(['/']);
-        });
-    }
-  // -------------------------------------------------------- signup end
-
-
-
-  login(email: string, password: string) {
-    const authData: AuthData = { email, password };
-    this.http.get('http://localhost:3000/api/user/key').subscribe(response => {
-      console.dir(response);
-    });
-    this.http
-      .post('http://localhost:3000/api/user/login', authData)
-      .subscribe(response => {
-        console.log(response);
-        this.router.navigate(['/']);
-      });
-  }
+  // -------------------------------------------------------- login end
 
   autoAuthUser() {
     const authInformation = this.getAuthData();
