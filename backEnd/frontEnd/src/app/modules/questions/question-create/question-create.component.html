@@ -1,0 +1,24 @@
+<div class="container">
+    <h1>Ask a Question</h1>
+    <form #askForm="ngForm" (ngSubmit)="onQuestion(); askForm.reset()">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" [(ngModel)]="questionModel.title" name="title" class="form-control" id="title" placeholder="What is your Question? Be specific">
+      </div>
+      <div class="form-group">
+        <label for="category">Category</label>
+        <input type="text" [(ngModel)]="questionModel.category" name="category" class="form-control" id="category" placeholder="What is the Field related to your Question">
+      </div>
+      <div class="form-group">
+        <label for="body">Body</label>
+        <textarea type="text" [(ngModel)]="questionModel.body" name="body" class="form-control" id="body" placeholder="Explain your Question"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="tags">Tags</label>
+        <tag-input type="text" [(ngModel)]="questionModel.tags" name="tags" id="tags" placeholder="Add Tags"></tag-input>
+      </div>
+      
+      <button type="submit" class="btn btn-primary">Post the Question</button>
+    </form>
+  </div>
+  
