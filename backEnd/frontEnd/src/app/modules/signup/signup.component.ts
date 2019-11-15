@@ -14,6 +14,7 @@ export class SignupComponent implements OnInit {
   formAddress: FormGroup;
   formEmail: FormGroup;
   formPassword: FormGroup;
+  formUserType: FormGroup;
   email = '';
   pass = '';
 
@@ -37,6 +38,9 @@ export class SignupComponent implements OnInit {
     this.formPassword = this.formBuilder.group({
       Ctrl_1: ['12345678', [Validators.required, Validators.minLength(8)]]
     });
+    this.formUserType = this.formBuilder.group({
+      Ctrl_1: ['user', [Validators.required]]
+    });
   }
 
   submit() {
@@ -44,22 +48,27 @@ export class SignupComponent implements OnInit {
       this.formName.valid &&
       this.formAddress.valid &&
       this.formEmail.valid &&
-      this.formPassword.valid
+      this.formPassword.valid &&
+      this.formUserType
     ) {
       const firstName = this.formName.value.Ctrl_1;
       const lastName = this.formName.value.Ctrl_2;
       const address = this.formAddress.value.Ctrl_1;
       const email = this.formEmail.value.Ctrl_1;
       const password = this.formPassword.value.Ctrl_1;
+      const userType = this.formUserType.value.Ctrl_1;
+      const picURL = 'null';
 
       const data: UserData = {
         firstName,
         lastName,
         address,
         email,
-        password
+        password,
+        picURL,
+        userType
       };
-      this.UserService.createAdmin(data);
+      this.UserService.updateUser(data);
     } else {
       alert('submission fail');
     }

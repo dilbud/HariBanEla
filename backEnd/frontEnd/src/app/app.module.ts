@@ -21,11 +21,15 @@ import { LogoutDComponent } from './modules/login/logout-d/logout-d.component';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './core/auth-interceptor';
+import { ErrorInterceptor } from './core/error-interceptor';
 import { ReportComponent } from './modules/report/report.component';
 import { CalendarComponent } from './modules/calendar/calendar.component';
 import { AdminComponent } from './modules/profile/admin/admin.component';
 import { ProfessionalComponent } from './modules/profile/professional/professional.component';
 import { GeneralComponent } from '@modules/profile/general/general.component';
+import { ReportDComponent } from './modules/report/report-d/report-d.component';
+
+
 
 @NgModule({
   declarations: [
@@ -42,7 +46,8 @@ import { GeneralComponent } from '@modules/profile/general/general.component';
     CalendarComponent,
     AdminComponent,
     GeneralComponent,
-    ProfessionalComponent
+    ProfessionalComponent,
+    ReportDComponent
   ],
   imports: [
     BrowserModule,
@@ -59,14 +64,16 @@ import { GeneralComponent } from '@modules/profile/general/general.component';
     HttpClientModule
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+    // { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
   ],
   bootstrap: [
     AppComponent
   ],
   entryComponents: [
     LoginDComponent,
-    LogoutDComponent
+    LogoutDComponent,
+    ReportDComponent,
   ],
 })
 export class AppModule { }

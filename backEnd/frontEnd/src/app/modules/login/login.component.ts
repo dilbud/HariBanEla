@@ -25,15 +25,40 @@ export class LoginComponent {
     });
 
     dialogRef.afterClosed().subscribe(result => {
+      if (result === 'google') {
+        this.UserService.google();
+        setTimeout(() => {
+          if (this.UserService.getIsAuth()) {
+            this.mode = false;
+          } else {
+            this.loginDialog();
+          }
+        }, 50000);
+        return;
+      }
+      if (result === 'facebook') {
+        this.UserService.facebook();
+        setTimeout(() => {
+          if (this.UserService.getIsAuth()) {
+            this.mode = false;
+          } else {
+            this.loginDialog();
+          }
+        }, 50000);
+        return;
+      }
       if (result != null) {
         this.email = result.email;
         this.password = result.password;
         this.UserService.login(this.email, this.password);
-        if(false) {
-          this.mode = !this.mode;
-        }else {
-          this.loginDialog();
-        }
+        setTimeout(() => {
+          if (this.UserService.getIsAuth()) {
+            this.mode = false;
+          } else {
+            this.loginDialog();
+          }
+        }, 500);
+        return;
       }
     });
   }
@@ -46,7 +71,7 @@ export class LoginComponent {
     dialogRef.afterClosed().subscribe(result => {
       if (result != null && result === 'yes') {
         this.UserService.logout();
-        this.mode = !this.mode; // MUST CALL RXJX
+        this.mode = !this.UserService.getIsAuth(); // MUST CALL RXJX
       }
     });
   }

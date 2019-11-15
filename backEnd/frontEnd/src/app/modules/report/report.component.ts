@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ReportDComponent } from './report-d/report-d.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-report',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReportComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit() {
+  }
+
+  report(): void {
+    const dialogRef = this.dialog.open(ReportDComponent, {
+      width: '500px',
+      data: {  }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result != null) {
+
+      }
+    });
   }
 
 }

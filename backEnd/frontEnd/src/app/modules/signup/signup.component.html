@@ -23,7 +23,7 @@
           <form [formGroup]="formAddress">
             <ng-template matStepLabel>Fill out your address</ng-template>
             <mat-form-field>
-              <input matInput placeholder="Address" formControlName="Ctrl_1" />
+              <textarea matInput placeholder="Address" formControlName="Ctrl_1" > </textarea>
             </mat-form-field>
             <div>
               <button mat-button matStepperPrevious>Back</button>
@@ -57,24 +57,44 @@
             </div>
           </form>
         </mat-step>
+        <!-- user type -->
+        <mat-step [stepControl]="formUserType">
+            <form [formGroup]="formUserType">
+              <ng-template matStepLabel>Fill out your password</ng-template>
+              <mat-form-field>
+                  <mat-label>Select an option</mat-label>
+                  <mat-select  formControlName="Ctrl_1">
+                    <mat-option value="user">General User</mat-option>
+                    <mat-option value="Pro">Professional</mat-option>
+
+                  </mat-select>
+                </mat-form-field>
+              <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button matStepperNext>Next</button>
+              </div>
+            </form>
+          </mat-step>
         <!-- done -->
         <mat-step>
           <ng-template matStepLabel>Done</ng-template>
           <div class="m-1">
             You are now done.
           </div>
-          <div class="m-auto float-right border rounded shadow-sm" [ngClass]="{
+          <div class="m-auto d-flex float-right border rounded shadow-sm" [ngClass]="{
               'border-danger': !(
                 formName.valid &&
                 formAddress.valid &&
                 formEmail.valid &&
-                formPassword.valid
+                formPassword.valid &&
+                formUserType
               ),
               'border-success':
                 formName.valid &&
                 formAddress.valid &&
                 formEmail.valid &&
-                formPassword.valid
+                formPassword.valid &&
+                formUserType
             }">
             <button mat-button matStepperPrevious class="m-1">Back</button>
             <button mat-button (click)="stepper.reset()" class="m-1">
@@ -85,7 +105,8 @@
                   formName.valid &&
                   formAddress.valid &&
                   formEmail.valid &&
-                  formPassword.valid
+                  formPassword.valid &&
+                  formUserType
                 )
               ">
               submit

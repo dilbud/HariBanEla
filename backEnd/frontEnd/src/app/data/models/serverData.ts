@@ -1,9 +1,9 @@
-export interface UserData {
+export interface ServerData {
+  id: string;
   firstName: string;
   lastName: string;
   address: string;
   email: string;
-  password: string;
   picURL: string;
   userType: string;
 }
