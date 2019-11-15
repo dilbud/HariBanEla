@@ -2,9 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { RouterModule, Router } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
-
-
 import { CoreModule } from '@app/core.module';
 import { SharedModule } from '@shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
@@ -25,6 +22,7 @@ import { AnswerCreateComponent } from './modules/answers/answer-create/answer-cr
 import { AnswerDetailComponent } from './modules/answers/answer-detail/answer-detail.component';
 import { CommentCreateComponent } from './modules/comments/comment-create/comment-create.component';
 import { CommentDetailComponent } from './modules/comments/comment-detail/comment-detail.component';
+import {AdminComponent} from './modules/admin/admin.component';
 
 
 @NgModule({
@@ -38,7 +36,8 @@ import { CommentDetailComponent } from './modules/comments/comment-detail/commen
     AnswerCreateComponent,
     AnswerDetailComponent,
     CommentCreateComponent,
-    CommentDetailComponent
+    CommentDetailComponent,
+    AdminComponent
   ],
 
   imports: [
