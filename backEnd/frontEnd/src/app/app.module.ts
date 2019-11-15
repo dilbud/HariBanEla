@@ -19,6 +19,8 @@ import { AnswerCreateComponent } from './modules/answers/answer-create/answer-cr
 import { AnswerDetailComponent } from './modules/answers/answer-detail/answer-detail.component';
 import { CommentCreateComponent } from './modules/comments/comment-create/comment-create.component';
 import { CommentDetailComponent } from './modules/comments/comment-detail/comment-detail.component';
+import { NavbarComponent } from './layout/navbar/navbar.component';
+import { FooterComponent } from './layout/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { CommentDetailComponent } from './modules/comments/comment-detail/commen
     AnswerCreateComponent,
     AnswerDetailComponent,
     CommentCreateComponent,
-    CommentDetailComponent
+    CommentDetailComponent,
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
