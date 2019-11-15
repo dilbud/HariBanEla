@@ -1,8 +1,13 @@
 const mongoose = require('mongoose');
 
+const commentSchema = mongoose.Schema({
+    body: { type: String }
+});
+
 const answerSchema = mongoose.Schema({
     body: { type: String },
-    votes: { type: Number }
+    votes: { type: Number },
+    comments: { type: [commentSchema] }
 });
 
 const questionSchema = mongoose.Schema({
@@ -23,6 +28,9 @@ const questionSchema = mongoose.Schema({
     },
     answers: {
         type: [answerSchema]
+    },
+    comments: {
+        type: [commentSchema]
     },
     tags: {
         type: Array

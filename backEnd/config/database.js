@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 exports.connection = function () {
-  mongoose.connect('mongodb+srv://dbAdmin:2fYaO7Ovhl2SQmWN@cluster0-ovc3p.mongodb.net/hariBnEla?retryWrites=true', { useNewUrlParser: true , useUnifiedTopology: true })
+  mongoose.connect('mongodb+srv://dbAdmin:2fYaO7Ovhl2SQmWN@cluster0-ovc3p.mongodb.net/hariBnEla?retryWrites=true', { useNewUrlParser: true , useUnifiedTopology: true, useFindAndModify: false })
     .then(() => console.log('connection successful'))
     .catch((err) => console.error(err));
 

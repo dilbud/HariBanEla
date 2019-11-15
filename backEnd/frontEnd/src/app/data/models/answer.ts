@@ -1,5 +1,5 @@
 export class Answer {
-    // id: string;
+    _id: string;
     // owner: User;
     // parent: Question;
     body: string;

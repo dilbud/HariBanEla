@@ -18,7 +18,7 @@ export class AnswerCreateComponent implements OnInit {
   }
 
   onAnswer() {
-    this.answerService.addAnswer(this.questionId, this.answerModel)
+    this.answerService.addAnswer(this.answerModel, this.questionId)
       .subscribe(
         data => {
           console.log("Success", data);

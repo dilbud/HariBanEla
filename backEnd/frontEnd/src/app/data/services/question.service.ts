@@ -22,6 +22,19 @@ export class QuestionService {
     return this.http.get(this.url+'/'+id);
   }
 
+  refreshQuestion(id){
+    return this.http.get(this.url+'/'+id+'?refresh=1');
+  }
+
+  voteQuestion(id,status){
+    if(status==1){
+      return this.http.get(this.url+'/'+id+'/vote?vote=1');
+    }else{
+      return this.http.get(this.url+'/'+id+'/vote?vote=0');
+    }
+    
+  }
+
   editQuestion(question: Question){
     return this.http.put(this.url+'/'+question._id,question);
   }

@@ -1,7 +1,7 @@
 <form #answerForm="ngForm" (ngSubmit)="onAnswer(); answerForm.reset()">
   <div class="form-group">
-    <label for="body">Add Answer</label>
-    <textarea type="text" class="form-control" [(ngModel)]="answerModel.body" name="body" id="body"
+    <label for="answerBody">Add Answer</label>
+    <textarea type="text" class="form-control" [(ngModel)]="answerModel.body" name="answerBody" id="answerBody"
       placeholder="Enter your Answer"></textarea>
     <button type="submit" class="btn btn-primary">Post your Answer</button>
   </div>

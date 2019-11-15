@@ -39,8 +39,27 @@ router.get('/:id', async (req, res) => {
     try {
         const id = req.params.id;
         const received = await Question.findById(id);
-        received.views++;
-        const saved = await Question.findByIdAndUpdate(id, received,{new:true});
+        if (!req.query.refresh) {
+            received.views++;
+        }
+        const saved = await Question.findByIdAndUpdate(id, received, { new: true });
+        res.json(saved);
+    } catch (error) {
+        res.json({ Emessage: error });
+    }
+});
+
+// Vote question
+router.get('/:id/vote', async (req, res) => {
+    try {
+        const id = req.params.id;
+        const received = await Question.findById(id);
+        if (req.query.vote == 1) {
+            received.votes++;
+        } else {
+            received.votes--;
+        }
+        const saved = await Question.findByIdAndUpdate(id, received, { new: true });
         res.json(saved);
     } catch (error) {
         res.json({ Emessage: error });
@@ -52,7 +71,7 @@ router.put('/:id', async (req, res) => {
     try {
         const id = req.params.id;
         const question = req.body;
-        const saved = await Question.findByIdAndUpdate(id, question,{new:true});
+        const saved = await Question.findByIdAndUpdate(id, question, { new: true });
         res.json(saved);
     } catch (error) {
         res.json({ Emessage: error });
@@ -61,11 +80,11 @@ router.put('/:id', async (req, res) => {
 
 // Delete question
 router.delete('/:id', async (req, res) => {
-    try{
-        const removed = await Question.remove({_id: req.params.id})
+    try {
+        const removed = await Question.remove({ _id: req.params.id })
         res.json(removed);
-    } catch(error) {
-        res.json({message: error});
+    } catch (error) {
+        res.json({ message: error });
     }
 });
 
@@ -81,6 +100,67 @@ router.put('/:id/answers', async (req, res) => {
         parent.answers.push(answer);
         parent.answerCount++;
         const saved = await parent.save();
+        res.json(saved);
+    } catch (error) {
+        res.json({ Emessage: error });
+    }
+});
+
+// Vote answer
+router.get('/:questionId/:answerId/vote', async (req, res) => {
+    try {
+        const questionId = req.params.questionId;
+        const answerId = req.params.answerId;
+        const received = await Question.findById(questionId);
+        for (let answer of received.answers) {
+            if (answer._id == answerId) {
+                if (req.query.vote == 1) {
+                    answer.votes++;
+                } else {
+                    answer.votes--;
+                }
+                break;
+            }
+        };
+        const saved = await Question.findByIdAndUpdate(questionId, received, { new: true });
+        res.json(saved);
+    } catch (error) {
+        res.json({ Emessage: error });
+    }
+});
+
+// Add comment to question
+router.put('/:questionId/comments', async (req, res) => {
+    const comment = {
+        body: req.body.body
+    };
+    try {
+        const questionId = req.params.questionId;
+        const question = await Question.findById(questionId);
+        question.comments.push(comment);
+        const saved = await question.save();
+        res.json(saved);
+    } catch (error) {
+        res.json({ Emessage: error });
+    }
+});
+
+// Add comment to answer
+router.put('/:questionId/:answerId/comments', async (req, res) => {
+    const comment = {
+        body: req.body.body
+    };
+    try {
+        const questionId = req.params.questionId;
+        const answerId = req.params.answerId;
+        const question = await Question.findById(questionId);
+        for (let answer of question.answers) {
+            if (answer._id == answerId) {
+                answer.comments.push(comment);
+                break;
+            }
+        }
+        const saved = await question.save();
         res.json(saved);
     } catch (error) {
         res.json({ Emessage: error });

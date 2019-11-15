@@ -7,6 +7,7 @@ import { SharedModule } from '@shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { TagInputModule } from 'ngx-chips';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,8 @@ import { QuestionSummaryComponent } from './modules/questions/question-summary/q
 import { QuestionDetailComponent } from './modules/questions/question-detail/question-detail.component';
 import { AnswerCreateComponent } from './modules/answers/answer-create/answer-create.component';
 import { AnswerDetailComponent } from './modules/answers/answer-detail/answer-detail.component';
+import { CommentCreateComponent } from './modules/comments/comment-create/comment-create.component';
+import { CommentDetailComponent } from './modules/comments/comment-detail/comment-detail.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,9 @@ import { AnswerDetailComponent } from './modules/answers/answer-detail/answer-de
     QuestionSummaryComponent,
     QuestionDetailComponent,
     AnswerCreateComponent,
-    AnswerDetailComponent
+    AnswerDetailComponent,
+    CommentCreateComponent,
+    CommentDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +40,8 @@ import { AnswerDetailComponent } from './modules/answers/answer-detail/answer-de
     FormsModule,
     HttpClientModule,
     TagInputModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
