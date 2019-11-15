@@ -1,0 +1,8 @@
+<form #commentForm="ngForm" (ngSubmit)="onComment(1); commentForm.reset()">
+  <div class="form-group">
+    <label for="commentBody">Add Comment</label>
+    <textarea type="text" class="form-control" [(ngModel)]="commentModel.body" name="commentBody" id="commentBody"
+      placeholder="Enter your Comment"></textarea>
+    <button type="submit" class="btn btn-primary">Post your Comment</button>
+  </div>
+</form>

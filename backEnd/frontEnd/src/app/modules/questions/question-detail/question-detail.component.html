@@ -1,0 +1,80 @@
+<div *ngIf="question" class="container">
+  <div class="row m-3">
+    <h4>{{question.category}}</h4>
+    <span class="rounded-pill bg-dark text-white m-1" *ngFor="let tag of question.tags">
+      <span class="p-2">
+        {{tag.value}}
+      </span>
+    </span>
+  </div>
+  <div class="border">
+
+    <div class="p-3">
+      <h2>{{question.title}}</h2>
+      <p>{{question.body}}</p>
+    </div>
+
+    <div class="row m-0 bg-dark">
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" (click)="voteQuestion(1)" class="btn btn-dark">
+          <i class="fa fa-thumbs-up"></i>
+          <span class="ml-2">{{question.votes}}</span>
+        </button>
+        <button type="button" (click)="voteQuestion(0)" class="btn btn-dark">
+          <i class="fa fa-thumbs-down"></i>
+        </button>
+
+        <button type="button" class="btn btn-dark" (click)="isAnswerCollapsed = !isAnswerCollapsed"
+          [attr.aria-expanded]="!isAnswerCollapsed" aria-controls="answerCollapse">
+          <i class="fa fa-check"></i>
+          <span class="ml-2">Answer</span>
+        </button>
+        <button type="button" class="btn btn-dark" (click)="isCommentCollapsed = !isCommentCollapsed"
+          [attr.aria-expanded]="!isCommentCollapsed" aria-controls="commentCollapse">
+          <i class="fa fa-comment"></i>
+          <span class="ml-2">Comment</span>
+        </button>
+
+        <button type="button" class="btn btn-dark">
+          <i class="fa fa-comment"></i>
+          <span class="ml-2">Comment</span>
+        </button>
+        <button type="button" class="btn btn-dark">
+          <i class="fa fa-eye"></i>
+          <span class="ml-2">{{question.views}} Views</span>
+        </button>
+        <button type="button" class="btn btn-dark">
+          <i class="fa fa-pen"></i>
+          <span class="ml-2">Edit</span>
+        </button>
+        <button class="btn btn-dark" (click)="onDelete()">
+          Delete
+        </button>
+      </div>
+    </div>
+
+    <div id="commentCollapse" [ngbCollapse]="isCommentCollapsed">
+      <app-comment-create [questionId]="question._id"></app-comment-create>
+    </div>
+
+    <div *ngFor="let comment of question.comments" class="m-3">
+      <app-comment-detail [comment]="comment"></app-comment-detail>
+    </div>
+
+    <div id="answerCollapse" [ngbCollapse]="isAnswerCollapsed">
+      <app-answer-create [questionId]="question._id"></app-answer-create>
+    </div>
+    
+  </div>
+
+  <h4 class="m-3">
+    <span>{{question.answerCount}}</span>
+    <span *ngIf="question.answerCount==1"> Answer </span>
+    <span *ngIf="question.answerCount!=1"> Answers </span>
+  </h4>
+  <div *ngIf="question.answerCount>0">
+    <span *ngFor="let answer of question.answers" class="m-3">
+      <app-answer-detail [questionId]="question._id" [answer]="answer"></app-answer-detail>
+    </span>
+  </div>
+</div>

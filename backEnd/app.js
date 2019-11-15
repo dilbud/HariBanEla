@@ -3,11 +3,15 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var dbConnection = require('./config/database');
+
+var categoryRouter=require('./routes/category');
+var cors = require('cors');
+const dbConnection = require('./config/database')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var categoryRouter=require('./routes/category');
-var cors = require("cors");
+var questionsRouter = require('./routes/questions');
+
+
 var app = express();
 
 // view engine setup
@@ -18,6 +22,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors({
   origin: 'http://localhost:4200'
@@ -26,6 +31,9 @@ app.use(cors({
 app.use('/', indexRouter);
 app.use('/api/category', categoryRouter);
 app.use('/users', usersRouter);
+app.use('/questions', questionsRouter);
+
+dbConnection.connection();
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -44,6 +52,10 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+});
+
+app.listen(3000, () => {
+  console.log('Server running on port: ' + 3000);
 });
 
 module.exports = app;

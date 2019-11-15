@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "app-root-path": "^3.0.0",
+    "@ng-bootstrap/ng-bootstrap": "^5.1.4",
     "cookie-parser": "~1.4.3",
     "cors": "^2.8.5",
     "debug": "~2.6.9",
@@ -16,5 +17,6 @@
     "mongoose": "^5.7.11",
     "morgan": "~1.9.0",
     "winston": "^3.2.1"
+
   }
 }
