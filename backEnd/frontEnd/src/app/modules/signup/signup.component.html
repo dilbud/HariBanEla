@@ -60,7 +60,7 @@
         <!-- user type -->
         <mat-step [stepControl]="formUserType">
             <form [formGroup]="formUserType">
-              <ng-template matStepLabel>Fill out your password</ng-template>
+              <ng-template matStepLabel>Fill user type</ng-template>
               <mat-form-field>
                   <mat-label>Select an option</mat-label>
                   <mat-select  formControlName="Ctrl_1">
@@ -85,14 +85,12 @@
               'border-danger': !(
                 formName.valid &&
                 formAddress.valid &&
-                formEmail.valid &&
                 formPassword.valid &&
                 formUserType
               ),
               'border-success':
                 formName.valid &&
                 formAddress.valid &&
-                formEmail.valid &&
                 formPassword.valid &&
                 formUserType
             }">
@@ -104,7 +102,6 @@
                 !(
                   formName.valid &&
                   formAddress.valid &&
-                  formEmail.valid &&
                   formPassword.valid &&
                   formUserType
                 )

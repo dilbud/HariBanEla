@@ -47,7 +47,7 @@ export class AlertService {
 
   private openSnackBar(message: string, action: string): any {
     return this.snackBar.open(message, action, {
-      duration: 6000
+      duration: 2000
     });
   }
 }

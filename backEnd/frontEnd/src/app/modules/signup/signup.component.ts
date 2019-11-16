@@ -33,7 +33,7 @@ export class SignupComponent implements OnInit {
       Ctrl_1: ['address', [Validators.required]]
     });
     this.formEmail = this.formBuilder.group({
-      Ctrl_1: ['abc@email.com', [Validators.required, Validators.email]]
+      Ctrl_1: [{value: 'abuddikahgd@gmail.com' , disabled: true}, [Validators.required, Validators.email]]
     });
     this.formPassword = this.formBuilder.group({
       Ctrl_1: ['12345678', [Validators.required, Validators.minLength(8)]]
@@ -47,7 +47,7 @@ export class SignupComponent implements OnInit {
     if (
       this.formName.valid &&
       this.formAddress.valid &&
-      this.formEmail.valid &&
+      // this.formEmail.valid &&
       this.formPassword.valid &&
       this.formUserType
     ) {

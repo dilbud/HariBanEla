@@ -21,12 +21,14 @@ export class UserService {
   private authStatusListener = new Subject<boolean>();
   private serverData: ServerData;
   private userData: UserData;
-
-  private socialData = {
-    provider: String,
+  private user = {
+    id: String,
     firstName: String,
     lastName: String,
-    email: String
+    address: String,
+    email: String,
+    picURL: String,
+    userType: String
   };
 
   constructor(
@@ -37,14 +39,6 @@ export class UserService {
     private router: Router
   ) {}
 
-  public getServerToken(): any {
-    const token101 = this.getToken('token101');
-    const token202 = this.getToken('token202');
-    let obj = { token101: JSON, token202: JSON };
-    obj = { token101, token202 };
-    return obj;
-  }
-
   getIsAuth(): any {
     return this.isAuthenticated;
   }
@@ -53,104 +47,85 @@ export class UserService {
     return this.authStatusListener.asObservable();
   }
 
-  // -------------------------------------------------------- signup begin
-  // create user
+  // -------------------------------------------------------- update begin
   public updateUser(data: UserData) {
-    console.log('+++++++++++++');
-    console.log(this.serverData);
-    let server;
-    this.http.post('http://localhost:3000/api/user/update', {id: 'jjg' , query: data}).subscribe(
-      response => {
-        server = response;
-      },
-      error => {
-        this.AlertService.setAlert('Something wrong !');
-        this.AlertService.showAlert();
-      },
-      () => {
-        this.serverData = {
-          id: server._id,
-          firstName: server.firstName,
-          lastName: server.lastName,
-          address: server.address,
-          email: server.email,
-          picURL: server.picURL,
-          userType: server.serType
-        };
-        this.userData = {
-          firstName: this.serverData.firstName,
-          lastName: this.serverData.lastName,
-          address: this.serverData.address,
-          email: this.serverData.email,
-          password: '********',
-          picURL: this.serverData.picURL,
-          userType: this.serverData.userType
-        };
-        console.log(this.serverData);
-        this.router.navigate(['/']);
-        this.AlertService.setAlert(
-          'Hi ' + data.firstName + ' your account is updated'
-        );
-        this.AlertService.showAlert();
-      }
-    );
+    let res: any;
+    this.http
+      .post('http://localhost:3000/api/user/update', { id: this.user.id, query: data })
+      .subscribe(
+        response => {
+          res = response;
+        },
+        error => {
+          this.AlertService.setAlert('Something wrong !');
+          this.AlertService.setAlert(error.error.msg);
+          this.AlertService.showAlert();
+        },
+        () => {
+          this.user = res.serverData;
+          this.token = res.token;
+          this.storeToken(this.token);
+          this.authStatusListener.next(true);
+          this.router.navigate(['/']);
+          this.AlertService.setAlert(
+            'Hi ' + data.firstName + ' your account is updated'
+          );
+          this.AlertService.showAlert();
+        }
+      );
   }
-  // -------------------------------------------------------- signup end
+  // -------------------------------------------------------- update end
   // -------------------------------------------------------- login start
   public google() {
     this.authService.signIn(GoogleLoginProvider.PROVIDER_ID).then(() => {
       const data = this.fetchSocialData();
-      this.storeToken('token202', data);
-      const token101 = this.getToken('token101');
-      const token202 = this.getToken('token202');
-      this.userData = {
+      this.serverData = {
+        id: 'null',
         firstName: data.firstName,
         lastName: data.lastName,
         address: 'null',
         email: data.email,
-        password: '****',
         picURL: data.photoUrl,
         userType: 'user'
       };
-      console.log(this.userData);
       let res: any;
       this.http
-        .post('http://localhost:3000/api/user/create', this.userData)
+        .post('http://localhost:3000/api/user/create', this.serverData)
         .subscribe(
           response => {
             res = response;
           },
           error => {
             this.AlertService.setAlert('Something wrong !');
+            this.AlertService.setAlert(error.error.msg);
             this.AlertService.showAlert();
           },
           () => {
-            console.log('hhhhhhhvvvvvv');
-            this.serverData = {
-              id: res.id,
-              firstName: res.firstName,
-              lastName: res.lastName,
-              address: res.address,
-              email: res.email,
-              picURL: res.picURL,
-              userType: res.picURL
-            };
-            this.userData = {
-              firstName: this.serverData.firstName,
-              lastName: this.serverData.lastName,
-              address: this.serverData.address,
-              email: this.serverData.email,
-              password: '****',
-              picURL: this.serverData.picURL,
-              userType: this.serverData.picURL
-            };
-            // this.router.navigate(['/']);
-            this.AlertService.setAlert(
-              'Hi ' + data.name + ' your account is created'
-            );
+            this.user = res.serverData;
+            this.token = res.token;
+            this.storeToken(this.token);
+            this.authStatusListener.next(true);
+            if (res.msg === 'created') {
+              this.AlertService.setAlert(
+                'Hi ' + data.name + ' your account is created'
+              );
+            }
+            if (res.msg === 'exist') {
+              this.AlertService.setAlert(
+                'Hi ' + data.name + ' your are sign in'
+              );
+            }
+            console.log('+++++++++++++');
+            console.log(this.user);
+            this.decodeToken(this.token);
+            this.AlertService.setAlert('Hi ' + data.name + ' you\'re welcome');
             this.AlertService.showAlert();
           }
         );
+    }).catch((error) => {
+      console.log(error);
+      this.AlertService.setAlert('Try later ...');
+      this.AlertService.showAlert();
     });
   }
 
@@ -158,6 +133,40 @@ export class UserService {
     // this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
   }
 
+  public login(email: string, password: string) {
+    const authData: AuthData = { email, password };
+    let res: any;
+    this.http.post('http://localhost:3000/api/user/login', authData).subscribe(
+      response => {
+        res = response;
+      },
+      error => {
+        this.AlertService.setAlert('Something wrong !');
+        this.AlertService.setAlert(error.error.msg);
+        this.AlertService.showAlert();
+      },
+      () => {
+        this.user = res.serverData;
+        this.token = res.token;
+        this.storeToken(this.token);
+        this.authStatusListener.next(true);
+
+        this.AlertService.setAlert(
+          'Hi ' +
+            this.user.firstName +
+            ' ' +
+            this.user.lastName +
+            ' ' +
+            'you\'re welcome'
+        );
+        console.log('+++++++++++++');
+        console.log(this.user);
+        this.AlertService.showAlert();
+        // this.router.navigate(['/']);
+      }
+    );
+  }
+  // -------------------------------------------------------- login start
   fetchSocialData() {
     let userData: any;
     this.authService.authState.subscribe(user => {
@@ -166,32 +175,6 @@ export class UserService {
     return userData;
   }
 
-  public login(email: string, password: string) {
-    const authData: AuthData = { email, password };
-    console.log(authData);
-    let res: any;
-    this.http.post('http://localhost:3000/api/user/login', authData).subscribe(
-      response => {
-        res = response;
-      },
-      error => {
-        console.log(error.error);
-        this.AlertService.setAlert(error.error.msg);
-        this.AlertService.showAlert();
-      },
-      () => {
-        this.serverData = res.user;
-        console.log(res.user);
-        this.storeToken('token101', res.tokenData);
-        this.setAuthTimer();
-        this.isAuthenticated = true;
-        this.AlertService.setAlert('you\'re welcome');
-        this.AlertService.showAlert();
-        // this.router.navigate(['/']);
-      }
-    );
-  }
-  // -------------------------------------------------------- login end
 
   public autoAuthUser() {}
 
@@ -207,16 +190,14 @@ export class UserService {
   }
 
   private setAuthTimer() {
-    const data = this.getToken('token101');
-    console.log('77777777777777');
-    console.log(data);
-    const iat = data.iat;
-    const exp = data.exp;
+    console.log('timer log');
+    const data = this.getToken();
+    const tokenObj = this.decodeToken(data);
     const now = new Date().getTime();
-    const duration = exp * 1000 - now;
-    const bool = iat * 1000 <= now && now < exp * 1000;
-    if (bool) {
-      this.tokenTimer = setTimeout(() => {
+    const duration = tokenObj.exp * 1000 - now;
+    const isAlive = !tokenObj.isExp;
+    if (isAlive) {
+      this.tokenTimer = setTimeout( () => {
         this.logout();
       }, duration);
     } else {
@@ -224,34 +205,41 @@ export class UserService {
     }
   }
 
-  private storeToken(tokenName: string, data: JSON) {
-    localStorage.setItem(tokenName, JSON.stringify(data));
+  private storeToken(data: any) {
+    localStorage.setItem('token101', data);
   }
 
-  public getToken(tokenName: string) {
-    if (tokenName === 'token101') {
-      const localStorageServerTokenData = localStorage.getItem(tokenName);
-      if (localStorageServerTokenData) {
-        return JSON.parse(localStorageServerTokenData);
-      } else {
-        return null;
-      }
+  public getToken() {
+    const localStorageServerTokenData = localStorage.getItem('token101');
+    if (localStorageServerTokenData) {
+      return localStorageServerTokenData;
+    } else {
+      return null;
     }
-    if (tokenName === 'token202') {
-      const localStorageSocialTokenData = localStorage.getItem(tokenName);
-      console.log(localStorageSocialTokenData);
-      if (localStorageSocialTokenData) {
-        return JSON.parse(localStorageSocialTokenData);
-      } else {
-        return null;
-      }
-    }
-    return null;
   }
 
   private clearAuthData() {
     localStorage.removeItem('token101');
-    localStorage.removeItem('token202');
   }
 
+  private decodeToken(token: string): {id: string, iat: number, exp: number, isExp: boolean} {
+    const payload = token.split('.')[1];
+    console.log('++++++++++');
+    console.log(payload);
+    const bodyJSON = JSON.parse(atob(payload));
+    const now = new Date().getTime();
+    const bool = !(now < bodyJSON.exp * 1000 && bodyJSON.iat * 1000 < now) ;
+    const obj = {
+      id: bodyJSON.id,
+      iat: bodyJSON.iat,
+      exp: bodyJSON.exp,
+      isExp: bool
+    };
+    console.log('decode log');
+    console.log(bodyJSON , obj);
+    return obj;
+  }
+  public getUserData() {
+
+  }
 }
