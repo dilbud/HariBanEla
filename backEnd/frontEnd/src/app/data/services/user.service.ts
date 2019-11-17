@@ -251,7 +251,7 @@ export class UserService  {
   private decodeToken(
     token: string
   ): { id: string; iat: number; exp: number; isExp: boolean }  {
-    if (token === null) {
+    if (token === null || token === undefined) {
       return null;
     }
     const payload = token.split('.')[1];

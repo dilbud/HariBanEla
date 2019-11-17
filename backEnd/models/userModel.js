@@ -9,11 +9,9 @@ const userSchema = mongoose.Schema({
   password: { type: String },
   picURL: { type: String },
   userType: { type: String }, 
+  pending: {type: Boolean, default: false}
 });
 
-
 userSchema.plugin(uniqueValidator);
-
-
 
 module.exports = mongoose.model('user', userSchema);

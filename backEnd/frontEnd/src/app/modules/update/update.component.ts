@@ -8,7 +8,9 @@ import { UserData } from '../../data/models/userData';
   templateUrl: './update.component.html',
   styleUrls: ['./update.component.scss']
 })
-export class UpdateComponent implements OnInit {
+export class UpdateComponent implements OnInit{
+
+
   isLinear = false;
   formName: FormGroup;
   formAddress: FormGroup;
@@ -19,15 +21,14 @@ export class UpdateComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    // tslint:disable-next-line: no-shadowed-variable
-    public UserService: UserService
+    public userService: UserService
   ) {}
 
   ngOnInit() {
-    this.user = this.UserService.getUserData();
-    this.UserService.getAuthStatusListener()
+    this.user = this.userService.getUserData();
+    this.userService.getAuthStatusListener()
     .subscribe( (isAuth: boolean) => {
-      this.user = this.UserService.getUserData();
+      this.user = this.userService.getUserData();
     });
     this.formName = this.formBuilder.group({
       Ctrl_1: [this.user.firstName, [Validators.required]],
@@ -72,7 +73,7 @@ export class UpdateComponent implements OnInit {
         picURL,
         userType
       };
-      this.UserService.updateUser(data);
+      this.userService.updateUser(data);
     } else {
       alert('submission fail');
     }

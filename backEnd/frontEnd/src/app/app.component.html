@@ -31,17 +31,21 @@
   </div>
 </nav> -->
 
+<div class="d-flex flex-row">
 
-<div>
-  <a routerLink="update" >update</a>
-</div>
-<br>
-<div>
+  <a mat-button routerLink="update"  class="m-3 ">update</a>
+  <a mat-button routerLink="profile" class="m-3">profile</a>
+
+<div class="m-3">
     <app-login></app-login>
 </div>
-<br>
-<div>
+<div class="m-3">
   <app-report></app-report>
 </div>
-<router-outlet></router-outlet>
+
+</div>
+
+<div class="m-3">
+  <router-outlet></router-outlet>
+</div>
 

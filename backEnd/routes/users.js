@@ -6,7 +6,7 @@ const express = require('express');
 const user = require('../models/userModel');
 const update = require('../controller/updateUser');
 const create = require('../controller/createUser');
-const login = require('../controller/login');
+const login = require('../controller/loginUser');
 const verify = require('../middleware/tokenVerify');
 
 const router = express.Router();
