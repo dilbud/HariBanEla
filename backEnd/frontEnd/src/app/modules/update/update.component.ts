@@ -4,18 +4,18 @@ import { UserService } from '../../data/services/user.service';
 import { UserData } from '../../data/models/userData';
 
 @Component({
-  selector: 'app-signup',
-  templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.scss']
+  selector: 'app-update',
+  templateUrl: './update.component.html',
+  styleUrls: ['./update.component.scss']
 })
-export class SignupComponent implements OnInit {
+export class UpdateComponent implements OnInit {
   isLinear = false;
   formName: FormGroup;
   formAddress: FormGroup;
   formEmail: FormGroup;
   formPassword: FormGroup;
   formUserType: FormGroup;
-
+  private user: any = null;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -24,21 +24,26 @@ export class SignupComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.user = this.UserService.getUserData();
+    this.UserService.getAuthStatusListener()
+    .subscribe( (isAuth: boolean) => {
+      this.user = this.UserService.getUserData();
+    });
     this.formName = this.formBuilder.group({
-      Ctrl_1: ['Dilan', [Validators.required]],
-      Ctrl_2: ['Buddika', [Validators.required]]
+      Ctrl_1: [this.user.firstName, [Validators.required]],
+      Ctrl_2: [this.user.lastName, [Validators.required]]
     });
     this.formAddress = this.formBuilder.group({
-      Ctrl_1: ['address', [Validators.required]]
+      Ctrl_1: [this.user.address, [Validators.required]]
     });
     this.formEmail = this.formBuilder.group({
-      Ctrl_1: [{value: 'abuddikahgd@gmail.com' , disabled: true}, [Validators.required, Validators.email]]
+      Ctrl_1: [{value: this.user.email , disabled: true}, [Validators.required, Validators.email]]
     });
     this.formPassword = this.formBuilder.group({
       Ctrl_1: ['12345678', [Validators.required, Validators.minLength(8)]]
     });
     this.formUserType = this.formBuilder.group({
-      Ctrl_1: ['user', [Validators.required]]
+      Ctrl_1: [this.user.userType, [Validators.required]]
     });
   }
 

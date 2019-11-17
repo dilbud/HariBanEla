@@ -10,7 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { LoginComponent } from './modules/login/login.component';
-import { SignupComponent } from './modules/signup/signup.component';
+import { UpdateComponent } from './modules/update/update.component';
 import { ProfileComponent } from './modules/profile/profile.component';
 import { MainComponent } from './modules/main/main.component';
 import { DataModule } from './data/data.module';
@@ -39,7 +39,7 @@ import { AuthGuardService } from './data/services/auth-guard.service';
     MainComponent,
     FooterComponent,
     ProfileComponent,
-    SignupComponent,
+    UpdateComponent,
     LoginComponent,
     LoginDComponent,
     LogoutDComponent,
