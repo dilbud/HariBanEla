@@ -5,10 +5,13 @@ import { RouterModule, Router } from '@angular/router';
 import { CoreModule } from '@app/core.module';
 import { SharedModule } from '@shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
+
 import { TagInputModule } from 'ngx-chips';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-
+import { ToastrModule } from 'ngx-toastr';
+import { DlDateTimeDateModule, DlDateTimePickerModule } from 'angular-bootstrap-datetimepicker';
+ 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +26,9 @@ import { AnswerDetailComponent } from './modules/answers/answer-detail/answer-de
 import { CommentCreateComponent } from './modules/comments/comment-create/comment-create.component';
 import { CommentDetailComponent } from './modules/comments/comment-detail/comment-detail.component';
 import {AdminComponent} from './modules/admin/admin.component';
+import { AppointmentCreateComponent } from './modules/appointment/appointment-create/appointment-create.component';
+import { AppointmentAcceptComponent } from './modules/appointment/appointment-accept/appointment-accept.component';
+import { AppointmentPaymentComponent } from './modules/appointment/appointment-payment/appointment-payment.component';
 
 
 @NgModule({
@@ -37,7 +43,10 @@ import {AdminComponent} from './modules/admin/admin.component';
     AnswerDetailComponent,
     CommentCreateComponent,
     CommentDetailComponent,
-    AdminComponent
+    AdminComponent,
+    AppointmentCreateComponent,
+    AppointmentAcceptComponent,
+    AppointmentPaymentComponent
   ],
 
   imports: [
@@ -51,9 +60,13 @@ import {AdminComponent} from './modules/admin/admin.component';
     HttpClientModule,
     TagInputModule,
     BrowserAnimationsModule,
-    NgbModule
+    NgbModule,
+    ToastrModule.forRoot(),
+    DlDateTimeDateModule,  
+    DlDateTimePickerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

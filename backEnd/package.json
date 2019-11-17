@@ -3,11 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "lint": "eslint --ignore-path .gitignore "
   },
   "dependencies": {
-    "app-root-path": "^3.0.0",
     "@ng-bootstrap/ng-bootstrap": "^5.1.4",
+    "@sendgrid/mail": "^6.4.0",
+    "app-root-path": "^3.0.0",
     "cookie-parser": "~1.4.3",
     "cors": "^2.8.5",
     "debug": "~2.6.9",
@@ -16,7 +18,13 @@
     "jade": "~1.11.0",
     "mongoose": "^5.7.11",
     "morgan": "~1.9.0",
+    "typescript": "^3.7.2",
     "winston": "^3.2.1"
-
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.3.3",
+    "@typescript-eslint/parser": "^2.3.3",
+    "eslint": "^6.5.1",
+    "eslint-config-google": "^0.14.0"
   }
 }
