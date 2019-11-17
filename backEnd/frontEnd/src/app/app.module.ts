@@ -28,6 +28,7 @@ import { AdminComponent } from './modules/profile/admin/admin.component';
 import { ProfessionalComponent } from './modules/profile/professional/professional.component';
 import { GeneralComponent } from '@modules/profile/general/general.component';
 import { ReportDComponent } from './modules/report/report-d/report-d.component';
+import { AuthGuardService } from './data/services/auth-guard.service';
 
 
 
@@ -64,8 +65,9 @@ import { ReportDComponent } from './modules/report/report-d/report-d.component';
     HttpClientModule
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     // { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    AuthGuardService
   ],
   bootstrap: [
     AppComponent

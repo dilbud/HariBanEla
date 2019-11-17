@@ -15,8 +15,7 @@ export class SignupComponent implements OnInit {
   formEmail: FormGroup;
   formPassword: FormGroup;
   formUserType: FormGroup;
-  email = '';
-  pass = '';
+
 
   constructor(
     private formBuilder: FormBuilder,

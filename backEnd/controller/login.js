@@ -3,7 +3,7 @@ const user = require('../models/userModel');
 const key = 'df678g68g786fd88fd67g8fdfd8g7fd8g7';
 
 module.exports = (req, res) => {
-  console.log(req.body);
+  console.log('login sever -------------------');
   user
     .findOne({ email: req.body.email, password: req.body.password })
     .select('-password')

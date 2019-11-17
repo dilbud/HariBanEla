@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { LoginDComponent } from './login-d/login-d.component';
 import { UserService } from '../../data/services/user.service';
@@ -9,14 +9,28 @@ import { LogoutDComponent } from './logout-d/logout-d.component';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit, OnDestroy {
   mode = true;
   email: string;
   password: string;
   name: string;
+  isAuthenticated = false;
 
   // tslint:disable-next-line: no-shadowed-variable
   constructor(private dialog: MatDialog, private UserService: UserService) {}
+
+  ngOnInit() {
+    this.isAuthenticated = this.UserService.getIsAuth();
+    this.UserService.getAuthStatusListener()
+    .subscribe( (isAuthenticated: boolean) => {
+      this.isAuthenticated = isAuthenticated;
+      this.mode = !this.isAuthenticated;
+    });
+  }
+
+  ngOnDestroy() {
+    this.UserService.getAuthStatusListener().unsubscribe();
+  }
 
   loginDialog(): void {
     const dialogRef = this.dialog.open(LoginDComponent, {
@@ -27,37 +41,23 @@ export class LoginComponent {
     dialogRef.afterClosed().subscribe(result => {
       if (result === 'google') {
         this.UserService.google();
-        setTimeout(() => {
-          if (this.UserService.getIsAuth()) {
-            this.mode = false;
-          } else {
-            this.loginDialog();
-          }
-        }, 50000);
         return;
       }
       if (result === 'facebook') {
         this.UserService.facebook();
-        setTimeout(() => {
-          if (this.UserService.getIsAuth()) {
-            this.mode = false;
-          } else {
-            this.loginDialog();
-          }
-        }, 50000);
+        // setTimeout(() => {
+        //   if (this.UserService.getIsAuth()) {
+        //     this.mode = false;
+        //   } else {
+        //     this.loginDialog();
+        //   }
+        // }, 50000);
         return;
       }
       if (result != null) {
         this.email = result.email;
         this.password = result.password;
         this.UserService.login(this.email, this.password);
-        setTimeout(() => {
-          if (this.UserService.getIsAuth()) {
-            this.mode = false;
-          } else {
-            this.loginDialog();
-          }
-        }, 500);
         return;
       }
     });

@@ -6,13 +6,13 @@ import { UserService } from './data/services/user.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'frontEnd';
-  val = 1;
-  isNavbarCollapsed = true;
+export class AppComponent implements OnInit {
+
   constructor(private authService: UserService) {}
 
-  OnInit() {
+  ngOnInit(): void {
     this.authService.autoAuthUser();
   }
+
+
 }

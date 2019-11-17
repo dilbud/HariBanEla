@@ -3,8 +3,7 @@ const jwt = require('jsonwebtoken');
 const key = 'df678g68g786fd88fd67g8fdfd8g7fd8g7';
 
 const social = (req, res, next) => {
-  console.log('create user');
-  console.log(req.body);
+  console.log('create user ---------------------------');
   new user({
     firstName: req.body.firstName,
     lastName: req.body.lastName,
@@ -15,7 +14,6 @@ const social = (req, res, next) => {
     userType: req.body.userType
   }).save((err, user) => {
     if (err) {
-      console.log(err.errors.email.kind);
       if (err.errors.email.kind && err.errors.email.kind === 'unique') {
         next();
       } else {
@@ -41,7 +39,7 @@ const social = (req, res, next) => {
 };
 
 const socialLogin = (req, res) => {
-  console.log(req.body);
+  console.log('login user ---------------------');
   user
     .findOne({ email: req.body.email })
     .select('-password')

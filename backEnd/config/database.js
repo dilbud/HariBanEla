@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-
+// mongodb+srv://s3rv3r:FpfEYWeDsFayVTWi@mydb-iz8ru.gcp.mongodb.net/test
 
 const options = {
   useNewUrlParser: true,
@@ -9,7 +9,7 @@ const options = {
 };
 
 exports.connection = function () {
-  mongoose.connect('mongodb+srv://s3rv3r:FpfEYWeDsFayVTWi@mydb-iz8ru.gcp.mongodb.net/test', options)
+  mongoose.connect('mongodb+srv://dbAdmin:2fYaO7Ovhl2SQmWN@cluster0-ovc3p.mongodb.net/hariBnEla?retryWrites=true', options)
     .then(() => console.log('connection successful'))
     .catch((err) => console.error(err));
 

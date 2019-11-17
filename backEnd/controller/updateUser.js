@@ -5,7 +5,7 @@ const user = require('../models/userModel');
 const key = 'df678g68g786fd88fd67g8fdfd8g7fd8g7';
 
 module.exports = (req, res) => {
-  console.log(req.headers);
+  console.log('update user ----------------');
   const query = {
     firstName: req.body.query.firstName,
     lastName: req.body.query.lastName,
@@ -20,15 +20,11 @@ module.exports = (req, res) => {
   user.findByIdAndUpdate(id, query, { new: true, useFindAndModify: false, select: '-password' }, (err, user) => {
     if (err) {
       if (err.kind && err.kind === 'ObjectId') {
-        console.log(err);
         return res.status(404).json({ msg: 'please sign in' });
       } else {
-        console.log(err);
         return res.status(500).json({ msg: 'internal server error' });
       }
     } else {
-      console.log('/////////////');
-      console.log(user);
       const token = jwt.sign({ id: user._id  }, key, { expiresIn: '2h' });
         res.status(200).json({
           msg: 'ok',
