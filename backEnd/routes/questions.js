@@ -108,48 +108,49 @@ router.put('/:id/answers', async (req, res) => {
 
 // edit answer
 router.put('/:questionId/:answerId', async (req, res) => {
-    const questionId = req.params.questionId;
-    const answerId = req.params.answerId;
-    try {
-        const received = await Question.findById(questionId);
-        for (let answer of received.answers) {
-            if (answer._id == answerId) {
-                answer.body=req.body.body;
-                break;
-            }
-        };
-        const saved = await Question.findByIdAndUpdate(questionId, received, { new: false });
-        res.json(saved);
-    } catch (error) {
-        res.json({ Emessage: error });
-    }
+  const questionId = req.params.questionId;
+  const answerId = req.params.answerId;
+  try {
+    const received = await Question.findById(questionId);
+    for (const answer of received.answers) {
+      if (answer._id == answerId) {
+        answer.body=req.body.body;
+        break;
+      }
+    };
+    const saved = await Question.findByIdAndUpdate(questionId, received, {new: false});
+    res.json(saved);
+  } catch (error) {
+    res.json({Emessage: error});
+  }
 });
 
 // Vote answer
 router.get('/:questionId/:answerId/vote', async (req, res) => {
-    try {
-        const questionId = req.params.questionId;
-        const answerId = req.params.answerId;
-        const received = await Question.findById(questionId);
-        for (let answer of received.answers) {
-            if (answer._id == answerId) {
-                if (req.query.vote == 1) {
-                    answer.votes++;
-                } else {
-                    answer.votes--;
-                }
-                break;
-            }
-        };
-        const saved = await Question.findByIdAndUpdate(questionId, received, { new: false });
-        res.json(saved);
-    } catch (error) {
-        res.json({ Emessage: error });
-    }
+  try {
+    const questionId = req.params.questionId;
+    const answerId = req.params.answerId;
+    const received = await Question.findById(questionId);
+    for (const answer of received.answers) {
+      if (answer._id == answerId) {
+        if (req.query.vote == 1) {
+          answer.votes++;
+        } else {
+          answer.votes--;
+        }
+        break;
+      }
+    };
+    const saved = await Question.findByIdAndUpdate(questionId, received, {new: false});
+    res.json(saved);
+  } catch (error) {
+    res.json({Emessage: error});
+  }
 });
 
 // Add comment to question
 router.put('/:questionId/comments', async (req, res) => {
+  console.log(req);
   const comment = {
     body: req.body.body,
   };

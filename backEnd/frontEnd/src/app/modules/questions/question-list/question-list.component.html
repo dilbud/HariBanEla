@@ -1,7 +1,7 @@
 <div class="container">
-  <h1>Top Questions</h1>
 
   <ul *ngIf="questions">
+      <h3 class="m-2">All Questions</h3>
     <div *ngFor="let question of questions">
       <app-question-summary [question]="question"></app-question-summary>
     </div>

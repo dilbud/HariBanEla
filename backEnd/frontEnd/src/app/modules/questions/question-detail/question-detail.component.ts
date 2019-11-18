@@ -11,8 +11,8 @@ export class QuestionDetailComponent implements OnInit {
 
   question;
   interval;
-  isAnswerCollapsed = true;
-  isCommentCollapsed = true;
+  // isAnswerCollapsed = true;
+  // isCommentCollapsed = true;
 
   constructor(private questionService: QuestionService, private route: ActivatedRoute, private router: Router) { }
 
