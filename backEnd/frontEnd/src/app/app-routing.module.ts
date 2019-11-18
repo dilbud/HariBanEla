@@ -12,7 +12,7 @@ import { QuestionListComponent } from './modules/questions/question-list/questio
 import{AppointmentAcceptComponent} from '@modules/appointment/appointment-accept/appointment-accept.component'
 import {AppointmentPaymentComponent} from '@modules/appointment/appointment-payment/appointment-payment.component'
 import{AppointmentCreateComponent} from '@modules/appointment/appointment-create/appointment-create.component'
-
+import {ChatComponent} from '@modules/chat/chat.component';
 import { from } from 'rxjs';
 
 const routes: Routes = [
@@ -47,6 +47,11 @@ const routes: Routes = [
   {
     path: 'payment/:id',
     component: AppointmentPaymentComponent
+  },
+  {
+    path: 'chat/:id',
+    component: ChatComponent,
+    // canActivate: [AuthGuardService],
   },
   
   {

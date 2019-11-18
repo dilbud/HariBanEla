@@ -38,6 +38,7 @@ import { QuestionSummaryComponent } from './modules/questions/question-summary/q
 import { ReportDComponent } from './modules/report/report-d/report-d.component';
 import { ReportComponent } from './modules/report/report.component';
 import { UpdateComponent } from './modules/update/update.component';
+import { ChatComponent } from '@modules/chat/chat.component';
  
 
 
@@ -67,7 +68,8 @@ import { UpdateComponent } from './modules/update/update.component';
     ReportDComponent, 
     AppointmentCreateComponent,
     AppointmentAcceptComponent,
-    AppointmentPaymentComponent
+    AppointmentPaymentComponent,
+    ChatComponent
   ],
 
   imports: [
