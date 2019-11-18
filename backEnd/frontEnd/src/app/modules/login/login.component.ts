@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   loginDialog(): void {
     const dialogRef = this.dialog.open(LoginDComponent, {
-      width: '500px',
+      width: '500px',height:'35em',
       data: { email: this.email, password: this.password }
     });
 
