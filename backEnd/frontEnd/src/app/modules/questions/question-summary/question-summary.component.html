@@ -1,4 +1,4 @@
-<div *ngIf="question" class="row border border-secondary m-1 p-1">
+<div *ngIf="question" class="row shadow m-1 p-1">
   <div class="col-2 row">
     <div class="m-1 text-center">
       {{question.votes}} <br>
@@ -15,7 +15,8 @@
   </div>
   <div class="col-10">
     <div>
-      <h4 (click)="onQuestion()">{{question.title}}</h4>
+      <h4 id="title" (click)="onQuestion()">{{question.title}}</h4>
+      <p><small>{{question.body | slice:0:250}}...</small></p>
     </div>
     <div>
       <span class="badge badge-pill badge-secondary m-1" *ngFor="let tag of question.tags"> {{tag.value}} </span>

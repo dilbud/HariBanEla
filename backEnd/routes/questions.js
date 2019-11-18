@@ -150,6 +150,7 @@ router.get('/:questionId/:answerId/vote', async (req, res) => {
 
 // Add comment to question
 router.put('/:questionId/comments', async (req, res) => {
+    console.log(req);
     const comment = {
         body: req.body.body
     };

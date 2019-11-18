@@ -9,7 +9,7 @@ import { CommentService } from 'app/data/services/comment.service';
 })
 export class CommentCreateComponent implements OnInit {
 
-  commentModel = new Comment;
+  commentModel = new Comment();
   @Input() questionId;
   @Input() answerId;
 
@@ -19,7 +19,8 @@ export class CommentCreateComponent implements OnInit {
   }
 
   onComment(status) {
-    if (status = 0) {
+    if (status == 0) {
+      console.log(this.commentModel);
       this.commentService.addComment(this.commentModel, this.questionId)
         .subscribe(
           data => {
