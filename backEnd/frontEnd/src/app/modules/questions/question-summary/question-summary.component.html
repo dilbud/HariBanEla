@@ -1,16 +1,16 @@
-<div *ngIf="question" class="row shadow m-1 p-1">
+<div *ngIf="question" class="row shadow m-1 p-3">
   <div class="col-2 row">
     <div class="m-1 text-center">
       {{question.votes}} <br>
-      <small>votes</small>
+      <small>Votes</small>
     </div>
     <div class="m-1 text-center">
         {{question.answerCount}} <br>
-        <small>answers</small>
+        <small>Answers</small>
     </div>
     <div class="m-1 text-center">
         {{question.views}} <br>
-        <small>views</small>
+        <small>Views</small>
     </div>
   </div>
   <div class="col-10">
@@ -19,8 +19,8 @@
       <p><small>{{question.body | slice:0:250}}...</small></p>
     </div>
     <div>
-      <span class="badge badge-pill badge-secondary m-1" *ngFor="let tag of question.tags"> {{tag.value}} </span>
+      <span class="rounded-pill bg-dark text-white m-1" *ngFor="let tag of question.tags"><small class="p-2"> {{tag.value}} </small></span>
     </div>
-    <div class="text-right col-12"><small>Last modified x sec ago @Username rep points</small></div>
+    <div class="text-right col-12"><small><span *ngIf="owner">{{owner.firstName}} {{owner.lastName}}</span></small></div>
   </div>
 </div>

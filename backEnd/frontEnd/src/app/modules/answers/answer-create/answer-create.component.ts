@@ -9,12 +9,14 @@ import { Answer } from 'app/data/models/answer';
 })
 export class AnswerCreateComponent implements OnInit {
 
-  answerModel = new Answer;
+  answerModel = new Answer();
   @Input() questionId;
+  @Input() user;
 
   constructor(private answerService: AnswerService) { }
 
   ngOnInit() {
+    this.answerModel.userId = this.user.id;
   }
 
   onAnswer() {

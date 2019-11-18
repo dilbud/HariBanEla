@@ -9,13 +9,14 @@ router.post('/', async (req, res) => {
         title: req.body.title,
         category: req.body.category,
         body: req.body.body,
+        userId: req.body.userId,
         answerCount: 0,
         answers: [],
         tags: req.body.tags,
         views: 0,
         votes: 0,
     });
-
+    // console.log(question);
     try {
         const saved = await question.save();
         res.json(saved);
@@ -90,8 +91,10 @@ router.delete('/:id', async (req, res) => {
 
 // Add answer
 router.put('/:id/answers', async (req, res) => {
+    console.log(req);
     const answer = {
         body: req.body.body,
+        userId: req.body.userId,
         votes: 0,
     };
     try {

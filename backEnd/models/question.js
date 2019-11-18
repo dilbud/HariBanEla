@@ -6,6 +6,9 @@ const commentSchema = mongoose.Schema({
 
 const answerSchema = mongoose.Schema({
     body: { type: String },
+    userId: {
+        type: String
+    },
     votes: { type: Number },
     comments: { type: [commentSchema] }
 });
@@ -20,6 +23,10 @@ const questionSchema = mongoose.Schema({
         required: true
     },
     body: {
+        type: String,
+        required: true
+    },
+    userId: {
         type: String,
         required: true
     },

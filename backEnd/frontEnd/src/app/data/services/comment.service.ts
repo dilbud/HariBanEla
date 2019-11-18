@@ -11,6 +11,8 @@ export class CommentService {
   constructor(private http: HttpClient) { }
 
   addComment(comment, questionId: string, answerId?: string) {
+    console.log("comment");
+    console.log(comment);
     if (!answerId) {
       return this.http.put(this.url + '/' + questionId + '/comments', comment);
     }else{

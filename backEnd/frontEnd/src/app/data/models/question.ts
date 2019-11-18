@@ -1,6 +1,6 @@
 export class Question {
     _id: string;
-    // owner: User;
+    userId: string;
     title: string;
     category: string;
     body: string;

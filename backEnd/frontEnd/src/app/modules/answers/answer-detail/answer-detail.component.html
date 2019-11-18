@@ -1,36 +1,36 @@
-<div *ngIf="answer" class="shadow">
-  <div class="m-3">
-    {{answer.body}}
+<div *ngIf="answer" class="row shadow p-3">
+  <div class="col-1">
+    <a type="button" (click)="voteAnswer(1)">
+      <i class="fa fa-caret-up fa-3x"></i>
+    </a>
+    <div id="voteCount" class="ml-2">{{answer.votes}}</div>
+    <a type="button" (click)="voteAnswer(0)">
+      <i class="fa fa-caret-down fa-3x"></i>
+    </a>
   </div>
-
-  <div class="row m-0 bg-dark">
-    <div class="btn-group" role="group" aria-label="Basic example">
-      <button type="button" (click)="voteAnswer(1)" class="btn btn-dark">
-        <i class="fa fa-thumbs-up text-white"></i>
-        <span class="ml-2">{{answer.votes}}</span>
-      </button>
-      <button type="button" (click)="voteAnswer(0)" class="btn btn-dark">
-        <i class="fa fa-thumbs-down text-white"></i>
-      </button>
-      <button type="button" class="btn btn-dark" (click)="isCommentCollapsed = !isCommentCollapsed"
-        [attr.aria-expanded]="!isCommentCollapsed" aria-controls="commentCollapse">
-        <i class="fa fa-comment"></i>
-        <span class="ml-2">Comment</span>
-      </button>
-      <button type="button" (click)="onEdit()" routerLinkActive="router-link-active"  class="btn btn-dark">
-        <i class="fa fa-pen"></i>
-        <span class="ml-2">Edit</span>
-      </button>
+  <div class="col-11">
+    <div>
+      {{answer.body}}
     </div>
-    <div class="d-flex flex-row btn-group mr-3">
-      <button class="btn btn-dark" (click)="onDelete()">Delete</button>
+    <div class="row">
+      <div class="col">
+        <small>
+          <a class="actionLink mr-3" [routerLink] routerLinkActive="router-link-active" (click)="onEdit()">Edit</a>
+          <!-- <a class="actionLink" [routerLink] routerLinkActive="router-link-active" (click)="onDelete()">Delete</a> -->
+        </small>
+      </div>
+      <div *ngIf="owner" class="col-3">
+        <img class="profilePhoto" routerLink="profile" src="{{owner.picURL}}">
+        <small> {{owner.firstName}} {{owner.lastName}} </small>
+      </div>
     </div>
-  </div>
-  
-  <div id="commentCollapse" [ngbCollapse]="isCommentCollapsed">
-    <app-comment-create [questionId]="questionId" [answerId]="answer._id"></app-comment-create>
-  </div>
-  <div *ngFor="let comment of answer.comments" class="m-3">
-    <app-comment-detail [comment]="comment"></app-comment-detail>
+    <div class="ml-5">
+      <div *ngFor="let comment of answer.comments">
+        <app-comment-detail [comment]="comment"></app-comment-detail>
+      </div>
+      <div *ngIf="!mode">
+        <app-comment-create [questionId]="questionId" [answerId]="answer._id"></app-comment-create>
+      </div>
+    </div>
   </div>
 </div>

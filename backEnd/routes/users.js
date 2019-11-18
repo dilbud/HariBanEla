@@ -8,11 +8,14 @@ const update = require('../controller/updateUser');
 const create = require('../controller/createUser');
 const login = require('../controller/loginUser');
 const verify = require('../middleware/tokenVerify');
+const fechUser = require('../controller/fetchUser');
+
 
 const router = express.Router();
 
 router.post('/update', verify, update);
 router.post('/create', create.social , create.login);
 router.post('/login', login);
+router.post('/getUserById', fechUser);
 
 module.exports = router;

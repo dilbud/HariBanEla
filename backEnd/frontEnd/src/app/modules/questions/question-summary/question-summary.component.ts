@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { Question } from 'app/data/models/question';
+import { UserService } from 'app/data/services/user.service';
 
 @Component({
   selector: 'app-question-summary',
@@ -10,11 +11,21 @@ import { Question } from 'app/data/models/question';
 export class QuestionSummaryComponent implements OnInit {
 
   @Input() question:Question;
+  owner;
 
-  constructor(private router: Router) { }
+  constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit() {
     console.log(this.question);
+    this.getOwner();
+  }
+
+  getOwner(){
+    this.userService.getUserDataById(this.question.userId).subscribe(res => {
+      this.owner = res.serverData;
+    }, err => {
+      console.log(err);
+    });
   }
 
   onQuestion(){

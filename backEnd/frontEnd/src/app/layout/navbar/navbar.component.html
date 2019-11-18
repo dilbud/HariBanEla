@@ -7,7 +7,7 @@
     <input class="form-control mr-sm-2" id="searchInput" type="search" placeholder="Search" aria-label="Search">
     <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
   </form>
-  <ul class="navbar-nav flex-row d-none d-md-flex col-2">
+  <ul class="navbar-nav flex-row d-none d-md-flex col-3">
 
     <!-- <li ngbDropdown class="nav-item">
         <a class="nav-link" id="categoryDropdown" ngbDropdownToggle>Categories</a>
@@ -21,10 +21,13 @@
     <li class="nav-item">
       <a class="nav-link" routerLink="/ask">Ask Question</a>
     </li>
-
+    <li>
+      <img *ngIf="isAuthenticated" class="profilePhoto mt-1 mr-2" routerLink="profile" src="{{user.picURL}}">
+    </li>
+    <li>
+      <app-login></app-login>
+    </li>
   </ul>
 
-  <img *ngIf="isAuthenticated" class="profilePhoto" routerLink="profile" src="{{user.picURL}}">
   <!-- <div  mat-card-avatar [ngStyle]="{'background-image': 'url(' + user.picURL + ')'}" ></div> -->
-  <app-login></app-login>
 </nav>

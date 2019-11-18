@@ -13,7 +13,7 @@ export class AuthInterceptor implements HttpInterceptor {
   constructor(private authService: UserService) {}
 
   intercept(req: HttpRequest<any>, next: HttpHandler) {
-    this.authService.autoAuthUser();
+    // this.authService.autoAuthUser();
     const authToken = this.authService.getToken();
 
     console.log('interceptor log');

@@ -11,6 +11,7 @@ export class QuestionService {
   constructor(private http: HttpClient) { }
 
   questionCreate(question: Question){
+    // console.log(question);
     return this.http.post(this.url, question);
   }
 

@@ -1,25 +1,15 @@
 <div *ngIf="question" class="container">
   <div class="row">
-    <div class="row ">
-      <nav aria-label="breadcrumb">
-        <ol class="list-group list-group-horizontal">
-          <li class="list-group-item"><a href="/">Questions</a></li>
-          <li class="list-group-item" aria-current="page">{{question.category}}</li>
-        </ol>
-      </nav>
-      <span class="rounded-pill bg-dark text-white m-1" *ngFor="let tag of question.tags">
-        <span class="p-2">
-          {{tag.value}}
-        </span>
-      </span>
+    <div class="row mb-2">
+      <a routerLink="/"> Questions </a> &nbsp; / {{question.category}}
     </div>
-    <div class="shadow row">
+    <div class="shadow row p-3">
       <div class="col-1">
-        <a type="button" (click)="voteQuestion(1)" class="">
+        <a type="button" (click)="voteQuestion(1)">
           <i class="fa fa-caret-up fa-3x"></i>
         </a>
-        <div id="voteCount" class="text-center font-size-5rem">{{question.votes}}</div>
-        <a type="button" (click)="voteQuestion(0)" class="">
+        <div id="voteCount" class="ml-2">{{question.votes}}</div>
+        <a type="button" (click)="voteQuestion(0)">
           <i class="fa fa-caret-down fa-3x"></i>
         </a>
       </div>
@@ -30,32 +20,51 @@
             <small>
               <span class="mr-3">Asked time</span>
               <span class="mr-3">{{question.views}} Views</span>
-              <a class="actionLink mr-3" [routerLink] routerLinkActive="router-link-active"  (click)="onEdit()">Edit</a>
-              <a class="actionLink" [routerLink] routerLinkActive="router-link-active"  (click)="onDelete()">Delete</a>
+              <a class="actionLink mr-3" [routerLink] routerLinkActive="router-link-active" (click)="onEdit()">Edit</a>
+              <a class="actionLink" [routerLink] routerLinkActive="router-link-active" (click)="onDelete()">Delete</a>
             </small>
-          </div>  
+          </div>
           <p>{{question.body}}</p>
+          <div class="row">
+            <div class="col">
+              <span class="rounded-pill bg-dark text-white m-1" *ngFor="let tag of question.tags">
+                <span class="p-2">
+                  <small>{{tag.value}}</small>
+                </span>
+              </span>
+            </div>
+            <div *ngIf="owner" class="col-3">
+              <img class="profilePhoto" routerLink="profile" src="{{owner.picURL}}">
+              <small> {{owner.firstName}} {{owner.lastName}} </small>
+            </div>
+          </div>
         </div>
 
-        <div *ngFor="let comment of question.comments" class="m-3">
-          <app-comment-detail [comment]="comment"></app-comment-detail>
+        <div class="ml-5">
+          <div *ngFor="let comment of question.comments" class="m-3">
+            <app-comment-detail [comment]="comment"></app-comment-detail>
+          </div>
+          <div *ngIf="!mode">
+            <app-comment-create [questionId]="question._id"></app-comment-create>
+          </div>
         </div>
-        <app-comment-create [questionId]="question._id"></app-comment-create>
-        
+
       </div>
 
     </div>
   </div>
 
-  <h4 class="m-3">
+  <h4 class="mt-3">
     <span>{{question.answerCount}}</span>
     <span *ngIf="question.answerCount==1"> Answer </span>
     <span *ngIf="question.answerCount!=1"> Answers </span>
   </h4>
   <div *ngIf="question.answerCount>0">
-    <span *ngFor="let answer of question.answers" class="m-3">
-      <app-answer-detail [questionId]="question._id" [answer]="answer"></app-answer-detail>
+    <span *ngFor="let answer of question.answers">
+      <app-answer-detail [questionId]="question._id" [answer]="answer" [mode]="mode"></app-answer-detail>
     </span>
   </div>
-  <app-answer-create [questionId]="question._id"></app-answer-create>
+  <div *ngIf="!mode">
+    <app-answer-create [questionId]="question._id" [user]="user"></app-answer-create>
+  </div>
 </div>

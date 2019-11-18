@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Question } from 'app/data/models/question';
 import { QuestionService } from 'app/data/services/question.service';
 import { CategoryService } from 'app/data/services/category.service';
+import { UserService } from 'app/data/services/user.service';
 
 @Component({
   selector: 'app-question-create',
@@ -15,8 +16,10 @@ export class QuestionCreateComponent implements OnInit {
   categories: any[]
   questionModel = new Question();
   id: string;
+  user;
+  userId: string;
 
-  constructor(private categoryService: CategoryService, private questionService: QuestionService, private route: ActivatedRoute, private router: Router) { }
+  constructor(private categoryService: CategoryService, private questionService: QuestionService, private userService: UserService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     this.id = this.route.snapshot.params.id;
@@ -27,11 +30,14 @@ export class QuestionCreateComponent implements OnInit {
     this.categoryService.getAllCategories().subscribe(res => {
       this.categories = res;
     });
+
+    this.user = this.userService.getUserData();
+    this.questionModel.userId=this.user.id;
   }
 
   getQuestion() {
     this.questionService.getQuestion(this.id).subscribe(res => {
-      console.log(res);
+      // console.log(res);
       this.question = res;
       this.questionModel._id = this.question._id;
       this.questionModel.title = this.question.title;
@@ -48,8 +54,8 @@ export class QuestionCreateComponent implements OnInit {
       this.questionService.questionCreate(this.questionModel)
         .subscribe(
           data => {
-            console.log("Success", data);
-            this.router.navigate([`/questions/${this.id}`]);
+            console.log("Success created", data);
+            this.router.navigate([`/questions`]);
           },
           error => console.log("Error", error)
         );

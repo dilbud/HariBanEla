@@ -1,6 +1,6 @@
 <div class="container">
-  <h1 *ngIf="!id">Ask a Question</h1>
-  <h1 *ngIf="id">Edit Question</h1>
+  <h4 *ngIf="!id">Ask a Question</h4>
+  <h4 *ngIf="id">Edit Question</h4>
   <form #askForm="ngForm" (ngSubmit)="onQuestion(); askForm.reset()">
     <div class="form-group">
       <label for="title">Title</label>
@@ -22,10 +22,9 @@
     <div class="form-group">
       <label for="tags">Tags</label>
       <tag-input [(ngModel)]="questionModel.tags" [ngModelOptions]="{standalone: true}" [onlyFromAutocomplete]="true">
-        <tag-input-dropdown [showDropdownIfEmpty]="true" [autocompleteItems]="['iTem1', 'item2', 'item3']" name="tags" id="tags"></tag-input-dropdown>
+        <tag-input-dropdown [showDropdownIfEmpty]="true" [autocompleteItems]="['Javascript','Typescript', 'Angular','NodeJs','MongoDb']" name="tags" id="tags"></tag-input-dropdown>
       </tag-input>
     </div>
-
     <button *ngIf="!id" type="submit" class="btn btn-primary">Post Question</button>
     <button *ngIf="id" type="submit" class="btn btn-primary">Save Question</button>
   </form>

@@ -11,6 +11,7 @@ export class AnswerService {
   constructor(private http: HttpClient) { }
 
   addAnswer(answer, id: string) {
+    console.log(answer);
     return this.http.put(this.url + '/' + id + '/answers', answer);
   }
 

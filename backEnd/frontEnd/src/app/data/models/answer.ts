@@ -1,7 +1,6 @@
 export class Answer {
     _id: string;
-    // owner: User;
-    // parent: Question;
+    userId: string;
     body: string;
     votes: number;
     // isCorrect: boolean;

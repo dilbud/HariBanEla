@@ -32,6 +32,15 @@ export class UserService  {
     picURL: String,
     userType: String
   };
+  private otherUser = {
+    id: String,
+    firstName: String,
+    lastName: String,
+    address: String,
+    email: String,
+    picURL: String,
+    userType: String
+  };
 
   constructor(
     private authService: AuthService,
@@ -50,6 +59,31 @@ export class UserService  {
   }
   public getUserData(): any {
     return this.user;
+  }
+  public getUserDataById(userId: string): any {
+    return this.http.post('http://localhost:3000/api/user/getUserById',{ id: userId});
+
+    // let res: any;
+    // this.http
+    //   .post('http://localhost:3000/api/user/getUserById', {
+    //     id: userId,
+    //   })
+    //   .subscribe(
+    //     response => {
+    //       res = response;
+    //       console.log(res.serverData,"-----------------")
+    //       this.otherUser = res.serverData;
+    //     },
+    //     error => {
+    //       this.AlertService.setAlert('Something wrong !');
+    //       this.AlertService.setAlert(error.error.msg);
+    //       this.AlertService.showAlert();
+    //     },
+    //     () => {
+          
+    //     }
+    //   );
+    //   return this.otherUser;
   }
 
   public getAuthStatusListener(): any {
@@ -131,7 +165,7 @@ export class UserService  {
                 );
               }
               console.log('+++++++++++++');
-              console.log(this.user);
+              // console.log(this.user);
               this.AlertService.setAlert('Hi ' + data.name + " you're welcome");
               this.AlertService.showAlert();
             }

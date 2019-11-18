@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { QuestionService } from 'app/data/services/question.service';
+import { UserService } from 'app/data/services/user.service';
+import { ServerData } from 'app/data/models/serverData';
 
 @Component({
   selector: 'app-question-detail',
@@ -11,22 +13,43 @@ export class QuestionDetailComponent implements OnInit {
 
   question;
   interval;
-  // isAnswerCollapsed = true;
-  // isCommentCollapsed = true;
+  owner;
+  user;
+  mode = true;
+  isAuthenticated = false;
 
-  constructor(private questionService: QuestionService, private route: ActivatedRoute, private router: Router) { }
+  constructor(private questionService: QuestionService, private userService: UserService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     this.getQuestion();
     this.interval = setInterval(() => {
       this.refreshQuestion();
     }, 600000);
+
+    this.user = this.userService.getUserData();
+
+    this.isAuthenticated = this.userService.getIsAuth();
+    this.userService.getAuthStatusListener()
+    .subscribe( (isAuthenticated: boolean) => {
+      this.isAuthenticated = isAuthenticated;
+      this.mode = !this.isAuthenticated;
+    });
+}
+
+getOwner(){
+  this.userService.getUserDataById(this.question.userId).subscribe(res => {
+    this.owner = res.serverData;
+  }, err => {
+    console.log(err);
+  });
 }
 
 getQuestion(){
   let id = this.route.snapshot.params.id;
   this.questionService.getQuestion(id).subscribe(res => {
     this.question = res;
+    this.getOwner();
+    console.log(this.question);
   }, err => {
     console.log(err);
   });
