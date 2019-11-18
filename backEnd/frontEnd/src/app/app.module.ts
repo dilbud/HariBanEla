@@ -24,6 +24,7 @@ import { ErrorInterceptor } from './core/error-interceptor';
 import { ReportComponent } from './modules/report/report.component';
 import { ReportDComponent } from './modules/report/report-d/report-d.component';
 import { AuthGuardService } from './data/services/auth-guard.service';
+import { ProfessionalListComponent } from './modules/professional-list/professional-list.component';
 
 
 
@@ -38,7 +39,8 @@ import { AuthGuardService } from './data/services/auth-guard.service';
     LoginDComponent,
     LogoutDComponent,
     ReportComponent,
-    ReportDComponent
+    ReportDComponent,
+    ProfessionalListComponent
   ],
   imports: [
     BrowserModule,

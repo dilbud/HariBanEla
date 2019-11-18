@@ -33,6 +33,8 @@ export class UserService  {
     userType: String
   };
 
+  private proProfileArry: ServerData [] = null;
+
   constructor(
     private authService: AuthService,
     // tslint:disable-next-line: no-shadowed-variable
@@ -55,6 +57,18 @@ export class UserService  {
   public getAuthStatusListener(): any {
     return this.authStatusListener.asObservable();
   }
+
+  public getProList() {
+
+    return this.http
+    .get('http://localhost:3000/api/user/proList');
+  }
+
+  public getProProfile(proId: string) {
+    return this.http.get('http://localhost:3000/api/user/proProfile', { params: {id: proId}});
+  }
+
+
   // -------------------------------------------------------- update begin
   public updateUser(data: UserData) {
     let res: any;
