@@ -134,7 +134,7 @@ export class UserService  {
               }
               console.log('+++++++++++++');
               console.log(this.user);
-              this.AlertService.setAlert('Hi ' + data.name + " you're welcome");
+              this.AlertService.setAlert('Hi ' + data.name);
               this.AlertService.showAlert();
             }
           );
@@ -147,7 +147,62 @@ export class UserService  {
   }
 
   public facebook() {
-    // this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
+    this.authService
+    .signIn(FacebookLoginProvider.PROVIDER_ID)
+    .then(() => {
+      const data = this.fetchSocialData();
+      console.log('9----------------------------------------------------9');
+      console.log(data);
+      this.serverData = {
+        id: 'null',
+        firstName: data.firstName,
+        lastName: data.lastName,
+        address: 'null',
+        email: data.email,
+        picURL: data.photoUrl,
+        userType: 'gen'
+      };
+      let res: any;
+      this.http
+        .post('http://localhost:3000/api/user/create', this.serverData)
+        .subscribe(
+          response => {
+            res = response;
+          },
+          error => {
+            this.AlertService.setAlert('Something wrong !');
+            this.AlertService.setAlert(error.error.msg);
+            this.AlertService.showAlert();
+          },
+          () => {
+            this.user = res.serverData;
+            this.token = res.token;
+            this.storeToken(this.token);
+            this.isAuthenticated = true;
+            this.authStatusListener.next(true);
+            this.setAuthTimer();
+            if (res.msg === 'created') {
+              this.AlertService.setAlert(
+                'Hi ' + data.name + ' your account is created'
+              );
+            }
+            if (res.msg === 'exist') {
+              this.AlertService.setAlert(
+                'Hi ' + data.name + ' your are sign in'
+              );
+            }
+            console.log('+++++++++++++');
+            console.log(this.user);
+            this.AlertService.setAlert('Hi ' + data.name);
+            this.AlertService.showAlert();
+          }
+        );
+    })
+    .catch(error => {
+      console.log(error);
+      this.AlertService.setAlert('Try later ...');
+      this.AlertService.showAlert();
+    });
   }
 
   public login(email: string, password: string) {
@@ -173,9 +228,7 @@ export class UserService  {
           'Hi ' +
             this.user.firstName +
             ' ' +
-            this.user.lastName +
-            ' ' +
-            "you're welcome"
+            this.user.lastName
         );
         console.log('+++++++++++++');
         console.log(this.user);

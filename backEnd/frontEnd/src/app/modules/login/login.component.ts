@@ -15,15 +15,18 @@ export class LoginComponent implements OnInit, OnDestroy {
   password: string;
   name: string;
   isAuthenticated = false;
+  user = null;
 
   // tslint:disable-next-line: no-shadowed-variable
   constructor(private dialog: MatDialog, private UserService: UserService) {}
 
   ngOnInit() {
     this.isAuthenticated = this.UserService.getIsAuth();
+    this.user = this.UserService.getUserData();
     this.UserService.getAuthStatusListener()
     .subscribe( (isAuthenticated: boolean) => {
       this.isAuthenticated = isAuthenticated;
+      this.user = this.UserService.getUserData();
       this.mode = !this.isAuthenticated;
     });
     this.mode = !this.isAuthenticated;
@@ -65,15 +68,17 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   logoutDialog(): void {
-    const dialogRef = this.dialog.open(LogoutDComponent, {
-      width: '500px',
-      data: { name: this.name = 'Dilan Buddika' }
-    });
-    dialogRef.afterClosed().subscribe(result => {
-      if (result != null && result === 'yes') {
-        this.UserService.logout();
-        this.mode = !this.UserService.getIsAuth(); // MUST CALL RXJX
-      }
-    });
+    this.UserService.logout();
+    // const userName  = this.user.firstName + ' ' + this.user.lastName;
+    // const dialogRef = this.dialog.open(LogoutDComponent, {
+    //   width: '500px',
+    //   data: { name: userName }
+    // });
+    // dialogRef.afterClosed().subscribe(result => {
+    //   if (result != null && result === 'yes') {
+    //     this.UserService.logout();
+    //     this.mode = !this.UserService.getIsAuth(); // MUST CALL RXJX
+    //   }
+    // });
   }
 }

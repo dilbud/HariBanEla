@@ -7,11 +7,11 @@
       <span class="vl m-1"></span>
       sign in with google
     </button>
-    <!-- <button mat-raised-button class="m-1 mb-3 btn-block" id="facebook" (click)="facebook()">
+    <button mat-raised-button class="m-1 mb-3 btn-block" id="facebook" (click)="facebook()">
       <i class="icon ion-logo-facebook m-1"></i>
       <span class="vl m-1"></span>
       sign in with facebook
-    </button> -->
+    </button>
 
     <form [formGroup]="login">
       <mat-form-field>
@@ -22,9 +22,10 @@
       </mat-form-field>
     </form>
   </div>
-  <div mat-dialog-actions class="m-auto float-none border rounded shadow-sm"
-    [ngClass]="{'border-danger': !login.valid ,'border-success': login.valid}">
+  <div mat-dialog-actions class="m-auto float-none"
+
+    >
     <button mat-raised-button (click)="onNoClick()" class="m-auto">No Thanks</button>
-    <button mat-raised-button (click)="send()" class="m-auto" [disabled]="!login.valid">LOGIN</button>
+    <button mat-raised-button (click)="send()" class="m-auto" [disabled]="!login.valid">Log in</button>
   </div>
 </div>
