@@ -26,5 +26,5 @@
   </mat-card>
   
 </div>
-<div *ngIf="user.userType === 'pro'"> Booking</div>
+<div *ngIf="user.userType === 'pro'" (click)="makeAppointment()"> Booking</div>
 
