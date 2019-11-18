@@ -7,7 +7,9 @@ import { RouterModule } from '@angular/router';
 import { CoreModule } from '@app/core.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from '@shared/shared.module';
+import { DlDateTimeDateModule, DlDateTimePickerModule } from 'angular-bootstrap-datetimepicker';
 import { TagInputModule } from 'ngx-chips';
+import { ToastrModule } from 'ngx-toastr';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthInterceptor } from './core/auth-interceptor';
@@ -19,6 +21,9 @@ import { AdminComponent } from './modules/admin/admin.component';
 import { AnswerCreateComponent } from './modules/answers/answer-create/answer-create.component';
 import { AnswerDetailComponent } from './modules/answers/answer-detail/answer-detail.component';
 import { AnswerUpdateComponent } from './modules/answers/answer-update/answer-update.component';
+import { AppointmentAcceptComponent } from './modules/appointment/appointment-accept/appointment-accept.component';
+import { AppointmentCreateComponent } from './modules/appointment/appointment-create/appointment-create.component';
+import { AppointmentPaymentComponent } from './modules/appointment/appointment-payment/appointment-payment.component';
 import { CategoryCreateComponent } from './modules/category/category-create/category-create.component';
 import { CommentCreateComponent } from './modules/comments/comment-create/comment-create.component';
 import { CommentDetailComponent } from './modules/comments/comment-detail/comment-detail.component';
@@ -33,6 +38,7 @@ import { QuestionSummaryComponent } from './modules/questions/question-summary/q
 import { ReportDComponent } from './modules/report/report-d/report-d.component';
 import { ReportComponent } from './modules/report/report.component';
 import { UpdateComponent } from './modules/update/update.component';
+ 
 
 
 
@@ -58,7 +64,10 @@ import { UpdateComponent } from './modules/update/update.component';
     LoginDComponent,
     LogoutDComponent,
     ReportComponent,
-    ReportDComponent
+    ReportDComponent, 
+    AppointmentCreateComponent,
+    AppointmentAcceptComponent,
+    AppointmentPaymentComponent
   ],
 
   imports: [
@@ -79,7 +88,10 @@ import { UpdateComponent } from './modules/update/update.component';
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ToastrModule.forRoot(),
+    DlDateTimeDateModule,  
+    DlDateTimePickerModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
@@ -93,6 +105,8 @@ import { UpdateComponent } from './modules/update/update.component';
     LoginDComponent,
     LogoutDComponent,
     ReportDComponent,
+   
   ],
 })
+
 export class AppModule { }

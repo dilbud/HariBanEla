@@ -1,8 +1,7 @@
-import { CategoryService } from './../../../data/services/category.service';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FormGroup, FormBuilder, Validators, NgForm, FormArray
-} from '@angular/forms';
+import { CategoryService } from './../../../data/services/category.service';
 
 @Component({
   selector: 'app-category-create',
@@ -12,22 +11,26 @@ import { FormGroup, FormBuilder, Validators, NgForm, FormArray
 export class CategoryCreateComponent implements OnInit {
 
   public method: String = 'Update';
-  public categoryId: any;  
-  public categoryForm: FormGroup; 
-  public name:string;
-
-   constructor(
-    private redirect: Router,
+  public categoryId: any;
+  public categoryForm: FormGroup;
+  public name: string;
+  /**
+   * @param  {Router} privateredirect
+   * @param  {ActivatedRoute} privateroute
+   * @param  {CategoryService} privatecategoryService
+   * @param  {FormBuilder} privateformBuilder
+   */
+  constructor(private redirect: Router,
     private route: ActivatedRoute,
     private categoryService: CategoryService,
     private formBuilder: FormBuilder
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.categoryForm = this.formBuilder.group({
-      name: [null, Validators.required]     
+      name: [null, Validators.required]
     });
-   
+
     this.categoryId = this.route.snapshot.params.id;
     if (this.categoryId == 'new') {
       this.method = 'Add';
@@ -35,7 +38,7 @@ export class CategoryCreateComponent implements OnInit {
     } else {
       this.categoryService.getCategoryById(this.categoryId).subscribe(
         res => {
-          this.categoryForm.patchValue({ name: res.name });          
+          this.categoryForm.patchValue({ name: res.name });
         },
         err => {
           console.log(err);
@@ -43,7 +46,10 @@ export class CategoryCreateComponent implements OnInit {
       );
     }
   }
-  
+
+  /**
+   * @param  {NgForm} form
+   */
   addCategory(form: NgForm) {
     console.log(form, 'form');
     if (this.categoryId) {

@@ -6,13 +6,15 @@
     "start": "node ./bin/www",
     "test": "nodemon ./bin/www",
     "build": "cd ./frontEnd && ng build --prod && cd .. && npm run test",
-    "ng": "cd ./frontEnd && ng serve"
+    "ng": "cd ./frontEnd && ng serve",
+    "lint": "eslint --ignore-path .gitignore "
   },
   "dependencies": {
-    "app-root-path": "^3.0.0",
     "@ng-bootstrap/ng-bootstrap": "^5.1.4",
     "bcrypt": "^3.0.6",
     "body-parser": "^1.19.0",
+    "@sendgrid/mail": "^6.4.0",
+    "app-root-path": "^3.0.0",
     "cookie-parser": "~1.4.3",
     "cors": "^2.8.5",
     "debug": "~2.6.9",
@@ -31,6 +33,12 @@
     "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
-    "nodemon": "^1.19.4"
+    "nodemon": "^1.19.4",
+    "typescript": "^3.7.2",
+    "winston": "^3.2.1",
+    "@typescript-eslint/eslint-plugin": "^2.3.3",
+    "@typescript-eslint/parser": "^2.3.3",
+    "eslint": "^6.5.1",
+    "eslint-config-google": "^0.14.0"
   }
 }

@@ -1,0 +1,25 @@
+<div class="container">
+  <div style="margin-bottom: 5em;margin-top: 5em;">
+    <h2>Appointment Confirmation</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-3 col-sm-12" style="margin: auto;"> <img class="profilePhoto" src="{{userPhoto}}"></div>
+    <div class="col-md-9 col-sm-12">
+      <div class="col-md-12 col-sm-12">
+        <h4>{{userName}}</h4>
+      </div>
+      <div class="col-md-12 col-sm-12"><span class="label">Subject: </span>{{subject}}</div>
+      <div class="col-md-12 col-sm-12"><span class="label">Description: </span>{{description}}</div>
+      <div class="col-md-12 col-sm-12"><span class="label">Start time of the appoinment: </span>{{startTime |date :'hh mm aaa EEE dd MMM yyy'}}</div>
+      <div class="col-md-12 col-sm-12"><span class="label">Duration: </span>{{duration}}</div>
+      <div class="col-md-12 col-sm-12"><span class="label">End time of the appointment: </span>{{endTime  |date :'hh mm aaa EEE dd MMM yyy'}}</div>
+    
+    </div>
+
+    <div class="row" style="margin: auto;margin-top: 3em;">
+      <div (click)="accepted()" class="acceptButton">Accept</div>
+      <div (click)="rejected()" class="rejectButton">Reject</div>
+    </div>
+
+  </div>
+</div>
