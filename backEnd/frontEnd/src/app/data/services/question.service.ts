@@ -35,7 +35,7 @@ export class QuestionService {
     
   }
 
-  editQuestion(question: Question){
+  questionUpdate(question: Question){
     return this.http.put(this.url+'/'+question._id,question);
   }
 

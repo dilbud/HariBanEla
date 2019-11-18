@@ -6,6 +6,7 @@ import { QuestionListComponent } from './modules/questions/question-list/questio
 import { QuestionDetailComponent } from './modules/questions/question-detail/question-detail.component';
 import {AdminComponent} from '@modules/admin/admin.component'
 import { from } from 'rxjs';
+import { AnswerUpdateComponent } from '@modules/answers/answer-update/answer-update.component';
 
 const routes: Routes = [
   {
@@ -20,7 +21,14 @@ const routes: Routes = [
     path: 'questions/:id',
     component: QuestionDetailComponent
   },
-  
+  {
+    path: 'questions/:id/edit',
+    component: QuestionCreateComponent
+  },
+  {
+    path: 'questions/:questionId/:answerId/edit',
+    component: AnswerUpdateComponent
+  },
   {
     path: 'admin',
     component: AdminComponent,
@@ -33,12 +41,7 @@ const routes: Routes = [
 {
   path: '**',
   component: QuestionListComponent
-},
-  // {
-  //   path: 'questions/:id/edit',
-  //   component: EditQuestionComponent
-  // }
-
+}
 ];
 
 @NgModule({

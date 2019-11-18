@@ -25,6 +25,7 @@ import { CommentDetailComponent } from './modules/comments/comment-detail/commen
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import {AdminComponent} from './modules/admin/admin.component';
+import { AnswerUpdateComponent } from './modules/answers/answer-update/answer-update.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import {AdminComponent} from './modules/admin/admin.component';
     CommentDetailComponent,
     NavbarComponent,
     FooterComponent,
-    AdminComponent
+    AdminComponent,
+    AnswerUpdateComponent
   ],
 
   imports: [

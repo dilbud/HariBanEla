@@ -10,15 +10,19 @@ export class AnswerService {
 
   constructor(private http: HttpClient) { }
 
-  addAnswer(answer, id: string){
-    return this.http.put(this.url+'/'+id+'/answers', answer);
+  addAnswer(answer, id: string) {
+    return this.http.put(this.url + '/' + id + '/answers', answer);
   }
 
-  voteAnswer(questionId,answerId,status){
-    if(status==1){
-      return this.http.get(this.url+'/'+questionId+'/'+answerId+'/vote?vote=1');
-    }else{
-      return this.http.get(this.url+'/'+questionId+'/'+answerId+'/vote?vote=0');
+  editAnswer(answer, questionId, answerId) {
+    return this.http.put(this.url + '/' + questionId + '/' + answerId, answer);
+  }
+
+  voteAnswer(questionId, answerId, status) {
+    if (status == 1) {
+      return this.http.get(this.url + '/' + questionId + '/' + answerId + '/vote?vote=1');
+    } else {
+      return this.http.get(this.url + '/' + questionId + '/' + answerId + '/vote?vote=0');
     }
   }
 

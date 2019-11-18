@@ -24,7 +24,7 @@ router.post('/', async (req, res) => {
     }
 });
 
-// View questions
+// get questions
 router.get('/', async (req, res) => {
     try {
         const received = await Question.find();
@@ -34,7 +34,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-// View question
+// get question
 router.get('/:id', async (req, res) => {
     try {
         const id = req.params.id;
@@ -106,6 +106,25 @@ router.put('/:id/answers', async (req, res) => {
     }
 });
 
+// edit answer
+router.put('/:questionId/:answerId', async (req, res) => {
+    const questionId = req.params.questionId;
+    const answerId = req.params.answerId;
+    try {
+        const received = await Question.findById(questionId);
+        for (let answer of received.answers) {
+            if (answer._id == answerId) {
+                answer.body=req.body.body;
+                break;
+            }
+        };
+        const saved = await Question.findByIdAndUpdate(questionId, received, { new: false });
+        res.json(saved);
+    } catch (error) {
+        res.json({ Emessage: error });
+    }
+});
+
 // Vote answer
 router.get('/:questionId/:answerId/vote', async (req, res) => {
     try {
@@ -122,7 +141,7 @@ router.get('/:questionId/:answerId/vote', async (req, res) => {
                 break;
             }
         };
-        const saved = await Question.findByIdAndUpdate(questionId, received, { new: true });
+        const saved = await Question.findByIdAndUpdate(questionId, received, { new: false });
         res.json(saved);
     } catch (error) {
         res.json({ Emessage: error });

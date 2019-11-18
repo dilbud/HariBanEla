@@ -34,20 +34,15 @@
           <i class="fa fa-comment"></i>
           <span class="ml-2">Comment</span>
         </button>
-
-        <button type="button" class="btn btn-dark">
-          <i class="fa fa-comment"></i>
-          <span class="ml-2">Comment</span>
-        </button>
         <button type="button" class="btn btn-dark">
           <i class="fa fa-eye"></i>
           <span class="ml-2">{{question.views}} Views</span>
         </button>
-        <button type="button" class="btn btn-dark">
+        <button type="button" class="btn btn-dark" (click)="onEdit()">
           <i class="fa fa-pen"></i>
           <span class="ml-2">Edit</span>
         </button>
-        <button class="btn btn-dark" (click)="onDelete()">
+        <button type="button" class="btn btn-dark" (click)="onDelete()">
           Delete
         </button>
       </div>

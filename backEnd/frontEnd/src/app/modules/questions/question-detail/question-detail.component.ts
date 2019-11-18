@@ -9,7 +9,7 @@ import { QuestionService } from 'app/data/services/question.service';
 })
 export class QuestionDetailComponent implements OnInit {
 
-  question: object;
+  question;
   interval;
   isAnswerCollapsed = true;
   isCommentCollapsed = true;
@@ -20,7 +20,7 @@ export class QuestionDetailComponent implements OnInit {
     this.getQuestion();
     this.interval = setInterval(() => {
       this.refreshQuestion();
-    }, 60000);
+    }, 600000);
 }
 
 getQuestion(){
@@ -45,6 +45,7 @@ voteQuestion(status){
   let id = this.route.snapshot.params.id;
   this.questionService.voteQuestion(id,status).subscribe(res => {
     console.log(res);
+    this.refreshQuestion();
   }, err => {
     console.log(err);
   });
