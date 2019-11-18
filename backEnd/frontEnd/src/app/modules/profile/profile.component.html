@@ -1,6 +1,17 @@
 <div class="container">
   <mat-card class="card">
-    <mat-card-header>
+    <div class="d-flex flex-row">
+      <img src="{{user.picURL}}" alt="Avatar" >
+      <div class="d-flex flex-column b">
+        <div class="c"><h3><span class="c1">{{user.firstName}}</span><span class="c2">{{user.lastName}}</span></h3></div>
+        <div class="d">{{user.address}}</div>
+        <div class="e">{{user.email}}</div>
+        <div class="f"><span>{{user.userType === 'gen' ? 'General' : 'Professional'}}</span></div>
+      </div>
+
+    </div>
+
+    <!-- <mat-card-header>
       <div mat-card-avatar [ngStyle]="{'background-image': 'url(' + user.picURL + ')'}" class="header" ></div>
       <mat-card-subtitle>{{user.firstName}}</mat-card-subtitle>
     </mat-card-header>
@@ -20,7 +31,7 @@
     <mat-card-actions>
       <button mat-button>LIKE</button>
       <button mat-button>SHARE</button>
-    </mat-card-actions>
+    </mat-card-actions> -->
   </mat-card>
 </div>
 
