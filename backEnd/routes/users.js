@@ -1,9 +1,18 @@
-var express = require('express');
-var router = express.Router();
+// 536808005835-lqmmujjncb20550usi2kgseudq2a8pn1.apps.googleusercontent.com
+// ghPu0CoJtAfloUCQ2OeGk31W
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+const express = require('express');
+
+const user = require('../models/userModel');
+const update = require('../controller/updateUser');
+const create = require('../controller/createUser');
+const login = require('../controller/loginUser');
+const verify = require('../middleware/tokenVerify');
+
+const router = express.Router();
+
+router.post('/update', verify, update);
+router.post('/create', create.social , create.login);
+router.post('/login', login);
 
 module.exports = router;

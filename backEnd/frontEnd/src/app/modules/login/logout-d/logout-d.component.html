@@ -1,0 +1,12 @@
+<div class="container">
+  <h1 mat-dialog-title>Hi {{data.name}}</h1>
+  <div mat-dialog-content >
+    <p>Are you sure you want to logout?</p>
+  </div>
+</div>
+
+<div mat-dialog-actions  class="m-auto float-right border border-primary rounded shadow-sm">
+  <button mat-button (click)="onNoClick()"  class="m-1">No</button>
+  <button mat-button [mat-dialog-close]="send()" cdkFocusInitial class="m-1">Yes</button>
+</div>
+

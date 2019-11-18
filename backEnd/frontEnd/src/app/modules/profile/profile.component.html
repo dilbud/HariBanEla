@@ -1,0 +1,30 @@
+<div class="container">
+  <mat-card class="card">
+    <mat-card-header>
+      <div mat-card-avatar [ngStyle]="{'background-image': 'url(' + user.picURL + ')'}" class="header"></div>
+      <mat-card-title>Hi</mat-card-title>
+      <mat-card-subtitle>{{user.firstName}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-list>
+            <mat-list-item> <span class="pr-2">First Name :</span> <span>{{user.firstName}}</span> </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item> <span class="pr-2">Last Name :</span> <span>{{user.lastName}}</span> </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item> <span class="pr-2">Address :</span> <span>{{user.address}}</span> </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item> <span class="pr-2">Email :</span> <span>{{user.email}}</span> </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item> <span class="pr-2">User :</span> <span>{{user.userType === 'gen' ? 'General' : 'Professional'}}</span> </mat-list-item>
+            
+        </mat-list>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+  
+</div>
+<div *ngIf="user.userType === 'pro'"> Booking</div>
+
