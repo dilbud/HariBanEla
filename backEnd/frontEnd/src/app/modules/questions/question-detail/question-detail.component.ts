@@ -26,7 +26,8 @@ export class QuestionDetailComponent implements OnInit {
       this.refreshQuestion();
     }, 600000);
 
-    this.user = this.userService.getUserData();
+    // this.user = this.userService.getUserData();
+    // console.log(this.user);
 
     this.isAuthenticated = this.userService.getIsAuth();
     this.userService.getAuthStatusListener()

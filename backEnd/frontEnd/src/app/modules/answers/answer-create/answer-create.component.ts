@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AnswerService } from 'app/data/services/answer.service';
 import { Answer } from 'app/data/models/answer';
+import { UserService } from 'app/data/services/user.service';
 
 @Component({
   selector: 'app-answer-create',
@@ -13,9 +14,12 @@ export class AnswerCreateComponent implements OnInit {
   @Input() questionId;
   @Input() user;
 
-  constructor(private answerService: AnswerService) { }
+  constructor(private answerService: AnswerService, private userService: UserService) { }
 
   ngOnInit() {
+    // console.log('||||||||||||||||||||||||||||');
+    // console.log(this.owner);
+    this.user = this.userService.getUserData();
     this.answerModel.userId = this.user.id;
   }
 
