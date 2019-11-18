@@ -1,0 +1,30 @@
+<div class="container">
+  <h1 mat-dialog-title>Hi</h1>
+  <div mat-dialog-content class="d-flex flex-column">
+    <p>Please signup or login !</p>
+    <button mat-raised-button class="m-1 btn-block" id="google" (click)="google()">
+      <i class="icon ion-logo-google"></i>
+      <span class="vl m-1"></span>
+      sign in with google
+    </button>
+    <!-- <button mat-raised-button class="m-1 mb-3 btn-block" id="facebook" (click)="facebook()">
+      <i class="icon ion-logo-facebook m-1"></i>
+      <span class="vl m-1"></span>
+      sign in with facebook
+    </button> -->
+
+    <form [formGroup]="login">
+      <mat-form-field>
+        <input matInput cdkFocusInitial type="email" formControlName="Ctrl_1" placeholder="Email">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="password" formControlName="Ctrl_2" placeholder="Password">
+      </mat-form-field>
+    </form>
+  </div>
+  <div mat-dialog-actions class="m-auto float-none border rounded shadow-sm"
+    [ngClass]="{'border-danger': !login.valid ,'border-success': login.valid}">
+    <button mat-raised-button (click)="onNoClick()" class="m-auto">No Thanks</button>
+    <button mat-raised-button (click)="send()" class="m-auto" [disabled]="!login.valid">LOGIN</button>
+  </div>
+</div>
