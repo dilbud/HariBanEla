@@ -6,11 +6,19 @@ const AppointmentSchema = new Schema({
     type: String,
     required: true,
   },
+  userEmail: {
+    type: String,
+    required: true,
+  },
   userName: {
     type: String,
     required: true,
   },
   professionalId: {
+    type: String,
+    required: true,
+  },
+  professionalEmail: {
     type: String,
     required: true,
   },

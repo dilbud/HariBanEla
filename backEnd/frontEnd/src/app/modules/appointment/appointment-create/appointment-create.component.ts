@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, NgForm, FormArray } from '@angular/forms';
-import { ActivatedRoute, Router, Data } from '@angular/router';
+import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AppointmentService } from 'app/data/services/appointment.service';
 import { ToastrService } from 'ngx-toastr';
 
@@ -25,7 +25,12 @@ export class AppointmentCreateComponent implements OnInit {
   public paymentAmount: Number
   public appointmentForm: FormGroup;
 
-
+  /**
+   * @param  {AppointmentService} privateappointmentService
+   * @param  {Router} privateredirect
+   * @param  {ToastrService} privatetoastrService
+   * @param  {FormBuilder} privateformBuilder
+   */
   constructor(private appointmentService: AppointmentService, private redirect: Router, private toastrService: ToastrService, private formBuilder: FormBuilder) { }
 
   ngOnInit() {

@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { ActivatedRoute, Router, Data } from '@angular/router';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AppointmentService } from 'app/data/services/appointment.service';
 import { ToastrService } from 'ngx-toastr';
 
@@ -28,7 +28,12 @@ export class AppointmentPaymentComponent implements OnInit {
 
   @ViewChild('paypal', { static: true }) paypalElement: ElementRef;
 
-
+  /**
+   * @param  {AppointmentService} privateappointmentService
+   * @param  {Router} privateredirect
+   * @param  {ActivatedRoute} privateroute
+   * @param  {ToastrService} privatetoastrService
+   */
   constructor(private appointmentService: AppointmentService, private redirect: Router, private route: ActivatedRoute,private toastrService:ToastrService) { }
 
   ngOnInit() {

@@ -62,7 +62,7 @@ export class AppointmentService {
       );
   }
   acceptAppointment(id,data): Observable<any> {
-    if (id == null) {
+      if (id == null) {
       return of(0);
     }
     return this.http.post(`${apiUrl}/accept/${id}`, data)
