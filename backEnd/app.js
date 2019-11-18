@@ -4,30 +4,16 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
-// var cookieParser = require('cookie-parser');
+var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var xcors = require('./middleware/xcors'); // custom middleware with cors
 const db = require('./config/database')
 const bodyParser = require("body-parser");
-
 var GoogleStrategy = require('passport-google-oauth20').Strategy;
 var passport = require('passport');
-
-
-
-// ---------------------------------------------------------
-// import router file
-var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
-// ---------------------------------------------------------
-// use express app
 var app = express();
-
-// cors
 app.use(xcors);
-
-
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -37,7 +23,6 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: false }));
-// app.use(cookieParser());
 
 app.use(passport.initialize()); // 
 app.use(passport.session());  //
@@ -47,7 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/',express.static(path.join(__dirname, 'frontEnd/dist/frontEnd')));
 
 // using router
-app.use('/', indexRouter);
+// app.use('/', indexRouter);
 app.use('/api/user', usersRouter);
 
 

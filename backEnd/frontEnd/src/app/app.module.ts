@@ -12,7 +12,6 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { LoginComponent } from './modules/login/login.component';
 import { UpdateComponent } from './modules/update/update.component';
 import { ProfileComponent } from './modules/profile/profile.component';
-import { MainComponent } from './modules/main/main.component';
 import { DataModule } from './data/data.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginDComponent } from './modules/login/login-d/login-d.component';
@@ -23,10 +22,6 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './core/auth-interceptor';
 import { ErrorInterceptor } from './core/error-interceptor';
 import { ReportComponent } from './modules/report/report.component';
-import { CalendarComponent } from './modules/calendar/calendar.component';
-import { AdminComponent } from './modules/profile/admin/admin.component';
-import { ProfessionalComponent } from './modules/profile/professional/professional.component';
-import { GeneralComponent } from '@modules/profile/general/general.component';
 import { ReportDComponent } from './modules/report/report-d/report-d.component';
 import { AuthGuardService } from './data/services/auth-guard.service';
 
@@ -36,7 +31,6 @@ import { AuthGuardService } from './data/services/auth-guard.service';
   declarations: [
     AppComponent,
     HeaderComponent,
-    MainComponent,
     FooterComponent,
     ProfileComponent,
     UpdateComponent,
@@ -44,10 +38,6 @@ import { AuthGuardService } from './data/services/auth-guard.service';
     LoginDComponent,
     LogoutDComponent,
     ReportComponent,
-    CalendarComponent,
-    AdminComponent,
-    GeneralComponent,
-    ProfessionalComponent,
     ReportDComponent
   ],
   imports: [
