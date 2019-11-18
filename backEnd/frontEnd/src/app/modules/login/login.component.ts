@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit, OnDestroy {
       this.isAuthenticated = isAuthenticated;
       this.mode = !this.isAuthenticated;
     });
+    this.mode = !this.isAuthenticated;
   }
 
   ngOnDestroy() {

@@ -78,6 +78,7 @@ export class UserService  {
           this.storeToken(this.token);
           this.isAuthenticated = true;
           this.authStatusListener.next(true);
+          this.setAuthTimer();
           this.router.navigate(['/']);
           this.AlertService.setAlert(
             'Hi ' + data.firstName + ' your account is updated'
@@ -120,6 +121,7 @@ export class UserService  {
               this.storeToken(this.token);
               this.isAuthenticated = true;
               this.authStatusListener.next(true);
+              this.setAuthTimer();
               if (res.msg === 'created') {
                 this.AlertService.setAlert(
                   'Hi ' + data.name + ' your account is created'
@@ -166,7 +168,7 @@ export class UserService  {
         this.storeToken(this.token);
         this.isAuthenticated = true;
         this.authStatusListener.next(true);
-
+        this.setAuthTimer();
         this.AlertService.setAlert(
           'Hi ' +
             this.user.firstName +
@@ -194,11 +196,25 @@ export class UserService  {
   public autoAuthUser() {
     const token = this.getToken();
     const decoded = this.decodeToken(token);
-    if (decoded === null) {
+    if (decoded === null || decoded === undefined) {
       this.logout();
       return;
+    } else {
+      console.log('auto auth user ************************');
+      this.user = {
+        id: decoded.id,
+        firstName: decoded.userData.firstName,
+        lastName: decoded.userData.lastName,
+        address: decoded.userData.address,
+        email: decoded.userData.email,
+        picURL: decoded.userData.picURL,
+        userType: decoded.userData.userType
+      }
+      this.isAuthenticated = true;
+      this.authStatusListener.next(true);
+      this.setAuthTimer();
+      return;
     }
-    return;
   }
 
   public logout() {
@@ -250,12 +266,12 @@ export class UserService  {
 
   private decodeToken(
     token: string
-  ): { id: string; iat: number; exp: number; isExp: boolean }  {
+  ): any  {
     if (token === null || token === undefined) {
       return null;
     }
     const payload = token.split('.')[1];
-    console.log(payload);
+    console.log('decode token ************************');
     const bodyJSON = JSON.parse(atob(payload));
     const now = new Date().getTime();
     const bool = !(now < bodyJSON.exp * 1000 && bodyJSON.iat * 1000 < now);
@@ -263,10 +279,9 @@ export class UserService  {
       id: bodyJSON.id,
       iat: bodyJSON.iat,
       exp: bodyJSON.exp,
-      isExp: bool
+      isExp: bool,
+      userData: bodyJSON.userData
     };
-    console.log('decode log');
-    console.log(bodyJSON, obj);
     return obj;
   }
 }
