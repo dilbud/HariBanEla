@@ -65,7 +65,7 @@ export class AppointmentPaymentComponent implements OnInit {
               {
                 description: 'Appointment with'+this.professionalName,
                 amount: {
-                  currency_code: 'LKR',
+                  currency_code: 'USD',
                   value: this.paymentAmount
                 }
               }

@@ -1,5 +1,5 @@
-<div class="container">
-    <div style="margin-bottom: 5em;margin-top: 5em;">
+<div class="container shadow p-4">
+    <div >
 <h2>Payment for the Appointment</h2>
 </div>
 <div class="row">
@@ -14,7 +14,7 @@
       <div class="col-md-12 col-sm-12"><span class="label">Duration: </span>{{duration}} hrs</div>
       <div class="col-md-12 col-sm-12"><span class="label">End time of the appointment: </span>{{endTime  |date :'hh mm aaa EEE dd MMM yyy'}}</div>
       <div class="col-md-12 col-sm-12"><span class="label">Payment Status: </span>{{paymentStatus}}</div>
-      <div class="col-md-12 col-sm-12"> <span class="label">Payment Amount:  </span>  {{paymentAmount| currency : "LKR" }}</div>
+      <div class="col-md-12 col-sm-12"> <span class="label">Payment Amount:  </span>  {{paymentAmount| currency : "USD" }}</div>
     
     </div>
 
