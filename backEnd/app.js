@@ -12,7 +12,8 @@ var questionsRouter = require('./routes/questions');
 const bodyParser = require('body-parser');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const passport = require('passport');
-var usersRouter = require('./routes/users');
+// var usersRouter = require('./routes/users');
+var chatRouter=require('./routes/chat')
 var app = express();
 const cookieParser = require('cookie-parser');
 const appointmentRouter = require('./routes/appointment');
@@ -38,11 +39,13 @@ app.use(cors({
   origin: 'http://localhost:4200',
 }));
 dbConnection.connection();
+app.use('/api/chat', chatRouter);
 app.use('/api/category', categoryRouter);
 app.use('/api/user', usersRouter);
+app.use('/api/appointment', appointmentRouter);
 app.use('/questions', questionsRouter);
 app.use('/', express.static(path.join(__dirname, 'frontEnd/dist/frontEnd')));
-app.use('/api/appointment', appointmentRouter);
+
 
 
 

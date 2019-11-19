@@ -13,8 +13,7 @@ import{AppointmentAcceptComponent} from '@modules/appointment/appointment-accept
 import {AppointmentPaymentComponent} from '@modules/appointment/appointment-payment/appointment-payment.component'
 import{AppointmentCreateComponent} from '@modules/appointment/appointment-create/appointment-create.component'
 import { ProfessionalListComponent } from '@modules/professional-list/professional-list.component';
-
-
+import {ChatComponent} from '@modules/chat/chat.component';
 import { from } from 'rxjs';
 
 const routes: Routes = [
@@ -50,6 +49,11 @@ const routes: Routes = [
   {
     path: 'payment/:id',
     component: AppointmentPaymentComponent
+  },
+  {
+    path: 'chat/:id',
+    component: ChatComponent,
+    // canActivate: [AuthGuardService],
   },
   
   {
