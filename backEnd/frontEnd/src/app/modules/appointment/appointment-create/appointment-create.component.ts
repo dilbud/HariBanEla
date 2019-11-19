@@ -3,6 +3,22 @@ import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AppointmentService } from 'app/data/services/appointment.service';
 import { ToastrService } from 'ngx-toastr';
+import { UserService } from 'app/data/services/user.service';
+
+class  Data {
+    professionalId:any
+    professionalName: any
+    subject:any
+    description:any
+    startTime:any
+    endTime:any
+    duration:any
+    paymentAmount:any
+    userId:any
+    userName:any
+    userEmail:any
+    professionalEmail:any
+}
 
 @Component({
   selector: 'app-appointment-create',
@@ -11,9 +27,11 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class AppointmentCreateComponent implements OnInit {
 
-  public professionalId: String
+  public professionalId: string
   public professionalName: string
   public professionalPhoto:string
+  public professionalEmail:string
+  public userEmail :string
   public userName: string
   public userId: string
   public subject: string
@@ -24,6 +42,7 @@ export class AppointmentCreateComponent implements OnInit {
   public paymentPerHour:Number
   public paymentAmount: Number
   public appointmentForm: FormGroup;
+  public user:any
 
   /**
    * @param  {AppointmentService} privateappointmentService
@@ -31,7 +50,8 @@ export class AppointmentCreateComponent implements OnInit {
    * @param  {ToastrService} privatetoastrService
    * @param  {FormBuilder} privateformBuilder
    */
-  constructor(private appointmentService: AppointmentService, private redirect: Router, private toastrService: ToastrService, private formBuilder: FormBuilder) { }
+  constructor(private appointmentService: AppointmentService, private redirect: Router, private toastrService: ToastrService, 
+    private formBuilder: FormBuilder, private userSerivce:UserService) { }
 
   ngOnInit() {
     this.professionalPhoto='https://lh4.googleusercontent.com/-yUG1fx5VXbY/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rdn62LesVDBvcpG1PFEv7aAuxByWg/s96-c/photo.jpg'
@@ -42,13 +62,17 @@ export class AppointmentCreateComponent implements OnInit {
     this.paymentAmount=0
     this.appointmentService.currentProfessionalId.subscribe(res => {
       this.professionalId = res;
-      // get the this.professional name form the user service
-      // get the this.paymentPerHour from the user service
-    },
+        },
       err => {
         console.log(err);
       })
-
+      this.userSerivce.getUserDataById(this.professionalId).subscribe(res=>{
+        console.log(res , '-----------------------------------');
+        this.professionalName=res.serverData.firstName+" "+res.serverData.lastName;
+        this.paymentPerHour=res.serverData.paymentPerHour;
+        this.professionalEmail=res.serverData.email;
+      })
+     this.user= this.userSerivce.getUserData()
     this.appointmentForm = this.formBuilder.group({
       subject: [null, Validators.required],
       description: [null, Validators.required],
@@ -57,12 +81,16 @@ export class AppointmentCreateComponent implements OnInit {
       });
   }
 
+
   makeAppointment(form: NgForm) {
-    var data: any;
+    console.log("ththt");
+    var data  = new Data();
     data.professionalId = this.professionalId
     data.professionalName = this.professionalName
-    // data.userId= get from the localStorage
-    // data.userName= get from the localStorage
+    data.professionalEmail=this.professionalEmail
+    data.userId=this.user.id
+    data.userName=this.user.firstName+" "+this.user.lastName
+    data.userEmail=this.user.email
     data.subject = this.subject
     data.description = this.description
     data.startTime = new Date(this.startTime).getTime();

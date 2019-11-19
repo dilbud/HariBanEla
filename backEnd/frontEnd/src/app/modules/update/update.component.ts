@@ -63,6 +63,7 @@ export class UpdateComponent implements OnInit{
       const password = this.formPassword.value.Ctrl_1;
       const userType = this.formUserType.value.Ctrl_1;
       const picURL = 'null';
+      const paymentPerHour=1000
 
       const data: UserData = {
         firstName,
@@ -71,7 +72,8 @@ export class UpdateComponent implements OnInit{
         email,
         password,
         picURL,
-        userType
+        userType,
+        paymentPerHour
       };
       this.userService.updateUser(data);
     } else {

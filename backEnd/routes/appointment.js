@@ -37,6 +37,7 @@ router.get('/:id', async function(req, res, next) {
 //   CREATE NEW BOOKING
 router.post('/new', async function(req, res, next) {
   try {
+    console.log(req.body)
     const appointment = await Appointment.create(req.body);
     winston.info(`200 - created a new appointment. - ${req.originalUrl} - ${req.method} - ${req.ip}`);
     res.json(appointment);

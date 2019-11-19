@@ -6,15 +6,12 @@
         <div class="c"><h3><span class="c1">{{user.firstName}}</span><span class="c2">{{user.lastName}}</span></h3></div>
         <div class="d">{{user.address === 'null' ? '' : user.address}}</div>
         <div class="e">{{user.email}}</div>
-        <div class="f"><span>{{user.userType === 'gen' ? 'General' : 'Professional'}}</span></div>
+        <div class="f"><span>{{user.userType === 'gen' ? 'General' : 'Professional'}}</span></div>      
+
       </div>
-
     </div>
-
-
-  </mat-card>
-  
+  </mat-card> 
+  <div class ="button" (click)="makeAppointment()"> Book Now</div> 
 </div>
 
-<div *ngIf="user.userType === 'pro'" (click)="makeAppointment()"> Booking</div>
 

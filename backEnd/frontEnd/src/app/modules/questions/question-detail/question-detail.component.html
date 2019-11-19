@@ -5,11 +5,11 @@
     </div>
     <div class="shadow row p-3">
       <div class="col-1">
-        <a type="button" (click)="voteQuestion(1)">
+        <a (click)="voteQuestion(1)">
           <i class="fa fa-caret-up fa-3x"></i>
         </a>
         <div id="voteCount" class="ml-2">{{question.votes}}</div>
-        <a type="button" (click)="voteQuestion(0)">
+        <a (click)="voteQuestion(0)">
           <i class="fa fa-caret-down fa-3x"></i>
         </a>
       </div>

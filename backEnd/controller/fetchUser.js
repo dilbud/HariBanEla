@@ -1,4 +1,6 @@
 const user = require('../models/userModel');
+
+
 module.exports =  (req, res, next) => {
   console.log('555555555555555555555555555555555');
   console.log(req.body.id);
@@ -6,7 +8,7 @@ module.exports =  (req, res, next) => {
 
   user.findById(
     id,
-    'firstName lastName address email picURL userType',
+    '-password',
     { useFindAndModify: false },
     (err, data) => {
       if (err) {
@@ -22,7 +24,7 @@ module.exports =  (req, res, next) => {
 
         console.log('555555555555555555555555555555555');
     
-        console.log(data);
+        // console.log(data);
 
         res.status(200).json({
             msg: 'ok',
@@ -33,9 +35,12 @@ module.exports =  (req, res, next) => {
               address: data.address,
               email: data.email,
               picURL: data.picURL,
-              userType: data.userType
+              userType: data.userType,
+              paymentPerHour:2000,
             }
           });
+// console.log(data.paymentPerHour);
+
 
       }
     }

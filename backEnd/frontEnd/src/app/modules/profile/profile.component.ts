@@ -3,6 +3,8 @@ import { UserService } from 'app/data/services/user.service';
 import { ActivatedRoute, Params } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { AlertService } from 'app/data/services/alert.service';
+import { AppointmentService } from 'app/data/services/appointment.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -15,22 +17,20 @@ export class ProfileComponent implements OnInit {
 
   mode = false;
 
-  constructor(
-    private userService: UserService,
-    private route: ActivatedRoute,
-    private alertService: AlertService
-  ) {}
+
+  constructor(private userService: UserService, private appointmentService: AppointmentService, private redirect: Router, private route: ActivatedRoute,
+    private alertService: AlertService) { }
 
   ngOnInit() {
     this.route.queryParams.subscribe((queryParams: Params) => {
       this.id = queryParams.id;
       console.log(this.id, '**************************');
-      if(this.id === null || this.id === undefined) {
+      if (this.id === null || this.id === undefined) {
         this.mode = true;
       }
     });
 
-    if(!this.mode) {
+    if (!this.mode) {
       let res;
       this.userService.getProProfile(this.id).subscribe(
         response => {
@@ -55,4 +55,11 @@ export class ProfileComponent implements OnInit {
       });
     }
   }
+  makeAppointment(){
+    this.appointmentService.changeProfessionalId(this.user.id);
+     this.redirect.navigate(['/appointment/new']);
+   }
 }
+
+
+

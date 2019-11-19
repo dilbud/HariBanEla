@@ -128,7 +128,7 @@ export class UserService  {
           this.isAuthenticated = true;
           this.authStatusListener.next(true);
           this.setAuthTimer();
-          this.router.navigate(['/']);
+          // this.router.navigate(['/']);
           this.AlertService.setAlert(
             'Hi ' + data.firstName + ' your account is updated'
           );
@@ -331,7 +331,7 @@ export class UserService  {
     this.authStatusListener.next(false);
     clearTimeout(this.tokenTimer);
     this.clearToken();
-    this.router.navigate(['/']);
+    // this.router.navigate(['/']);
   }
 
   private setAuthTimer() {
