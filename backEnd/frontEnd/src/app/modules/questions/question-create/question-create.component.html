@@ -1,0 +1,31 @@
+<div class="container">
+  <h4 *ngIf="!id">Ask a Question</h4>
+  <h4 *ngIf="id">Edit Question</h4>
+  <form #askForm="ngForm" (ngSubmit)="onQuestion(); askForm.reset()">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" [(ngModel)]="questionModel.title" name="title" class="form-control" id="title"
+        placeholder="What is your Question? Be specific">
+    </div>
+    <div class="form-group">
+      <label for="category">Category</label>
+      <select name="category" id="category" class="custom-select" [(ngModel)]="questionModel.category">
+        <option selected>Select a Category</option>
+        <option *ngFor="let category of categories">{{category.name}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="body">Body</label>
+      <textarea type="text" [(ngModel)]="questionModel.body" name="body" class="form-control" id="body"
+        placeholder="Explain your Question"></textarea>
+    </div>
+    <!-- <div class="form-group">
+      <label for="tags">Tags</label>
+      <tag-input [(ngModel)]="questionModel.tags" [ngModelOptions]="{standalone: true}" [onlyFromAutocomplete]="true">
+        <tag-input-dropdown [showDropdownIfEmpty]="true" [autocompleteItems]="['Javascript','Typescript', 'Angular','NodeJs','MongoDb']" name="tags" id="tags"></tag-input-dropdown>
+      </tag-input>
+    </div> -->
+    <button *ngIf="!id" type="submit" class="btn btn-primary">Post Question</button>
+    <button *ngIf="id" type="submit" class="btn btn-primary">Save Question</button>
+  </form>
+</div>

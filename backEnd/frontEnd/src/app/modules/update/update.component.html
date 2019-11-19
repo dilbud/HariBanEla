@@ -1,0 +1,116 @@
+<div class="container">
+  <mat-card>
+    <mat-card-content>
+      <mat-vertical-stepper [linear]="isLinear" #stepper>
+        <!-- Name -->
+        <mat-step [stepControl]="formName">
+          <form [formGroup]="formName">
+            <ng-template matStepLabel>Fill out your name</ng-template>
+            <mat-form-field>
+              <input matInput placeholder="First Name" formControlName="Ctrl_1" />
+            </mat-form-field>
+            <br />
+            <mat-form-field>
+              <input matInput placeholder="Last Name" formControlName="Ctrl_2" />
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+        <!-- Address -->
+        <mat-step [stepControl]="formAddress">
+          <form [formGroup]="formAddress">
+            <ng-template matStepLabel>Fill out your address</ng-template>
+            <mat-form-field>
+              <textarea matInput placeholder="Address" formControlName="Ctrl_1" > </textarea>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+        <!-- email -->
+        <mat-step [stepControl]="formEmail">
+          <form [formGroup]="formEmail">
+            <ng-template matStepLabel>Fill out your email</ng-template>
+            <mat-form-field>
+              <input matInput type="email" placeholder="Email" formControlName="Ctrl_1" />
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+        <!-- password -->
+        <mat-step [stepControl]="formPassword">
+          <form [formGroup]="formPassword">
+            <ng-template matStepLabel>Fill out your password</ng-template>
+            <mat-form-field>
+              <input matInput type="Password" placeholder="Password" formControlName="Ctrl_1" />
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+        <!-- user type -->
+        <mat-step [stepControl]="formUserType">
+            <form [formGroup]="formUserType">
+              <ng-template matStepLabel>Fill user type</ng-template>
+              <mat-form-field>
+                  <mat-label>Select an option</mat-label>
+                  <mat-select  formControlName="Ctrl_1">
+                    <mat-option value="gen">General User</mat-option>
+                    <mat-option value="pro">Professional</mat-option>
+
+                  </mat-select>
+                </mat-form-field>
+              <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button matStepperNext>Next</button>
+              </div>
+            </form>
+          </mat-step>
+        <!-- done -->
+        <mat-step>
+          <ng-template matStepLabel>Done</ng-template>
+          <div class="m-1">
+            You are now done.
+          </div>
+          <div class="m-auto d-flex float-right border rounded shadow-sm" [ngClass]="{
+              'border-danger': !(
+                formName.valid &&
+                formAddress.valid &&
+                formPassword.valid &&
+                formUserType
+              ),
+              'border-success':
+                formName.valid &&
+                formAddress.valid &&
+                formPassword.valid &&
+                formUserType
+            }">
+            <button mat-button matStepperPrevious class="m-1">Back</button>
+            <button mat-button (click)="stepper.reset()" class="m-1">
+              Reset
+            </button>
+            <button mat-button (click)="submit()" class="m-1" [disabled]="
+                !(
+                  formName.valid &&
+                  formAddress.valid &&
+                  formPassword.valid &&
+                  formUserType
+                )
+              ">
+              submit
+            </button>
+          </div>
+        </mat-step>
+      </mat-vertical-stepper>
+    </mat-card-content>
+  </mat-card>
+</div>
