@@ -19,12 +19,12 @@
       <textarea type="text" [(ngModel)]="questionModel.body" name="body" class="form-control" id="body"
         placeholder="Explain your Question"></textarea>
     </div>
-    <div class="form-group">
+    <!-- <div class="form-group">
       <label for="tags">Tags</label>
       <tag-input [(ngModel)]="questionModel.tags" [ngModelOptions]="{standalone: true}" [onlyFromAutocomplete]="true">
         <tag-input-dropdown [showDropdownIfEmpty]="true" [autocompleteItems]="['Javascript','Typescript', 'Angular','NodeJs','MongoDb']" name="tags" id="tags"></tag-input-dropdown>
       </tag-input>
-    </div>
+    </div> -->
     <button *ngIf="!id" type="submit" class="btn btn-primary">Post Question</button>
     <button *ngIf="id" type="submit" class="btn btn-primary">Save Question</button>
   </form>
