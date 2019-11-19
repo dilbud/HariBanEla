@@ -8,7 +8,7 @@ import { CoreModule } from '@app/core.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from '@shared/shared.module';
 import { DlDateTimeDateModule, DlDateTimePickerModule } from 'angular-bootstrap-datetimepicker';
-import { TagInputModule } from 'ngx-chips';
+// import { TagInputModule } from 'ngx-chips';
 import { ToastrModule } from 'ngx-toastr';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -81,7 +81,7 @@ import { UpdateComponent } from './modules/update/update.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    TagInputModule,
+    // TagInputModule,
     BrowserAnimationsModule,
     NgbModule,
     DataModule,
