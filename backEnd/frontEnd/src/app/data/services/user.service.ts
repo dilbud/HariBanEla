@@ -42,6 +42,8 @@ export class UserService  {
     userType: String
   };
 
+  private proProfileArry: ServerData [] = null;
+
   constructor(
     private authService: AuthService,
     // tslint:disable-next-line: no-shadowed-variable
@@ -87,8 +89,21 @@ export class UserService  {
   }
 
   public getAuthStatusListener(): any {
-    return this.authStatusListener.asObservable();
+    // console.log(this.authStatusListener,"ththth")
+       return this.authStatusListener.asObservable();
   }
+
+  public getProList() {
+
+    return this.http
+    .get('http://localhost:3000/api/user/proList');
+  }
+
+  public getProProfile(proId: string) {
+    return this.http.get('http://localhost:3000/api/user/proProfile', { params: {id: proId}});
+  }
+
+
   // -------------------------------------------------------- update begin
   public updateUser(data: UserData) {
     let res: any;
@@ -112,6 +127,7 @@ export class UserService  {
           this.storeToken(this.token);
           this.isAuthenticated = true;
           this.authStatusListener.next(true);
+          this.setAuthTimer();
           this.router.navigate(['/']);
           this.AlertService.setAlert(
             'Hi ' + data.firstName + ' your account is updated'
@@ -154,6 +170,7 @@ export class UserService  {
               this.storeToken(this.token);
               this.isAuthenticated = true;
               this.authStatusListener.next(true);
+              this.setAuthTimer();
               if (res.msg === 'created') {
                 this.AlertService.setAlert(
                   'Hi ' + data.name + ' your account is created'
@@ -165,8 +182,8 @@ export class UserService  {
                 );
               }
               console.log('+++++++++++++');
-              // console.log(this.user);
-              this.AlertService.setAlert('Hi ' + data.name + " you're welcome");
+              console.log(this.user);
+              this.AlertService.setAlert('Hi ' + data.name);
               this.AlertService.showAlert();
             }
           );
@@ -179,7 +196,62 @@ export class UserService  {
   }
 
   public facebook() {
-    // this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
+    this.authService
+    .signIn(FacebookLoginProvider.PROVIDER_ID)
+    .then(() => {
+      const data = this.fetchSocialData();
+      console.log('9----------------------------------------------------9');
+      console.log(data);
+      this.serverData = {
+        id: 'null',
+        firstName: data.firstName,
+        lastName: data.lastName,
+        address: 'null',
+        email: data.email,
+        picURL: data.photoUrl,
+        userType: 'gen'
+      };
+      let res: any;
+      this.http
+        .post('http://localhost:3000/api/user/create', this.serverData)
+        .subscribe(
+          response => {
+            res = response;
+          },
+          error => {
+            this.AlertService.setAlert('Something wrong !');
+            this.AlertService.setAlert(error.error.msg);
+            this.AlertService.showAlert();
+          },
+          () => {
+            this.user = res.serverData;
+            this.token = res.token;
+            this.storeToken(this.token);
+            this.isAuthenticated = true;
+            this.authStatusListener.next(true);
+            this.setAuthTimer();
+            if (res.msg === 'created') {
+              this.AlertService.setAlert(
+                'Hi ' + data.name + ' your account is created'
+              );
+            }
+            if (res.msg === 'exist') {
+              this.AlertService.setAlert(
+                'Hi ' + data.name + ' your are sign in'
+              );
+            }
+            console.log('+++++++++++++');
+            console.log(this.user);
+            this.AlertService.setAlert('Hi ' + data.name);
+            this.AlertService.showAlert();
+          }
+        );
+    })
+    .catch(error => {
+      console.log(error);
+      this.AlertService.setAlert('Try later ...');
+      this.AlertService.showAlert();
+    });
   }
 
   public login(email: string, password: string) {
@@ -200,14 +272,12 @@ export class UserService  {
         this.storeToken(this.token);
         this.isAuthenticated = true;
         this.authStatusListener.next(true);
-
+        this.setAuthTimer();
         this.AlertService.setAlert(
           'Hi ' +
             this.user.firstName +
             ' ' +
-            this.user.lastName +
-            ' ' +
-            "you're welcome"
+            this.user.lastName
         );
         console.log('+++++++++++++');
         console.log(this.user);
@@ -228,11 +298,26 @@ export class UserService  {
   public autoAuthUser() {
     const token = this.getToken();
     const decoded = this.decodeToken(token);
-    if (decoded === null) {
+    console.log("11111111111111111")
+    if (decoded === null || decoded === undefined) {
       this.logout();
       return;
+    } else {
+      console.log('auto auth user ************************');
+      this.user = {
+        id: decoded.id,
+        firstName: decoded.userData.firstName,
+        lastName: decoded.userData.lastName,
+        address: decoded.userData.address,
+        email: decoded.userData.email,
+        picURL: decoded.userData.picURL,
+        userType: decoded.userData.userType
+      }
+      this.isAuthenticated = true;
+      this.authStatusListener.next(true);
+      this.setAuthTimer();
+      return;
     }
-    return;
   }
 
   public logout() {
@@ -284,12 +369,12 @@ export class UserService  {
 
   private decodeToken(
     token: string
-  ): { id: string; iat: number; exp: number; isExp: boolean }  {
+  ): any  {
     if (token === null || token === undefined) {
       return null;
     }
     const payload = token.split('.')[1];
-    console.log(payload);
+    console.log('decode token ************************');
     const bodyJSON = JSON.parse(atob(payload));
     const now = new Date().getTime();
     const bool = !(now < bodyJSON.exp * 1000 && bodyJSON.iat * 1000 < now);
@@ -297,10 +382,9 @@ export class UserService  {
       id: bodyJSON.id,
       iat: bodyJSON.iat,
       exp: bodyJSON.exp,
-      isExp: bool
+      isExp: bool,
+      userData: bodyJSON.userData
     };
-    console.log('decode log');
-    console.log(bodyJSON, obj);
     return obj;
   }
 }

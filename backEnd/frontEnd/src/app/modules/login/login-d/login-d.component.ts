@@ -29,8 +29,8 @@ export class LoginDComponent implements OnInit {
 
   ngOnInit() {
     this.login = this.formBuilder.group({
-      Ctrl_1: ['buddikahgd@gmail.com', [Validators.required, Validators.email]],
-      Ctrl_2: ['12345678', [Validators.required, Validators.minLength(8)]]
+      Ctrl_1: ['', [Validators.required, Validators.email]],
+      Ctrl_2: ['', [Validators.required, Validators.minLength(8)]]
     });
   }
 
@@ -38,19 +38,19 @@ export class LoginDComponent implements OnInit {
     if (this.login.valid) {
       this.data.email = this.login.value.Ctrl_1;
       this.data.password = this.login.value.Ctrl_2;
-      console.log('jjjjjjjjj');
+      // console.log('jjjjjjjjj');
       this.dialogRef.close(this.data);
     } else {
       this.dialogRef.close(null);
     }
   }
   google() {
-    console.log('44444444444');
+    // console.log('44444444444');
     this.dialogRef.close('google');
   }
 
   facebook() {
-    console.log('555555555555');
+    // console.log('555555555555');
     this.dialogRef.close('facebook');
   }
 }

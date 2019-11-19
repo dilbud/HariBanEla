@@ -12,6 +12,8 @@ import { QuestionListComponent } from './modules/questions/question-list/questio
 import{AppointmentAcceptComponent} from '@modules/appointment/appointment-accept/appointment-accept.component'
 import {AppointmentPaymentComponent} from '@modules/appointment/appointment-payment/appointment-payment.component'
 import{AppointmentCreateComponent} from '@modules/appointment/appointment-create/appointment-create.component'
+import { ProfessionalListComponent } from '@modules/professional-list/professional-list.component';
+
 
 import { from } from 'rxjs';
 
@@ -61,13 +63,18 @@ const routes: Routes = [
     canActivate: [AuthGuardService]
   },
 
-  { path: 'update', component: UpdateComponent, canActivate: [AuthGuardService] },
-  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuardService] },
+  { path: 'professionals', component: ProfessionalListComponent},
+  { path: 'update', component: UpdateComponent, canActivate: [AuthGuardService]},
+  { path: 'profile', component: ProfileComponent},
+  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuardService]},
   {
     path: '**',
     component: QuestionListComponent
-  }
-]
+  },
+
+  
+
+];
 
 @NgModule({
     imports: [RouterModule.forRoot(routes)],

@@ -11,7 +11,7 @@ import { UserData } from '../../data/models/userData';
 export class UpdateComponent implements OnInit{
 
 
-  isLinear = false;
+  isLinear = true;
   formName: FormGroup;
   formAddress: FormGroup;
   formEmail: FormGroup;

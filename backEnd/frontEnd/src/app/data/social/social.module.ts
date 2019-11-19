@@ -9,10 +9,10 @@ const config = new AuthServiceConfig([
     id: GoogleLoginProvider.PROVIDER_ID,
     provider: new GoogleLoginProvider('536808005835-fgklacedsvrnnn4fupfp5c3d7tfrj87e.apps.googleusercontent.com')
   },
-  // {
-  //   id: FacebookLoginProvider.PROVIDER_ID,
-  //   provider: new FacebookLoginProvider('Facebook-App-Id')
-  // }
+  {
+    id: FacebookLoginProvider.PROVIDER_ID,
+    provider: new FacebookLoginProvider('426167758332608')
+  }
 ]);
 
 export function provideConfig() {

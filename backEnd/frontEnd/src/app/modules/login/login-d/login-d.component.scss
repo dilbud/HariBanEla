@@ -8,23 +8,40 @@ mat-dialog-actions {
 }
 
 .vl {
-  border-left: 1px solid ;
+  border-left: 0px solid ;
   height: 100%;
 }
 
 
 i.icon {
-  font-size: 20px;
+  font-size: 35px;
 }
 
-#google{
-  background: #dd4b39;
-  color: white;
-}
+// #google{
+//   background: #dd4b39;
+//   color: white;
+// }
 
 #facebook{
 
   background: #3b5998;
   color: white;
 
+}
+.signButton{
+  background: #fff;
+  color: #000;
+  font-weight: 500;
+  border-radius: 20px;
+  border: solid #000 1px;
+}  
+.loginButton{
+  background: #2dbeef;
+  color: #fff;
+  width: 100%;
+  font-weight: 500;
+  border-radius: 20px;
+  border: solid #000 1px;
+  height: 48px;
+  font-size: 16px;
 }

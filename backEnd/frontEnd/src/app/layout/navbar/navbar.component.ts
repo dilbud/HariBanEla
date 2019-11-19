@@ -10,7 +10,7 @@ import { UserService } from 'app/data/services/user.service';
 export class NavbarComponent implements OnInit {
 
   categories: any[]
-  isAuthenticated
+  isAuthenticated=false
 
   constructor(private categoryService: CategoryService,private userService:UserService) { }
   user = null;
@@ -18,10 +18,13 @@ export class NavbarComponent implements OnInit {
     this.categoryService.getAllCategories().subscribe(res => {
       this.categories = res;
     });
+    this.isAuthenticated = this.userService.getIsAuth();
+    this.user = this.userService.getUserData();
     this.userService.getAuthStatusListener()
     .subscribe( (isAuthenticated: boolean) => {
-      this.user = this.userService.getUserData(); 
       this.isAuthenticated = isAuthenticated;
+      this.user = this.userService.getUserData();
+      // this.mode = !this.isAuthenticated;
     });
     
     

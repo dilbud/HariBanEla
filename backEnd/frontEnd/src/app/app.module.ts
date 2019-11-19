@@ -30,6 +30,7 @@ import { CommentDetailComponent } from './modules/comments/comment-detail/commen
 import { LoginDComponent } from './modules/login/login-d/login-d.component';
 import { LoginComponent } from './modules/login/login.component';
 import { LogoutDComponent } from './modules/login/logout-d/logout-d.component';
+import { ProfessionalListComponent } from './modules/professional-list/professional-list.component';
 import { ProfileComponent } from './modules/profile/profile.component';
 import { QuestionCreateComponent } from './modules/questions/question-create/question-create.component';
 import { QuestionDetailComponent } from './modules/questions/question-detail/question-detail.component';
@@ -67,7 +68,8 @@ import { UpdateComponent } from './modules/update/update.component';
     ReportDComponent, 
     AppointmentCreateComponent,
     AppointmentAcceptComponent,
-    AppointmentPaymentComponent
+    AppointmentPaymentComponent,
+    ProfessionalListComponent
   ],
 
   imports: [

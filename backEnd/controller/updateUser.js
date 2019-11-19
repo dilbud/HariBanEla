@@ -70,7 +70,15 @@ module.exports = (req, res, next) => {
           return res.status(500).json({ msg: 'internal server error' });
         }
       } else {
-        const token = jwt.sign({ id: user._id }, key, { expiresIn: '2h' });
+        details = {
+          firstName: user.firstName,
+          lastName: user.lastName,
+          address: user.address,
+          email: user.email,
+          picURL: user.picURL,
+          userType: user.userType
+        }
+        const token = jwt.sign({ id: user._id, userData: details }, key, { expiresIn: '2h' });
         res.status(200).json({
           msg: 'ok',
           token: token,
