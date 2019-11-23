@@ -1,20 +1,20 @@
 // 536808005835-lqmmujjncb20550usi2kgseudq2a8pn1.apps.googleusercontent.com
 // ghPu0CoJtAfloUCQ2OeGk31W
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var logger = require('morgan');
-var cors = require('cors');
-var categoryRouter = require('./routes/category');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const logger = require('morgan');
+const cors = require('cors');
+const categoryRouter = require('./routes/category');
 const dbConnection = require('./config/database');
-var usersRouter = require('./routes/users');
-var questionsRouter = require('./routes/questions');
+const usersRouter = require('./routes/users');
+const questionsRouter = require('./routes/questions');
 const bodyParser = require('body-parser');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const passport = require('passport');
 // var usersRouter = require('./routes/users');
-var chatRouter=require('./routes/chat')
-var app = express();
+const chatRouter=require('./routes/chat');
+const app = express();
 const cookieParser = require('cookie-parser');
 const appointmentRouter = require('./routes/appointment');
 
@@ -34,7 +34,8 @@ app.use(passport.session()); //
 app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(cors());
-app.use(express.static(path.join(__dirname, 'public')));
+const distDir = __dirname + '/frontEnd/dist/frontEnd';
+app.use(express.static(distDir));
 app.use(cors({
   origin: 'http://localhost:4200',
 }));
@@ -44,7 +45,12 @@ app.use('/api/category', categoryRouter);
 app.use('/api/user', usersRouter);
 app.use('/api/appointment', appointmentRouter);
 app.use('/questions', questionsRouter);
-app.use('/', express.static(path.join(__dirname, 'frontEnd/dist/frontEnd')));
+// app.use('/', express.static(path.join(__dirname, 'frontEnd/dist/frontEnd')));
+app.get('/*', function(req, res) {
+
+  res.sendFile(path.join(__dirname + '/frontEnd/dist/frontEnd/index.html'));
+});
+
 
 
 
