@@ -1,0 +1,36 @@
+<div *ngIf="answer" class="row shadow p-3">
+  <div class="col-1">
+    <a (click)="voteAnswer(1)">
+      <i class="fa fa-caret-up fa-3x"></i>
+    </a>
+    <div id="voteCount" class="ml-2">{{answer.votes}}</div>
+    <a (click)="voteAnswer(0)">
+      <i class="fa fa-caret-down fa-3x"></i>
+    </a>
+  </div>
+  <div class="col-11">
+    <div>
+      {{answer.body}}
+    </div>
+    <div class="row">
+      <div class="col">
+        <small>
+          <a class="actionLink mr-3" [routerLink] routerLinkActive="router-link-active" (click)="onEdit()">Edit</a>
+          <!-- <a class="actionLink" [routerLink] routerLinkActive="router-link-active" (click)="onDelete()">Delete</a> -->
+        </small>
+      </div>
+      <div *ngIf="owner" class="col-3">
+        <img class="profilePhoto" routerLink="profile" src="{{owner.picURL}}">
+        <small> {{owner.firstName}} {{owner.lastName}} </small>
+      </div>
+    </div>
+    <div class="ml-5">
+      <div *ngFor="let comment of answer.comments">
+        <app-comment-detail [comment]="comment"></app-comment-detail>
+      </div>
+      <div *ngIf="!mode">
+        <app-comment-create [questionId]="questionId" [answerId]="answer._id"></app-comment-create>
+      </div>
+    </div>
+  </div>
+</div>

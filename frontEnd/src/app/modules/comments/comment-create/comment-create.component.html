@@ -1,0 +1,9 @@
+<form #commentForm="ngForm">
+  <div class="form-group">
+    <textarea type="text" class="form-control" [(ngModel)]="commentModel.body" name="commentBody" id="commentBody"
+      placeholder="Enter a Comment"></textarea>
+
+    <button  mat-raised-button color="primary" *ngIf="!answerId" type="submit" (click)="onComment(0); commentForm.reset()">Post Comment</button>
+    <button  mat-raised-button color="primary" *ngIf="answerId" type="submit" (click)="onComment(1); commentForm.reset()">Post your Comment</button>
+  </div>
+</form>
