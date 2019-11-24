@@ -19,7 +19,7 @@ export class ProfileComponent implements OnInit {
 
 
   constructor(private userService: UserService, private appointmentService: AppointmentService, private redirect: Router, private route: ActivatedRoute,
-    private alertService: AlertService) { }
+              private alertService: AlertService) { }
 
   ngOnInit() {
     this.route.queryParams.subscribe((queryParams: Params) => {
@@ -55,9 +55,9 @@ export class ProfileComponent implements OnInit {
       });
     }
   }
-  makeAppointment(){
+  makeAppointment() {
     this.appointmentService.changeProfessionalId(this.user.id);
-     this.redirect.navigate(['/appointment/new']);
+    this.redirect.navigate(['/appointment/new']);
    }
 }
 

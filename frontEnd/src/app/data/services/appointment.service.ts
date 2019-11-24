@@ -11,8 +11,8 @@ const apiUrl = environment.baseUrl + 'appointment';
 })
 export class AppointmentService {
 
-  private professionalId = new BehaviorSubject("");
-  currentProfessionalId= this.professionalId.asObservable();
+  private professionalId = new BehaviorSubject('');
+  currentProfessionalId = this.professionalId.asObservable();
 
   constructor(private http: HttpClient) { }
 
@@ -61,16 +61,16 @@ export class AppointmentService {
         catchError(this.handleError)
       );
   }
-  acceptAppointment(id,data): Observable<any> {
+  acceptAppointment(id, data): Observable<any> {
       if (id == null) {
       return of(0);
     }
-    return this.http.post(`${apiUrl}/accept/${id}`, data)
+      return this.http.post(`${apiUrl}/accept/${id}`, data)
       .pipe(
         catchError(this.handleError)
       );
   }
-  paymentAppointment(id,data): Observable<any> {
+  paymentAppointment(id, data): Observable<any> {
     if (id == null) {
       return of(0);
     }

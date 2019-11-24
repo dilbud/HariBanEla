@@ -12,9 +12,9 @@ const apiUrl = environment.baseUrl + 'chat';
   providedIn: 'root'
 })
 export class ChatService   {
-public currentUser :any
-public roomId :string
-public userId: string
+public currentUser: any;
+public roomId: string;
+public userId: string;
 
   constructor(private http: HttpClient) { }
 
@@ -39,7 +39,7 @@ public userId: string
     // return an observable with a user-facing error message
     return throwError('Something bad happened; please try again later.');
   }
-  
+
   // APIs
   getChatById(id: string): Observable<any> {
     const url = `${apiUrl}/${id}`;
@@ -49,7 +49,7 @@ public userId: string
     return this.http.get(url).pipe(
       map(this.extractData), catchError(this.handleError));
   }
-  
+
   updateCategoryById(id, data): Observable<any> {
     const url = `${apiUrl}/${id}`;
     return this.http.put(url, data)
@@ -57,11 +57,11 @@ public userId: string
         catchError(this.handleError)
       );
   }
-  addUser(userId:string,roomId) {
-      axios.post(apiUrl+'/users', { userId })
+  addUser(userId: string, roomId) {
+      axios.post(apiUrl + '/users', { userId })
       .then(() => {
         const tokenProvider = new Chatkit.TokenProvider({
-          url: apiUrl+'/authenticate'
+          url: apiUrl + '/authenticate'
         });
         const chatManager = new Chatkit.ChatManager({
           instanceLocator: environment.chatkitInstanceLocator,
@@ -70,20 +70,20 @@ public userId: string
         });
 
         return chatManager.connect().then(currentUser => {
-            this.currentUser = currentUser; 
-            this.joinRoom(roomId);         
+            this.currentUser = currentUser;
+            this.joinRoom(roomId);
           });
       })
-        .catch(error => console.error(error))
+        .catch(error => console.error(error));
   }
-  joinRoom(roomId){
-    this.currentUser.joinRoom({ roomId: roomId })
+  joinRoom(roomId) {
+    this.currentUser.joinRoom({ roomId })
     .then(room => {
-      console.log(`Joined room with ID: ${room.id}`)
+      console.log(`Joined room with ID: ${room.id}`);
     })
     .catch(err => {
-      console.log(`Error joining room ${roomId}: ${err}`)
-    })
+      console.log(`Error joining room ${roomId}: ${err}`);
+    });
    }
 
 

@@ -34,7 +34,7 @@ export class AnswerUpdateComponent implements OnInit {
       this.questionModel.title = this.question.title;
       this.questionModel.body = this.question.body;
 
-      for (let answer of this.question.answers) {
+      for (const answer of this.question.answers) {
         if (answer._id == this.answerId) {
           this.answerModel = answer;
         }
@@ -46,13 +46,13 @@ export class AnswerUpdateComponent implements OnInit {
   }
 
   onAnswer() {
-    this.answerService.editAnswer(this.answerModel,this.questionId,this.answerId)
+    this.answerService.editAnswer(this.answerModel, this.questionId, this.answerId)
       .subscribe(
         data => {
-          console.log("Success", data);
+          console.log('Success', data);
           this.router.navigate([`/questions/${this.questionId}`]);
         },
-        error => console.log("Error", error)
+        error => console.log('Error', error)
       );
   }
 

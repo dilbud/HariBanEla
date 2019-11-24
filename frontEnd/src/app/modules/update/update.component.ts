@@ -8,7 +8,7 @@ import { UserData } from '../../data/models/userData';
   templateUrl: './update.component.html',
   styleUrls: ['./update.component.scss']
 })
-export class UpdateComponent implements OnInit{
+export class UpdateComponent implements OnInit {
 
 
   isLinear = true;
@@ -63,7 +63,7 @@ export class UpdateComponent implements OnInit{
       const password = this.formPassword.value.Ctrl_1;
       const userType = this.formUserType.value.Ctrl_1;
       const picURL = 'null';
-      const paymentPerHour=1000
+      const paymentPerHour = 1000;
 
       const data: UserData = {
         firstName,

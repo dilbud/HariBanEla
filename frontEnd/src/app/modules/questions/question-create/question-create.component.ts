@@ -13,7 +13,7 @@ import { UserService } from 'app/data/services/user.service';
 export class QuestionCreateComponent implements OnInit {
 
   question;
-  categories: any[]
+  categories: any[];
   questionModel = new Question();
   id: string;
   user;
@@ -32,7 +32,7 @@ export class QuestionCreateComponent implements OnInit {
     });
 
     this.user = this.userService.getUserData();
-    this.questionModel.userId=this.user.id;
+    this.questionModel.userId = this.user.id;
   }
 
   getQuestion() {
@@ -54,19 +54,19 @@ export class QuestionCreateComponent implements OnInit {
       this.questionService.questionCreate(this.questionModel)
         .subscribe(
           data => {
-            console.log("Success created", data);
+            console.log('Success created', data);
             this.router.navigate([`/questions`]);
           },
-          error => console.log("Error", error)
+          error => console.log('Error', error)
         );
     } else {
       this.questionService.questionUpdate(this.questionModel)
         .subscribe(
           data => {
-            console.log("Success", data);
+            console.log('Success', data);
             this.router.navigate([`/questions/${this.id}`]);
           },
-          error => console.log("Error", error)
+          error => console.log('Error', error)
         );
     }
   }

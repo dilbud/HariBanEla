@@ -5,10 +5,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { CoreModule } from '@app/core.module';
+import { ChatComponent } from '@modules/chat/chat.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from '@shared/shared.module';
 import { DlDateTimeDateModule, DlDateTimePickerModule } from 'angular-bootstrap-datetimepicker';
-// import { TagInputModule } from 'ngx-chips';
 import { ToastrModule } from 'ngx-toastr';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -39,8 +39,7 @@ import { QuestionSummaryComponent } from './modules/questions/question-summary/q
 import { ReportDComponent } from './modules/report/report-d/report-d.component';
 import { ReportComponent } from './modules/report/report.component';
 import { UpdateComponent } from './modules/update/update.component';
-import { ChatComponent } from '@modules/chat/chat.component';
- 
+
 
 
 
@@ -66,7 +65,7 @@ import { ChatComponent } from '@modules/chat/chat.component';
     LoginDComponent,
     LogoutDComponent,
     ReportComponent,
-    ReportDComponent, 
+    ReportDComponent,
     AppointmentCreateComponent,
     AppointmentAcceptComponent,
     AppointmentPaymentComponent,
@@ -83,7 +82,6 @@ import { ChatComponent } from '@modules/chat/chat.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    // TagInputModule,
     BrowserAnimationsModule,
     NgbModule,
     DataModule,
@@ -94,8 +92,9 @@ import { ChatComponent } from '@modules/chat/chat.component';
     ReactiveFormsModule,
     HttpClientModule,
     ToastrModule.forRoot(),
-    DlDateTimeDateModule,  
+    DlDateTimeDateModule,
     DlDateTimePickerModule,
+
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
@@ -109,7 +108,7 @@ import { ChatComponent } from '@modules/chat/chat.component';
     LoginDComponent,
     LogoutDComponent,
     ReportDComponent,
-   
+
   ],
 })
 

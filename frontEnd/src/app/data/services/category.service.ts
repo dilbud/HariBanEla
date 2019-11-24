@@ -34,9 +34,9 @@ export class CategoryService  {
     // return an observable with a user-facing error message
     return throwError('Something bad happened; please try again later.');
   }
-  
+
   // APIs
-  getAllCategories():Observable<any>{
+  getAllCategories(): Observable<any> {
     return this.http.get(apiUrl).pipe(
       map(this.extractData), catchError(this.handleError));
   }
@@ -68,7 +68,7 @@ export class CategoryService  {
         catchError(this.handleError)
       );
   }
- 
+
 
 
 }

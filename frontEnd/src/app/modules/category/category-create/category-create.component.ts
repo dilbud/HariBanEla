@@ -21,9 +21,9 @@ export class CategoryCreateComponent implements OnInit {
    * @param  {FormBuilder} privateformBuilder
    */
   constructor(private redirect: Router,
-    private route: ActivatedRoute,
-    private categoryService: CategoryService,
-    private formBuilder: FormBuilder
+              private route: ActivatedRoute,
+              private categoryService: CategoryService,
+              private formBuilder: FormBuilder
   ) { }
 
   ngOnInit() {

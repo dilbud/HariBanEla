@@ -24,19 +24,19 @@ export class CommentCreateComponent implements OnInit {
       this.commentService.addComment(this.commentModel, this.questionId)
         .subscribe(
           data => {
-            console.log("Success", data);
-            // 
+            console.log('Success', data);
+            //
           },
-          error => console.log("Error", error)
+          error => console.log('Error', error)
         );
-    }else{
+    } else {
       this.commentService.addComment(this.commentModel, this.questionId, this.answerId)
         .subscribe(
           data => {
-            console.log("Success", data);
-            // 
+            console.log('Success', data);
+            //
           },
-          error => console.log("Error", error)
+          error => console.log('Error', error)
         );
     }
   }

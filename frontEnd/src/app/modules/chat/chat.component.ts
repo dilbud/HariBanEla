@@ -14,9 +14,9 @@ const apiUrl = environment.baseUrl + 'chat';
 })
 export class ChatComponent implements OnInit {
   userId = '';
-  currentUser = <any>{};
+  currentUser = {} as any;
   messages = [];
-  currentRoom = <any>{};
+  currentRoom = {} as any;
   roomUsers = [];
   userRooms = [];
   newMessage = '';
@@ -26,9 +26,9 @@ export class ChatComponent implements OnInit {
   };
   joinableRooms = [];
   newUser = '';
-public appointmentId
-public user
-  constructor(private route: ActivatedRoute,private appointmentService:AppointmentService,private userService:UserService,private redirect: Router) { }
+public appointmentId;
+public user;
+  constructor(private route: ActivatedRoute, private appointmentService: AppointmentService, private userService: UserService, private redirect: Router) { }
 
   ngOnInit() {
     this.appointmentId = this.route.snapshot.params.id;
@@ -39,31 +39,29 @@ public user
     // this.userId="Dilan Buddika"
     // this.currentRoom=this.appointmentId
     //   this.addUser()
-    this.appointmentService.getAppointmentById(this.appointmentId).subscribe(res=>{
-      if(this.user.id===res.userName){
-        this.userId=res.userName
-      }
-      else if (this.user.id===res.professionalId){
-        this.userId=res.professionalName
-      }
-      else{
+    this.appointmentService.getAppointmentById(this.appointmentId).subscribe(res => {
+      if (this.user.id === res.userName) {
+        this.userId = res.userName;
+      } else if (this.user.id === res.professionalId) {
+        this.userId = res.professionalName;
+      } else {
         this.redirect.navigate(['/profile']);
-      }      
-      this.currentRoom=res.appointmentId
-      this.addUser()
-    })
-    
+      }
+      this.currentRoom = res.appointmentId;
+      this.addUser();
+    });
+
      }
   addUser() {
     const { userId } = this;
-    console.log(this)
+    console.log(this);
     axios.post('http://localhost:3000/api/chat/users', { userId })
       .then(() => {
         console.log(userId);
         const tokenProvider = new Chatkit.TokenProvider({
           url: 'http://localhost:3000/api/chat/authenticate'
         });
-       
+
         const chatManager = new Chatkit.ChatManager({
           instanceLocator: 'v1:us1:75b6cdeb-b889-403e-a0eb-5a50da4d3c95',
           userId,
@@ -73,7 +71,7 @@ public user
         return chatManager
           .connect({
             onAddedToRoom: room => {
-              console.log(`Added to room ${room.name}`)
+              console.log(`Added to room ${room.name}`);
               this.userRooms.push(room);
               this.getJoinableRooms();
             },
@@ -84,7 +82,7 @@ public user
             this.getJoinableRooms();
           });
       })
-        .catch(error => console.error(error))
+        .catch(error => console.error(error));
   }
   addUserToRoom() {
     const { newUser, currentUser, currentRoom } = this;
@@ -106,7 +104,7 @@ public user
   createRoom() {
     const { newRoom: { name, isPrivate }, currentUser } = this;
 
-    if (name.trim() === '') return;
+    if (name.trim() === '') { return; }
 
     currentUser.createRoom({
       name,
@@ -119,8 +117,8 @@ public user
       };
     })
     .catch(err => {
-      console.log(`Error creating room ${err}`)
-    })
+      console.log(`Error creating room ${err}`);
+    });
   }
 
 
@@ -128,11 +126,11 @@ public user
     const { currentUser } = this;
     currentUser.joinRoom({ roomId: id })
     .catch(err => {
-      console.log(`Error joining room ${id}: ${err}`)
-    })
+      console.log(`Error joining room ${id}: ${err}`);
+    });
   }
 
-  
+
 
   connectToRoom(id) {
     this.messages = [];
@@ -147,7 +145,7 @@ public user
         },
         onPresenceChanged: () => {
           this.roomUsers = this.currentRoom.users.sort((a) => {
-            if (a.presence.state === 'online') return -1;
+            if (a.presence.state === 'online') { return -1; }
 
             return 1;
           });
@@ -164,7 +162,7 @@ public user
   sendMessage() {
     const { newMessage, currentUser, currentRoom } = this;
 
-    if (newMessage.trim() === '') return;
+    if (newMessage.trim() === '') { return; }
 
     currentUser.sendMessage({
       text: newMessage,
@@ -180,9 +178,9 @@ public user
       this.joinableRooms = rooms;
     })
     .catch(err => {
-      console.log(`Error getting joinable rooms: ${err}`)
-    })
+      console.log(`Error getting joinable rooms: ${err}`);
+    });
   }
 
- 
+
 }

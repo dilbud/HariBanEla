@@ -9,9 +9,9 @@ import { AuthGuardService } from './data/services/auth-guard.service';
 import { QuestionCreateComponent } from './modules/questions/question-create/question-create.component';
 import { QuestionDetailComponent } from './modules/questions/question-detail/question-detail.component';
 import { QuestionListComponent } from './modules/questions/question-list/question-list.component';
-import{AppointmentAcceptComponent} from '@modules/appointment/appointment-accept/appointment-accept.component'
-import {AppointmentPaymentComponent} from '@modules/appointment/appointment-payment/appointment-payment.component'
-import{AppointmentCreateComponent} from '@modules/appointment/appointment-create/appointment-create.component'
+import {AppointmentAcceptComponent} from '@modules/appointment/appointment-accept/appointment-accept.component';
+import {AppointmentPaymentComponent} from '@modules/appointment/appointment-payment/appointment-payment.component';
+import {AppointmentCreateComponent} from '@modules/appointment/appointment-create/appointment-create.component';
 import { ProfessionalListComponent } from '@modules/professional-list/professional-list.component';
 import {ChatComponent} from '@modules/chat/chat.component';
 import { from } from 'rxjs';
@@ -45,7 +45,7 @@ const routes: Routes = [
     path: 'appointment/:id',
     component: AppointmentAcceptComponent
   },
- 
+
   {
     path: 'payment/:id',
     component: AppointmentPaymentComponent
@@ -55,14 +55,14 @@ const routes: Routes = [
     component: ChatComponent,
     // canActivate: [AuthGuardService],
   },
-  
+
   {
     path: 'admin',
     component: AdminComponent,
     canActivate: [AuthGuardService],
   },
   {
-    path: "admin/category/:id",
+    path: 'admin/category/:id',
     component: CategoryCreateComponent,
     canActivate: [AuthGuardService]
   },
@@ -76,7 +76,7 @@ const routes: Routes = [
     component: QuestionListComponent
   },
 
-  
+
 
 ];
 

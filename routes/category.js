@@ -8,18 +8,18 @@ const winston = require('../config/winston');
 /* GET ALL CATEGORIES */
 
 router.get('/', async function(req, res, next) {
-    try {
-        const categories = await Category.find();
-        winston.info(`200 -  View a categories. - ${req.originalUrl} - ${req.method} - ${req.ip}`);
-        res.json(categories);   
-      
-    } catch (error) {
-      winston.error(`${error.status || 500} - ${error.message} - ${req.originalUrl} - ${req.method} - ${req.ip}`);
-      return next(error);
-      throw error; // <-- THIS IS ESSENTIAL FOR BREAKING THE CHAIN
-    }
-  });
-  
+  try {
+    const categories = await Category.find();
+    winston.info(`200 -  View a categories. - ${req.originalUrl} - ${req.method} - ${req.ip}`);
+    res.json(categories);
+
+  } catch (error) {
+    winston.error(`${error.status || 500} - ${error.message} - ${req.originalUrl} - ${req.method} - ${req.ip}`);
+    return next(error);
+    throw error; // <-- THIS IS ESSENTIAL FOR BREAKING THE CHAIN
+  }
+});
+
 
 // GET SINGEL CATEGORY BY ID
 router.get('/:id', async function(req, res, next) {

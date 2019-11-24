@@ -7,7 +7,7 @@ import { CategoryService } from 'app/data/services/category.service';
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent implements OnInit {
-  public categories: any[]
+  public categories: any[];
   constructor(private categoryService: CategoryService, ) { }
 
   ngOnInit() {

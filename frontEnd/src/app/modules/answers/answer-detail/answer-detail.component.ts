@@ -23,7 +23,7 @@ export class AnswerDetailComponent implements OnInit {
     this.getOwner();
   }
 
-  getOwner(){
+  getOwner() {
     this.userService.getUserDataById(this.answer.userId).subscribe(res => {
       this.owner = res.serverData;
       console.log(this.owner);
@@ -37,7 +37,7 @@ export class AnswerDetailComponent implements OnInit {
   }
 
   voteAnswer(status) {
-    let id = this.route.snapshot.params.id;
+    const id = this.route.snapshot.params.id;
     this.answerService.voteAnswer(this.questionId, this.answer._id, status).subscribe(res => {
       console.log(res);
     }, err => {

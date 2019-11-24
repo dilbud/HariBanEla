@@ -63,7 +63,7 @@ export class UserService  {
     return this.user;
   }
   public getUserDataById(userId: string): any {
-    return this.http.post('http://localhost:3000/api/user/getUserById',{ id: userId});
+    return this.http.post('http://localhost:3000/api/user/getUserById', { id: userId});
 
     // let res: any;
     // this.http
@@ -82,7 +82,7 @@ export class UserService  {
     //       this.AlertService.showAlert();
     //     },
     //     () => {
-          
+
     //     }
     //   );
     //   return this.otherUser;
@@ -298,7 +298,7 @@ export class UserService  {
   public autoAuthUser() {
     const token = this.getToken();
     const decoded = this.decodeToken(token);
-    console.log("11111111111111111")
+    console.log('11111111111111111');
     if (decoded === null || decoded === undefined) {
       this.logout();
       return;
@@ -312,7 +312,7 @@ export class UserService  {
         email: decoded.userData.email,
         picURL: decoded.userData.picURL,
         userType: decoded.userData.userType
-      }
+      };
       this.isAuthenticated = true;
       this.authStatusListener.next(true);
       this.setAuthTimer();

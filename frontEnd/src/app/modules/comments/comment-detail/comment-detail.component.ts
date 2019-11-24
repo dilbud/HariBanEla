@@ -8,7 +8,7 @@ import { Comment } from 'app/data/models/comment';
 })
 export class CommentDetailComponent implements OnInit {
 
-  @Input() comment:Comment;
+  @Input() comment: Comment;
 
   constructor() { }
 

@@ -5,8 +5,8 @@ const winston = require('../config/winston');
 const sgMail = require('../config/sendGrid').sgMail;
 const Chatkit = require('@pusher/chatkit-server');
 const chatkit = new Chatkit.default({
-  instanceLocator: 'v1:us1:75b6cdeb-b889-403e-a0eb-5a50da4d3c95' ,
-      key: '5a554936-f216-4f98-a053-80f32b51f827:FB4J+2fgc7X9MWIOpWfQDDdEa5KiUsWI5/NC52a7qCE=',
+  instanceLocator: 'v1:us1:75b6cdeb-b889-403e-a0eb-5a50da4d3c95',
+  key: '5a554936-f216-4f98-a053-80f32b51f827:FB4J+2fgc7X9MWIOpWfQDDdEa5KiUsWI5/NC52a7qCE=',
 });
 
 
@@ -42,7 +42,7 @@ router.get('/:id', async function(req, res, next) {
 //   CREATE NEW BOOKING
 router.post('/new', async function(req, res, next) {
   try {
-    console.log(req.body)
+    console.log(req.body);
     const appointment = await Appointment.create(req.body);
     winston.info(`200 - created a new appointment. - ${req.originalUrl} - ${req.method} - ${req.ip}`);
     res.json(appointment);
@@ -115,9 +115,9 @@ router.post('/accept/:id', async function(req, res, next) {
 router.post('/payment/:id', async function(req, res, next) {
   try {
     const appointment = await Appointment.findById(req.params.id);
-    console.log("tjjtjt");
+    console.log('tjjtjt');
     if (req.body.paymentStatus == 'Paid') {
-      appointment.paymentStatus = 'Paid'; 
+      appointment.paymentStatus = 'Paid';
       console.log(appointment.userId);
       createUser(appointment.userName, appointment.userName);
       createUser(appointment.professionalName, appointment.professionalName);

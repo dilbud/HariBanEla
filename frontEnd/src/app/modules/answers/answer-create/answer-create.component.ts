@@ -27,10 +27,10 @@ export class AnswerCreateComponent implements OnInit {
     this.answerService.addAnswer(this.answerModel, this.questionId)
       .subscribe(
         data => {
-          console.log("Success", data);
-          // 
+          console.log('Success', data);
+          //
         },
-        error => console.log("Error", error)
+        error => console.log('Error', error)
       );
   }
 

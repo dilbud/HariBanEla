@@ -44,7 +44,7 @@ app.use('/api/chat', chatRouter);
 app.use('/api/category', categoryRouter);
 app.use('/api/user', usersRouter);
 app.use('/api/appointment', appointmentRouter);
-app.use('/questions', questionsRouter);
+app.use('/api/questions', questionsRouter);
 // app.use('/', express.static(path.join(__dirname, 'frontEnd/dist/frontEnd')));
 app.get('/*', function(req, res) {
 

@@ -10,7 +10,7 @@ import { UserService } from 'app/data/services/user.service';
 })
 export class QuestionSummaryComponent implements OnInit {
 
-  @Input() question:Question;
+  @Input() question: Question;
   owner;
 
   constructor(private userService: UserService, private router: Router) { }
@@ -20,7 +20,7 @@ export class QuestionSummaryComponent implements OnInit {
     this.getOwner();
   }
 
-  getOwner(){
+  getOwner() {
     this.userService.getUserDataById(this.question.userId).subscribe(res => {
       this.owner = res.serverData;
     }, err => {
@@ -28,8 +28,8 @@ export class QuestionSummaryComponent implements OnInit {
     });
   }
 
-  onQuestion(){
-    this.router.navigate(['/questions',this.question._id]);
+  onQuestion() {
+    this.router.navigate(['/questions', this.question._id]);
   }
 
 }
