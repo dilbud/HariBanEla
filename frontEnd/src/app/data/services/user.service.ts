@@ -11,6 +11,9 @@ import {
   FacebookLoginProvider,
   GoogleLoginProvider
 } from 'angularx-social-login';
+import { environment } from '@env';
+
+const apiUrl = environment.baseUrl + 'user';
 
 @Injectable({ providedIn: 'root' })
 export class UserService  {
@@ -63,7 +66,7 @@ export class UserService  {
     return this.user;
   }
   public getUserDataById(userId: string): any {
-    return this.http.post('http://localhost:3000/api/user/getUserById', { id: userId});
+    return this.http.post(apiUrl +'/getUserById', { id: userId});
 
     // let res: any;
     // this.http
@@ -96,11 +99,11 @@ export class UserService  {
   public getProList() {
 
     return this.http
-    .get('http://localhost:3000/api/user/proList');
+    .get(apiUrl+'/proList');
   }
 
   public getProProfile(proId: string) {
-    return this.http.get('http://localhost:3000/api/user/proProfile', { params: {id: proId}});
+    return this.http.get(apiUrl+'/proProfile', { params: {id: proId}});
   }
 
 
@@ -108,7 +111,7 @@ export class UserService  {
   public updateUser(data: UserData) {
     let res: any;
     this.http
-      .post('http://localhost:3000/api/user/update', {
+      .post(apiUrl+'update', {
         id: this.user.id,
         query: data
       })
@@ -154,7 +157,7 @@ export class UserService  {
         };
         let res: any;
         this.http
-          .post('http://localhost:3000/api/user/create', this.serverData)
+          .post(apiUrl+'/create', this.serverData)
           .subscribe(
             response => {
               res = response;
@@ -213,7 +216,7 @@ export class UserService  {
       };
       let res: any;
       this.http
-        .post('http://localhost:3000/api/user/create', this.serverData)
+        .post(apiUrl+'/create', this.serverData)
         .subscribe(
           response => {
             res = response;
@@ -257,7 +260,7 @@ export class UserService  {
   public login(email: string, password: string) {
     const authData: AuthData = { email, password };
     let res: any;
-    this.http.post('http://localhost:3000/api/user/login', authData).subscribe(
+    this.http.post(apiUrl+'/login', authData).subscribe(
       response => {
         res = response;
       },
@@ -349,7 +352,7 @@ export class UserService  {
       this.logout();
     }
   }
-
+cd
   private storeToken(data: any) {
     localStorage.setItem('token101', data);
   }

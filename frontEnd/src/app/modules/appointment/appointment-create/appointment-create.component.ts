@@ -54,12 +54,12 @@ export class AppointmentCreateComponent implements OnInit {
               private formBuilder: FormBuilder, private userSerivce: UserService) { }
 
   ngOnInit() {
-    this.professionalPhoto = 'https://lh4.googleusercontent.com/-yUG1fx5VXbY/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rdn62LesVDBvcpG1PFEv7aAuxByWg/s96-c/photo.jpg';
-    this.paymentPerHour = 1000;
-    this.professionalName = 'the xhax';
-    this.duration = 0;
-    // this.paymentAmount=0
-    this.paymentAmount = 0;
+    // this.professionalPhoto = 'https://lh4.googleusercontent.com/-yUG1fx5VXbY/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rdn62LesVDBvcpG1PFEv7aAuxByWg/s96-c/photo.jpg';
+    // this.paymentPerHour = 1000;
+    // this.professionalName = 'the xhax';
+    // this.duration = 0;
+    // // this.paymentAmount=0
+    // this.paymentAmount = 0;
     this.appointmentService.currentProfessionalId.subscribe(res => {
       this.professionalId = res;
         },
@@ -71,6 +71,7 @@ export class AppointmentCreateComponent implements OnInit {
         this.professionalName = res.serverData.firstName + ' ' + res.serverData.lastName;
         this.paymentPerHour = res.serverData.paymentPerHour;
         this.professionalEmail = res.serverData.email;
+        this.professionalPhoto=res.serverData.picURL;
       });
     this.user = this.userSerivce.getUserData();
     this.appointmentForm = this.formBuilder.group({
@@ -99,7 +100,7 @@ export class AppointmentCreateComponent implements OnInit {
     data.paymentAmount = this.paymentAmount;
 
     this.appointmentService.makeAppointment(data).subscribe(res => {
-      this.toastrService.success('Hari Bn Ela', 'Appoinment has been sent to the' + this.professionalName + '. We will get back to you');
+      this.toastrService.success('Hari Bn Ela', 'Appoinment has been sent to the ' + this.professionalName + '. We will get back to you');
       this.redirect.navigate(['/home']);
     });
 

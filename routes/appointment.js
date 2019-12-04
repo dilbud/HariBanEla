@@ -61,7 +61,7 @@ router.post('/accept/:id', async function(req, res, next) {
     const appointment = await Appointment.findById(req.params.id);
     if (req.body.status == 'Accepted') {
       appointment.status = 'Accepted';
-      appointment.paymentUrl = 'http://localhost:4200/payment/' + req.params.id;
+      appointment.paymentUrl = 'https://haribnela.herokuapp.com/payment/' + req.params.id;
     }
     else {
       appointment.status = 'Rejected';
@@ -122,7 +122,7 @@ router.post('/payment/:id', async function(req, res, next) {
       createUser(appointment.userName, appointment.userName);
       createUser(appointment.professionalName, appointment.professionalName);
       createRoom(appointment.id, appointment.userName, appointment.professionalName);
-      appointment.chatUrl='https://localhost:4200:chat/'+appointment.id;
+      appointment.chatUrl='https://haribnela.herokuapp.com/chat/'+appointment.id;
     }
     else {
       appointment.paymentStatus = 'Not paid';
@@ -132,16 +132,16 @@ router.post('/payment/:id', async function(req, res, next) {
 
     // res.json(updatedAppointment);
     const msg = {
-      to: appointment.userEmail,
+      to: updatedAppointment.userEmail,
       from: 'Appointmet@haribnela.lk',
       subject: 'Payment Details',
-      text: `Your Appointment with ${appointment.proffesionalName} has been made.
-              Subject:${appointment.subject}
-              Description: ${appointment.description}
-              Starting Time: ${appointment.startTime}.
-              Ending Time: ${appointment.endTime}
-              URl for Communication : ${appointment.chatUrl}`,
-      html: '<div><a href="https://allurneeds.herokuapp.com/api/users/resetPassword/${resetToken}>Click here to reset your password </a> </div>',
+      text: `Your Appointment with ${updatedAppointment.proffesionalName} has been made.
+              Subject:${updatedAppointment.subject}
+              Description: ${updatedAppointment.description}
+              Starting Time: ${updatedAppointment.startTime}.
+              Ending Time: ${updatedAppointment.endTime}
+              URl for Communication : ${updatedAppointment.chatUrl}`,
+      html: '<div> </div>',
     };
 
     sgMail.send(msg, function(err, info) {

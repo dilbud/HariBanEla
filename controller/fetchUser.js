@@ -2,7 +2,7 @@ const user = require('../models/userModel');
 
 
 module.exports =  (req, res, next) => {
-  console.log('555555555555555555555555555555555');
+  // console.log('555555555555555555555555555555555');
   console.log(req.body.id);
     let id  = req.body.id;
 
@@ -22,7 +22,7 @@ module.exports =  (req, res, next) => {
         }
       } else {
 
-        console.log('555555555555555555555555555555555');
+        // console.log('555555555555555555555555555555555');
     
         // console.log(data);
 
