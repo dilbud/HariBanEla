@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node ./bin/www & node app",
     "lint": "eslint --ignore-path .gitignore ",
-    "build": "cd ./frontEnd && ng build --prod && cd .. && npm run start"
+    "build": "cd ./frontEnd && ng build --prod && cd .. && npm run start",
+    "ng": "cd ./frontEnd && ng build --prod"
   },
   "dependencies": {
     "@ng-bootstrap/ng-bootstrap": "^5.1.4",
