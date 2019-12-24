@@ -20,8 +20,11 @@
             <small>
               <span class="mr-3">Asked time</span>
               <span class="mr-3">{{question.views}} Views</span>
-              <a class="actionLink mr-3" [routerLink] routerLinkActive="router-link-active" (click)="onEdit()">Edit</a>
-              <a class="actionLink" [routerLink] routerLinkActive="router-link-active" (click)="onDelete()">Delete</a>
+              <span *ngIf="!mode && user?.id==owner?.id">
+                <a class="actionLink mr-3" [routerLink] routerLinkActive="router-link-active"
+                  (click)="onEdit()">Edit</a>
+                <a class="actionLink" [routerLink] routerLinkActive="router-link-active" (click)="onDelete()">Delete</a>
+              </span>
             </small>
           </div>
           <p>{{question.body}}</p>
@@ -61,7 +64,7 @@
   </h4>
   <div *ngIf="question.answerCount>0">
     <span *ngFor="let answer of question.answers">
-      <app-answer-detail [questionId]="question._id" [answer]="answer" [mode]="mode"></app-answer-detail>
+      <app-answer-detail [questionId]="question._id" [answer]="answer" [user]="user" [mode]="mode"></app-answer-detail>
     </span>
   </div>
   <div *ngIf="!mode">

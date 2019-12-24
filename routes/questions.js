@@ -91,7 +91,7 @@ router.delete('/:id', async (req, res) => {
 
 // Add answer
 router.put('/:id/answers', async (req, res) => {
-    console.log(req);
+    // console.log(req);
     const answer = {
         body: req.body.body,
         userId: req.body.userId,
@@ -110,7 +110,7 @@ router.put('/:id/answers', async (req, res) => {
 });
 
 // edit answer
-router.put('/:questionId/:answerId', async (req, res) => {
+router.put('/:questionId/answers/:answerId', async (req, res) => {
   const questionId = req.params.questionId;
   const answerId = req.params.answerId;
   try {
@@ -129,7 +129,7 @@ router.put('/:questionId/:answerId', async (req, res) => {
 });
 
 // Vote answer
-router.get('/:questionId/:answerId/vote', async (req, res) => {
+router.get('/:questionId/answers/:answerId/vote', async (req, res) => {
   try {
     const questionId = req.params.questionId;
     const answerId = req.params.answerId;
@@ -153,15 +153,17 @@ router.get('/:questionId/:answerId/vote', async (req, res) => {
 
 // Add comment to question
 router.put('/:questionId/comments', async (req, res) => {
-  console.log(req);
+  console.log('req.body');
   const comment = {
     body: req.body.body,
   };
   try {
+    console.log('req.body');
     const questionId = req.params.questionId;
     const question = await Question.findById(questionId);
     question.comments.push(comment);
     const saved = await question.save();
+    console.log(saved);
     res.json(saved);
   } catch (error) {
     res.json({Emessage: error});
@@ -169,7 +171,7 @@ router.put('/:questionId/comments', async (req, res) => {
 });
 
 // Add comment to answer
-router.put('/:questionId/:answerId/comments', async (req, res) => {
+router.put('/:questionId/answers/:answerId/comments', async (req, res) => {
   const comment = {
     body: req.body.body,
   };

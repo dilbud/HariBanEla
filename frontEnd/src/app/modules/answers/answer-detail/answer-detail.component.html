@@ -15,8 +15,10 @@
     <div class="row">
       <div class="col">
         <small>
-          <a class="actionLink mr-3" [routerLink] routerLinkActive="router-link-active" (click)="onEdit()">Edit</a>
-          <!-- <a class="actionLink" [routerLink] routerLinkActive="router-link-active" (click)="onDelete()">Delete</a> -->
+          <span *ngIf="!mode && user?.id==owner?.id">
+            <a class="actionLink mr-3" [routerLink] routerLinkActive="router-link-active" (click)="onEdit()">Edit</a>
+            <!-- <a class="actionLink" [routerLink] routerLinkActive="router-link-active" (click)="onDelete()">Delete</a> -->
+          </span>
         </small>
       </div>
       <div *ngIf="owner" class="col-3">

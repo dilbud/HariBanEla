@@ -26,15 +26,17 @@ export class QuestionDetailComponent implements OnInit {
       this.refreshQuestion();
     }, 600000);
 
-    // this.user = this.userService.getUserData();
-    // console.log(this.user);
-
     this.isAuthenticated = this.userService.getIsAuth();
+    this.user = this.userService.getUserData();
+    console.log('this.user');
+    console.log(this.user);
     this.userService.getAuthStatusListener()
     .subscribe( (isAuthenticated: boolean) => {
       this.isAuthenticated = isAuthenticated;
+      this.user = this.userService.getUserData();
       this.mode = !this.isAuthenticated;
     });
+    this.mode = !this.isAuthenticated;
 }
 
 getOwner() {

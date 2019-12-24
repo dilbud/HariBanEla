@@ -1,5 +1,5 @@
 export class Comment {
-    _id: string;
+    // _id: string;
     // owner: User;
     body: string;
 

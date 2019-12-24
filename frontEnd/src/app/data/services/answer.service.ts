@@ -18,14 +18,14 @@ export class AnswerService {
   }
 
   editAnswer(answer, questionId, answerId) {
-    return this.http.put(apiUrl + '/' + questionId + '/' + answerId, answer);
+    return this.http.put(apiUrl + '/' + questionId + '/answers/' + answerId, answer);
   }
 
   voteAnswer(questionId, answerId, status) {
     if (status == 1) {
-      return this.http.get(apiUrl + '/' + questionId + '/' + answerId + '/vote?vote=1');
+      return this.http.get(apiUrl + '/' + questionId + '/answers/' + answerId + '/vote?vote=1');
     } else {
-      return this.http.get(apiUrl + '/' + questionId + '/' + answerId + '/vote?vote=0');
+      return this.http.get(apiUrl + '/' + questionId + '/answers/' + answerId + '/vote?vote=0');
     }
   }
 

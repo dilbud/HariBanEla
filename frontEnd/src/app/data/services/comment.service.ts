@@ -17,7 +17,7 @@ export class CommentService {
     if (!answerId) {
       return this.http.put(apiUrl + '/' + questionId + '/comments', comment);
     } else {
-      return this.http.put(apiUrl + '/' + questionId + '/' + answerId + '/comments', comment);
+      return this.http.put(apiUrl + '/' + questionId + '/answers/' + answerId + '/comments', comment);
     }
   }
 

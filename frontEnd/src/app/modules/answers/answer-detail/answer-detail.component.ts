@@ -13,9 +13,9 @@ export class AnswerDetailComponent implements OnInit {
 
   @Input() questionId: string;
   @Input() answer: Answer;
-  user;
-  owner;
+  @Input() user;
   @Input() mode;
+  owner;
 
   constructor(private answerService: AnswerService, private userService: UserService, private route: ActivatedRoute, private router: Router) { }
 
