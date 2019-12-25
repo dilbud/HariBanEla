@@ -18,8 +18,14 @@ export class QuestionService {
     return this.http.post(apiUrl, question);
   }
 
-  questionList() {
-    return this.http.get(apiUrl);
+  questionList(category?) {
+    console.log(category);
+    if (!category){
+      return this.http.get(apiUrl);
+    }else{
+      return this.http.get(apiUrl+'/category/'+category);
+    }
+    
   }
 
   getQuestion(id) {

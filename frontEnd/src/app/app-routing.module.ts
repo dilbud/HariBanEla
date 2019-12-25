@@ -22,6 +22,10 @@ const routes: Routes = [
     component: QuestionListComponent
   },
   {
+    path: 'category/:category',
+    component: QuestionListComponent
+  },
+  {
     path: 'ask',
     component: QuestionCreateComponent,
     canActivate: [AuthGuardService]

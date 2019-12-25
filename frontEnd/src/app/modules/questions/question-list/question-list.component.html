@@ -1,9 +1,17 @@
 <div class="container">
-
-  <ul *ngIf="questions">
-      <h3 class="m-2">All Questions</h3>
+  <div class="row mb-2">
+    <a routerLink="/"> Questions </a> &nbsp;
+    <span *ngIf="category">
+      / {{category}}
+    </span>
+    <span *ngIf="!category">
+      / All
+    </span>
+  </div>
+  <div *ngIf="questions">
+      <!-- <h3 class="m-2">All Questions</h3> -->
     <div *ngFor="let question of questions">
       <app-question-summary [question]="question"></app-question-summary>
     </div>
-  </ul>
+  </div>
 </div>

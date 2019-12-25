@@ -1,5 +1,5 @@
 <nav class="navbar shadow navbar-expand-lg navbar-light bg-light row fixed-top mb-3rem">
-  <a class="navbar-brand col-1" routerLink="#">
+  <a class="navbar-brand col-1" routerLink="/">
     <img src="assets/logo.png" height="70px" alt="">
   </a>
 
@@ -16,7 +16,7 @@
     <li ngbDropdown class="nav-item">
       <a class="nav-link" id="categoryDropdown" ngbDropdownToggle>Categories</a>
       <div ngbDropdownMenu aria-labelledby="categoryDropdown">
-        <button ngbDropdownItem *ngFor="let category of categories">{{category.name}}</button>
+        <button ngbDropdownItem *ngFor="let category of categories" (click)="onCategory(category.name)" routerLinkActive="router-link-active" >{{category.name}}</button>
       </div>
     </li>
     

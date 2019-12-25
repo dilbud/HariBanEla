@@ -25,10 +25,22 @@ router.post('/', async (req, res) => {
     }
 });
 
-// get questions
+// get questions  
 router.get('/', async (req, res) => {
   try {
     const received = await Question.find();
+    res.json(received);
+  } catch (error) {
+    res.json({Emessage: error});
+  }
+});
+
+// get questions of a category 
+router.get('/category/:category', async (req, res) => {
+  const category = req.params.category;
+  try {
+    const received = await Question.find({category: category});
+    console.log(received);
     res.json(received);
   } catch (error) {
     res.json({Emessage: error});
