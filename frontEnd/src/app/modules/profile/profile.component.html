@@ -1,17 +1,27 @@
-<div class="container">
+<div class="container" *ngIf="user === null ? false : true">
   <mat-card class="card">
-    <div class="d-flex flex-row">
-      <img src="{{user.picURL}}" alt="Avatar" >
-      <div class="d-flex flex-column b">
-        <div class="c"><h3><span class="c1">{{user.firstName}}</span><span class="c2">{{user.lastName}}</span></h3></div>
-        <div class="d">{{user.address === 'null' ? '' : user.address}}</div>
-        <div class="e">{{user.email}}</div>
-        <div class="f"><span>{{user.userType === 'gen' ? 'General' : 'Professional'}}</span></div>      
-
+    <div class="d-flex ">
+      <img src="{{ user.picURL }}" alt="Avatar" class="m-0 propic" />
+      <div class="d-flex flex-column b pl-sm-2 pl-md-5">
+        <div class="c">
+          <h3>
+            <span class="c1">{{ user.firstName }}</span><span class="c2">{{ user.lastName }}</span>
+          </h3>
+        </div>
+        <div class="d">{{ user.address === "null" ? "" : user.address }}</div>
+        <div class="e">{{ user.email }}</div>
+        <div class="f">
+          <span>{{
+            user.userType === "gen" ? "General" : "Professional"
+          }}</span>
+        </div>
+      </div>
+      <div class="ml-auto align-self-end d-none d-md-block d-lg-block">
+        <a mat-icon-button class="editbutt" id="butticon">
+          <i class="editicon material-icons">
+            edit </i>
+        </a>
       </div>
     </div>
-  </mat-card> 
-  <div class ="button" (click)="makeAppointment()"> Book Now</div> 
+  </mat-card>
 </div>
-
-

@@ -24,9 +24,9 @@
     <li class="nav-item">
       <a class="nav-link" routerLink="/professionals">professionals</a>
     </li>
-    
+
     <li>
-      <img *ngIf="isAuthenticated" class="profilePhoto mt-1 mr-2" routerLink="profile" src="{{user.picURL}}">
+      <img *ngIf="isAuthenticated" class="profilePhoto mt-1 mr-2" (click)="view()" src="{{user.picURL}}">
     </li>
     <li>
       <app-login></app-login>

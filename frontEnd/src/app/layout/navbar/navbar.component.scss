@@ -4,4 +4,8 @@
 .profilePhoto{
     border-radius: 50%;
     width: 2em;
+    cursor: pointer;
+}
+.profilePhoto:focus {
+  outline: none;
 }

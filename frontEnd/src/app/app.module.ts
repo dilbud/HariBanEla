@@ -39,6 +39,8 @@ import { QuestionSummaryComponent } from './modules/questions/question-summary/q
 import { ReportDComponent } from './modules/report/report-d/report-d.component';
 import { ReportComponent } from './modules/report/report.component';
 import { UpdateComponent } from './modules/update/update.component';
+import { ProfilePageComponent } from './modules/profile-page/profile-page.component';
+import { BookingComponent } from './modules/booking/booking.component';
 
 
 
@@ -70,7 +72,9 @@ import { UpdateComponent } from './modules/update/update.component';
     AppointmentAcceptComponent,
     AppointmentPaymentComponent,
     ProfessionalListComponent,
-    ChatComponent
+    ChatComponent,
+    ProfilePageComponent,
+    BookingComponent
   ],
 
   imports: [

@@ -14,6 +14,8 @@ import {AppointmentPaymentComponent} from '@modules/appointment/appointment-paym
 import {AppointmentCreateComponent} from '@modules/appointment/appointment-create/appointment-create.component';
 import { ProfessionalListComponent } from '@modules/professional-list/professional-list.component';
 import {ChatComponent} from '@modules/chat/chat.component';
+import { ProfilePageComponent } from './modules/profile-page/profile-page.component';
+import { BookingComponent } from './modules/booking/booking.component';
 import { from } from 'rxjs';
 
 const routes: Routes = [
@@ -71,6 +73,8 @@ const routes: Routes = [
   { path: 'update', component: UpdateComponent, canActivate: [AuthGuardService]},
   { path: 'profile', component: ProfileComponent},
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuardService]},
+  { path: 'account', component: ProfilePageComponent},
+  { path: 'booking', component: BookingComponent },
   {
     path: '**',
     component: QuestionListComponent

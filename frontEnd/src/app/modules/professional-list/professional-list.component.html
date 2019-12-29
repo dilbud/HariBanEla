@@ -1,16 +1,13 @@
-
-<mat-accordion>
-
-
-  <mat-expansion-panel *ngFor=" let item of proList">
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        <span>{{item.firstName+ ' ' + item.lastName}}</span>
-      </mat-panel-title>
-      <mat-panel-description>
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-    <span><button mat-button (click)="view(item)"  >View</button></span>
-  </mat-expansion-panel>
-</mat-accordion>
-
+<div class="container prolist">
+  <mat-accordion >
+    <mat-expansion-panel *ngFor="let item of proList">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <span>{{ item.firstName + " " + item.lastName }}</span>
+        </mat-panel-title>
+        <mat-panel-description> </mat-panel-description>
+      </mat-expansion-panel-header>
+      <span><button mat-button (click)="view(item)">View</button></span>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

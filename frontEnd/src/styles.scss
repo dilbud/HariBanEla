@@ -31,3 +31,7 @@ $frontEnd-theme: mat-light-theme($frontEnd-primary, $frontEnd-accent, $frontEnd-
 @import '@fortawesome/fontawesome-free/css/all.css';
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.profile#tab.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  background-color: red;
+}

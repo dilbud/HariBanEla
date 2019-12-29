@@ -66,7 +66,7 @@ export class UserService  {
     return this.user;
   }
   public getUserDataById(userId: string): any {
-    return this.http.post(apiUrl +'/getUserById', { id: userId});
+    return this.http.post(apiUrl + '/getUserById', { id: userId});
 
     // let res: any;
     // this.http
@@ -99,7 +99,7 @@ export class UserService  {
   public getProList() {
 
     return this.http
-    .get(apiUrl+'/proList');
+    .get(apiUrl + '/proList');
   }
 
   public getProProfile(proId: string) {
@@ -111,7 +111,7 @@ export class UserService  {
   public updateUser(data: UserData) {
     let res: any;
     this.http
-      .post(apiUrl+'update', {
+      .post(apiUrl + '/update', {
         id: this.user.id,
         query: data
       })
@@ -157,7 +157,7 @@ export class UserService  {
         };
         let res: any;
         this.http
-          .post(apiUrl+'/create', this.serverData)
+          .post(apiUrl + '/create', this.serverData)
           .subscribe(
             response => {
               res = response;
@@ -216,7 +216,7 @@ export class UserService  {
       };
       let res: any;
       this.http
-        .post(apiUrl+'/create', this.serverData)
+        .post(apiUrl + '/create', this.serverData)
         .subscribe(
           response => {
             res = response;
@@ -260,7 +260,7 @@ export class UserService  {
   public login(email: string, password: string) {
     const authData: AuthData = { email, password };
     let res: any;
-    this.http.post(apiUrl+'/login', authData).subscribe(
+    this.http.post(apiUrl + '/login', authData).subscribe(
       response => {
         res = response;
       },
@@ -334,7 +334,7 @@ export class UserService  {
     this.authStatusListener.next(false);
     clearTimeout(this.tokenTimer);
     this.clearToken();
-    // this.router.navigate(['/']);
+    this.router.navigate(['/']);
   }
 
   private setAuthTimer() {
@@ -352,7 +352,7 @@ export class UserService  {
       this.logout();
     }
   }
-cd
+
   private storeToken(data: any) {
     localStorage.setItem('token101', data);
   }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CategoryService } from 'app/data/services/category.service';
 import { UserService } from 'app/data/services/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -13,7 +14,7 @@ export class NavbarComponent implements OnInit {
   categories: any[];
   isAuthenticated = false;
 
-  constructor(private categoryService: CategoryService, private userService: UserService) { }
+  constructor(private categoryService: CategoryService, private userService: UserService, private router: Router) { }
   user = null;
   ngOnInit() {
     this.categoryService.getAllCategories().subscribe(res => {
@@ -27,9 +28,9 @@ export class NavbarComponent implements OnInit {
       this.user = this.userService.getUserData();
       // this.mode = !this.isAuthenticated;
     });
-
-
-
+  }
+  view() {
+    this.router.navigate(['../account'], { queryParams: { id: this.user.id, type: 'current' } });
   }
 
 }

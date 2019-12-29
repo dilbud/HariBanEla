@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   loginDialog(): void {
     const dialogRef = this.dialog.open(LoginDComponent, {
-      width: '500px', height: '35em',
+      width: '400px', height: '30em',
       data: { email: this.email, password: this.password }
     });
 
@@ -68,6 +68,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   logoutDialog(): void {
+    
     this.UserService.logout();
     // const userName  = this.user.firstName + ' ' + this.user.lastName;
     // const dialogRef = this.dialog.open(LogoutDComponent, {

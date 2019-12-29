@@ -37,7 +37,7 @@ export class ProfessionalListComponent implements OnInit {
   }
 
   view(item: any) {
-    this.router.navigate(['../profile'], { queryParams: { id: item._id } });
+    this.router.navigate(['../booking'], { queryParams: { id: item._id, type: item.userType} });
   }
 
 

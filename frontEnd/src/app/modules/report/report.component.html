@@ -1,3 +1,28 @@
+<!-- <button mat-icon-button ngsw (click)="report()">
+  <mat-icon>favorite</mat-icon>
+</button>
 <button mat-icon-button (click)="report()">
   <mat-icon>favorite</mat-icon>
 </button>
+<button mat-icon-button (click)="report()">
+  <mat-icon>favorite</mat-icon>
+</button> -->
+
+
+<div [ngSwitch]="path">
+  <div *ngSwitchCase="0">
+    <a (click)="feedback()" >Feedback</a>
+  </div>
+  <div *ngSwitchCase="1">
+    <a (click)="resetPassword()" >reset password</a>
+  </div>
+  <div *ngSwitchCase="2">
+    <a (click)="reportPost()" >report post</a>
+  </div>
+  <div *ngSwitchCase="3">
+    <a (click)="reportSystem()" >report system</a>
+  </div>
+  <div *ngSwitchCase="4">
+    <a (click)="reportUser()" >report user</a>
+  </div>
+</div>
