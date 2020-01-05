@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Comment } from 'app/data/models/comment';
+import { CommentService } from 'app/data/services/comment.service';
+import { UserService } from 'app/data/services/user.service';
 
 @Component({
   selector: 'app-comment-detail',
@@ -9,10 +11,21 @@ import { Comment } from 'app/data/models/comment';
 export class CommentDetailComponent implements OnInit {
 
   @Input() comment: Comment;
+  owner;
 
-  constructor() { }
+  constructor(private commentService: CommentService, private userService: UserService) { }
 
   ngOnInit() {
+    this.getOwner();
+  }
+
+  getOwner() {
+    this.userService.getUserDataById(this.comment.userId).subscribe(res => {
+      this.owner = res.serverData;
+      console.log(this.owner);
+    }, err => {
+      console.log(err);
+    });
   }
 
 }

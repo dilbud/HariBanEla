@@ -17,11 +17,11 @@
         <small>
           <span *ngIf="!mode && user?.id==owner?.id">
             <a class="actionLink mr-3" [routerLink] routerLinkActive="router-link-active" (click)="onEdit()">Edit</a>
-            <!-- <a class="actionLink" [routerLink] routerLinkActive="router-link-active" (click)="onDelete()">Delete</a> -->
+            <a class="actionLink" [routerLink] routerLinkActive="router-link-active" (click)="onDelete()">Delete</a>
           </span>
         </small>
       </div>
-      <div *ngIf="owner" class="col-3">
+      <div *ngIf="owner" class="col-3 mb-3">
         <img class="profilePhoto" routerLink="profile" src="{{owner.picURL}}">
         <small> {{owner.firstName}} {{owner.lastName}} </small>
       </div>
@@ -31,7 +31,7 @@
         <app-comment-detail [comment]="comment"></app-comment-detail>
       </div>
       <div *ngIf="!mode">
-        <app-comment-create [questionId]="questionId" [answerId]="answer._id"></app-comment-create>
+        <app-comment-create [questionId]="questionId" [answerId]="answer._id" [user]="user"></app-comment-create>
       </div>
     </div>
   </div>

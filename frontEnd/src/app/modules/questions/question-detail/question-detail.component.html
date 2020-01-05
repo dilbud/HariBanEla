@@ -48,7 +48,7 @@
             <app-comment-detail [comment]="comment"></app-comment-detail>
           </div>
           <div *ngIf="!mode">
-            <app-comment-create [questionId]="question._id"></app-comment-create>
+            <app-comment-create [questionId]="question._id" [user]="user"></app-comment-create>
           </div>
         </div>
 
@@ -58,7 +58,7 @@
   </div>
 
   <h4 class="mt-3">
-    <span>{{question.answerCount}}</span>
+    <span>{{question.answers.length}}</span>
     <span *ngIf="question.answerCount==1"> Answer </span>
     <span *ngIf="question.answerCount!=1"> Answers </span>
   </h4>
@@ -68,6 +68,6 @@
     </span>
   </div>
   <div *ngIf="!mode">
-    <app-answer-create [questionId]="question._id"></app-answer-create>
+    <app-answer-create [questionId]="question._id" [user]="user"></app-answer-create>
   </div>
 </div>

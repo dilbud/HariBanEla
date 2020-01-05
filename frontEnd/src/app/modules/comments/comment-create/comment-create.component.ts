@@ -12,10 +12,12 @@ export class CommentCreateComponent implements OnInit {
   commentModel = new Comment();
   @Input() questionId;
   @Input() answerId;
+  @Input() user;
 
   constructor(private commentService: CommentService) { }
 
   ngOnInit() {
+    this.commentModel.userId = this.user.id;
   }
 
   onComment(status) {

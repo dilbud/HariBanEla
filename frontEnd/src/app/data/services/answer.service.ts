@@ -17,6 +17,10 @@ export class AnswerService {
     return this.http.put(apiUrl + '/' + id + '/answers', answer);
   }
 
+  deleteAnswer(questionId, answerId) {
+    return this.http.delete(apiUrl + '/' + questionId + '/answers/' + answerId);
+  }
+
   editAnswer(answer, questionId, answerId) {
     return this.http.put(apiUrl + '/' + questionId + '/answers/' + answerId, answer);
   }

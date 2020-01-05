@@ -1,6 +1,6 @@
 export class Comment {
-    // _id: string;
-    // owner: User;
+    _id: string;
+    userId: string;
     body: string;
 
     constructor() {

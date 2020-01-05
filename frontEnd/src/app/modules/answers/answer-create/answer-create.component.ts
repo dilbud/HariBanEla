@@ -19,7 +19,9 @@ export class AnswerCreateComponent implements OnInit {
   ngOnInit() {
     // console.log('||||||||||||||||||||||||||||');
     // console.log(this.owner);
-    this.user = this.userService.getUserData();
+    // if(!this.user){
+    //   this.user = this.userService.getUserData();
+    // }
     this.answerModel.userId = this.user.id;
   }
 

@@ -1,7 +1,10 @@
 const mongoose = require('mongoose');
 
 const commentSchema = mongoose.Schema({
-    body: { type: String }
+    body: { type: String },
+    userId: {
+        type: String
+    }
 });
 
 const answerSchema = mongoose.Schema({

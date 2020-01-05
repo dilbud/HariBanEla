@@ -1,4 +1,5 @@
 <mat-divider></mat-divider>
 <div class="p-2">
         {{comment.body}}
+        <a routerLink="/"><small *ngIf="owner"> {{owner.firstName}} {{owner.lastName}} </small></a>
 </div>
