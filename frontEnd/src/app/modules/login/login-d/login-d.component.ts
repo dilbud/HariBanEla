@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, OnDestroy } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -13,19 +13,15 @@ interface DialogData {
   templateUrl: './login-d.component.html',
   styleUrls: ['./login-d.component.scss']
 })
-export class LoginDComponent implements OnInit {
+export class LoginDComponent implements OnInit, OnDestroy {
   login: FormGroup;
+  lock = true;
 
   constructor(
     private formBuilder: FormBuilder,
-    // tslint:disable-next-line: no-shadowed-variable
     public dialogRef: MatDialogRef<LoginDComponent>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData
   ) {}
-
-  onNoClick(): void {
-    this.dialogRef.close(null);
-  }
 
   ngOnInit() {
     this.login = this.formBuilder.group({
@@ -33,24 +29,28 @@ export class LoginDComponent implements OnInit {
       Ctrl_2: ['', [Validators.required, Validators.minLength(8)]]
     });
   }
+  ngOnDestroy() {
+    if (this.lock) {
+      this.dialogRef.close('close');
+    }
+  }
 
   send() {
     if (this.login.valid) {
       this.data.email = this.login.value.Ctrl_1;
       this.data.password = this.login.value.Ctrl_2;
-      // console.log('jjjjjjjjj');
       this.dialogRef.close(this.data);
     } else {
       this.dialogRef.close(null);
     }
   }
   google() {
-    // console.log('44444444444');
+    this.lock = false;
     this.dialogRef.close('google');
   }
 
   facebook() {
-    // console.log('555555555555');
+    this.lock = false;
     this.dialogRef.close('facebook');
   }
 }

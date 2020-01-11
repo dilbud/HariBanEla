@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { LoginDComponent } from './login-d/login-d.component';
 import { UserService } from '../../data/services/user.service';
 import { LogoutDComponent } from './logout-d/logout-d.component';
@@ -16,19 +16,20 @@ export class LoginComponent implements OnInit, OnDestroy {
   name: string;
   isAuthenticated = false;
   user = null;
+  toggle = true;
 
   // tslint:disable-next-line: no-shadowed-variable
-  constructor(private dialog: MatDialog, private UserService: UserService) {}
+  constructor(private dialog: MatDialog, private UserService: UserService) { }
 
   ngOnInit() {
     this.isAuthenticated = this.UserService.getIsAuth();
     this.user = this.UserService.getUserData();
     this.UserService.getAuthStatusListener()
-    .subscribe( (isAuthenticated: boolean) => {
-      this.isAuthenticated = isAuthenticated;
-      this.user = this.UserService.getUserData();
-      this.mode = !this.isAuthenticated;
-    });
+      .subscribe((isAuthenticated: boolean) => {
+        this.isAuthenticated = isAuthenticated;
+        this.user = this.UserService.getUserData();
+        this.mode = !this.isAuthenticated;
+      });
     this.mode = !this.isAuthenticated;
   }
 
@@ -36,7 +37,12 @@ export class LoginComponent implements OnInit, OnDestroy {
     this.UserService.getAuthStatusListener().unsubscribe();
   }
 
+  nothing() {
+    alert('state ' + this.toggle);
+    return;
+  }
   loginDialog(): void {
+    this.toggle = false;
     const dialogRef = this.dialog.open(LoginDComponent, {
       width: '400px', height: '30em',
       data: { email: this.email, password: this.password }
@@ -44,10 +50,12 @@ export class LoginComponent implements OnInit, OnDestroy {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result === 'google') {
+        this.toggle = true;
         this.UserService.google();
         return;
       }
       if (result === 'facebook') {
+        this.toggle = true;
         this.UserService.facebook();
         // setTimeout(() => {
         //   if (this.UserService.getIsAuth()) {
@@ -58,17 +66,22 @@ export class LoginComponent implements OnInit, OnDestroy {
         // }, 50000);
         return;
       }
-      if (result != null) {
+      if (result !== null) {
+        this.toggle = true;
         this.email = result.email;
         this.password = result.password;
         this.UserService.login(this.email, this.password);
+        return;
+      }
+      if (result === 'close') {
+        this.toggle = true;
         return;
       }
     });
   }
 
   logoutDialog(): void {
-    
+
     this.UserService.logout();
     // const userName  = this.user.firstName + ' ' + this.user.lastName;
     // const dialogRef = this.dialog.open(LogoutDComponent, {

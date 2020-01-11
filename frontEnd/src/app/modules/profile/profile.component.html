@@ -16,10 +16,12 @@
           }}</span>
         </div>
       </div>
-      <div class="ml-auto align-self-end d-none d-md-block d-lg-block">
-        <a mat-icon-button class="editbutt" id="butticon">
-          <i class="editicon material-icons">
+      <div *ngIf="type == 'current' ? true: false" class="ml-auto align-self-end d-none d-md-block d-lg-block">
+        <a mat-icon-button (click)="show()" class="editbutt" id="butticon">
+          <i *ngIf="toggle" class="editicon material-icons">
             edit </i>
+          <i *ngIf="!toggle" class="editicon material-icons">
+            home </i>
         </a>
       </div>
     </div>

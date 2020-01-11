@@ -41,6 +41,7 @@ import { ReportComponent } from './modules/report/report.component';
 import { UpdateComponent } from './modules/update/update.component';
 import { ProfilePageComponent } from './modules/profile-page/profile-page.component';
 import { BookingComponent } from './modules/booking/booking.component';
+import { ProfilePageBaseComponent } from './modules/profile-page-base/profile-page-base.component';
 
 
 
@@ -74,7 +75,8 @@ import { BookingComponent } from './modules/booking/booking.component';
     ProfessionalListComponent,
     ChatComponent,
     ProfilePageComponent,
-    BookingComponent
+    BookingComponent,
+    ProfilePageBaseComponent
   ],
 
   imports: [

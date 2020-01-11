@@ -9,12 +9,13 @@ import { AuthGuardService } from './data/services/auth-guard.service';
 import { QuestionCreateComponent } from './modules/questions/question-create/question-create.component';
 import { QuestionDetailComponent } from './modules/questions/question-detail/question-detail.component';
 import { QuestionListComponent } from './modules/questions/question-list/question-list.component';
-import {AppointmentAcceptComponent} from '@modules/appointment/appointment-accept/appointment-accept.component';
-import {AppointmentPaymentComponent} from '@modules/appointment/appointment-payment/appointment-payment.component';
-import {AppointmentCreateComponent} from '@modules/appointment/appointment-create/appointment-create.component';
+import { AppointmentAcceptComponent } from '@modules/appointment/appointment-accept/appointment-accept.component';
+import { AppointmentPaymentComponent } from '@modules/appointment/appointment-payment/appointment-payment.component';
+import { AppointmentCreateComponent } from '@modules/appointment/appointment-create/appointment-create.component';
 import { ProfessionalListComponent } from '@modules/professional-list/professional-list.component';
-import {ChatComponent} from '@modules/chat/chat.component';
+import { ChatComponent } from '@modules/chat/chat.component';
 import { ProfilePageComponent } from './modules/profile-page/profile-page.component';
+import { ProfilePageBaseComponent } from './modules/profile-page-base/profile-page-base.component';
 import { BookingComponent } from './modules/booking/booking.component';
 import { from } from 'rxjs';
 
@@ -40,7 +41,8 @@ const routes: Routes = [
     path: 'questions/:questionId/:answerId/edit',
     component: AnswerUpdateComponent
   },
-   { path: 'appointment/new',
+  {
+    path: 'appointment/new',
     component: AppointmentCreateComponent
   },
   {
@@ -69,23 +71,26 @@ const routes: Routes = [
     canActivate: [AuthGuardService]
   },
 
-  { path: 'professionals', component: ProfessionalListComponent},
-  { path: 'update', component: UpdateComponent, canActivate: [AuthGuardService]},
-  { path: 'profile', component: ProfileComponent},
-  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuardService]},
-  { path: 'account', component: ProfilePageComponent},
-  { path: 'booking', component: BookingComponent },
+  { path: 'professionals', component: ProfessionalListComponent },
+  // { path: 'update', component: UpdateComponent, canActivate: [AuthGuardService]},
+  // { path: 'profile', component: ProfileComponent},
+  // { path: 'profile', component: ProfileComponent, canActivate: [AuthGuardService]},
+
   {
-    path: '**',
-    component: QuestionListComponent
+    path: 'account', component: ProfilePageComponent, canActivate: [AuthGuardService],
+    children: [
+      { path: '', component: ProfilePageBaseComponent },
+      { path: 'edit', component: UpdateComponent }
+    ]
   },
+  { path: 'booking', component: BookingComponent, canActivate: [AuthGuardService] },
 
-
+  { path: '**', component: QuestionListComponent },
 
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
-  })
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
 export class AppRoutingModule { }

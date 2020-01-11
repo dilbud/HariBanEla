@@ -1,6 +1,6 @@
 import { Component, OnInit} from "@angular/core";
 import { UserService } from "app/data/services/user.service";
-import { ActivatedRoute, Params } from "@angular/router";
+import { ActivatedRoute, Params , Router } from "@angular/router";
 import { filter } from "rxjs/operators";
 import { AlertService } from "app/data/services/alert.service";
 
@@ -13,7 +13,7 @@ import { AlertService } from "app/data/services/alert.service";
 export class ProfileComponent implements OnInit {
   user = null;
   id = null;
-
+  toggle = true;
   mode = false;
   type: any;
 
@@ -21,7 +21,8 @@ export class ProfileComponent implements OnInit {
     private userService: UserService,
 
     private route: ActivatedRoute,
-    private alertService: AlertService
+    private alertService: AlertService,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -35,21 +36,30 @@ export class ProfileComponent implements OnInit {
     });
   }
 
+  public show() {
+    if (this.toggle) {
+      this.router.navigate(['edit'], { queryParams: { id: this.id, type: this.type} , relativeTo: this.route });
+    } else {
+      this.router.navigate(['account'], { queryParams: { id: this.id, type: this.type} });
+    }
+    this.toggle = this.toggle ? false : true ;
+  }
+
   private getUser() {
     if (this.type === 'current') {
       this.user = this.userService.getUserData();
       this.userService.getAuthStatusListener().subscribe((isAuth: boolean) => {
         this.user = this.userService.getUserData();
       });
-    } else if( this.type === 'pro') {
+    } else if ( this.type === 'pro') {
       console.log('get pro user ==================');
-      let res;
+      let res: any;
       this.userService.getProProfile(this.id).subscribe(
         response => {
           res = response;
         },
         error => {
-          this.alertService.setAlert("Something wrong !");
+          this.alertService.setAlert('Something wrong !');
           this.alertService.setAlert(error.error.msg);
           this.alertService.showAlert();
         },
