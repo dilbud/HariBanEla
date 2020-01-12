@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from "app/data/services/user.service";
 
 @Component({
   selector: 'app-profile-page-base',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfilePageBaseComponent implements OnInit {
 
-  constructor() { }
+
+  user = null;
+
+  constructor(
+    private userService: UserService,
+  ) { }
 
   ngOnInit() {
+    this.user = this.userService.getUserData();
+    this.userService.getAuthStatusListener().subscribe((isAuth: boolean) => {
+      this.user = this.userService.getUserData();
+    });
   }
 
 }

@@ -16,25 +16,24 @@ export class LoginComponent implements OnInit, OnDestroy {
   name: string;
   isAuthenticated = false;
   user = null;
-  toggle = true;
+  toggle = true; // disable login link
 
-  // tslint:disable-next-line: no-shadowed-variable
-  constructor(private dialog: MatDialog, private UserService: UserService) { }
+  constructor(private dialog: MatDialog, private userService: UserService) { }
 
   ngOnInit() {
-    this.isAuthenticated = this.UserService.getIsAuth();
-    this.user = this.UserService.getUserData();
-    this.UserService.getAuthStatusListener()
+    this.isAuthenticated = this.userService.getIsAuth();
+    this.user = this.userService.getUserData();
+    this.userService.getAuthStatusListener()
       .subscribe((isAuthenticated: boolean) => {
         this.isAuthenticated = isAuthenticated;
-        this.user = this.UserService.getUserData();
+        this.user = this.userService.getUserData();
         this.mode = !this.isAuthenticated;
       });
     this.mode = !this.isAuthenticated;
   }
 
   ngOnDestroy() {
-    this.UserService.getAuthStatusListener().unsubscribe();
+    this.userService.getAuthStatusListener().unsubscribe();
   }
 
   nothing() {
@@ -49,14 +48,15 @@ export class LoginComponent implements OnInit, OnDestroy {
     });
 
     dialogRef.afterClosed().subscribe(result => {
+      console.log('login data ', result);
       if (result === 'google') {
         this.toggle = true;
-        this.UserService.google();
+        this.userService.google();
         return;
       }
       if (result === 'facebook') {
         this.toggle = true;
-        this.UserService.facebook();
+        this.userService.facebook();
         // setTimeout(() => {
         //   if (this.UserService.getIsAuth()) {
         //     this.mode = false;
@@ -66,23 +66,24 @@ export class LoginComponent implements OnInit, OnDestroy {
         // }, 50000);
         return;
       }
-      if (result !== null) {
-        this.toggle = true;
-        this.email = result.email;
-        this.password = result.password;
-        this.UserService.login(this.email, this.password);
-        return;
-      }
       if (result === 'close') {
         this.toggle = true;
         return;
       }
+      if (result !== null) {
+        this.toggle = true;
+        this.email = result.email;
+        this.password = result.password;
+        this.userService.login(this.email, this.password);
+        return;
+      }
+
     });
   }
 
   logoutDialog(): void {
 
-    this.UserService.logout();
+    this.userService.logout();
     // const userName  = this.user.firstName + ' ' + this.user.lastName;
     // const dialogRef = this.dialog.open(LogoutDComponent, {
     //   width: '500px',

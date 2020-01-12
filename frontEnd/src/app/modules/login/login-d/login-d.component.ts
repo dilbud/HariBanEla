@@ -5,7 +5,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 interface DialogData {
   email: string;
   password: string;
-  type: number;
 }
 
 @Component({
@@ -15,7 +14,7 @@ interface DialogData {
 })
 export class LoginDComponent implements OnInit, OnDestroy {
   login: FormGroup;
-  lock = true;
+  lock = true; // disable on destroy
 
   constructor(
     private formBuilder: FormBuilder,
@@ -30,18 +29,20 @@ export class LoginDComponent implements OnInit, OnDestroy {
     });
   }
   ngOnDestroy() {
-    if (this.lock) {
+    if (this.lock) { // disable on destroy
       this.dialogRef.close('close');
     }
   }
 
   send() {
     if (this.login.valid) {
+      this.lock = false;
       this.data.email = this.login.value.Ctrl_1;
       this.data.password = this.login.value.Ctrl_2;
       this.dialogRef.close(this.data);
     } else {
-      this.dialogRef.close(null);
+      this.lock = true;
+      this.dialogRef.close('close');
     }
   }
   google() {

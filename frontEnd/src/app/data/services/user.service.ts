@@ -13,11 +13,9 @@ import {
 } from 'angularx-social-login';
 import { environment } from '@env';
 
-const apiUrl = environment.baseUrl + 'user';
-
 @Injectable({ providedIn: 'root' })
 export class UserService  {
-
+  private apiUrl = environment.baseUrl + 'user';
   private isAuthenticated = false;
   private token: string = null;
   private tokenTimer: any;
@@ -66,7 +64,7 @@ export class UserService  {
     return this.user;
   }
   public getUserDataById(userId: string): any {
-    return this.http.post(apiUrl + '/getUserById', { id: userId});
+    return this.http.post(this.apiUrl + '/getUserById', { id: userId});
 
     // let res: any;
     // this.http
@@ -97,13 +95,11 @@ export class UserService  {
   }
 
   public getProList() {
-
-    return this.http
-    .get(apiUrl + '/proList');
+    return this.http.get(this.apiUrl + '/proList');
   }
 
   public getProProfile(proId: string) {
-    return this.http.get(apiUrl+'/proProfile', { params: {id: proId}});
+    return this.http.get(this.apiUrl + '/proProfile', { params: {id: proId}});
   }
 
 
@@ -111,7 +107,7 @@ export class UserService  {
   public updateUser(data: UserData) {
     let res: any;
     this.http
-      .post(apiUrl + '/update', {
+      .post(this.apiUrl + '/update', {
         id: this.user.id,
         query: data
       })
@@ -157,7 +153,7 @@ export class UserService  {
         };
         let res: any;
         this.http
-          .post(apiUrl + '/create', this.serverData)
+          .post(this.apiUrl + '/create', this.serverData)
           .subscribe(
             response => {
               res = response;
@@ -216,7 +212,7 @@ export class UserService  {
       };
       let res: any;
       this.http
-        .post(apiUrl + '/create', this.serverData)
+        .post(this.apiUrl + '/create', this.serverData)
         .subscribe(
           response => {
             res = response;
@@ -260,7 +256,7 @@ export class UserService  {
   public login(email: string, password: string) {
     const authData: AuthData = { email, password };
     let res: any;
-    this.http.post(apiUrl + '/login', authData).subscribe(
+    this.http.post(this.apiUrl + '/login', authData).subscribe(
       response => {
         res = response;
       },
