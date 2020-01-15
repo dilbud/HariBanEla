@@ -1,28 +1,30 @@
 <div class="container" style="padding-top: 1em;">
-<div style="margin-bottom: 1em;">
-  <button class="m-1  signButton btn-block" id="google" (click)="google()">
-    <!-- <i class="icon ion-logo-google"></i> -->
-    <span class="vl m-1"><img src="https://img.icons8.com/color/48/000000/google-logo.png"></span>
-    sign in with google
-  </button>
-</div>
-<div style="margin-bottom: 1em;">
-  <button class="m-1 mb-3  signButton btn-block" id="facebook" (click)="facebook()">
-    <i class="icon ion-logo-facebook m-1"></i>
-    <span class="vl m-1"></span>
-    sign in with facebook
-  </button>
-</div>
-<form [formGroup]="login">
-  <mat-form-field>
-    <input matInput cdkFocusInitial type="email" formControlName="Ctrl_1" placeholder="Email">
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput type="password" formControlName="Ctrl_2" placeholder="Password">
-  </mat-form-field>
-</form>
-<div style="margin-top: 2em;">
-  <button mat-raised-button (click)="send()" class="m-auto loginButton" [disabled]="!login.valid">Log in</button>
-  <div class="d-flex justify-content-end"><app-report [path]="1"></app-report></div>
-</div>
+  <div style="margin-bottom: 1em;">
+    <button class="m-1  signButton btn-block" id="google" (click)="google()">
+      <!-- <i class="icon ion-logo-google"></i> -->
+      <span class="vl m-1"><img src="https://img.icons8.com/color/48/000000/google-logo.png"></span>
+      sign in with google
+    </button>
+  </div>
+  <div style="margin-bottom: 1em;">
+    <button class="m-1 mb-3  signButton btn-block" id="facebook" (click)="facebook()">
+      <i class="icon ion-logo-facebook m-1"></i>
+      <span class="vl m-1"></span>
+      sign in with facebook
+    </button>
+  </div>
+  <form [formGroup]="login">
+    <mat-form-field>
+      <input matInput cdkFocusInitial type="email" formControlName="Ctrl_1" placeholder="Email">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="password" formControlName="Ctrl_2" placeholder="Password">
+    </mat-form-field>
+  </form>
+  <div style="margin-top: 2em;">
+    <button mat-raised-button (click)="send()" class="m-auto loginButton" [disabled]="!login.valid">Log in</button>
+    <div class="d-flex justify-content-end">
+      <app-report [path]="1"></app-report>
+    </div>
+  </div>
 </div>

@@ -1,22 +1,22 @@
 <div class="container">
   <mat-card class="card p-0">
     <mat-tab-group class="profile" id="tab" mat-align-tabs="center">
-        <mat-tab label="Questions">
+        <mat-tab *ngIf="!isAdmin" label="Questions">
           <div class="m-3">
             <p>Lorem ipsum dolor sit amet cnsectetur adipisicing elit. Deleniti ipsam dolor magni vitae ratione enim hic praesentium provident obcaecati maxime perferendis voluptates ad dolorem autem, sunt aliquid corporis illo explicabo.</p>
           </div>
         </mat-tab>
-        <mat-tab label="Appoinment">
+        <mat-tab *ngIf="!isAdmin" label="Appoinments">
           <div class="m-3">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ipsam dolor magni vitae ratione enim hic praesentium provident obcaecati maxime perferendis voluptates ad dolorem autem, sunt aliquid corporis illo explicabo.</p>
           </div>
         </mat-tab>
-        <mat-tab *ngIf="user.userType === 'gen'? false : true" label="report">
+        <mat-tab *ngIf="isAdmin" label="Reports">
           <div class="m-3">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ipsam dolor magni vitae ratione enim hic praesentium provident obcaecati maxime perferendis voluptates ad dolorem autem, sunt aliquid corporis illo explicabo.</p>
           </div>
         </mat-tab>
-        <mat-tab *ngIf="user.userType === 'gen' ? false : true" label="Professional verification">
+        <mat-tab *ngIf="isAdmin" label="Professional Verifications">
           <div class="m-3">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ipsam dolor magni vitae ratione enim hic praesentium provident obcaecati maxime perferendis voluptates ad dolorem autem, sunt aliquid corporis illo explicabo.</p>
           </div>

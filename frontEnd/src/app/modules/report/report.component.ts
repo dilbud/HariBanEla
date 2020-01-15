@@ -1,5 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ReportDComponent } from './report-d/report-d.component';
+import { FeedbackComponent } from './feedback/feedback.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { ReportPostComponent } from './report-post/report-post.component';
+import { ReportUserComponent } from './report-user/report-user.component';
 import { MatDialog } from '@angular/material/dialog';
 import { ReportService } from '../../data/services/report.service';
 import { ReportData } from '../../data/models/reportData';
@@ -14,18 +17,28 @@ export class ReportComponent implements OnInit {
 
   @Input() path: number;
   private reportData: ReportData;
-  private user = this.userService.getUserData();
+  private user = null;
+  public isAuth = false;
+
   constructor(
-    private dialog: MatDialog,
+    private feedbackDialog: MatDialog,
+    private resetPasswordDialog: MatDialog,
+    private reportUserDialog: MatDialog,
+    private reportPostDialog: MatDialog,
     private reportService: ReportService,
     private userService: UserService,
     ) { }
 
   ngOnInit() {
+    this.user = this.userService.getUserData();
+    this.userService.getAuthStatusListener().subscribe((isAuth: boolean) => {
+      this.user = this.userService.getUserData();
+      this.isAuth = isAuth;
+    });
   }
 
   feedback(): void {
-    const dialogRef = this.dialog.open(ReportDComponent, {
+    const feedbackDialogRef = this.feedbackDialog.open(FeedbackComponent, {
       width: '500px',
       data: {
         path: this.path,
@@ -33,23 +46,23 @@ export class ReportComponent implements OnInit {
       }
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-      this.reportData = result;
+    feedbackDialogRef.afterClosed().subscribe(result => {
       if (result != null) {
-        this.reportService.sendFeedBack(result);
+        this.reportData = result;
+        this.reportService.sendFeedBack(this.reportData);
       }
     });
   }
 
   resetPassword(): void {
-    const dialogRef = this.dialog.open(ReportDComponent, {
+    const resetPasswordDialogRef = this.resetPasswordDialog.open(ResetPasswordComponent, {
       width: '400px', height: '30em',
       data: {
         path: this.path,
        }
     });
 
-    dialogRef.afterClosed().subscribe(result => {
+    resetPasswordDialogRef.afterClosed().subscribe(result => {
       if (result != null) {
         this.reportService.sendResetPassword(result);
       }
@@ -57,7 +70,7 @@ export class ReportComponent implements OnInit {
   }
 
   reportPost(): void {
-    const dialogRef = this.dialog.open(ReportDComponent, {
+    const reportPostDialogRef = this.reportPostDialog.open(ReportPostComponent, {
       width: '500px',
       data: {
         path: this.path,
@@ -65,14 +78,14 @@ export class ReportComponent implements OnInit {
        }
     });
 
-    dialogRef.afterClosed().subscribe(result => {
+    reportPostDialogRef.afterClosed().subscribe(result => {
       if (result != null) {
         this.reportService.sendReportPost(result);
       }
     });
   }
   reportUser(): void {
-    const dialogRef = this.dialog.open(ReportDComponent, {
+    const reportUserDialogRef = this.reportUserDialog.open(ReportUserComponent, {
       width: '500px',
       data: {
         path: this.path,
@@ -80,7 +93,7 @@ export class ReportComponent implements OnInit {
        }
     });
 
-    dialogRef.afterClosed().subscribe(result => {
+    reportUserDialogRef.afterClosed().subscribe(result => {
       if (result != null) {
         this.reportService.sendReportUser(result);
       }

@@ -36,12 +36,15 @@ import { QuestionCreateComponent } from './modules/questions/question-create/que
 import { QuestionDetailComponent } from './modules/questions/question-detail/question-detail.component';
 import { QuestionListComponent } from './modules/questions/question-list/question-list.component';
 import { QuestionSummaryComponent } from './modules/questions/question-summary/question-summary.component';
-import { ReportDComponent } from './modules/report/report-d/report-d.component';
 import { ReportComponent } from './modules/report/report.component';
 import { UpdateComponent } from './modules/update/update.component';
 import { ProfilePageComponent } from './modules/profile-page/profile-page.component';
 import { BookingComponent } from './modules/booking/booking.component';
 import { ProfilePageBaseComponent } from './modules/profile-page-base/profile-page-base.component';
+import { FeedbackComponent } from './modules/report/feedback/feedback.component';
+import { ResetPasswordComponent } from './modules/report/reset-password/reset-password.component';
+import { ReportPostComponent } from './modules/report/report-post/report-post.component';
+import { ReportUserComponent } from './modules/report/report-user/report-user.component';
 
 
 
@@ -68,7 +71,6 @@ import { ProfilePageBaseComponent } from './modules/profile-page-base/profile-pa
     LoginDComponent,
     LogoutDComponent,
     ReportComponent,
-    ReportDComponent,
     AppointmentCreateComponent,
     AppointmentAcceptComponent,
     AppointmentPaymentComponent,
@@ -76,7 +78,11 @@ import { ProfilePageBaseComponent } from './modules/profile-page-base/profile-pa
     ChatComponent,
     ProfilePageComponent,
     BookingComponent,
-    ProfilePageBaseComponent
+    ProfilePageBaseComponent,
+    FeedbackComponent,
+    ResetPasswordComponent,
+    ReportPostComponent,
+    ReportUserComponent
   ],
 
   imports: [
@@ -113,8 +119,10 @@ import { ProfilePageBaseComponent } from './modules/profile-page-base/profile-pa
   entryComponents: [
     LoginDComponent,
     LogoutDComponent,
-    ReportDComponent,
-
+    FeedbackComponent,
+    ResetPasswordComponent,
+    ReportPostComponent,
+    ReportUserComponent,
   ],
 })
 

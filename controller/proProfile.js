@@ -3,7 +3,7 @@ const user = require("../models/userModel");
 const getProfile = (req, res, next) => {
   let id = req.query.id;
 
-  user.findById(id, "firstName lastName address email picURL", (err, data) => {
+  user.findById(id, "firstName lastName address email picURL userType", (err, data) => {
     if (err) {
       console.log(err, "----------------------------/////////////////////");
       if (err.kind && err.kind === "ObjectId") {

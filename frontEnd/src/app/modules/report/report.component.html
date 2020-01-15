@@ -17,9 +17,9 @@
     <a (click)="resetPassword()" >reset password</a>
   </div>
   <div *ngSwitchCase="2">
-    <a (click)="reportPost()" >report post</a>
+    <a *ngIf="isAuth" (click)="reportPost()" >report post</a>
   </div>
   <div *ngSwitchCase="3">
-    <a (click)="reportUser()" >report user</a>
+    <a *ngIf="isAuth" (click)="reportUser()" >report user</a>
   </div>
 </div>

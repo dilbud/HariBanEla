@@ -5,24 +5,31 @@
       <div class="d-flex flex-column b pl-sm-2 pl-md-5">
         <div class="c">
           <h3>
-            <span class="c1">{{ user.firstName }}</span><span class="c2">{{ user.lastName }}</span>
+            <span class="c1">{{ user.firstName }}</span
+            ><span class="c2">{{ user.lastName }}</span>
           </h3>
         </div>
         <div class="d">{{ user.address === "null" ? "" : user.address }}</div>
         <div class="e">{{ user.email }}</div>
         <div class="f">
-          <span>{{
-            user.userType === "gen" ? "General" : "Professional"
-          }}</span>
+          <span>{{getUserType()}}</span>
         </div>
       </div>
-      <div *ngIf="type == 'current' ? true: false" class="ml-auto align-self-end d-none d-md-block d-lg-block">
-        <a mat-icon-button (click)="show()" class="editbutt" id="butticon">
-          <i *ngIf="toggle" class="editicon material-icons">
-            edit </i>
-          <i *ngIf="!toggle" class="editicon material-icons">
-            home </i>
-        </a>
+      <div
+        *ngIf="user.userType === 'admin' ? false : true"
+        class="ml-auto align-self-end d-none d-md-block d-lg-block"
+      >
+        <div *ngIf="type == 'current' ? false : true">
+          <a mat-icon-button (click)="show()" class="editbutt" id="butticon">
+            <i class="editicon material-icons"> report </i>
+          </a>
+        </div>
+        <div *ngIf="type == 'current' ? true : false">
+          <a mat-icon-button (click)="show()" class="editbutt" id="butticon">
+            <i *ngIf="toggle" class="editicon material-icons"> edit </i>
+            <i *ngIf="!toggle" class="editicon material-icons"> home </i>
+          </a>
+        </div>
       </div>
     </div>
   </mat-card>

@@ -1,20 +1,19 @@
-import { Component, OnInit} from "@angular/core";
-import { UserService } from "app/data/services/user.service";
-import { ActivatedRoute, Params , Router } from "@angular/router";
+import { Component, OnInit} from '@angular/core';
+import { UserService } from 'app/data/services/user.service';
+import { ActivatedRoute, Params , Router } from '@angular/router';
 import { filter } from "rxjs/operators";
-import { AlertService } from "app/data/services/alert.service";
+import { AlertService } from 'app/data/services/alert.service';
 
 
 @Component({
-  selector: "app-profile",
-  templateUrl: "./profile.component.html",
-  styleUrls: ["./profile.component.scss"]
+  selector: 'app-profile',
+  templateUrl: './profile.component.html',
+  styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
   user = null;
   id = null;
-  toggle = true;
-  mode = false;
+  toggle = true; // home and edit icon
   type: any;
 
   constructor(
@@ -30,9 +29,6 @@ export class ProfileComponent implements OnInit {
       this.id = queryParams.id;
       this.type = queryParams.type;
       this.getUser();
-      // if (this.id === null || this.id === undefined) {
-      //   this.mode = true;
-      // }
     });
   }
 
@@ -42,7 +38,21 @@ export class ProfileComponent implements OnInit {
     } else {
       this.router.navigate(['account'], { queryParams: { id: this.id, type: this.type} });
     }
-    this.toggle = this.toggle ? false : true ;
+    this.toggle = this.toggle ? false : true ; // home and edit icon
+  }
+
+  public getUserType() {
+    if (this.user.userType === 'admin') {
+      return 'Administrator';
+    }
+    if (this.user.userType === 'pro') {
+      return 'Professional';
+    }
+    if (this.user.userType === 'gen') {
+      return 'General';
+    }
+    console.log('*************************** ', this.user);
+    return this.user.userType;
   }
 
   private getUser() {
@@ -68,7 +78,21 @@ export class ProfileComponent implements OnInit {
         }
       );
     } else {
-
+      console.log('get any user ==================');
+      let res: any;
+      this.userService.getUserDataById(this.id).subscribe(
+        response => {
+          res = response;
+        },
+        error => {
+          this.alertService.setAlert('Something wrong !');
+          this.alertService.setAlert(error.error.msg);
+          this.alertService.showAlert();
+        },
+        () => {
+          this.user = res.serverData;
+        }
+      );
     }
   }
 

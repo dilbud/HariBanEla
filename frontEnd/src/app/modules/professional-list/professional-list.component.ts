@@ -1,11 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import {animate, state, style, transition, trigger} from '@angular/animations';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { ServerData } from '../../data/models/serverData';
 import { UserService } from '../../data/services/user.service';
 import { AlertService } from 'app/data/services/alert.service';
 import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
+export interface Food {
+  value: string;
+  viewValue: string;
+}
 
 
 @Component({
@@ -15,11 +20,28 @@ import { Router } from '@angular/router';
 })
 export class ProfessionalListComponent implements OnInit {
 
-  proList: ServerData[] = null;
+  category: FormGroup;
 
-  constructor(private userService: UserService, private alertService: AlertService, private router: Router) { }
+  proList: ServerData[] = null;
+  foods: Food[] = [
+    { value: 'steak-0', viewValue: 'Steak' },
+    { value: 'pizza-1', viewValue: 'Pizza' },
+    { value: 'tacos-2', viewValue: 'Tacos' }
+  ];
+
+  constructor(
+    private formBuilder: FormBuilder,
+    private userService: UserService,
+    private alertService: AlertService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
+
+    this.category = this.formBuilder.group({
+      Ctrl_1: [null, [Validators.required]],
+    });
+    console.log('ddddddddddddddddddddddddddddddddddddddddddddddddd', this.category.value.Ctrl_1);
     let res;
     this.userService.getProList().subscribe(
       response => {
@@ -36,8 +58,11 @@ export class ProfessionalListComponent implements OnInit {
     );
   }
 
+  onChange() {
+  }
+
   view(item: any) {
-    this.router.navigate(['../booking'], { queryParams: { id: item._id, type: item.userType} });
+    this.router.navigate(['../booking'], { queryParams: { id: item._id, type: item.userType } });
   }
 
 }

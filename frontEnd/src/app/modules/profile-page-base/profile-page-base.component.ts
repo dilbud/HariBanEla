@@ -8,7 +8,7 @@ import { UserService } from "app/data/services/user.service";
 })
 export class ProfilePageBaseComponent implements OnInit {
 
-
+  isAdmin = false;
   user = null;
 
   constructor(
@@ -20,6 +20,10 @@ export class ProfilePageBaseComponent implements OnInit {
     this.userService.getAuthStatusListener().subscribe((isAuth: boolean) => {
       this.user = this.userService.getUserData();
     });
+
+    if (this.user.userType === 'admin') {
+      this.isAdmin = true;
+    }
   }
 
 }
