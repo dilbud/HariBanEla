@@ -1,16 +1,17 @@
 <div *ngIf="question" class="container">
   <div class="row">
     <div class="row mb-2">
-      <a routerLink="/"> Questions </a> &nbsp; / {{question.category}}
+      <a routerLink="/"> Questions </a> &nbsp; / &nbsp;
+      <a [routerLink] routerLinkActive="router-link-active" (click)="onCategory()">{{question.category}}</a>
     </div>
-    <div class="shadow row p-3">
+    <div class="shadow row p-3 mt-3" style="width: 100%; margin: auto;">
       <div class="col-1">
         <a (click)="voteQuestion(1)">
-          <i class="fa fa-caret-up fa-3x"></i>
+          <i [ngClass]="{'text-primary' : votedUpDown==1}" class="fa fa-caret-up fa-3x"></i>
         </a>
         <div id="voteCount" class="ml-2">{{question.votes}}</div>
         <a (click)="voteQuestion(0)">
-          <i class="fa fa-caret-down fa-3x"></i>
+          <i [ngClass]="{'text-primary' : votedUpDown==2}" class="fa fa-caret-down fa-3x"></i>
         </a>
       </div>
       <div class="col">
@@ -18,7 +19,7 @@
           <h4>{{question.title}}</h4>
           <div class="mb-2">
             <small>
-              <span class="mr-3">Asked time</span>
+              <span class="mr-3">Asked {{question.createdAt | date:'medium'}}</span>
               <span class="mr-3">{{question.views}} Views</span>
               <span *ngIf="!mode && user?.id==owner?.id">
                 <a class="actionLink mr-3" [routerLink] routerLinkActive="router-link-active"
@@ -36,7 +37,7 @@
                 </span>
               </span>
             </div>
-            <div *ngIf="owner" class="col-3">
+            <div *ngIf="owner" class="col-4">
               <img class="profilePhoto" routerLink="profile" src="{{owner.picURL}}">
               <small> {{owner.firstName}} {{owner.lastName}} </small>
             </div>
@@ -48,7 +49,7 @@
             <app-comment-detail [comment]="comment"></app-comment-detail>
           </div>
           <div *ngIf="!mode">
-            <app-comment-create [questionId]="question._id" [user]="user"></app-comment-create>
+            <app-comment-create (refreshEvent)="refreshQuestion()" [questionId]="question._id" [user]="user"></app-comment-create>
           </div>
         </div>
 
@@ -59,15 +60,15 @@
 
   <h4 class="mt-3">
     <span>{{question.answers.length}}</span>
-    <span *ngIf="question.answerCount==1"> Answer </span>
-    <span *ngIf="question.answerCount!=1"> Answers </span>
+    <span *ngIf="question.answers.length==1"> Answer </span>
+    <span *ngIf="question.answers.length!=1"> Answers </span>
   </h4>
-  <div *ngIf="question.answerCount>0">
+  <div *ngIf="question.answers.length>0">
     <span *ngFor="let answer of question.answers">
-      <app-answer-detail [questionId]="question._id" [answer]="answer" [user]="user" [mode]="mode"></app-answer-detail>
+      <app-answer-detail (refreshEvent)="refreshQuestion()" [questionId]="question._id" [answer]="answer" [user]="user" [mode]="mode"></app-answer-detail>
     </span>
   </div>
   <div *ngIf="!mode">
-    <app-answer-create [questionId]="question._id" [user]="user"></app-answer-create>
+    <app-answer-create (refreshEvent)="refreshQuestion()" [questionId]="question._id" [user]="user"></app-answer-create>
   </div>
 </div>

@@ -10,7 +10,7 @@ import { UserService } from 'app/data/services/user.service';
 })
 export class CommentDetailComponent implements OnInit {
 
-  @Input() comment: Comment;
+  @Input() comment;
   owner;
 
   constructor(private commentService: CommentService, private userService: UserService) { }
@@ -22,7 +22,7 @@ export class CommentDetailComponent implements OnInit {
   getOwner() {
     this.userService.getUserDataById(this.comment.userId).subscribe(res => {
       this.owner = res.serverData;
-      console.log(this.owner);
+      // console.log(this.owner);
     }, err => {
       console.log(err);
     });

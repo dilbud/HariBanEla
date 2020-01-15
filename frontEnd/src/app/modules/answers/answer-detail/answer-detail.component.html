@@ -1,11 +1,11 @@
 <div *ngIf="answer" class="row shadow p-3">
   <div class="col-1">
     <a (click)="voteAnswer(1)">
-      <i class="fa fa-caret-up fa-3x"></i>
+      <i [ngClass]="{'text-primary' : votedUpDown==1}" class="fa fa-caret-up fa-3x"></i>
     </a>
-    <div id="voteCount" class="ml-2">{{answer.votes}}</div>
+    <div style="font-size: x-large;" class="ml-2">{{answer.votes}}</div>
     <a (click)="voteAnswer(0)">
-      <i class="fa fa-caret-down fa-3x"></i>
+      <i [ngClass]="{'text-primary' : votedUpDown==2}" class="fa fa-caret-down fa-3x"></i>
     </a>
   </div>
   <div class="col-11">
@@ -15,6 +15,7 @@
     <div class="row">
       <div class="col">
         <small>
+          <span class="mr-3">Asked {{answer.createdAt | date:'medium'}}</span>
           <span *ngIf="!mode && user?.id==owner?.id">
             <a class="actionLink mr-3" [routerLink] routerLinkActive="router-link-active" (click)="onEdit()">Edit</a>
             <a class="actionLink" [routerLink] routerLinkActive="router-link-active" (click)="onDelete()">Delete</a>
@@ -31,7 +32,7 @@
         <app-comment-detail [comment]="comment"></app-comment-detail>
       </div>
       <div *ngIf="!mode">
-        <app-comment-create [questionId]="questionId" [answerId]="answer._id" [user]="user"></app-comment-create>
+        <app-comment-create (refreshEvent)="refreshQuestion()" [questionId]="questionId" [answerId]="answer._id" [user]="user"></app-comment-create>
       </div>
     </div>
   </div>

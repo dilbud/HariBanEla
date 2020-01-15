@@ -1,5 +1,18 @@
 <mat-divider></mat-divider>
 <div class="p-2">
-        {{comment.body}}
-        <a routerLink="/"><small *ngIf="owner"> {{owner.firstName}} {{owner.lastName}} </small></a>
+        <span class="mr-3">{{comment.body}}</span>
+        <br>
+        <div class="row">
+                <div class="col"></div>
+                <div class="col-7">
+                        <small *ngIf="owner">
+                                <span class="mr-3">
+                                        Asked {{comment.createdAt | date:'medium'}}
+                                </span>
+                                <a routerLink="/">
+                                        {{owner.firstName}} {{owner.lastName}}
+                                </a>
+                        </small>
+                </div>
+        </div>
 </div>

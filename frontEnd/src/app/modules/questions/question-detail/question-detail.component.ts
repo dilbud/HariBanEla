@@ -17,79 +17,107 @@ export class QuestionDetailComponent implements OnInit {
   user;
   mode = true;
   isAuthenticated = false;
+  votedUpDown = 0; // not=0, up=1 down=2
 
   constructor(private questionService: QuestionService, private userService: UserService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     this.getQuestion();
+
+
     this.interval = setInterval(() => {
       this.refreshQuestion();
     }, 600000);
 
+    
+  }
+
+  getOwner() {
+    this.userService.getUserDataById(this.question.userId).subscribe(res => {
+      this.owner = res.serverData;
+    }, err => {
+      console.log(err);
+    });
+  }
+
+  getUser(){
     this.isAuthenticated = this.userService.getIsAuth();
     this.user = this.userService.getUserData();
-    console.log('this.user');
-    console.log(this.user);
+    // console.log(this.user);
     this.userService.getAuthStatusListener()
-    .subscribe( (isAuthenticated: boolean) => {
-      this.isAuthenticated = isAuthenticated;
-      this.user = this.userService.getUserData();
-      this.mode = !this.isAuthenticated;
-    });
+      .subscribe((isAuthenticated: boolean) => {
+        this.isAuthenticated = isAuthenticated;
+        this.user = this.userService.getUserData();
+        this.mode = !this.isAuthenticated;
+
+      });
     this.mode = !this.isAuthenticated;
-}
+  }
 
-getOwner() {
-  this.userService.getUserDataById(this.question.userId).subscribe(res => {
-    this.owner = res.serverData;
-  }, err => {
-    console.log(err);
-  });
-}
+  getQuestion() {
+    const id = this.route.snapshot.params.id;
+    this.questionService.getQuestion(id).subscribe(res => {
+      this.question = res;
+      this.getUser();
+      this.getOwner();
+      this.checkVote();
 
-getQuestion() {
-  const id = this.route.snapshot.params.id;
-  this.questionService.getQuestion(id).subscribe(res => {
-    this.question = res;
-    this.getOwner();
-    console.log(this.question);
-  }, err => {
-    console.log(err);
-  });
-}
+      console.log(this.question);
+    }, err => {
+      console.log(err);
+    });
+  }
 
-refreshQuestion() {
-  const id = this.route.snapshot.params.id;
-  this.questionService.refreshQuestion(id).subscribe(res => {
-    this.question = res;
-  }, err => {
-    console.log(err);
-  });
-}
+  checkVote(){
+    let flag=0;
+    this.question.voters.forEach(voter => {
+      if(voter.userId==this.user.id){
+        this.votedUpDown=voter.upDown;
+        flag=1;
+      }
+    });
+    if(flag==0){
+      this.votedUpDown=0;
+    }
+  }
 
-voteQuestion(status) {
-  const id = this.route.snapshot.params.id;
-  this.questionService.voteQuestion(id, status).subscribe(res => {
-    console.log(res);
-    this.refreshQuestion();
-  }, err => {
-    console.log(err);
-  });
-}
+  refreshQuestion() {
+    const id = this.route.snapshot.params.id;
+    this.questionService.refreshQuestion(id).subscribe(res => {
+      this.question = res;
+      this.checkVote();
+    }, err => {
+      console.log(err);
+    });
+  }
 
-onDelete() {
-  const id = this.route.snapshot.params.id;
-  this.questionService.deleteQuestion(id).subscribe(res => {
-    console.log(res);
-    this.router.navigate(['/questions']);
-  }, err => {
-    console.log(err);
-  });
-}
+  voteQuestion(status) {
+    const id = this.route.snapshot.params.id;
+    this.questionService.voteQuestion(id, status, this.user.id).subscribe(res => {
+      console.log(res);
+      this.refreshQuestion();
+    }, err => {
+      console.log(err);
+    });
+  }
 
-onEdit() {
-  const id = this.route.snapshot.params.id;
-  this.router.navigate([`/questions/${id}/edit`]);
-}
+  onDelete() {
+    const id = this.route.snapshot.params.id;
+    this.questionService.deleteQuestion(id).subscribe(res => {
+      console.log(res);
+      this.router.navigate(['/questions']);
+    }, err => {
+      console.log(err);
+    });
+  }
+
+  onEdit() {
+    const id = this.route.snapshot.params.id;
+    this.router.navigate([`/questions/${id}/edit`]);
+  }
+
+  onCategory(){
+    this.router.navigate([`/category/${this.question.category}`]);
+  }
 
 }

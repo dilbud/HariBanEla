@@ -5,7 +5,7 @@
       <small>Votes</small>
     </div>
     <div class="m-1 text-center">
-        {{question.answerCount}} <br>
+        {{question.answers.length}} <br>
         <small>Answers</small>
     </div>
     <div class="m-1 text-center">
@@ -16,7 +16,10 @@
   <div class="col-10">
     <div>
       <h4 id="title" (click)="onQuestion()">{{question.title}}</h4>
-      <p><small>{{question.body | slice:0:250}}...</small></p>
+      <small>{{question.body | slice:0:250}}<span *ngIf="question.body.length>250">...
+        <a [routerLink]="['/questions',question._id]" routerLinkActive="router-link-active">Read More</a>
+      </span>
+      </small>
     </div>
     <div>
       <span class="rounded-pill bg-dark text-white m-1" *ngFor="let tag of question.tags"><small class="p-2"> {{tag.value}} </small></span>
