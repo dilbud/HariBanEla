@@ -21,14 +21,14 @@ export class QuestionListComponent implements OnInit {
 
     if (this.category) {
       console.log('categoryyyyyyyyyyyyyyyyy');
-      return this.questionService.questionList(this.category).subscribe(res => {
+      this.questionService.questionList(this.category).subscribe(res => {
         this.questions = res;
       }, err => {
         console.log(err);
       });
     }else{
       console.log('no categoryyyyyyyyyyyyyyyyy');
-      return this.questionService.questionList().subscribe(res => {
+      this.questionService.questionList().subscribe(res => {
         this.questions = res;
       }, err => {
         console.log(err);
@@ -36,5 +36,4 @@ export class QuestionListComponent implements OnInit {
     }
 
   }
-
 }

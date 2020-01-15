@@ -1,13 +1,13 @@
 <mat-divider></mat-divider>
 <div class="p-2">
-        <span class="mr-3">{{comment.body}}</span>
+        <span class="mr-3" style="word-wrap: break-word;">{{comment.body}}</span>
         <br>
         <div class="row">
                 <div class="col"></div>
                 <div class="col-7">
-                        <small *ngIf="owner">
+                        <small class="text-secondary" *ngIf="owner">
                                 <span class="mr-3">
-                                        Asked {{comment.createdAt | date:'medium'}}
+                                        {{comment.createdAt | date:'medium'}}
                                 </span>
                                 <a routerLink="/">
                                         {{owner.firstName}} {{owner.lastName}}

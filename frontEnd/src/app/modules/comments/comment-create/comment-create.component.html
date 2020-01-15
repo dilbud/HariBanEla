@@ -3,11 +3,11 @@
   <div class="form-group row ml-1 mr-5">
     <div class="col">
       <mat-form-field style="width: 100%;">
-        <input matInput placeholder="Add Comment" [(ngModel)]="commentModel.body" name="commentBody"
+        <input #commentBody="ngModel" matInput placeholder="Add Comment" [(ngModel)]="commentModel.body" name="commentBody"
           id="commentBody">
       </mat-form-field>
     </div>
-    <div class="col-2 mt-2">
+    <div class="col-2 mt-2" *ngIf="commentBody.dirty">
       <button mat-raised-button color="primary" *ngIf="!answerId" type="submit"
         (click)="onComment(0); commentForm.reset()">Post Comment</button>
       <button mat-raised-button color="primary" *ngIf="answerId" type="submit"

@@ -18,18 +18,17 @@ export class QuestionDetailComponent implements OnInit {
   mode = true;
   isAuthenticated = false;
   votedUpDown = 0; // not=0, up=1 down=2
+  qs;
 
   constructor(private questionService: QuestionService, private userService: UserService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     this.getQuestion();
 
+    // this.interval = setInterval(() => {
+    //   this.refreshQuestion();
+    // }, 600000);
 
-    this.interval = setInterval(() => {
-      this.refreshQuestion();
-    }, 600000);
-
-    
   }
 
   getOwner() {
@@ -40,9 +39,11 @@ export class QuestionDetailComponent implements OnInit {
     });
   }
 
-  getUser(){
+  getUser() {
     this.isAuthenticated = this.userService.getIsAuth();
     this.user = this.userService.getUserData();
+    this.checkVote();
+
     // console.log(this.user);
     this.userService.getAuthStatusListener()
       .subscribe((isAuthenticated: boolean) => {
@@ -60,7 +61,6 @@ export class QuestionDetailComponent implements OnInit {
       this.question = res;
       this.getUser();
       this.getOwner();
-      this.checkVote();
 
       console.log(this.question);
     }, err => {
@@ -68,16 +68,16 @@ export class QuestionDetailComponent implements OnInit {
     });
   }
 
-  checkVote(){
-    let flag=0;
+  checkVote() {
+    let flag = 0;
     this.question.voters.forEach(voter => {
-      if(voter.userId==this.user.id){
-        this.votedUpDown=voter.upDown;
-        flag=1;
+      if (voter.userId == this.user.id) {
+        this.votedUpDown = voter.upDown;
+        flag = 1;
       }
     });
-    if(flag==0){
-      this.votedUpDown=0;
+    if (flag == 0) {
+      this.votedUpDown = 0;
     }
   }
 
@@ -85,7 +85,7 @@ export class QuestionDetailComponent implements OnInit {
     const id = this.route.snapshot.params.id;
     this.questionService.refreshQuestion(id).subscribe(res => {
       this.question = res;
-      this.checkVote();
+      this.getUser();
     }, err => {
       console.log(err);
     });
@@ -116,7 +116,7 @@ export class QuestionDetailComponent implements OnInit {
     this.router.navigate([`/questions/${id}/edit`]);
   }
 
-  onCategory(){
+  onCategory() {
     this.router.navigate([`/category/${this.question.category}`]);
   }
 

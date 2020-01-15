@@ -32,6 +32,10 @@ export class QuestionService {
     return this.http.get(apiUrl + '/' + id);
   }
 
+  getQuestionsOfUser(userId) {
+    return this.http.get(apiUrl + '/user/' + userId);
+  }
+
   refreshQuestion(id) {
     return this.http.get(apiUrl+ '/' + id + '?refresh=1');
   }

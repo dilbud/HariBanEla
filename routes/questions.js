@@ -35,6 +35,17 @@ router.get('/', async (req, res) => {
   }
 });
 
+// get questions of user
+router.get('/user/:userId', async (req, res) => {
+  const userId = req.params.userId;
+  try {
+    const received = await Question.find({ userId: userId });
+    res.json(received);
+  } catch (error) {
+    res.json({ Emessage: error });
+  }
+});
+
 // get questions of a category 
 router.get('/category/:category', async (req, res) => {
   const category = req.params.category;
