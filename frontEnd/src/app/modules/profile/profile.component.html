@@ -20,12 +20,12 @@
         class="ml-auto align-self-end d-none d-md-block d-lg-block"
       >
         <div *ngIf="type == 'current' ? false : true">
-          <a mat-icon-button (click)="show()" class="editbutt" id="butticon">
+          <a mat-icon-button (click)="show()" class="editbutt" id="butticon1">
             <i class="editicon material-icons"> report </i>
           </a>
         </div>
         <div *ngIf="type == 'current' ? true : false">
-          <a mat-icon-button (click)="show()" class="editbutt" id="butticon">
+          <a mat-icon-button (click)="show()" class="editbutt" id="butticon2">
             <i *ngIf="toggle" class="editicon material-icons"> edit </i>
             <i *ngIf="!toggle" class="editicon material-icons"> home </i>
           </a>
