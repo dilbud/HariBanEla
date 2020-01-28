@@ -25,7 +25,7 @@
     </li>
 
     <li>
-      <img *ngIf="isAuthenticated" class="profilePhoto mt-1 mr-2" routerLink="profile" src="{{user.picURL}}">
+      <img *ngIf="isAuthenticated" class="profilePhoto mt-1 mr-2" (click)="view()" src="{{user.picURL}}">
     </li>
     <li>
       <app-login></app-login>
@@ -34,3 +34,7 @@
 
   <!-- <div  mat-card-avatar [ngStyle]="{'background-image': 'url(' + user.picURL + ')'}" ></div> -->
 </nav>
+
+<div class="container">
+
+</div>

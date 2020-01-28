@@ -1,0 +1,72 @@
+<div class="container">
+  <mat-card class="card p-0 ">
+    <mat-tab-group class="profile" id="tab" mat-align-tabs="center">
+        <mat-tab *ngIf="!isAdmin" label="Questions">
+          <div class="quelist" >
+            <mat-accordion>
+              <mat-expansion-panel >
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    <span>dsfsd</span>
+                  </mat-panel-title>
+                  <mat-panel-description> </mat-panel-description>
+                </mat-expansion-panel-header>
+                <span><button mat-button (click)="true">close</button></span>
+              </mat-expansion-panel>
+            </mat-accordion>
+          </div>
+        </mat-tab>
+        <mat-tab *ngIf="!isAdmin" label="Appointments">
+          <!-- <mat-accordion>
+            <mat-expansion-panel *ngFor="let item of proList">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <span>{{ item.firstName + " " + item.lastName }}</span>
+                </mat-panel-title>
+                <mat-panel-description> </mat-panel-description>
+              </mat-expansion-panel-header>
+              <span><button mat-button (click)="view(item)">View</button></span>
+            </mat-expansion-panel>
+          </mat-accordion> -->
+        </mat-tab>
+        <mat-tab *ngIf="isAdmin" label="Reports" >
+          <div class="reportList pt-3 align-self-center">
+            <mat-accordion >
+              <mat-expansion-panel >
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    <span>Feedback</span>
+                  </mat-panel-title>
+                  <mat-panel-description></mat-panel-description>
+                </mat-expansion-panel-header>
+                <span>jhfjhhj</span>
+              </mat-expansion-panel>
+              <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    <span>Reported Posts</span>
+                  </mat-panel-title>
+                  <mat-panel-description></mat-panel-description>
+                </mat-expansion-panel-header>
+                <span><button mat-button >View</button></span>
+              </mat-expansion-panel>
+              <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    <span>Reported Users</span>
+                  </mat-panel-title>
+                  <mat-panel-description></mat-panel-description>
+                </mat-expansion-panel-header>
+                <span><button mat-button >View</button></span>
+              </mat-expansion-panel>
+            </mat-accordion>
+          </div>
+        </mat-tab>
+        <mat-tab *ngIf="isAdmin" label="Professional Verifications">
+          <div class=" pv pt-3">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ipsam dolor magni vitae ratione enim hic praesentium provident obcaecati maxime perferendis voluptates ad dolorem autem, sunt aliquid corporis illo explicabo.</p>
+          </div>
+        </mat-tab>
+    </mat-tab-group>
+  </mat-card>
+</div>

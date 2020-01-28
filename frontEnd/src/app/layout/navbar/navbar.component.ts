@@ -36,5 +36,8 @@ export class NavbarComponent implements OnInit {
     this.router.navigateByUrl(`/`, { skipLocationChange: true }).then(() =>
       this.router.navigate([`/category/${category}`]));
   }
+  view() {
+    this.router.navigate(['../account'], { queryParams: { id: this.user.id, type: 'current' } });
+  }
 
 }

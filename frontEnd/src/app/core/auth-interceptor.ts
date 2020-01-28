@@ -10,17 +10,17 @@ import { AlertService } from '../data/services/alert.service';
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
-  constructor(private authService: UserService) {}
+
+  constructor(
+    private authService: UserService
+    ) {}
 
   intercept(req: HttpRequest<any>, next: HttpHandler) {
-    // this.authService.autoAuthUser();
     const authToken = this.authService.getToken();
-
-    console.log('interceptor log');
-    console.log(authToken);
     const authRequest = req.clone({
       headers: req.headers.set('Authorization', 'Bearer ' + authToken),
     });
+
     return next.handle(authRequest);
   }
 }

@@ -51,6 +51,23 @@ export class AppointmentService {
     return this.http.get(url).pipe(
       map(this.extractData), catchError(this.handleError));
   }
+  getAppointmentByUserId(id: string): Observable <any> {
+    const url = `${apiUrl}/user/${id}`;
+    if (id == null) {
+      return of(0);
+    }
+    return this.http.get(url).pipe(
+      map(this.extractData), catchError(this.handleError));
+  }
+  getAppointmentByProfessionalId(id: string): Observable <any> {
+    const url = `${apiUrl}/professional/${id}`;
+    if (id == null) {
+      return of(0);
+    }
+    return this.http.get(url).pipe(
+      map(this.extractData), catchError(this.handleError));
+  }
+
   getAllAppointments(): Observable<any> {
         return this.http.get(apiUrl).pipe(
       map(this.extractData), catchError(this.handleError));

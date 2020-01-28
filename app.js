@@ -8,9 +8,9 @@ const cors = require('cors');
 const categoryRouter = require('./routes/category');
 const dbConnection = require('./config/database');
 const usersRouter = require('./routes/users');
+const reportRouter = require('./routes/report');
 const questionsRouter = require('./routes/questions');
 const bodyParser = require('body-parser');
-const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const passport = require('passport');
 // var usersRouter = require('./routes/users');
 const chatRouter=require('./routes/chat');
@@ -22,7 +22,7 @@ const appointmentRouter = require('./routes/appointment');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-app.use(logger('dev'));
+// app.use(logger('dev'));
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(express.urlencoded({extended: false}));
@@ -43,6 +43,7 @@ dbConnection.connection();
 app.use('/api/chat', chatRouter);
 app.use('/api/category', categoryRouter);
 app.use('/api/user', usersRouter);
+app.use('/api/report', reportRouter);
 app.use('/api/appointment', appointmentRouter);
 app.use('/api/questions', questionsRouter);
 // app.use('/', express.static(path.join(__dirname, 'frontEnd/dist/frontEnd')));
@@ -60,6 +61,7 @@ app.get('/*', function(req, res) {
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
 
 // error handler
 app.use(function(err, req, res, next) {

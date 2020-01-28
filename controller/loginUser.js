@@ -18,7 +18,8 @@ module.exports = (req, res) => {
           address: user.address,
           email: user.email,
           picURL: user.picURL,
-          userType: user.userType
+          userType: user.userType,
+          category: user.category
         }
         const token = jwt.sign({ id: user._id, userData: details}, key, { expiresIn: '2h' });
         res.status(200).json({
@@ -31,7 +32,8 @@ module.exports = (req, res) => {
             address: user.address,
             email: user.email,
             picURL: user.picURL,
-            userType: user.userType
+            userType: user.userType,
+            category: user.category
           }
         });
       } else {
