@@ -63,7 +63,7 @@
               <ng-template matStepLabel>Fill user type</ng-template>
               <mat-form-field>
                   <mat-label>Select an option</mat-label>
-                  <mat-select  formControlName="Ctrl_1">
+                  <mat-select  formControlName="Ctrl_1" disableOptionCentering>
                     <mat-option value="gen">General User</mat-option>
                     <mat-option value="pro">Professional</mat-option>
 
@@ -74,7 +74,26 @@
                 <button mat-button matStepperNext>Next</button>
               </div>
             </form>
-          </mat-step>
+        </mat-step>
+        <!-- pro user category -->
+        <mat-step [stepControl]="formUserProCat">
+          <form [formGroup]="formUserProCat">
+            <ng-template matStepLabel>Fill user type</ng-template>
+            <mat-form-field>
+              <mat-label>select category</mat-label>
+              <mat-select class="select" formControlName="Ctrl_1" disableOptionCentering>
+                <mat-option *ngFor="let field of fields" [value]="field.value">
+                  {{field.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+      </mat-step>
+
         <!-- done -->
         <mat-step>
           <ng-template matStepLabel>Done</ng-template>

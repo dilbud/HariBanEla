@@ -3,7 +3,7 @@ const user = require("../models/userModel");
 const getProfile = (req, res, next) => {
   let id = req.query.id;
 
-  user.findById(id, "firstName lastName address email picURL userType", (err, data) => {
+  user.findById(id, "-password", (err, data) => {
     if (err) {
       console.log(err, "----------------------------/////////////////////");
       if (err.kind && err.kind === "ObjectId") {
@@ -19,7 +19,8 @@ const getProfile = (req, res, next) => {
         address: data.address,
         email: data.email,
         picURL: data.picURL,
-        userType: data.userType
+        userType: data.userType,
+        category: data.category
       };
       console.log(details);
       res.status(200).json({ msg: "ok", serverData: details });
@@ -30,7 +31,7 @@ const getProfile = (req, res, next) => {
 const listProfile = (req, res, next) => {
   user.find(
     { userType: "pro" },
-    "firstName lastName address email picURL userType",
+    "-password",
     (err, data) => {
       if (err) {
         console.log(err, "----------------------------/////////////////////");
@@ -47,7 +48,8 @@ const listProfile = (req, res, next) => {
           address: data.address,
           email: data.email,
           picURL: data.picURL,
-          userType: data.userType
+          userType: data.userType,
+          category: data.category
         };
         console.log(data);
         res.status(200).json({ msg: "ok", serverData: data });

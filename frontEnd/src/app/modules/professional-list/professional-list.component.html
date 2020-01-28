@@ -2,9 +2,9 @@
   <form [formGroup]="category">
     <mat-form-field>
       <mat-label>select category</mat-label>
-      <mat-select formControlName="Ctrl_1" (selectionChange)="onChange()" disableOptionCentering>
-        <mat-option *ngFor="let food of foods" [value]="food.value">
-          {{food.viewValue}}
+      <mat-select class="select" formControlName="Ctrl_1" (selectionChange)="onChange()" disableOptionCentering>
+        <mat-option *ngFor="let field of fields" [value]="field.value">
+          {{field.viewValue}}
         </mat-option>
       </mat-select>
     </mat-form-field>
@@ -13,7 +13,7 @@
 
 <div class="container prolist" *ngIf="category.value.Ctrl_1 === null ? false : true">
   <mat-accordion>
-    <mat-expansion-panel *ngFor="let item of proList">
+    <mat-expansion-panel *ngFor="let item of filteredList">
       <mat-expansion-panel-header>
         <mat-panel-title>
           <span>{{ item.firstName + " " + item.lastName }}</span>

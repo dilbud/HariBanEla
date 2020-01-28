@@ -23,7 +23,8 @@ module.exports = (req, res, next) => {
           email: data.email,
           picURL: data.picURL,
           userType: data.userType,
-          paymentPerHour: 2000
+          paymentPerHour: 2000,
+          category: data.category
         }
       });
     }

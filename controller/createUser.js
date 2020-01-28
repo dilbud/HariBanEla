@@ -26,7 +26,8 @@ const social = (req, res, next) => {
         address: user.address,
         email: user.email,
         picURL: user.picURL,
-        userType: user.userType
+        userType: user.userType,
+        category: user.category
       }
       const token = jwt.sign({ id: user._id , userData: details}, key, { expiresIn: '2h' });
       res.status(200).json({
@@ -39,7 +40,8 @@ const social = (req, res, next) => {
           address: user.address,
           email: user.email,
           picURL: user.picURL,
-          userType: user.userType
+          userType: user.userType,
+          category: user.category
         }
       });
     }
@@ -62,7 +64,8 @@ const socialLogin = (req, res) => {
           address: user.address,
           email: user.email,
           picURL: user.picURL,
-          userType: user.userType
+          userType: user.userType,
+          category: user.category
         }
         const token = jwt.sign({ id: user._id, userData: details }, key, { expiresIn: '2h' });
         res.status(200).json({
@@ -75,7 +78,8 @@ const socialLogin = (req, res) => {
             address: user.address,
             email: user.email,
             picURL: user.picURL,
-            userType: user.userType
+            userType: user.userType,
+            category: user.category
           }
         });
       } else {

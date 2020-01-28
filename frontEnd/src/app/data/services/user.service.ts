@@ -31,7 +31,8 @@ export class UserService  {
     address: String,
     email: String,
     picURL: String,
-    userType: String
+    userType: String,
+    category: String,
   };
   private otherUser = {
     id: String,
@@ -90,7 +91,6 @@ export class UserService  {
   }
 
   public getAuthStatusListener(): any {
-    // console.log(this.authStatusListener,"ththth")
        return this.authStatusListener.asObservable();
   }
 
@@ -149,7 +149,8 @@ export class UserService  {
           address: 'null',
           email: data.email,
           picURL: data.photoUrl,
-          userType: 'gen'
+          userType: 'gen',
+          category: 'null'
         };
         let res: any;
         this.http
@@ -180,15 +181,12 @@ export class UserService  {
                   'Hi ' + data.name + ' your are sign in'
                 );
               }
-              console.log('+++++++++++++');
-              console.log(this.user);
               this.AlertService.setAlert('Hi ' + data.name);
               this.AlertService.showAlert();
             }
           );
       })
       .catch(error => {
-        console.log(error);
         this.AlertService.setAlert('Try later ...');
         this.AlertService.showAlert();
       });
@@ -199,8 +197,6 @@ export class UserService  {
     .signIn(FacebookLoginProvider.PROVIDER_ID)
     .then(() => {
       const data = this.fetchSocialData();
-      console.log('9----------------------------------------------------9');
-      console.log(data);
       this.serverData = {
         id: 'null',
         firstName: data.firstName,
@@ -208,7 +204,8 @@ export class UserService  {
         address: 'null',
         email: data.email,
         picURL: data.photoUrl,
-        userType: 'gen'
+        userType: 'gen',
+        category: 'null'
       };
       let res: any;
       this.http
@@ -239,15 +236,12 @@ export class UserService  {
                 'Hi ' + data.name + ' your are sign in'
               );
             }
-            console.log('+++++++++++++');
-            console.log(this.user);
             this.AlertService.setAlert('Hi ' + data.name);
             this.AlertService.showAlert();
           }
         );
     })
     .catch(error => {
-      console.log(error);
       this.AlertService.setAlert('Try later ...');
       this.AlertService.showAlert();
     });
@@ -278,8 +272,6 @@ export class UserService  {
             ' ' +
             this.user.lastName
         );
-        console.log('+++++++++++++');
-        console.log(this.user);
         this.AlertService.showAlert();
         // this.router.navigate(['/']);
       }
@@ -297,12 +289,10 @@ export class UserService  {
   public autoAuthUser() {
     const token = this.getToken();
     const decoded = this.decodeToken(token);
-    console.log('11111111111111111');
     if (decoded === null || decoded === undefined) {
       this.logout();
       return;
     } else {
-      console.log('auto auth user ************************');
       this.user = {
         id: decoded.id,
         firstName: decoded.userData.firstName,
@@ -310,7 +300,8 @@ export class UserService  {
         address: decoded.userData.address,
         email: decoded.userData.email,
         picURL: decoded.userData.picURL,
-        userType: decoded.userData.userType
+        userType: decoded.userData.userType,
+        category: decoded.userData.category
       };
       this.isAuthenticated = true;
       this.authStatusListener.next(true);
@@ -334,7 +325,6 @@ export class UserService  {
   }
 
   private setAuthTimer() {
-    console.log('timer log');
     const data = this.getToken();
     const tokenObj = this.decodeToken(data);
     const now = new Date().getTime();
@@ -373,7 +363,6 @@ export class UserService  {
       return null;
     }
     const payload = token.split('.')[1];
-    console.log('decode token ************************');
     const bodyJSON = JSON.parse(atob(payload));
     const now = new Date().getTime();
     const bool = !(now < bodyJSON.exp * 1000 && bodyJSON.iat * 1000 < now);

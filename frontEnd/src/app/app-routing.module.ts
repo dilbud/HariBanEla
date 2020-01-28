@@ -63,8 +63,9 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminComponent,
-    canActivate: [AuthGuardService],
+    canActivate: [AuthGuardService]
   },
+
   {
     path: 'admin/category/:id',
     component: CategoryCreateComponent,
@@ -72,9 +73,6 @@ const routes: Routes = [
   },
 
   { path: 'professionals', component: ProfessionalListComponent },
-  // { path: 'update', component: UpdateComponent, canActivate: [AuthGuardService]},
-  // { path: 'profile', component: ProfileComponent},
-  // { path: 'profile', component: ProfileComponent, canActivate: [AuthGuardService]},
 
   {
     path: 'account', component: ProfilePageComponent, canActivate: [AuthGuardService],
@@ -83,10 +81,10 @@ const routes: Routes = [
       { path: 'edit', component: UpdateComponent }
     ]
   },
+
   { path: 'booking', component: BookingComponent, canActivate: [AuthGuardService] },
 
   { path: '**', component: QuestionListComponent },
-
 ];
 
 @NgModule({
