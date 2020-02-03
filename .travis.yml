@@ -1,9 +1,22 @@
 language: node_js
 node_js:
-  - "9"
+  - 12.13
 dist: trusty
 sudo: required
 branches:
   only:
   - master
   - develop
+before_script:
+  - npm install -g @angular/cli
+script:
+- ng lint 
+- ng test frontEnd 
+- ng test back-end
+- ng build frontEnd --prod
+- ng build back-end--prod 
+
+deploy:
+  provider: heroku
+  api_key: HEROKU_KEY
+  app: haribnela

@@ -1,0 +1,21 @@
+{
+  "npmScope": "front-end",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "frontEnd": {
+      "tags": []
+    },
+    "frontEnd-e2e": {
+      "tags": []
+    },
+    "back-end": {
+      "tags": []
+    }
+  }
+}
