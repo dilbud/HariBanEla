@@ -17,15 +17,19 @@ export class AnswerService {
     return this.http.put(apiUrl + '/' + id + '/answers', answer);
   }
 
-  editAnswer(answer, questionId, answerId) {
-    return this.http.put(apiUrl + '/' + questionId + '/' + answerId, answer);
+  deleteAnswer(questionId, answerId) {
+    return this.http.delete(apiUrl + '/' + questionId + '/answers/' + answerId);
   }
 
-  voteAnswer(questionId, answerId, status) {
+  editAnswer(answer, questionId, answerId) {
+    return this.http.put(apiUrl + '/' + questionId + '/answers/' + answerId, answer);
+  }
+
+  voteAnswer(questionId, answerId, status, userId: string) {
     if (status == 1) {
-      return this.http.get(apiUrl + '/' + questionId + '/' + answerId + '/vote?vote=1');
+      return this.http.put(apiUrl + '/' + questionId + '/answers/' + answerId + '/vote?vote=1', {userId: userId});
     } else {
-      return this.http.get(apiUrl + '/' + questionId + '/' + answerId + '/vote?vote=0');
+      return this.http.put(apiUrl + '/' + questionId + '/answers/' + answerId + '/vote?vote=0', {userId: userId});
     }
   }
 

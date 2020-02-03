@@ -6,4 +6,5 @@ export interface ServerData {
   email: string;
   picURL: string;
   userType: string;
+  category: string;
 }

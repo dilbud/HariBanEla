@@ -10,7 +10,7 @@ import { CategoryService } from './../../../data/services/category.service';
 })
 export class CategoryCreateComponent implements OnInit {
 
-  public method: String = 'Update';
+  public method = 'Update';
   public categoryId: any;
   public categoryForm: FormGroup;
   public name: string;
@@ -86,5 +86,9 @@ export class CategoryCreateComponent implements OnInit {
         console.log(err);
       }
     );
+  }
+
+  deletePortfolio(){
+    return null;
   }
 }

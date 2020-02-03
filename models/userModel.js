@@ -9,7 +9,8 @@ const userSchema = mongoose.Schema({
   password: { type: String },
   picURL: { type: String },
   userType: { type: String }, 
-  pending: {type: Boolean, default: false}
+  pending: {type: Boolean, default: false},
+  category: {type: String , default: 'null'}
 });
 
 userSchema.plugin(uniqueValidator);

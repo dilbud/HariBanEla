@@ -18,23 +18,33 @@ export class QuestionService {
     return this.http.post(apiUrl, question);
   }
 
-  questionList() {
-    return this.http.get(apiUrl);
+  questionList(category?) {
+    console.log(category);
+    if (!category){
+      return this.http.get(apiUrl);
+    }else{
+      return this.http.get(apiUrl+'/category/'+category);
+    }
+    
   }
 
   getQuestion(id) {
     return this.http.get(apiUrl + '/' + id);
   }
 
+  getQuestionsOfUser(userId) {
+    return this.http.get(apiUrl + '/user/' + userId);
+  }
+
   refreshQuestion(id) {
     return this.http.get(apiUrl+ '/' + id + '?refresh=1');
   }
 
-  voteQuestion(id, status) {
+  voteQuestion(id, status, userId: string) {
     if (status == 1) {
-      return this.http.get(apiUrl + '/' + id + '/vote?vote=1');
+      return this.http.put(apiUrl + '/' + id + '/vote?vote=1',{userId: userId});
     } else {
-      return this.http.get(apiUrl + '/' + id + '/vote?vote=0');
+      return this.http.put(apiUrl + '/' + id + '/vote?vote=0',{userId: userId});
     }
 
   }

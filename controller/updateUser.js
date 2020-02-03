@@ -11,7 +11,8 @@ module.exports = (req, res, next) => {
     lastName: req.body.query.lastName,
     address: req.body.query.address,
     password: req.body.query.password,
-    userType: req.body.query.userType
+    userType: req.body.query.userType,
+    category: req.body.query.category
   };
   let id = req.body.id;
   const userTypeNew = req.body.query.userType;
@@ -76,7 +77,8 @@ module.exports = (req, res, next) => {
           address: user.address,
           email: user.email,
           picURL: user.picURL,
-          userType: user.userType
+          userType: user.userType,
+          category: user.category
         }
         const token = jwt.sign({ id: user._id, userData: details }, key, { expiresIn: '2h' });
         res.status(200).json({
@@ -89,7 +91,8 @@ module.exports = (req, res, next) => {
             address: user.address,
             email: user.email,
             picURL: user.picURL,
-            userType: user.userType
+            userType: user.userType,
+            category: user.category
           }
         });
       }

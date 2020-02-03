@@ -1,10 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { UserService } from 'app/data/services/user.service';
-import { ActivatedRoute, Params } from '@angular/router';
-import { filter } from 'rxjs/operators';
+import { ActivatedRoute, Params , Router } from '@angular/router';
+import { filter } from "rxjs/operators";
 import { AlertService } from 'app/data/services/alert.service';
-import { AppointmentService } from 'app/data/services/appointment.service';
-import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-profile',
@@ -14,24 +13,57 @@ import { Router } from '@angular/router';
 export class ProfileComponent implements OnInit {
   user = null;
   id = null;
+  toggle = true; // home and edit icon
+  type: any;
 
-  mode = false;
+  constructor(
+    private userService: UserService,
 
-
-  constructor(private userService: UserService, private appointmentService: AppointmentService, private redirect: Router, private route: ActivatedRoute,
-              private alertService: AlertService) { }
+    private route: ActivatedRoute,
+    private alertService: AlertService,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.route.queryParams.subscribe((queryParams: Params) => {
       this.id = queryParams.id;
-      console.log(this.id, '**************************');
-      if (this.id === null || this.id === undefined) {
-        this.mode = true;
-      }
+      this.type = queryParams.type;
+      this.getUser();
     });
+  }
 
-    if (!this.mode) {
-      let res;
+  public show() {
+    if (this.toggle) {
+      this.router.navigate(['edit'], { queryParams: { id: this.id, type: this.type} , relativeTo: this.route });
+    } else {
+      this.router.navigate(['account'], { queryParams: { id: this.id, type: this.type} });
+    }
+    this.toggle = this.toggle ? false : true ; // home and edit icon
+  }
+
+  public getUserType() {
+    if (this.user.userType === 'admin') {
+      return 'Administrator';
+    }
+    if (this.user.userType === 'pro') {
+      return 'Professional';
+    }
+    if (this.user.userType === 'gen') {
+      return 'General';
+    }
+    console.log('*************************** ', this.user);
+    return this.user.userType;
+  }
+
+  private getUser() {
+    if (this.type === 'current') {
+      this.user = this.userService.getUserData();
+      this.userService.getAuthStatusListener().subscribe((isAuth: boolean) => {
+        this.user = this.userService.getUserData();
+      });
+    } else if ( this.type === 'pro') {
+      console.log('get pro user ==================');
+      let res: any;
       this.userService.getProProfile(this.id).subscribe(
         response => {
           res = response;
@@ -44,22 +76,24 @@ export class ProfileComponent implements OnInit {
         () => {
           this.user = res.serverData;
         }
-
+      );
+    } else {
+      console.log('get any user ==================');
+      let res: any;
+      this.userService.getUserDataById(this.id).subscribe(
+        response => {
+          res = response;
+        },
+        error => {
+          this.alertService.setAlert('Something wrong !');
+          this.alertService.setAlert(error.error.msg);
+          this.alertService.showAlert();
+        },
+        () => {
+          this.user = res.serverData;
+        }
       );
     }
-
-    if (this.mode) {
-      this.user = this.userService.getUserData();
-      this.userService.getAuthStatusListener().subscribe((isAuth: boolean) => {
-        this.user = this.userService.getUserData();
-      });
-    }
   }
-  makeAppointment() {
-    this.appointmentService.changeProfessionalId(this.user.id);
-    this.redirect.navigate(['/appointment/new']);
-   }
+
 }
-
-
-

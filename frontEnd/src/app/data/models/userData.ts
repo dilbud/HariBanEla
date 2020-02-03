@@ -7,4 +7,5 @@ export interface UserData {
   picURL: string;
   userType: string;
   paymentPerHour: number;
+  category: string;
 }

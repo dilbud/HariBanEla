@@ -1,27 +1,37 @@
 <div *ngIf="answer" class="row shadow p-3">
   <div class="col-1">
     <a (click)="voteAnswer(1)">
-      <i class="fa fa-caret-up fa-3x"></i>
+      <i style="cursor:pointer;" [ngClass]="{'text-primary' : votedUpDown==1}" class="fa fa-caret-up fa-3x"></i>
     </a>
-    <div id="voteCount" class="ml-2">{{answer.votes}}</div>
+    <div>
+      <a (click)="voteAnswer(1)" style="font-size: x-large;" style="cursor:pointer; font-size: x-large;"
+        [ngClass]="{'text-primary' : votedUpDown==1}" class="ml-2"><b>{{answer.votes}}</b></a>
+    </div>
     <a (click)="voteAnswer(0)">
-      <i class="fa fa-caret-down fa-3x"></i>
+      <i style="cursor:pointer;" [ngClass]="{'text-primary' : votedUpDown==2}" class="fa fa-caret-down fa-3x"></i>
     </a>
   </div>
   <div class="col-11">
     <div>
-      {{answer.body}}
+      <p style="word-wrap: break-word;">{{answer.body}}</p>
     </div>
     <div class="row">
       <div class="col">
-        <small>
-          <a class="actionLink mr-3" [routerLink] routerLinkActive="router-link-active" (click)="onEdit()">Edit</a>
-          <!-- <a class="actionLink" [routerLink] routerLinkActive="router-link-active" (click)="onDelete()">Delete</a> -->
+        <small class="text-secondary">
+          <span class="mr-3">{{answer.createdAt | date:'medium'}}</span>
+          <span *ngIf="!mode && user?.id==owner?.id">
+            <a class="actionLink mr-3" [routerLink] routerLinkActive="router-link-active" (click)="onEdit()">Edit</a>
+            <a class="actionLink" [routerLink] routerLinkActive="router-link-active" (click)="onDelete()">Delete</a>
+          </span>
         </small>
       </div>
-      <div *ngIf="owner" class="col-3">
+      <div *ngIf="owner" class="col-3 mb-3">
         <img class="profilePhoto" routerLink="profile" src="{{owner.picURL}}">
-        <small> {{owner.firstName}} {{owner.lastName}} </small>
+        <small>
+          <a routerLink="/">
+            {{owner.firstName}} {{owner.lastName}}
+          </a>
+        </small>
       </div>
     </div>
     <div class="ml-5">
@@ -29,7 +39,8 @@
         <app-comment-detail [comment]="comment"></app-comment-detail>
       </div>
       <div *ngIf="!mode">
-        <app-comment-create [questionId]="questionId" [answerId]="answer._id"></app-comment-create>
+        <app-comment-create (refreshEvent)="refreshQuestion()" [questionId]="questionId" [answerId]="answer._id"
+          [user]="user"></app-comment-create>
       </div>
     </div>
   </div>

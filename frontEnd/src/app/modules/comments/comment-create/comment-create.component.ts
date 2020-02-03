@@ -1,6 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Comment } from 'app/data/models/comment';
 import { CommentService } from 'app/data/services/comment.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-comment-create',
@@ -12,10 +13,13 @@ export class CommentCreateComponent implements OnInit {
   commentModel = new Comment();
   @Input() questionId;
   @Input() answerId;
+  @Input() user;
+  @Output() refreshEvent = new EventEmitter();
 
-  constructor(private commentService: CommentService) { }
+  constructor(private commentService: CommentService, private router: Router) { }
 
   ngOnInit() {
+    this.commentModel.userId = this.user.id;
   }
 
   onComment(status) {
@@ -25,7 +29,9 @@ export class CommentCreateComponent implements OnInit {
         .subscribe(
           data => {
             console.log('Success', data);
-            //
+            this.refreshEvent.emit();
+            // this.router.navigateByUrl(`/`, { skipLocationChange: true }).then(() =>
+            //   this.router.navigate([`/questions/${this.questionId}`]));
           },
           error => console.log('Error', error)
         );
@@ -34,7 +40,9 @@ export class CommentCreateComponent implements OnInit {
         .subscribe(
           data => {
             console.log('Success', data);
-            //
+            this.refreshEvent.emit();
+            // this.router.navigateByUrl(`/`, { skipLocationChange: true }).then(() =>
+            //   this.router.navigate([`/questions/${this.questionId}`]));
           },
           error => console.log('Error', error)
         );

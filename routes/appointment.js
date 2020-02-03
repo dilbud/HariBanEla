@@ -38,7 +38,30 @@ router.get('/:id', async function(req, res, next) {
     throw error; // <-- THIS IS ESSENTIAL FOR BREAKING THE CHAIN
   }
 });
-
+// GET BOOKINGS BY USER ID
+router.get('/user/:id', async function(req, res, next) {
+  try {
+    const appointments = await Appointment.find({userId:req.params.id});
+    winston.info(`200 -Viewed appointments of a user. - ${req.originalUrl} - ${req.method} - ${req.ip}`);
+    res.json(appointments);
+  } catch (error) {
+    winston.error(`${error.status || 500} - ${error.message} - ${req.originalUrl} - ${req.method} - ${req.ip}`);
+    return next(error);
+    throw error; // <-- THIS IS ESSENTIAL FOR BREAKING THE CHAIN
+  }
+});
+// GET BOOKINGS BY PROFESSIONAL ID
+router.get('/professional/:id', async function(req, res, next) {
+  try {
+    const appointments = await Appointment.find({professionalId:req.params.id});
+    winston.info(`200 -Viewed appointments of a professional. - ${req.originalUrl} - ${req.method} - ${req.ip}`);
+    res.json(appointments);
+  } catch (error) {
+    winston.error(`${error.status || 500} - ${error.message} - ${req.originalUrl} - ${req.method} - ${req.ip}`);
+    return next(error);
+    throw error; // <-- THIS IS ESSENTIAL FOR BREAKING THE CHAIN
+  }
+});
 //   CREATE NEW BOOKING
 router.post('/new', async function(req, res, next) {
   try {
