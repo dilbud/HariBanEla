@@ -38,7 +38,6 @@ export class ProfessionalListComponent implements OnInit {
     private formBuilder: FormBuilder,
     private userService: UserService,
     private alertService: AlertService,
-    private router: Router
   ) { }
 
   ngOnInit() {
@@ -50,6 +49,7 @@ export class ProfessionalListComponent implements OnInit {
           viewValue: v.name, };
       });
       this.fields = arryList;
+      this.fields.push({value: 'all', viewValue: 'All'});
     });
 
     this.category = this.formBuilder.group({
@@ -73,19 +73,17 @@ export class ProfessionalListComponent implements OnInit {
   }
 
   onChange() {
-
-    this.filteredList = this.proList.filter(val => {
-      return val.category === this.category.value.Ctrl_1;
-    });
+    if ( this.category.value.Ctrl_1 === 'all') {
+      this.filteredList = this.proList;
+    } else {
+      this.filteredList = this.proList.filter(val => {
+        return val.category === this.category.value.Ctrl_1;
+      });
+    }
 
     if (this.filteredList.length === 0) {
       this.alertService.setAlert('professionals not available');
       this.alertService.showAlert();
     }
   }
-
-  view(item: any) {
-    this.router.navigate(['../booking'], { queryParams: { id: item._id, type: item.userType } });
-  }
-
 }

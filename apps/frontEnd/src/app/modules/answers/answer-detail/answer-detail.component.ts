@@ -81,4 +81,8 @@ export class AnswerDetailComponent implements OnInit {
     this.refreshEvent.emit();
   }
 
+  viewProfile() {
+    this.router.navigate(['../../view'], { queryParams: { id: this.owner.id, type: this.owner.userType } });
+  }
+
 }

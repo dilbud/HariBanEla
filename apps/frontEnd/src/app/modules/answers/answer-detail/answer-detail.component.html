@@ -26,9 +26,9 @@
         </small>
       </div>
       <div *ngIf="owner" class="col-3 mb-3">
-        <img class="profilePhoto" routerLink="profile" src="{{owner.picURL}}">
+        <img class="profilePhoto" (click)="viewProfile()" src="{{owner.picURL}}">
         <small>
-          <a routerLink="/">
+          <a (click)="viewProfile()">
             {{owner.firstName}} {{owner.lastName}}
           </a>
         </small>

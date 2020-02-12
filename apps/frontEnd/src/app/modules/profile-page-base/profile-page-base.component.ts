@@ -11,6 +11,10 @@ import { QuestionService } from 'app/data/services/question.service';
 })
 export class ProfilePageBaseComponent implements OnInit {
 
+  feedbackView = false;
+  reportUserView = false;
+  reportPostView = false;
+
   isAdmin = false;
   isPro = false;
   isGen = false;

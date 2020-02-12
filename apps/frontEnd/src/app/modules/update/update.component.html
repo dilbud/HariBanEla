@@ -57,6 +57,24 @@
             </div>
           </form>
         </mat-step>
+        <!-- user profile pic -->
+        <!-- <mat-step [stepControl]="formUserProCat">
+          <form [formGroup]="formUserProCat">
+            <ng-template matStepLabel>Fill user type</ng-template>
+            <mat-form-field>
+              <mat-label>select category</mat-label>
+              <mat-select class="select" formControlName="Ctrl_1" disableOptionCentering>
+                <mat-option *ngFor="let field of fields" [value]="field.value">
+                  {{field.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+      </mat-step> -->
         <!-- user type -->
         <mat-step [stepControl]="formUserType">
             <form [formGroup]="formUserType">
@@ -75,6 +93,7 @@
               </div>
             </form>
         </mat-step>
+        <!-- pro details -->
         <!-- pro user category -->
         <mat-step [stepControl]="formUserProCat">
           <form [formGroup]="formUserProCat">
@@ -93,6 +112,24 @@
             </div>
           </form>
       </mat-step>
+      <!-- validate document as image -->
+      <!-- <mat-step [stepControl]="formUserProCat">
+        <form [formGroup]="formUserProCat">
+          <ng-template matStepLabel>Fill user type</ng-template>
+          <mat-form-field>
+            <mat-label>select category</mat-label>
+            <mat-select class="select" formControlName="Ctrl_1" disableOptionCentering>
+              <mat-option *ngFor="let field of fields" [value]="field.value">
+                {{field.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+    </mat-step> -->
 
         <!-- done -->
         <mat-step>

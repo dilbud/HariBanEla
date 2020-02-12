@@ -20,14 +20,12 @@
         class="ml-auto align-self-end d-none d-md-block d-lg-block"
       >
         <div *ngIf="type == 'current' ? false : true">
-          <a mat-icon-button (click)="show()" class="editbutt" id="butticon1">
-            <i class="editicon material-icons"> report </i>
-          </a>
+          <app-report [path]="3" matTooltip="report user"></app-report>
         </div>
         <div *ngIf="type == 'current' ? true : false">
           <a mat-icon-button (click)="show()" class="editbutt" id="butticon2">
-            <i *ngIf="toggle" class="editicon material-icons"> edit </i>
-            <i *ngIf="!toggle" class="editicon material-icons"> home </i>
+            <i *ngIf="toggle" class="editicon material-icons" matTooltip="edit profile"> edit </i>
+            <i *ngIf="!toggle" class="editicon material-icons" matTooltip="profile page"> home </i>
           </a>
         </div>
       </div>

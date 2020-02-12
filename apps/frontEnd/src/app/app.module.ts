@@ -45,6 +45,16 @@ import { FeedbackComponent } from './modules/report/feedback/feedback.component'
 import { ResetPasswordComponent } from './modules/report/reset-password/reset-password.component';
 import { ReportPostComponent } from './modules/report/report-post/report-post.component';
 import { ReportUserComponent } from './modules/report/report-user/report-user.component';
+import { ProfileViewComponent } from './modules/profile-view/profile-view.component';
+import { UsersComponent } from './modules/users/users.component';
+import { CategoryComponent } from './modules/category/category.component';
+import { VerificationsComponent } from './modules/verifications/verifications.component';
+import { ViewQuestionsComponent } from './modules/view-questions/view-questions.component';
+import { ViewAppointmentsComponent } from './modules/view-appointments/view-appointments.component';
+import { ViewFeedbackComponent } from './modules/view-feedback/view-feedback.component';
+import { ViewReportedUserComponent } from './modules/view-reported-user/view-reported-user.component';
+import { ViewReportedPostComponent } from './modules/view-reported-post/view-reported-post.component';
+import { ProfessionalListTableComponent } from './modules/professional-list-table/professional-list-table.component';
 
 
 
@@ -82,7 +92,17 @@ import { ReportUserComponent } from './modules/report/report-user/report-user.co
     FeedbackComponent,
     ResetPasswordComponent,
     ReportPostComponent,
-    ReportUserComponent
+    ReportUserComponent,
+    ProfileViewComponent,
+    UsersComponent,
+    CategoryComponent,
+    VerificationsComponent,
+    ViewQuestionsComponent,
+    ViewAppointmentsComponent,
+    ViewFeedbackComponent,
+    ViewReportedUserComponent,
+    ViewReportedPostComponent,
+    ProfessionalListTableComponent
   ],
 
   imports: [

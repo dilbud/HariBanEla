@@ -12,15 +12,5 @@
 </div>
 
 <div class="container prolist" *ngIf="category.value.Ctrl_1 === null ? false : true">
-  <mat-accordion>
-    <mat-expansion-panel *ngFor="let item of filteredList">
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          <span>{{ item.firstName + " " + item.lastName }}</span>
-        </mat-panel-title>
-        <mat-panel-description> </mat-panel-description>
-      </mat-expansion-panel-header>
-      <span><button mat-button (click)="view(item)">View</button></span>
-    </mat-expansion-panel>
-  </mat-accordion>
+  <app-professional-list-table [filteredList] = "filteredList"></app-professional-list-table>
 </div>

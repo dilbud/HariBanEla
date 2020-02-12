@@ -48,8 +48,7 @@ export class UserService  {
 
   constructor(
     private authService: AuthService,
-    // tslint:disable-next-line: no-shadowed-variable
-    private AlertService: AlertService,
+    private alertService: AlertService,
     private http: HttpClient,
     private router: Router
   ) {
@@ -116,9 +115,9 @@ export class UserService  {
           res = response;
         },
         error => {
-          this.AlertService.setAlert('Something wrong !');
-          this.AlertService.setAlert(error.error.msg);
-          this.AlertService.showAlert();
+          this.alertService.setAlert('Something wrong !');
+          this.alertService.setAlert(error.error.msg);
+          this.alertService.showAlert();
         },
         () => {
           this.user = res.serverData;
@@ -128,10 +127,10 @@ export class UserService  {
           this.authStatusListener.next(true);
           this.setAuthTimer();
           // this.router.navigate(['/']);
-          this.AlertService.setAlert(
+          this.alertService.setAlert(
             'Hi ' + data.firstName + ' your account is updated'
           );
-          this.AlertService.showAlert();
+          this.alertService.showAlert();
         }
       );
   }
@@ -160,9 +159,9 @@ export class UserService  {
               res = response;
             },
             error => {
-              this.AlertService.setAlert('Something wrong !');
-              this.AlertService.setAlert(error.error.msg);
-              this.AlertService.showAlert();
+              this.alertService.setAlert('Something wrong !');
+              this.alertService.setAlert(error.error.msg);
+              this.alertService.showAlert();
             },
             () => {
               this.user = res.serverData;
@@ -172,23 +171,23 @@ export class UserService  {
               this.authStatusListener.next(true);
               this.setAuthTimer();
               if (res.msg === 'created') {
-                this.AlertService.setAlert(
+                this.alertService.setAlert(
                   'Hi ' + data.name + ' your account is created'
                 );
               }
               if (res.msg === 'exist') {
-                this.AlertService.setAlert(
+                this.alertService.setAlert(
                   'Hi ' + data.name + ' your are sign in'
                 );
               }
-              this.AlertService.setAlert('Hi ' + data.name);
-              this.AlertService.showAlert();
+              this.alertService.setAlert('Hi ' + data.name);
+              this.alertService.showAlert();
             }
           );
       })
       .catch(error => {
-        this.AlertService.setAlert('Try later ...');
-        this.AlertService.showAlert();
+        this.alertService.setAlert('Try later ...');
+        this.alertService.showAlert();
       });
   }
 
@@ -215,9 +214,9 @@ export class UserService  {
             res = response;
           },
           error => {
-            this.AlertService.setAlert('Something wrong !');
-            this.AlertService.setAlert(error.error.msg);
-            this.AlertService.showAlert();
+            this.alertService.setAlert('Something wrong !');
+            this.alertService.setAlert(error.error.msg);
+            this.alertService.showAlert();
           },
           () => {
             this.user = res.serverData;
@@ -227,23 +226,23 @@ export class UserService  {
             this.authStatusListener.next(true);
             this.setAuthTimer();
             if (res.msg === 'created') {
-              this.AlertService.setAlert(
+              this.alertService.setAlert(
                 'Hi ' + data.name + ' your account is created'
               );
             }
             if (res.msg === 'exist') {
-              this.AlertService.setAlert(
+              this.alertService.setAlert(
                 'Hi ' + data.name + ' your are sign in'
               );
             }
-            this.AlertService.setAlert('Hi ' + data.name);
-            this.AlertService.showAlert();
+            this.alertService.setAlert('Hi ' + data.name);
+            this.alertService.showAlert();
           }
         );
     })
     .catch(error => {
-      this.AlertService.setAlert('Try later ...');
-      this.AlertService.showAlert();
+      this.alertService.setAlert('Try later ...');
+      this.alertService.showAlert();
     });
   }
 
@@ -255,9 +254,9 @@ export class UserService  {
         res = response;
       },
       error => {
-        this.AlertService.setAlert('Something wrong !');
-        this.AlertService.setAlert(error.error.msg);
-        this.AlertService.showAlert();
+        this.alertService.setAlert('Something wrong !');
+        this.alertService.setAlert(error.error.msg);
+        this.alertService.showAlert();
       },
       () => {
         this.user = res.serverData;
@@ -266,13 +265,13 @@ export class UserService  {
         this.isAuthenticated = true;
         this.authStatusListener.next(true);
         this.setAuthTimer();
-        this.AlertService.setAlert(
+        this.alertService.setAlert(
           'Hi ' +
             this.user.firstName +
             ' ' +
             this.user.lastName
         );
-        this.AlertService.showAlert();
+        this.alertService.showAlert();
         // this.router.navigate(['/']);
       }
     );

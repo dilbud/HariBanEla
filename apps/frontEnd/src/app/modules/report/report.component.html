@@ -20,6 +20,8 @@
     <a *ngIf="isAuth" (click)="reportPost()" >report post</a>
   </div>
   <div *ngSwitchCase="3">
-    <a *ngIf="isAuth" (click)="reportUser()" >report user</a>
+    <a mat-icon-button *ngIf="isAuth" (click)="reportUser()" class="editbutt" id="butticon1">
+      <i class="editicon material-icons"> report </i>
+    </a>
   </div>
 </div>

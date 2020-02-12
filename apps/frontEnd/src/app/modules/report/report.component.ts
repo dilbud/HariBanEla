@@ -31,6 +31,7 @@ export class ReportComponent implements OnInit {
 
   ngOnInit() {
     this.user = this.userService.getUserData();
+    this.isAuth = this.userService.getIsAuth();
     this.userService.getAuthStatusListener().subscribe((isAuth: boolean) => {
       this.user = this.userService.getUserData();
       this.isAuth = isAuth;
@@ -64,7 +65,8 @@ export class ReportComponent implements OnInit {
 
     resetPasswordDialogRef.afterClosed().subscribe(result => {
       if (result != null) {
-        this.reportService.sendResetPassword(result);
+        this.reportData = result;
+        this.reportService.sendResetPassword(this.reportData);
       }
     });
   }

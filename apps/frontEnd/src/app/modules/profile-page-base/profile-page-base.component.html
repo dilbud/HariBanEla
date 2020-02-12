@@ -2,7 +2,8 @@
   <mat-card class="card p-0 ">
     <mat-tab-group class="profile" id="tab" mat-align-tabs="center">
         <mat-tab *ngIf="!isAdmin" label="Questions">
-          <div class="quelist" >
+          <app-view-questions [user]="user"></app-view-questions>
+          <!-- <div class="quelist" >
             <mat-accordion>
               <mat-expansion-panel >
                 <mat-expansion-panel-header>
@@ -14,9 +15,10 @@
                 <span><button mat-button (click)="true">close</button></span>
               </mat-expansion-panel>
             </mat-accordion>
-          </div>
+          </div> -->
         </mat-tab>
         <mat-tab *ngIf="!isAdmin" label="Appointments">
+          <app-view-appointments [user]="user" ></app-view-appointments>
           <!-- <mat-accordion>
             <mat-expansion-panel *ngFor="let item of proList">
               <mat-expansion-panel-header>
@@ -32,39 +34,49 @@
         <mat-tab *ngIf="isAdmin" label="Reports" >
           <div class="reportList pt-3 align-self-center">
             <mat-accordion >
-              <mat-expansion-panel >
+              <mat-expansion-panel (click)="feedbackView = true">
                 <mat-expansion-panel-header>
                   <mat-panel-title>
                     <span>Feedback</span>
                   </mat-panel-title>
                   <mat-panel-description></mat-panel-description>
                 </mat-expansion-panel-header>
-                <span>jhfjhhj</span>
+                <app-view-feedback *ngIf="feedbackView"></app-view-feedback>
               </mat-expansion-panel>
-              <mat-expansion-panel>
+              <mat-expansion-panel (click)="reportPostView = true">
                 <mat-expansion-panel-header>
                   <mat-panel-title>
                     <span>Reported Posts</span>
                   </mat-panel-title>
                   <mat-panel-description></mat-panel-description>
                 </mat-expansion-panel-header>
-                <span><button mat-button >View</button></span>
+                <app-view-reported-post *ngIf="reportPostView"></app-view-reported-post>
               </mat-expansion-panel>
-              <mat-expansion-panel>
+              <mat-expansion-panel (click)="reportUserView = true">
                 <mat-expansion-panel-header>
                   <mat-panel-title>
                     <span>Reported Users</span>
                   </mat-panel-title>
                   <mat-panel-description></mat-panel-description>
                 </mat-expansion-panel-header>
-                <span><button mat-button >View</button></span>
+                <app-view-reported-user *ngIf="reportUserView"></app-view-reported-user>
               </mat-expansion-panel>
             </mat-accordion>
           </div>
         </mat-tab>
-        <mat-tab *ngIf="isAdmin" label="Professional Verifications">
+        <mat-tab *ngIf="isAdmin" label="Verifications">
           <div class=" pv pt-3">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ipsam dolor magni vitae ratione enim hic praesentium provident obcaecati maxime perferendis voluptates ad dolorem autem, sunt aliquid corporis illo explicabo.</p>
+            <app-verifications></app-verifications>
+          </div>
+        </mat-tab>
+        <!-- <mat-tab *ngIf="isAdmin" label="Users">
+          <div class=" pt-3">
+            <app-users></app-users>
+          </div>
+        </mat-tab> -->
+        <mat-tab *ngIf="isAdmin" label="Category">
+          <div class=" pv pt-3">
+            <app-category></app-category>
           </div>
         </mat-tab>
     </mat-tab-group>
