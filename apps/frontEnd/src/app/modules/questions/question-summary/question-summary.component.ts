@@ -16,7 +16,7 @@ export class QuestionSummaryComponent implements OnInit {
   constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit() {
-    console.log(this.question);
+    // console.log(this.question);
     this.getOwner();
   }
 

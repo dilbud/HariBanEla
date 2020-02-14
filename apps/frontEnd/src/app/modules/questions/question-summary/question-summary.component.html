@@ -22,8 +22,12 @@
       </small>
     </div>
     <div>
-      <span class="rounded-pill bg-dark text-white m-1" *ngFor="let tag of question.tags"><small class="p-2">
-          {{tag.value}} </small></span>
+      <mat-chip-list>
+        <span *ngFor="let tag of question.tags">
+            <mat-chip>{{tag}}</mat-chip>
+        </span>
+      </mat-chip-list>
+
     </div>
     <div class="text-right col-12"><small><span *ngIf="owner">
           <a routerLink="/">

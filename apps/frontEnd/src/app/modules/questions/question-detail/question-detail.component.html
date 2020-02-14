@@ -34,11 +34,11 @@
           <p style="word-wrap: break-word;">{{question.body}}</p>
           <div class="row">
             <div class="col">
-              <span class="rounded-pill bg-dark text-white m-1" *ngFor="let tag of question.tags">
-                <span class="p-2">
-                  <small>{{tag?.value}}</small>
+              <mat-chip-list>
+                <span *ngFor="let tag of question.tags">
+                    <mat-chip>{{tag}}</mat-chip>
                 </span>
-              </span>
+              </mat-chip-list>
             </div>
             <div *ngIf="owner" class="col-4">
               <img class="profilePhoto" routerLink="profile" src="{{owner.picURL}}">
