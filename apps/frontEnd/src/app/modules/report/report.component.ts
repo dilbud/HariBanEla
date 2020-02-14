@@ -16,6 +16,10 @@ import { UserService } from '../../data/services/user.service';
 export class ReportComponent implements OnInit {
 
   @Input() path: number;
+  @Input() reportedPostId: string;
+  @Input() reportedUserId: string;
+  @Input() reportedUserName: string;
+
   private reportData: ReportData;
   private user = null;
   public isAuth = false;
@@ -77,6 +81,9 @@ export class ReportComponent implements OnInit {
       data: {
         path: this.path,
         user: this.user === null ? null : this.user,
+        reportedPostId: this.reportedPostId,
+        reportedUserId: this.reportedUserId,
+        reportedUserName: this.reportedUserName
        }
     });
 
@@ -92,6 +99,9 @@ export class ReportComponent implements OnInit {
       data: {
         path: this.path,
         user: this.user === null ? null : this.user,
+        reportedPostId: this.reportedPostId,
+        reportedUserId: this.reportedUserId,
+        reportedUserName: this.reportedUserName
        }
     });
 

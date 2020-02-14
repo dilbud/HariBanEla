@@ -1,2 +1,25 @@
-<p>view-questions works!</p>
-{{user.id}}
+
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let item of sorted" >
+    <mat-expansion-panel-header>
+      <mat-panel-title class="title">
+        <span>{{ item.category }}</span>
+      </mat-panel-title>
+      <mat-panel-description> {{ item.title }}</mat-panel-description>
+    </mat-expansion-panel-header>
+    <div>Title : {{item.title}}</div>
+    <div>Category : {{item.category}}</div>
+    <div>Body : {{item.body}}</div>
+    <div>Views : {{item.views}}</div>
+    <div>Answers : {{item.answers.length}}</div>
+    <div>Comments : {{item.comments.length}}</div>
+    <span><button mat-button (click)="view(item)" class="mr-2">View</button></span>
+  </mat-expansion-panel>
+</mat-accordion>
+
+<mat-paginator [length]="sorted.length"
+              [pageSize]="5"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              (page)="paginate($event)">
+</mat-paginator>
+

@@ -32,7 +32,7 @@ export class ReportService {
     );
   }
   public getFeedBack(data: ReportData) {
-    this.http.post(this.apiUrl + '/feedback', data).subscribe(
+    this.http.post(this.apiUrl + '/getFeedback', data).subscribe(
       response => {
       },
       error => {
@@ -60,6 +60,7 @@ export class ReportService {
   }
 
   public sendReportUser(data: ReportData) {
+    console.log('dhfhjdfjjhf',data);
     this.http.post(this.apiUrl + '/reportUser', data).subscribe(
       response => {
       },
@@ -70,7 +71,7 @@ export class ReportService {
     );
   }
   public getReportUser(data: ReportData) {
-    this.http.post(this.apiUrl + '/reportUser', data).subscribe(
+    this.http.post(this.apiUrl + '/getReportUser', data).subscribe(
       response => {
       },
       error => {
@@ -91,7 +92,7 @@ export class ReportService {
     );
   }
   public getReportPost(data: ReportData) {
-    this.http.post(this.apiUrl + '/reportPost', data).subscribe(
+    this.http.post(this.apiUrl + '/getReportPost', data).subscribe(
       response => {
       },
       error => {

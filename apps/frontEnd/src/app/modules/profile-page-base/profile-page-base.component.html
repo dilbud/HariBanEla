@@ -3,33 +3,9 @@
     <mat-tab-group class="profile" id="tab" mat-align-tabs="center">
         <mat-tab *ngIf="!isAdmin" label="Questions">
           <app-view-questions [user]="user"></app-view-questions>
-          <!-- <div class="quelist" >
-            <mat-accordion>
-              <mat-expansion-panel >
-                <mat-expansion-panel-header>
-                  <mat-panel-title>
-                    <span>dsfsd</span>
-                  </mat-panel-title>
-                  <mat-panel-description> </mat-panel-description>
-                </mat-expansion-panel-header>
-                <span><button mat-button (click)="true">close</button></span>
-              </mat-expansion-panel>
-            </mat-accordion>
-          </div> -->
         </mat-tab>
         <mat-tab *ngIf="!isAdmin" label="Appointments">
           <app-view-appointments [user]="user" ></app-view-appointments>
-          <!-- <mat-accordion>
-            <mat-expansion-panel *ngFor="let item of proList">
-              <mat-expansion-panel-header>
-                <mat-panel-title>
-                  <span>{{ item.firstName + " " + item.lastName }}</span>
-                </mat-panel-title>
-                <mat-panel-description> </mat-panel-description>
-              </mat-expansion-panel-header>
-              <span><button mat-button (click)="view(item)">View</button></span>
-            </mat-expansion-panel>
-          </mat-accordion> -->
         </mat-tab>
         <mat-tab *ngIf="isAdmin" label="Reports" >
           <div class="reportList pt-3 align-self-center">
@@ -69,11 +45,11 @@
             <app-verifications></app-verifications>
           </div>
         </mat-tab>
-        <!-- <mat-tab *ngIf="isAdmin" label="Users">
+        <mat-tab *ngIf="isAdmin" label="Users">
           <div class=" pt-3">
             <app-users></app-users>
           </div>
-        </mat-tab> -->
+        </mat-tab>
         <mat-tab *ngIf="isAdmin" label="Category">
           <div class=" pv pt-3">
             <app-category></app-category>

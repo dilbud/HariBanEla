@@ -25,13 +25,6 @@ export class ProfessionalListComponent implements OnInit {
   filteredList: ServerData[] = null;
 
   fields: Field[] = null;
-  //  [
-  //   { value: 'edu', viewValue: 'Education' },
-  //   { value: 'it', viewValue: 'Information Technology' },
-  //   { value: 'health', viewValue: 'Health' },
-  //   { value: 'cc', viewValue: 'career coaching' },
-  //   { value: 'final', viewValue: 'financial' },
-  // ];
 
   constructor(
     private categoryService: CategoryService,
@@ -74,10 +67,12 @@ export class ProfessionalListComponent implements OnInit {
 
   onChange() {
     if ( this.category.value.Ctrl_1 === 'all') {
-      this.filteredList = this.proList;
+      this.filteredList = this.proList.filter(val => {
+        return (val.active);
+      });
     } else {
       this.filteredList = this.proList.filter(val => {
-        return val.category === this.category.value.Ctrl_1;
+        return (val.category === this.category.value.Ctrl_1) && (val.active);
       });
     }
 

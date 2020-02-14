@@ -10,7 +10,6 @@ export class ViewFeedbackComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log('testing     5465');
   }
 
 }

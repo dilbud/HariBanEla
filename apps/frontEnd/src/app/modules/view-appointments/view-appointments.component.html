@@ -1,3 +1,26 @@
-<p>view-appointments works!</p>
-<br>
-{{user}}
+<mat-button-toggle-group #group="matButtonToggleGroup" value="up" (click)="filter(group.value)">
+  <mat-button-toggle value="up" aria-label="Text align left" >
+    Upcoming Appointment
+  </mat-button-toggle>
+  <mat-button-toggle value="past" aria-label="Text align center">
+      Past Appointment
+  </mat-button-toggle>
+</mat-button-toggle-group>
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let item of FilterList" >
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <span>{{ item.subject }}</span>
+      </mat-panel-title>
+      <mat-panel-description> </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div class="">Appointment</div>
+  </mat-expansion-panel>
+</mat-accordion>
+
+<mat-paginator [length]="FilterList.length"
+              [pageSize]="5"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              (page)="paginate($event)">
+</mat-paginator>
+

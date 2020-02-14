@@ -3,7 +3,6 @@ const user = require('../models/userModel');
 const key = 'df678g68g786fd88fd67g8fdfd8g7fd8g7';
 
 module.exports = (req, res) => {
-  console.log('login sever -------------------');
   user
     .findOne({ email: req.body.email, password: req.body.password })
     .select('-password')
@@ -11,6 +10,8 @@ module.exports = (req, res) => {
     .exec((err, user) => {
       if (err) {
         res.status(500).json({ msg: 'internal server error' });
+      } if (user.active === false) {
+        res.status(404).json({ msg: 'User blocked by Administrator' });
       } else if (user !== null) {
         details = {
           firstName: user.firstName,
@@ -19,7 +20,12 @@ module.exports = (req, res) => {
           email: user.email,
           picURL: user.picURL,
           userType: user.userType,
-          category: user.category
+          category: user.category,
+          doc: user.doc,
+          pending: user.pending,
+          rate: user.rate,
+          paymentPerHour: user.paymentPerHour,
+          active: user.active
         }
         const token = jwt.sign({ id: user._id, userData: details}, key, { expiresIn: '2h' });
         res.status(200).json({
@@ -33,7 +39,12 @@ module.exports = (req, res) => {
             email: user.email,
             picURL: user.picURL,
             userType: user.userType,
-            category: user.category
+            category: user.category,
+            doc: user.doc,
+            pending: user.pending,
+            rate: user.rate,
+            paymentPerHour: user.paymentPerHour,
+            active: user.active
           }
         });
       } else {

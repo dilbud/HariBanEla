@@ -5,6 +5,8 @@ import { categoryRouter } from './app/routes/category';
 import { appointmentRouter } from './app/routes/appointment';
 import { questionRouter } from './app/routes/questions';
 import { reportRouter } from './app/routes/report';
+import { edRouter } from './app/routes/ed';
+import { verifyProRouter } from './app/routes/verifyPro';
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -41,6 +43,8 @@ app.use('/api/user', userRouter);
 app.use('/api/appointment', appointmentRouter);
 app.use('/api/questions', questionRouter);
 app.use('/api/report',  reportRouter);
+app.use('/api/ed', edRouter);
+app.use('/api/verifypro', verifyProRouter);
 app.use('/', express.static(path.join(process.cwd(),'//dist/apps/frontEnd')));
 app.get('/*', (req, res) => {
 

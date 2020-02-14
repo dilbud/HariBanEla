@@ -29,7 +29,6 @@ import { CommentCreateComponent } from './modules/comments/comment-create/commen
 import { CommentDetailComponent } from './modules/comments/comment-detail/comment-detail.component';
 import { LoginDComponent } from './modules/login/login-d/login-d.component';
 import { LoginComponent } from './modules/login/login.component';
-import { LogoutDComponent } from './modules/login/logout-d/logout-d.component';
 import { ProfessionalListComponent } from './modules/professional-list/professional-list.component';
 import { ProfileComponent } from './modules/profile/profile.component';
 import { QuestionCreateComponent } from './modules/questions/question-create/question-create.component';
@@ -55,6 +54,7 @@ import { ViewFeedbackComponent } from './modules/view-feedback/view-feedback.com
 import { ViewReportedUserComponent } from './modules/view-reported-user/view-reported-user.component';
 import { ViewReportedPostComponent } from './modules/view-reported-post/view-reported-post.component';
 import { ProfessionalListTableComponent } from './modules/professional-list-table/professional-list-table.component';
+import { RatingStarComponent } from './modules/rating-star/rating-star.component';
 
 
 
@@ -79,7 +79,6 @@ import { ProfessionalListTableComponent } from './modules/professional-list-tabl
     UpdateComponent,
     LoginComponent,
     LoginDComponent,
-    LogoutDComponent,
     ReportComponent,
     AppointmentCreateComponent,
     AppointmentAcceptComponent,
@@ -102,7 +101,8 @@ import { ProfessionalListTableComponent } from './modules/professional-list-tabl
     ViewFeedbackComponent,
     ViewReportedUserComponent,
     ViewReportedPostComponent,
-    ProfessionalListTableComponent
+    ProfessionalListTableComponent,
+    RatingStarComponent
   ],
 
   imports: [
@@ -138,7 +138,6 @@ import { ProfessionalListTableComponent } from './modules/professional-list-tabl
   ],
   entryComponents: [
     LoginDComponent,
-    LogoutDComponent,
     FeedbackComponent,
     ResetPasswordComponent,
     ReportPostComponent,

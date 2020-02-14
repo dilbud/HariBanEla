@@ -12,7 +12,9 @@ const userSchema = mongoose.Schema({
   userType: { type: String },
   pending: {type: Boolean, default: false},
   category: {type: String , default: 'null'},
-  rate: {type: Number, default: 0}
+  rate: {type: Number, default: 0},
+  paymentPerHour: {type: Number, default:0},
+  active: {type: Boolean, default: true}
 });
 
 userSchema.plugin(uniqueValidator);

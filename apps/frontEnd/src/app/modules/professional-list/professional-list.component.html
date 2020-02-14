@@ -2,7 +2,7 @@
   <form [formGroup]="category">
     <mat-form-field>
       <mat-label>select category</mat-label>
-      <mat-select class="select" formControlName="Ctrl_1" (selectionChange)="onChange()" disableOptionCentering>
+      <mat-select class="select" formControlName="Ctrl_1" (selectionChange)="onChange(); " disableOptionCentering>
         <mat-option *ngFor="let field of fields" [value]="field.value">
           {{field.viewValue}}
         </mat-option>
@@ -12,5 +12,5 @@
 </div>
 
 <div class="container prolist" *ngIf="category.value.Ctrl_1 === null ? false : true">
-  <app-professional-list-table [filteredList] = "filteredList"></app-professional-list-table>
+  <app-professional-list-table [filteredList] = "filteredList" [fields] = "fields"></app-professional-list-table>
 </div>

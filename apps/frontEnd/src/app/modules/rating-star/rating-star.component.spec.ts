@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LogoutDComponent } from './logout-d.component';
+import { RatingStarComponent } from './rating-star.component';
 
-describe('LogoutDComponent', () => {
-  let component: LogoutDComponent;
-  let fixture: ComponentFixture<LogoutDComponent>;
+describe('RatingStarComponent', () => {
+  let component: RatingStarComponent;
+  let fixture: ComponentFixture<RatingStarComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LogoutDComponent ]
+      declarations: [ RatingStarComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LogoutDComponent);
+    fixture = TestBed.createComponent(RatingStarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

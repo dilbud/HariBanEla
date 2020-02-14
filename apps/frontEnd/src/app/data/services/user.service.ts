@@ -97,6 +97,13 @@ export class UserService  {
     return this.http.get(this.apiUrl + '/proList');
   }
 
+  public getAllUser() {
+    return this.http.get(this.apiUrl + '/allUser');
+  }
+  public getAllPendingUser() {
+    return this.http.get(this.apiUrl + '/allPendingUser');
+  }
+
   public getProProfile(proId: string) {
     return this.http.get(this.apiUrl + '/proProfile', { params: {id: proId}});
   }
@@ -149,7 +156,12 @@ export class UserService  {
           email: data.email,
           picURL: data.photoUrl,
           userType: 'gen',
-          category: 'null'
+          category: 'null',
+          rate: 0,
+          paymentPerHour: 0,
+          doc: [],
+          pending: false,
+          active: true
         };
         let res: any;
         this.http
@@ -204,7 +216,12 @@ export class UserService  {
         email: data.email,
         picURL: data.photoUrl,
         userType: 'gen',
-        category: 'null'
+        category: 'null',
+        rate: 0,
+        paymentPerHour: 0,
+        doc: [],
+        pending: false,
+        active: true
       };
       let res: any;
       this.http

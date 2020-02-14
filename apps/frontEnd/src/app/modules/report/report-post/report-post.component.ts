@@ -27,6 +27,9 @@ export class ReportPostComponent implements OnInit {
       email: this.getEmail(),
       type: 'reportPost' ,
       userId: this.getUserId(),
+      reportedPostId: this.data.reportedPostId,
+      reportedUserId: this.data.reportedUserId,
+      reportedUserName: this.data.reportedUserName,
     };
     this.dialogRef.close(this.reportData);
   }

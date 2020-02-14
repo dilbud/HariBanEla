@@ -20,7 +20,7 @@
         class="ml-auto align-self-end d-none d-md-block d-lg-block"
       >
         <div *ngIf="type == 'current' ? false : true">
-          <app-report [path]="3" matTooltip="report user"></app-report>
+          <app-report [path]="3" [reportedPostId]="'null'" [reportedUserId]="user.id" [reportedUserName]="user.firstName + ' ' + user.lastName" matTooltip="report user"></app-report>
         </div>
         <div *ngIf="type == 'current' ? true : false">
           <a mat-icon-button (click)="show()" class="editbutt" id="butticon2">
@@ -32,3 +32,4 @@
     </div>
   </mat-card>
 </div>
+

@@ -3,7 +3,6 @@ import { UserService } from 'app/data/services/user.service';
 import { AppointmentService } from 'app/data/services/appointment.service';
 import { QuestionService } from 'app/data/services/question.service';
 
-
 @Component({
   selector: 'app-profile-page-base',
   templateUrl: './profile-page-base.component.html',
@@ -42,13 +41,6 @@ export class ProfilePageBaseComponent implements OnInit {
     if (this.user.userType === 'gen') {
       this.isGen = true;
     }
-
-    this.appointmentService.getAppointmentByUserId('5dd0c48507c02c294c25b261').subscribe(result => {
-      this.appointments = result;
-      console.log('xxxxxxxxxxxx', this.appointments);
-    });
-
-    // this.questionService.get
   }
 
 }

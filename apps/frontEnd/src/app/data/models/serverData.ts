@@ -7,4 +7,10 @@ export interface ServerData {
   picURL: string;
   userType: string;
   category: string;
+  rate: number;
+  paymentPerHour: number;
+  doc: string[];
+  pending: boolean;
+  active: boolean;
 }
+
