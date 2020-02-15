@@ -12,10 +12,10 @@
         <i style="cursor:pointer;" [ngClass]="{'text-primary' : votedUpDown==2}" class="fa fa-caret-down fa-3x"></i>
       </a>
         <span style="color: darkgrey;" [ngClass]="{'text-success': answer.isAccepted}">
-          <span *ngIf="answer.userId==user.id && !answer.isAccepted">
+          <span *ngIf="question.userId==user.id && !answer.isAccepted">
             <i style="cursor:pointer;" class="fas fa-check fa-2x" (click)="onAccept()"></i>
           </span>
-          <span *ngIf="(answer.userId==user.id && answer.isAccepted) || (answer.userId!=user.id && answer.isAccepted)">
+          <span *ngIf="(question.userId==user.id && answer.isAccepted) || (question.userId!=user.id && answer.isAccepted)">
             <i class="fas fa-check fa-2x"></i>
           </span>
       </span>
@@ -34,10 +34,10 @@
             </span>
           </small>
         </div>
-        <div *ngIf="owner" class="col-3 mb-3">
-          <img class="profilePhoto" routerLink="profile" src="{{owner.picURL}}">
+        <div *ngIf="owner" class="col-3 mb-3" style="cursor: pointer;" (click)="viewProfile()">
+          <img class="profilePhoto" src="{{owner.picURL}}">
           <small>
-            <a routerLink="/">
+            <a>
               {{owner.firstName}} {{owner.lastName}}
             </a>
           </small>
@@ -48,7 +48,7 @@
           <app-comment-detail [comment]="comment"></app-comment-detail>
         </div>
         <div *ngIf="!mode">
-          <app-comment-create (refreshEvent)="refreshQuestion()" [questionId]="questionId" [answerId]="answer._id"
+          <app-comment-create (refreshEvent)="refreshQuestion()" [questionId]="question._id" [answerId]="answer._id"
             [user]="user"></app-comment-create>
         </div>
       </div>

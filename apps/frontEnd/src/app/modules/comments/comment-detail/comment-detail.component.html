@@ -9,7 +9,7 @@
                                 <span class="mr-3">
                                         {{comment.createdAt | date:'medium'}}
                                 </span>
-                                <a routerLink="/">
+                                <a style="cursor: pointer;" (click)="viewProfile()">
                                         {{owner.firstName}} {{owner.lastName}}
                                 </a>
                         </small>

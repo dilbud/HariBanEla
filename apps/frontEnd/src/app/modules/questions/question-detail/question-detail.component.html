@@ -76,7 +76,7 @@
   </h4>
   <div *ngIf="question.answers.length>0">
     <span *ngFor="let answer of question.answers">
-      <app-answer-detail (refreshEvent)="refreshQuestion()" [questionId]="question._id" [answer]="answer" [user]="user"
+      <app-answer-detail (refreshEvent)="refreshQuestion()" [question]="question" [answer]="answer" [user]="user"
         [mode]="mode"></app-answer-detail>
     </span>
   </div>

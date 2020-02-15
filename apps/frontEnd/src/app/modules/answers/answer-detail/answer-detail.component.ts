@@ -11,7 +11,7 @@ import { UserService } from 'app/data/services/user.service';
 })
 export class AnswerDetailComponent implements OnInit {
 
-  @Input() questionId: string;
+  @Input() question;
   @Input() answer;
   @Input() user;
   @Input() mode;
@@ -37,23 +37,23 @@ export class AnswerDetailComponent implements OnInit {
   }
 
   onEdit() {
-    this.router.navigate(['/questions/' + this.questionId + '/' + this.answer._id + '/edit']);
+    this.router.navigate(['/questions/' + this.question._id + '/' + this.answer._id + '/edit']);
   }
 
   onDelete() {
-    this.answerService.deleteAnswer(this.questionId, this.answer._id).subscribe(res => {
+    this.answerService.deleteAnswer(this.question._id, this.answer._id).subscribe(res => {
       this.refreshEvent.emit();
       // this.router.navigateByUrl(`/`, { skipLocationChange: true }).then(() =>
-      // this.router.navigate([`/questions/${this.questionId}`]));
+      // this.router.navigate([`/questions/${this.question._id}`]));
     }, err => {
       console.log(err);
     });
-    // this.router.navigate(['/questions/' + this.questionId]);
+    // this.router.navigate(['/questions/' + this.question._id]);
 
   }
 
   onAccept(){
-    this.answerService.acceptAnswer(this.questionId, this.answer._id).subscribe(res => {
+    this.answerService.acceptAnswer(this.question._id, this.answer._id).subscribe(res => {
       this.refreshEvent.emit();
     }, err => {
       console.log(err);
@@ -62,11 +62,11 @@ export class AnswerDetailComponent implements OnInit {
 
   voteAnswer(status) {
     const id = this.route.snapshot.params.id;
-    this.answerService.voteAnswer(this.questionId, this.answer._id, status, this.user.id).subscribe(res => {
+    this.answerService.voteAnswer(this.question._id, this.answer._id, status, this.user.id).subscribe(res => {
       console.log(res);
       this.refreshEvent.emit();
       // this.router.navigateByUrl(`/`, { skipLocationChange: true }).then(() =>
-      // this.router.navigate([`/questions/${this.questionId}`]));
+      // this.router.navigate([`/questions/${this.question._id}`]));
     }, err => {
       console.log(err);
     });

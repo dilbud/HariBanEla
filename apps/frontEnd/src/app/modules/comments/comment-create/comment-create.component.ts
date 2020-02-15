@@ -34,8 +34,9 @@ export class CommentCreateComponent implements OnInit {
             //   this.router.navigate([`/questions/${this.questionId}`]));
           },
           error => console.log('Error', error)
-        );
+      )
     } else {
+      console.log(this.questionId+' '+this.answerId);
       this.commentService.addComment(this.commentModel, this.questionId, this.answerId)
         .subscribe(
           data => {

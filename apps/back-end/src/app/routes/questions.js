@@ -196,10 +196,14 @@ questionRouter.delete('/:questionId/answers/:answerId', async (req, res) => {
   try {
     const questionId = req.params.questionId;
     const answerId = req.params.answerId;
+    let index=-1;
+    // console.log(questionId);
+    // console.log(answerId);
     const parent = await Question.findById(questionId);
     for (const answer of parent.answers) {
       if (answerId == answer._id) {
         index = parent.answers.indexOf(answer);
+        // console.log(index);
         break;
       }
     }
@@ -304,8 +308,8 @@ questionRouter.put('/:questionId/answers/:answerId/vote', async (req, res) => {
           }
           answer.voters.splice(index, 1);
         }
-        console.log(unVote);
-        console.log(answer);
+        // console.log(unVote);
+        // console.log(answer);
         // console.log(received);
         if (unVote == false) {
           answer.voters.push(vote);
@@ -347,15 +351,19 @@ questionRouter.put('/:questionId/comments', async (req, res) => {
 
 // Add comment to answer
 questionRouter.put('/:questionId/answers/:answerId/comments', async (req, res) => {
+  console.log(req.params);
   const comment = {
     body: req.body.body,
     userId: req.body.userId,
     createdAt: Date.now()
   };
+  console.log(comment);
   try {
     const questionId = req.params.questionId;
     const answerId = req.params.answerId;
+    console.log(questionId);
     const question = await Question.findById(questionId);
+    console.log(question);
     for (const answer of question.answers) {
       if (answer._id == answerId) {
         answer.comments.push(comment);
