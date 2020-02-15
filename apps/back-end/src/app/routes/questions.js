@@ -35,6 +35,20 @@ questionRouter.get('/', async (req, res) => {
   }
 });
 
+// search questions
+questionRouter.put('/search', async (req, res) => {
+  const searchInput = req.body.searchInput;
+  // console.log(searchInput);
+  try {
+    if (searchInput != '') {
+      const received = await Question.find();
+      res.json(received);
+    }
+  } catch (error) {
+    res.json({ Emessage: error });
+  }
+});
+
 // get questions of user
 questionRouter.get('/user/:userId', async (req, res) => {
   const userId = req.params.userId;
@@ -51,7 +65,7 @@ questionRouter.get('/category/:category', async (req, res) => {
   const category = req.params.category;
   try {
     const received = await Question.find({ category: category });
-    console.log(received);
+    // console.log(received);
     res.json(received);
   } catch (error) {
     res.json({ Emessage: error });
@@ -75,9 +89,10 @@ questionRouter.get('/:id', async (req, res) => {
 
 // Vote question
 questionRouter.put('/:id/vote', async (req, res) => {
-  // console.log(req.body);
-  vote = { userId: req.body.userId };
-
+  console.log('req.body');
+  console.log(req.body);
+  const vote = { userId: req.body.userId };
+  console.log(vote);
   try {
     const id = req.params.id;
     const received = await Question.findById(id);
@@ -89,7 +104,7 @@ questionRouter.put('/:id/vote', async (req, res) => {
         break;
       }
     }
-    // console.log(vote);
+    console.log(received);
     if (index == -1) {
       if (req.query.vote == 1) {
         vote.upDown = 1;
@@ -120,6 +135,7 @@ questionRouter.put('/:id/vote', async (req, res) => {
       }
       received.voters.splice(index, 1);
     }
+    console.log(received);
     console.log(vote);
     if (unVote == false) {
       received.voters.push(vote);
@@ -161,7 +177,8 @@ questionRouter.put('/:id/answers', async (req, res) => {
     body: req.body.body,
     userId: req.body.userId,
     votes: 0,
-    createdAt: Date.now()
+    createdAt: Date.now(),
+    isAccepted: false
   };
   try {
     const id = req.params.id;
@@ -197,6 +214,25 @@ questionRouter.delete('/:questionId/answers/:answerId', async (req, res) => {
   }
 });
 
+// Accept answer
+questionRouter.get('/:questionId/answers/:answerId/accept', async (req, res) => {
+  try {
+    const questionId = req.params.questionId;
+    const answerId = req.params.answerId;
+    const parent = await Question.findById(questionId);
+    for (const answer of parent.answers) {
+      if (answerId == answer._id) {
+        answer.isAccepted=true;
+        break;
+      }
+    }
+    const saved = await parent.save();
+    res.json(saved);
+  } catch (error) {
+    res.json({ message: error });
+  }
+});
+
 // edit answer
 questionRouter.put('/:questionId/answers/:answerId', async (req, res) => {
   const questionId = req.params.questionId;
@@ -218,15 +254,16 @@ questionRouter.put('/:questionId/answers/:answerId', async (req, res) => {
 
 // Vote answer
 questionRouter.put('/:questionId/answers/:answerId/vote', async (req, res) => {
-  // console.log(req.body);
-  vote = { userId: req.body.userId };
+  console.log(req.body);
+  const vote = { userId: req.body.userId };
   try {
     const questionId = req.params.questionId;
     const answerId = req.params.answerId;
     const received = await Question.findById(questionId);
     for (const answer of received.answers) {
       if (answer._id == answerId) {
-        answerIndex=received.answers.indexOf(answer);
+        console.log(answer);
+        answerIndex = received.answers.indexOf(answer);
         let index = -1;
         let unVote = false;
         for (const voter of answer.voters) {
@@ -267,13 +304,13 @@ questionRouter.put('/:questionId/answers/:answerId/vote', async (req, res) => {
           answer.voters.splice(index, 1);
         }
         console.log(unVote);
-        
+
+        // console.log(received);
         if (unVote == false) {
           answer.voters.push(vote);
-          received.answers.splice(answerIndex,1);
-          // console.log(received);
+          received.answers.splice(answerIndex, 1);
           received.answers.push(answer);
-          console.log(received);
+          // console.log(received);
         }
         break;
       }

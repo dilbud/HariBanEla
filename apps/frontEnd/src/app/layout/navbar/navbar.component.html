@@ -1,40 +1,45 @@
-<nav class="navbar shadow navbar-expand-lg navbar-light bg-light row fixed-top mb-3rem">
-  <a class="navbar-brand col-1" routerLink="/">
-    <img src="assets/logo.png" height="70px" alt="">
-  </a>
+<mat-toolbar class="mat-elevation-z2 bg-light navbar-fixed-top" style="justify-content: space-between;">
+  <div>
+    <a class="mr-5" routerLink="/">
+      <img src="assets/logo.png" height="70px" alt="">
+    </a>
+  </div>
 
-  <form class="form-inline my-2 my-lg-0 col-8">
-    <input class="form-control mr-sm-2" id="searchInput" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
-  </form>
-  <ul class="navbar-nav flex-row d-none d-md-flex col-3">
-
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/ask">Ask Question</a>
-    </li>
-
-    <li ngbDropdown class="nav-item">
-      <a class="nav-link" id="categoryDropdown" ngbDropdownToggle>Categories</a>
+  <div>
+    <span>
+      <mat-form-field floatLabel="never" style="width: 700px;">
+        <input matInput [matAutocomplete]="auto" [(ngModel)]="searchInput" placeholder="Search" style="width: 93%;" (keyup)="onSearch()">
+        <a style="cursor: pointer;" (click)="onSearch()"><i class="fas fa-search pl-3"></i></a>
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option [routerLink]="['/questions', searchResult._id]" *ngFor="let searchResult of searchResults" [value]="option">
+            <a id="title" style="word-wrap: break-word;" >{{searchResult.title}}</a>
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </span>
+    <span>
+      <a mat-button color="primary" routerLink="/ask">Ask Question</a>
+    </span>
+    <span ngbDropdown>
+      <a mat-button color="primary" id="categoryDropdown" ngbDropdownToggle>Categories</a>
       <div ngbDropdownMenu aria-labelledby="categoryDropdown">
-        <button ngbDropdownItem *ngFor="let category of categories" (click)="onCategory(category.name)" routerLinkActive="router-link-active" >{{category.name}}</button>
+        <button ngbDropdownItem *ngFor="let category of categories" (click)="onCategory(category.name)"
+          routerLinkActive="router-link-active">{{category.name}}</button>
       </div>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/professionals">professionals</a>
-    </li>
+    </span>
 
-    <li>
-      <img *ngIf="isAuthenticated" class="profilePhoto mt-1 mr-2" (click)="view()" src="{{user.picURL}}">
-    </li>
-    <li>
+    <span>
+      <a mat-button color="primary" routerLink="/professionals">professionals</a>
+    </span>
+
+    <span>
+      <img *ngIf="isAuthenticated" class="profilePhoto mt-1" (click)="view()" src="{{user.picURL}}">
+    </span>
+    <span>
       <app-login></app-login>
-    </li>
-  </ul>
+    </span>
+  </div>
 
   <!-- <div  mat-card-avatar [ngStyle]="{'background-image': 'url(' + user.picURL + ')'}" ></div> -->
-</nav>
-
-<div class="container">
-
-</div>
+</mat-toolbar>
+<br><br>

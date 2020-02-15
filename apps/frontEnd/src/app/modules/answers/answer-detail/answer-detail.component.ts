@@ -52,6 +52,14 @@ export class AnswerDetailComponent implements OnInit {
 
   }
 
+  onAccept(){
+    this.answerService.acceptAnswer(this.questionId, this.answer._id).subscribe(res => {
+      this.refreshEvent.emit();
+    }, err => {
+      console.log(err);
+    });
+  }
+
   voteAnswer(status) {
     const id = this.route.snapshot.params.id;
     this.answerService.voteAnswer(this.questionId, this.answer._id, status, this.user.id).subscribe(res => {

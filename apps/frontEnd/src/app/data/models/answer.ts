@@ -3,7 +3,9 @@ export class Answer {
     userId: string;
     body: string;
     votes: number;
-    // isCorrect: boolean;
+    comments: any[];
+    createdAt: Date;
+    isAccepted: boolean;
 
     constructor() {
     }
