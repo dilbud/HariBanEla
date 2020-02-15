@@ -2,7 +2,7 @@
   <mat-form-field appearance="fill">
     <mat-label>Filter Or Add Category</mat-label>
     <input matInput (keyup)="applyFilter($event)" #f placeholder="Ex. Mia">
-    <button mat-icon-button matTooltip="add category" matSuffix (click)="addCategory(f.value); f.value=''" >
+    <button mat-icon-button matTooltip="add category" matSuffix (click)="create(f.value); f.value=''" >
     <mat-icon class="input">add_circle_outline</mat-icon>
     </button>
   </mat-form-field>
@@ -30,7 +30,7 @@
             <mat-form-field appearance="fill" class="w-100">
               <mat-label>category name</mat-label>
               <input matInput #f [value]="element.name">
-              <button mat-icon-button matTooltip="update category" matSuffix (click)="updateCategory(f.value, element.id)" >
+              <button mat-icon-button matTooltip="update category" matSuffix (click)="update(f.value, element.id)" >
               <mat-icon class="input">update</mat-icon>
               </button>
             </mat-form-field>

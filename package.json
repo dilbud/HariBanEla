@@ -57,6 +57,7 @@
     "mongoose": "^5.8.7",
     "mongoose-unique-validator": "^2.0.3",
     "ngx-awesome-uploader": "^9.0.0",
+    "ngx-clipboard": "^12.3.1",
     "ngx-toastr": "^10.1.0",
     "open-iconic": "^1.1.1",
     "passport": "^0.4.1",

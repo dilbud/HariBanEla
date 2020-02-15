@@ -1,13 +1,7 @@
-<div class="container">
+<div class="container" *ngIf="isAdmin">
   <mat-card class="card p-0 ">
-    <mat-tab-group class="profile" id="tab" mat-align-tabs="center">
-        <mat-tab *ngIf="!isAdmin" label="Questions">
-          <app-view-questions [user]="user"></app-view-questions>
-        </mat-tab>
-        <mat-tab *ngIf="!isAdmin" label="Appointments">
-          <app-view-appointments [user]="user" ></app-view-appointments>
-        </mat-tab>
-        <mat-tab *ngIf="isAdmin" label="Reports" >
+    <mat-tab-group class="profile" id="tab1" mat-align-tabs="center" >
+        <mat-tab  label="Reports" >
           <div class="reportList pt-3 align-self-center">
             <mat-accordion >
               <mat-expansion-panel (click)="feedbackView = true">
@@ -40,20 +34,38 @@
             </mat-accordion>
           </div>
         </mat-tab>
-        <mat-tab *ngIf="isAdmin" label="Verifications">
+        <mat-tab label="Verifications">
           <div class=" pv pt-3">
             <app-verifications></app-verifications>
           </div>
         </mat-tab>
-        <mat-tab *ngIf="isAdmin" label="Users">
+        <mat-tab  label="Users">
           <div class=" pt-3">
             <app-users></app-users>
           </div>
         </mat-tab>
-        <mat-tab *ngIf="isAdmin" label="Category">
+        <mat-tab  label="Category">
           <div class=" pv pt-3">
             <app-category></app-category>
           </div>
+        </mat-tab>
+        <mat-tab  label="Tag">
+          <div class=" pv pt-3">
+            <app-tag></app-tag>
+          </div>
+        </mat-tab>
+    </mat-tab-group>
+  </mat-card>
+</div>
+
+<div class="container" *ngIf="!isAdmin">
+  <mat-card class="card p-0 ">
+    <mat-tab-group class="profile" id="tab2" mat-align-tabs="center" >
+        <mat-tab  label="Questions">
+          <app-view-questions [user]="user"></app-view-questions>
+        </mat-tab>
+        <mat-tab label="Appointments">
+          <app-view-appointments [user]="user" ></app-view-appointments>
         </mat-tab>
     </mat-tab-group>
   </mat-card>

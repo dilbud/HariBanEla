@@ -5,14 +5,26 @@ const user = require('../models/userModel');
 const key = 'df678g68g786fd88fd67g8fdfd8g7fd8g7';
 
 module.exports = (req, res, next) => {
-  const query = {
-    firstName: req.body.query.firstName,
-    lastName: req.body.query.lastName,
-    address: req.body.query.address,
-    password: req.body.query.password,
-    userType: req.body.query.userType,
-    category: req.body.query.category
-  };
+  let query
+  if(req.body.query.password === "12345678") {
+    query = {
+      firstName: req.body.query.firstName,
+      lastName: req.body.query.lastName,
+      address: req.body.query.address,
+      userType: req.body.query.userType,
+      category: req.body.query.category
+    };
+  } else{
+    query = {
+      firstName: req.body.query.firstName,
+      lastName: req.body.query.lastName,
+      address: req.body.query.address,
+      password: req.body.query.password,
+      userType: req.body.query.userType,
+      category: req.body.query.category
+    };
+  }
+
   let id = req.body.id;
   const userTypeNew = req.body.query.userType;
   if (id === undefined || id === null) {

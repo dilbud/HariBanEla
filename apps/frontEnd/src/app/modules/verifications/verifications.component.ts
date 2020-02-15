@@ -4,9 +4,17 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { UserService } from '../../data/services/user.service';
 import { CategoryService } from '../../data/services/category.service';
+import { VerifyProService } from '../../data/services/verify-pro.service';
 import { ServerData } from '../../data/models/serverData';
 import { Router } from '@angular/router';
 import { AlertService } from 'app/data/services/alert.service';
+import {animate, state, style, transition, trigger} from '@angular/animations';
+
+
+export interface Field {
+  value: string;
+  viewValue: string;
+}
 
 export interface RowData {
   no: string;
@@ -16,33 +24,40 @@ export interface RowData {
   row: any;
 }
 
-export interface Field {
-  value: string;
-  viewValue: string;
-}
-
 @Component({
   selector: 'app-verifications',
   templateUrl: './verifications.component.html',
-  styleUrls: ['./verifications.component.scss']
+  styleUrls: ['./verifications.component.scss'],
+  animations: [
+    trigger('detailExpand', [
+      state('collapsed', style({height: '0px', minHeight: '0'})),
+      state('expanded', style({height: '*'})),
+      transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
+    ]),
+  ],
 })
+
 export class VerificationsComponent implements OnInit {
 
   allUser: any[] = [];
   allUserTable: any[] = [];
-  displayedColumns: string[] = ['no', 'name', 'cat', 'email', 'id'];
   fields: Field[] = [];
 
-  dataSource: MatTableDataSource<RowData>;
 
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   @ViewChild(MatSort, { static: true }) sort: MatSort;
+
+  dataSource: MatTableDataSource<RowData>;
+  columnsToDisplay = ['no', 'name', 'cat', 'email'];
+  expandedElement: RowData | null;
+
 
   constructor(
     private alertService: AlertService,
     private userService: UserService,
     private router: Router,
     private categoryService: CategoryService,
+    private verifyProService: VerifyProService
   ) { }
 
   ngOnInit() {
@@ -87,12 +102,9 @@ export class VerificationsComponent implements OnInit {
             this.dataSource.paginator = this.paginator;
             this.dataSource.sort = this.sort;
           });
-        this.dataSource = new MatTableDataSource(this.allUserTable);
-        this.dataSource.paginator = this.paginator;
-        this.dataSource.sort = this.sort;
       });
   }
-  
+
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -102,8 +114,15 @@ export class VerificationsComponent implements OnInit {
     }
   }
 
-  view(val: any) {
-    this.router.navigate(['../view'], { queryParams: { id: val._id, type: val.userType } });
+  accept(val: any) {
+    this.verifyProService.acceptPro(val._id);
+    console.log(val);
+    this.ngOnInit();
+  }
+
+  reject(val: any) {
+    this.verifyProService.rejectPro(val._id);
+    console.log(val);
   }
 
 }

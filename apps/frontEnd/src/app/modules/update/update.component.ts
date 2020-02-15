@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from '../../data/services/user.service';
 import { UserData } from '../../data/models/userData';
@@ -16,7 +16,6 @@ export interface Field {
   styleUrls: ['./update.component.scss']
 })
 export class UpdateComponent implements OnInit {
-
 
   isLinear = true;
   formName: FormGroup;
@@ -79,6 +78,7 @@ export class UpdateComponent implements OnInit {
     });
     this.onChange();
   }
+
 
   onChange() {
     this.formUserType.get('Ctrl_1').valueChanges.subscribe(val => {

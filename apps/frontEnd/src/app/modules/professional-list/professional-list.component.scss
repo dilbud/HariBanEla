@@ -5,6 +5,22 @@ div.container.prolist{
 // div.catlist {
 //   margin-top: 110px  !important;
 // }
-.select {
+
+
+.prolist .select {
   width: 200px !important;
+}
+
+
+.prolist table {
+  width: 100%;
+}
+
+.prolist .mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.prolist td, th {
+  width: 25%;
 }

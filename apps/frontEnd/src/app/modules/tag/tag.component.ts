@@ -3,13 +3,12 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { UserService } from '../../data/services/user.service';
-import { CategoryService } from '../../data/services/category.service';
+import { TagService } from '../../data/services/tag.service';
 import { VerifyProService } from '../../data/services/verify-pro.service';
 import { ServerData } from '../../data/models/serverData';
 import { Router } from '@angular/router';
 import { AlertService } from 'app/data/services/alert.service';
 import {animate, state, style, transition, trigger} from '@angular/animations';
-
 
 export interface Field {
   value: string;
@@ -23,9 +22,9 @@ export interface RowData {
 }
 
 @Component({
-  selector: 'app-category',
-  templateUrl: './category.component.html',
-  styleUrls: ['./category.component.scss'],
+  selector: 'app-tag',
+  templateUrl: './tag.component.html',
+  styleUrls: ['./tag.component.scss'],
   animations: [
     trigger('detailExpand', [
       state('collapsed', style({height: '0px', minHeight: '0'})),
@@ -34,8 +33,7 @@ export interface RowData {
     ]),
   ],
 })
-
-export class CategoryComponent implements OnInit {
+export class TagComponent implements OnInit {
 
   row: RowData[] = [];
 
@@ -51,13 +49,13 @@ export class CategoryComponent implements OnInit {
     private alertService: AlertService,
     private userService: UserService,
     private router: Router,
-    private categoryService: CategoryService,
+    private tagService: TagService,
     private verifyProService: VerifyProService
   ) { }
 
   ngOnInit() {
-    let res: Field[];
-    this.categoryService.getAllCategories().subscribe(
+    let res: any;
+    this.tagService.getAllTag().subscribe(
       result => {
         res = result;
       },
@@ -87,13 +85,15 @@ export class CategoryComponent implements OnInit {
     }
   }
 
-  addCategory(val: any) {
-    console.log('gasdghas', val);
+  create(val: any) {
+    this.tagService.createTag(val);
   }
 
-  updateCategory(val: any, id: any) {
-    console.log('gasdghas', val, id);
+  update(val: any, id: any) {
+    this.tagService.updateTag(id, val);
   }
 
 }
+
+
 

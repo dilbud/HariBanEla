@@ -55,6 +55,8 @@ import { ViewReportedUserComponent } from './modules/view-reported-user/view-rep
 import { ViewReportedPostComponent } from './modules/view-reported-post/view-reported-post.component';
 import { ProfessionalListTableComponent } from './modules/professional-list-table/professional-list-table.component';
 import { RatingStarComponent } from './modules/rating-star/rating-star.component';
+import { ClipboardModule } from 'ngx-clipboard';
+import { TagComponent } from './modules/tag/tag.component';
 
 
 
@@ -102,7 +104,8 @@ import { RatingStarComponent } from './modules/rating-star/rating-star.component
     ViewReportedUserComponent,
     ViewReportedPostComponent,
     ProfessionalListTableComponent,
-    RatingStarComponent
+    RatingStarComponent,
+    TagComponent
   ],
 
   imports: [
@@ -126,6 +129,7 @@ import { RatingStarComponent } from './modules/rating-star/rating-star.component
     ToastrModule.forRoot(),
     DlDateTimeDateModule,
     DlDateTimePickerModule,
+    ClipboardModule,
 
   ],
   providers: [
