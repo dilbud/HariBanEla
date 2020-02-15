@@ -31,14 +31,6 @@
                   <a class="actionLink" [routerLink] routerLinkActive="router-link-active"
                     (click)="onDelete()">Delete</a>
                 </span>
-              </span>
-            </div>
-            <div *ngIf="owner" class="col-4">
-              <img class="profilePhoto" (click)="viewProfile()" src="{{owner.picURL}}">
-              <small>
-                <a (click)="viewProfile()">
-                  {{owner?.firstName}} {{owner?.lastName}}
-                </a>
               </small>
             </div>
             <p style="word-wrap: break-word;">{{question.body}}</p>
@@ -50,10 +42,10 @@
                   </span>
                 </mat-chip-list>
               </div>
-              <div *ngIf="owner" class="col-4">
-                <img class="profilePhoto" routerLink="profile" src="{{owner.picURL}}">
+              <div *ngIf="owner" class="col-4" style="cursor: pointer;" (click)="viewProfile()">
+                <img class="profilePhoto" src="{{owner.picURL}}">
                 <small>
-                  <a routerLink="/">
+                  <a>
                     {{owner?.firstName}} {{owner?.lastName}}
                   </a>
                 </small>
