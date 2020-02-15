@@ -16,7 +16,7 @@ import { ProfessionalListComponent } from '@modules/professional-list/profession
 import { ChatComponent } from '@modules/chat/chat.component';
 import { ProfilePageComponent } from './modules/profile-page/profile-page.component';
 import { ProfilePageBaseComponent } from './modules/profile-page-base/profile-page-base.component';
-import { BookingComponent } from './modules/booking/booking.component';
+
 import { from } from 'rxjs';
 import { ProfileViewComponent } from '@modules/profile-view/profile-view.component';
 
@@ -62,7 +62,7 @@ const routes: Routes = [
   {
     path: 'chat/:id',
     component: ChatComponent,
-    // canActivate: [AuthGuardService],
+    canActivate: [AuthGuardService],
   },
 
   {
@@ -80,14 +80,16 @@ const routes: Routes = [
   { path: 'professionals', component: ProfessionalListComponent },
 
   {
-    path: 'account', component: ProfilePageComponent, canActivate: [AuthGuardService],
+    path: 'account',
+    component: ProfilePageComponent,
+    canActivate: [AuthGuardService],
     children: [
       { path: '', component: ProfilePageBaseComponent },
       { path: 'edit', component: UpdateComponent }
     ]
   },
 
-  { path: 'booking', component: BookingComponent, canActivate: [AuthGuardService] },
+  // { path: 'booking', component: BookingComponent, canActivate: [AuthGuardService] },
 
   { path: 'view', component: ProfileViewComponent, canActivate: [AuthGuardService] },
 
@@ -98,4 +100,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

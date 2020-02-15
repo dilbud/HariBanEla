@@ -1,5 +1,6 @@
 const express = require('express');
 export const chatRouter = express.Router();
+const Appointment = require('../models/appointment');
 const winston = require('../config/winston');
 const Chatkit = require('@pusher/chatkit-server');
 const chatkit = new Chatkit.default({
@@ -15,6 +16,7 @@ chatRouter.post('/users', (req, res) => {
       .createUser({
         id: userId,
         name: userId,
+        // avatarURL:
       })
       .then(() => {
         res.sendStatus(201);
@@ -35,4 +37,29 @@ chatRouter.post('/authenticate', (req, res) => {
   // console.log(authData)/;
   res.status(authData.status).send(authData.body);
 });
-
+chatRouter.post('/createRoom/:id',async(req, res, next) =>{
+  try {
+    const id = req.params.id;
+    const appointment = await Appointment.findById(id);
+    chatkit.createRoom({
+      id: appointment.id,
+      creatorId: appointment.professionalName,
+      name: 'Chat',
+    })
+      .then(() => {
+        console.log('Room created successfully');
+        res.send();
+      }).catch((err) => {
+        console.log(err);
+        res.send();
+      });
+  } catch (error) {
+    winston.error(
+      `${error.status || 500} - ${error.message} - ${req.originalUrl} - ${
+        req.method
+      } - ${req.ip}`
+    );
+    return next(error);
+    throw error; // <-- THIS IS ESSENTIAL FOR BREAKING THE CHAIN
+  }
+});

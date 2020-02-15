@@ -1,13 +1,28 @@
 .acceptButton{
-    margin-right: 18em;
-    background: #48b02c;
-    padding: 1em 4em;
+    // margin-right: 18em;
+    background:#fff ;
+    text-align: center;
+    padding: 1em 1em;
+    color: #48b02c;
+    min-width: 4em;
+    border: none;
+    border-radius: 2em;
+}
+.acceptButton:hover , .acceptButton:focus{
+    background-color:#48b02c ;
     color: #fff;
 }
 .rejectButton{
-    
-    background: #ff1d3c;
-    padding: 1em 4em;
+    background: #fff;
+    text-align: center;
+    padding: 1em 1em;
+    color: #ff1d3c;
+    min-width: 4em;
+    border: none;
+    border-radius: 2em;
+}
+.rejectButton:hover, .rejectButton:focus{
+    background-color: #ff1d3c;
     color: #fff;
 }
 .profilePhoto{

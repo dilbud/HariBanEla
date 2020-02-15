@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '@env';
-
+import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 const apiUrl = environment.baseUrl + 'questions';
 
 @Injectable({
@@ -30,7 +30,7 @@ export class AnswerService {
   }
 
   voteAnswer(questionId, answerId, status, userId: string) {
-    if (status == 1) {
+    if (status === 1) {
       return this.http.put(apiUrl + '/' + questionId + '/answers/' + answerId + '/vote?vote=1', {userId});
     } else {
       return this.http.put(apiUrl + '/' + questionId + '/answers/' + answerId + '/vote?vote=0', {userId});

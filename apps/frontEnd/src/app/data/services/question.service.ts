@@ -41,8 +41,8 @@ export class QuestionService {
   }
 
   voteQuestion(id, status, userId: string) {
-    if (status == 1) {
-      return this.http.put(apiUrl + '/' + id + '/vote?vote=1', { userId });
+    if (status === 1) {
+      return this.http.put(apiUrl + '/' + id + '/vote?vote=1', {userId});
     } else {
       return this.http.put(apiUrl + '/' + id + '/vote?vote=0', { userId });
     }

@@ -58,12 +58,18 @@
 
   .right-sidebar {
     display: flex;
+    background: transparent;
+    color: #333;
+    // flex: 25%;
     flex-direction: column;
     justify-content: space-between;
-    padding-left: 10;
+    padding-left: 10px;
     padding-right: 0;
+    overflow: hidden;
   }
-
+  .right-sidebar::-webkit-scrollbar { 
+    display: none; 
+} 
   .room {
     padding: 10px 10px;
     cursor: pointer;
@@ -137,6 +143,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    padding: 0;
   }
 
   .user-message {
@@ -146,9 +153,17 @@
   .user-message span {
     display: block;
   }
-
-  .user-id {
+ .right{
+   float:right;
+   text-align: right;
+ }
+ .image-attachment{
+  max-width: 80%;
+  border-radius: 10px 10px 0px 10px;
+ }
+ .user-id {
     font-weight: bold;
+    font-size: x-small;
   }
 
   .chat-footer {
@@ -203,4 +218,16 @@
     padding-left: 10px;
   }
 
-  
+  .is-typing {
+    text-align: left;
+  }
+  .chat-session {
+    ::-webkit-scrollbar { 
+        display: none !important;  /* Chrome Safari */
+    }
+      scrollbar-width: none !important; /* Firefox */
+      -ms-overflow-style: none !important;  /* IE 10+ */
+      overflow-y:scroll !important;
+      overflow-x:hidden !important;
+      height: 87vh;
+    }

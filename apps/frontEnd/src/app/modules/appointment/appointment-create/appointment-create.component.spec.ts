@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { AppointmentCreateComponent } from './appointment-create.component';
 
 describe('AppointmentCreateComponent', () => {
@@ -8,7 +8,10 @@ describe('AppointmentCreateComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AppointmentCreateComponent ]
+      declarations: [ AppointmentCreateComponent ],
+      schemas: [
+        CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA
+      ],
     })
     .compileComponents();
   }));

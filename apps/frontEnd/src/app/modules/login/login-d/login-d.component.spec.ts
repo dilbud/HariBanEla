@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { LoginDComponent } from './login-d.component';
 
 describe('LoginDComponent', () => {
@@ -8,7 +8,10 @@ describe('LoginDComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LoginDComponent ]
+      declarations: [ LoginDComponent ],
+      schemas: [
+        CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA
+      ],
     })
     .compileComponents();
   }));

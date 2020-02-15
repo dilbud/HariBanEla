@@ -3,6 +3,7 @@
 // showAlert(void);
 // import { AlertService } from './alert.service' to use
 import { Injectable } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import {
   MatSnackBar,
   MatSnackBarRef,

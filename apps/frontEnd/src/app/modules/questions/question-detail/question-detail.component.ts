@@ -10,7 +10,6 @@ import { ServerData } from 'app/data/models/serverData';
   styleUrls: ['./question-detail.component.scss']
 })
 export class QuestionDetailComponent implements OnInit {
-
   question;
   interval;
   owner;
@@ -20,7 +19,12 @@ export class QuestionDetailComponent implements OnInit {
   votedUpDown = 0; // not=0, up=1 down=2
   qs;
 
-  constructor(private questionService: QuestionService, private userService: UserService, private route: ActivatedRoute, private router: Router) { }
+  constructor(
+    private questionService: QuestionService,
+    private userService: UserService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.getQuestion();
@@ -28,15 +32,17 @@ export class QuestionDetailComponent implements OnInit {
     // this.interval = setInterval(() => {
     //   this.refreshQuestion();
     // }, 600000);
-
   }
 
   getOwner() {
-    this.userService.getUserDataById(this.question.userId).subscribe(res => {
-      this.owner = res.serverData;
-    }, err => {
-      console.log(err);
-    });
+    this.userService.getUserDataById(this.question.userId).subscribe(
+      res => {
+        this.owner = res.serverData;
+      },
+      err => {
+        console.log(err);
+      }
+    );
   }
 
   getUser() {
@@ -46,12 +52,12 @@ export class QuestionDetailComponent implements OnInit {
       this.checkVote();
     }
     // console.log(this.user);
-    this.userService.getAuthStatusListener()
+    this.userService
+      .getAuthStatusListener()
       .subscribe((isAuthenticated: boolean) => {
         this.isAuthenticated = isAuthenticated;
         this.user = this.userService.getUserData();
         this.mode = !this.isAuthenticated;
-
       });
     this.mode = !this.isAuthenticated;
   }
@@ -73,44 +79,53 @@ export class QuestionDetailComponent implements OnInit {
   checkVote() {
     let flag = 0;
     this.question.voters.forEach(voter => {
-      if (voter.userId == this.user.id) {
+      if (voter.userId === this.user.id) {
         this.votedUpDown = voter.upDown;
         flag = 1;
       }
     });
-    if (flag == 0) {
+    if (flag === 0) {
       this.votedUpDown = 0;
     }
   }
 
   refreshQuestion() {
     const id = this.route.snapshot.params.id;
-    this.questionService.refreshQuestion(id).subscribe(res => {
-      this.question = res;
-      this.getUser();
-    }, err => {
-      console.log(err);
-    });
+    this.questionService.refreshQuestion(id).subscribe(
+      res => {
+        this.question = res;
+        this.getUser();
+      },
+      err => {
+        console.log(err);
+      }
+    );
   }
 
   voteQuestion(status) {
     const id = this.route.snapshot.params.id;
-    this.questionService.voteQuestion(id, status, this.user.id).subscribe(res => {
-      console.log(res);
-      this.refreshQuestion();
-    }, err => {
-      console.log(err);
-    });
+    this.questionService.voteQuestion(id, status, this.user.id).subscribe(
+      res => {
+        console.log(res);
+        this.refreshQuestion();
+      },
+      err => {
+        console.log(err);
+      }
+    );
   }
 
   onDelete() {
     const id = this.route.snapshot.params.id;
-    this.questionService.deleteQuestion(id).subscribe(res => {
-      console.log(res);
-      this.router.navigate(['/questions']);
-    }, err => {
-      console.log(err);
-    });
+    this.questionService.deleteQuestion(id).subscribe(
+      res => {
+        console.log(res);
+        this.router.navigate(['/questions']);
+      },
+      err => {
+        console.log(err);
+      }
+    );
   }
 
   onEdit() {

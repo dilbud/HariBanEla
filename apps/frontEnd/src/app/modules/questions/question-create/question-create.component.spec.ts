@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { QuestionCreateComponent } from './question-create.component';
 
 describe('QuestionCreateComponent', () => {
@@ -8,7 +8,10 @@ describe('QuestionCreateComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ QuestionCreateComponent ]
+      declarations: [ QuestionCreateComponent ],
+      schemas: [
+        CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA
+      ],
     })
     .compileComponents();
   }));

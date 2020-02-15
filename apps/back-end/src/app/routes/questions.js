@@ -89,10 +89,7 @@ questionRouter.get('/:id', async (req, res) => {
 
 // Vote question
 questionRouter.put('/:id/vote', async (req, res) => {
-  console.log('req.body');
-  console.log(req.body);
-  const vote = { userId: req.body.userId };
-  console.log(vote);
+   const vote = { userId: req.body.userId }; 
   try {
     const id = req.params.id;
     const received = await Question.findById(id);

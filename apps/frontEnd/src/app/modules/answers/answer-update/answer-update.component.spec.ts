@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { AnswerUpdateComponent } from './answer-update.component';
 
 describe('AnswerUpdateComponent', () => {
@@ -8,7 +8,10 @@ describe('AnswerUpdateComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AnswerUpdateComponent ]
+      declarations: [ AnswerUpdateComponent ],
+      schemas: [
+        CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA
+      ],
     })
     .compileComponents();
   }));

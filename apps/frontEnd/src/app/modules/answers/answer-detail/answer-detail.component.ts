@@ -19,7 +19,12 @@ export class AnswerDetailComponent implements OnInit {
   owner;
   votedUpDown = 0; // not=0, up=1 down=2
 
-  constructor(private answerService: AnswerService, private userService: UserService, private route: ActivatedRoute, private router: Router) { }
+  constructor(
+    private answerService: AnswerService,
+    private userService: UserService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.getOwner();
@@ -28,12 +33,15 @@ export class AnswerDetailComponent implements OnInit {
   }
 
   getOwner() {
-    this.userService.getUserDataById(this.answer.userId).subscribe(res => {
-      this.owner = res.serverData;
-      // console.log(this.owner);
-    }, err => {
-      console.log(err);
-    });
+    this.userService.getUserDataById(this.answer.userId).subscribe(
+      res => {
+        this.owner = res.serverData;
+        // console.log(this.owner);
+      },
+      err => {
+        console.log(err);
+      }
+    );
   }
 
   onEdit() {
@@ -75,12 +83,12 @@ export class AnswerDetailComponent implements OnInit {
   checkVote() {
     let flag = 0;
     this.answer.voters.forEach(voter => {
-      if (voter.userId == this.user.id) {
+      if (voter.userId === this.user.id) {
         this.votedUpDown = voter.upDown;
         flag = 1;
       }
     });
-    if (flag == 0) {
+    if (flag === 0) {
       this.votedUpDown = 0;
     }
   }

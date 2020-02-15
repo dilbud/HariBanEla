@@ -38,7 +38,6 @@ import { QuestionSummaryComponent } from './modules/questions/question-summary/q
 import { ReportComponent } from './modules/report/report.component';
 import { UpdateComponent } from './modules/update/update.component';
 import { ProfilePageComponent } from './modules/profile-page/profile-page.component';
-import { BookingComponent } from './modules/booking/booking.component';
 import { ProfilePageBaseComponent } from './modules/profile-page-base/profile-page-base.component';
 import { FeedbackComponent } from './modules/report/feedback/feedback.component';
 import { ResetPasswordComponent } from './modules/report/reset-password/reset-password.component';
@@ -58,6 +57,7 @@ import { RatingStarComponent } from './modules/rating-star/rating-star.component
 import { ClipboardModule } from 'ngx-clipboard';
 import { TagComponent } from './modules/tag/tag.component';
 
+import {CookieService} from 'ngx-cookie-service';
 
 
 
@@ -88,7 +88,6 @@ import { TagComponent } from './modules/tag/tag.component';
     ProfessionalListComponent,
     ChatComponent,
     ProfilePageComponent,
-    BookingComponent,
     ProfilePageBaseComponent,
     FeedbackComponent,
     ResetPasswordComponent,
@@ -135,7 +134,8 @@ import { TagComponent } from './modules/tag/tag.component';
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     // { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-    AuthGuardService
+    AuthGuardService,
+    CookieService
   ],
   bootstrap: [
     AppComponent

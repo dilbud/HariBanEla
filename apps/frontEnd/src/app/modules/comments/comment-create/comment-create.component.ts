@@ -23,7 +23,7 @@ export class CommentCreateComponent implements OnInit {
   }
 
   onComment(status) {
-    if (status == 0) {
+    if (status === 0) {
       console.log(this.commentModel);
       this.commentService.addComment(this.commentModel, this.questionId)
         .subscribe(

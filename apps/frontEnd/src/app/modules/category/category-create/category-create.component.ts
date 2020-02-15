@@ -9,22 +9,17 @@ import { CategoryService } from './../../../data/services/category.service';
   styleUrls: ['./category-create.component.scss']
 })
 export class CategoryCreateComponent implements OnInit {
-
   public method = 'Update';
   public categoryId: any;
   public categoryForm: FormGroup;
   public name: string;
-  /**
-   * @param  {Router} privateredirect
-   * @param  {ActivatedRoute} privateroute
-   * @param  {CategoryService} privatecategoryService
-   * @param  {FormBuilder} privateformBuilder
-   */
-  constructor(private redirect: Router,
-              private route: ActivatedRoute,
-              private categoryService: CategoryService,
-              private formBuilder: FormBuilder
-  ) { }
+
+  constructor(
+    private redirect: Router,
+    private route: ActivatedRoute,
+    private categoryService: CategoryService,
+    private formBuilder: FormBuilder
+  ) {}
 
   ngOnInit() {
     this.categoryForm = this.formBuilder.group({
@@ -32,7 +27,7 @@ export class CategoryCreateComponent implements OnInit {
     });
 
     this.categoryId = this.route.snapshot.params.id;
-    if (this.categoryId == 'new') {
+    if (this.categoryId === 'new') {
       this.method = 'Add';
       this.categoryId = null;
     } else {
@@ -47,23 +42,18 @@ export class CategoryCreateComponent implements OnInit {
     }
   }
 
-  /**
-   * @param  {NgForm} form
-   */
   addCategory(form: NgForm) {
     console.log(form, 'form');
     if (this.categoryId) {
-      this.categoryService
-        .updateCategoryById(this.categoryId, form)
-        .subscribe(
-          data => {
-            console.log(data, 'update');
-            this.redirect.navigate(['/admin']);
-          },
-          err => {
-            console.log(err);
-          }
-        );
+      this.categoryService.updateCategoryById(this.categoryId, form).subscribe(
+        data => {
+          console.log(data, 'update');
+          this.redirect.navigate(['/admin']);
+        },
+        err => {
+          console.log(err);
+        }
+      );
     } else {
       this.categoryService.addCategory(form).subscribe(
         data => {

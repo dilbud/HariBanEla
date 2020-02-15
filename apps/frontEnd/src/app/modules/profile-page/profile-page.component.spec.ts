@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { ProfilePageComponent } from './profile-page.component';
+import { Router } from 'express';
 
 describe('ProfilePageComponent', () => {
   let component: ProfilePageComponent;
@@ -8,7 +9,13 @@ describe('ProfilePageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProfilePageComponent ]
+      declarations: [ ProfilePageComponent ],
+      schemas: [
+        CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA
+      ],
+      providers:[
+        Router
+      ]
     })
     .compileComponents();
   }));

@@ -1,10 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormGroup,
+  NgForm,
+  Validators,
+  ValidatorFn
+} from '@angular/forms';
 import { Router } from '@angular/router';
 import { AppointmentService } from 'app/data/services/appointment.service';
 import { ToastrService } from 'ngx-toastr';
 import { UserService } from 'app/data/services/user.service';
-
+import { validateDate } from './validateDate';
 class Data {
   professionalId: any;
   professionalName: any;
@@ -42,6 +48,7 @@ export class AppointmentCreateComponent implements OnInit {
   public paymentAmount: number;
   public appointmentForm: FormGroup;
   public user: any;
+  public submitted: boolean
 
   constructor(
     private appointmentService: AppointmentService,
@@ -52,39 +59,43 @@ export class AppointmentCreateComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    // this.professionalPhoto = 'https://lh4.googleusercontent.com/-yUG1fx5VXbY
-    // /AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rdn62LesVDBvcpG1PFEv7aAuxByWg/s96-c/photo.jpg';
-    // this.paymentPerHour = 1000;
-    // this.professionalName = 'the xhax';
-    // this.duration = 0;
-    // // this.paymentAmount=0
-    // this.paymentAmount = 0;
-    this.appointmentService.currentProfessionalId.subscribe(
+    this.submitted=false;
+    this.professionalId = this.appointmentService.getProfesionalId();
+
+    this.userSerivce.getUserDataById(this.professionalId).subscribe(
       res => {
-        this.professionalId = res;
+        console.log(res, '-----------------------------------');
+        this.professionalName =
+          res.serverData.firstName + ' ' + res.serverData.lastName;
+        this.paymentPerHour = res.serverData.paymentPerHour;
+        this.professionalEmail = res.serverData.email;
+        this.professionalPhoto = res.serverData.picURL;
       },
       err => {
         console.log(err);
+        this.redirect.navigate(['/home']);
       }
     );
-    this.userSerivce.getUserDataById(this.professionalId).subscribe(res => {
-      console.log(res, '-----------------------------------');
-      this.professionalName =
-        res.serverData.firstName + ' ' + res.serverData.lastName;
-      this.paymentPerHour = res.serverData.paymentPerHour;
-      this.professionalEmail = res.serverData.email;
-      this.professionalPhoto = res.serverData.picURL;
-    });
     this.user = this.userSerivce.getUserData();
-    this.appointmentForm = this.formBuilder.group({
-      subject: [null, Validators.required],
-      description: [null, Validators.required],
-      startTime: [null, Validators.required],
-      endTime: [null, Validators.required]
-    });
+    this.appointmentForm = this.formBuilder.group(
+      {
+        subject: [null, Validators.required],
+        description: [null, Validators.required],
+        startTime: [null, Validators.required],
+        endTime: [null, Validators.required]
+      },
+      // {
+      //   validator: validateDate('startTime', 'endTime')
+      // }
+    );
   }
+  get f() { return this.appointmentForm.controls; }
 
   makeAppointment(form: NgForm) {
+    this.submitted=true;
+    if (this.appointmentForm.invalid) {
+      return;
+  }
     console.log('ththt');
     const data = new Data();
     data.professionalId = this.professionalId;

@@ -24,24 +24,26 @@ i.icon {
 
 #facebook{
 
-  background: #3b5998;
-  color: white;
+  // background: #3b5998;
+  // color: white;
+  padding: 0;
 
 }
 .signButton{
-  background: #fff;
+  // background: #fff;
   color: #000;
   font-weight: 500;
-  border-radius: 20px;
-  border: solid #000 1px;
+  padding:0
+  // border-radius: 20px;
+  // border: solid #000 1px;
 }
 .loginButton{
-  background: #2dbeef;
-  color: #fff;
+  // background: #2dbeef;
+  color: #000;
   width: 100%;
   font-weight: 500;
-  border-radius: 20px;
-  border: solid #000 1px;
+  // border-radius: 20px;
+  // border: solid #000 1px;
   height: 48px;
   font-size: 16px;
 }

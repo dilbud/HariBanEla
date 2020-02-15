@@ -3,5 +3,5 @@
   "compilerOptions": {
     "types": ["node", "jest", "express"]
   },
-  "include": ["**/*.ts"]
+  "include": ["**/*.ts", "src/app/config/database.ts", "src/app/config/winston.js", "src/app/routes/appointment.js", "src/app/routes/appointment.js", "src/app/routes/appointment.js"]
 }

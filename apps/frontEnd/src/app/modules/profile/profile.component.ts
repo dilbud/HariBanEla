@@ -3,7 +3,7 @@ import { UserService } from 'app/data/services/user.service';
 import { ActivatedRoute, Params , Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { AlertService } from 'app/data/services/alert.service';
-
+import {AppointmentService} from 'app/data/services/appointment.service'
 
 @Component({
   selector: 'app-profile',
@@ -18,7 +18,7 @@ export class ProfileComponent implements OnInit {
 
   constructor(
     private userService: UserService,
-
+    private appointmentService: AppointmentService,
     private route: ActivatedRoute,
     private alertService: AlertService,
     private router: Router
@@ -32,6 +32,12 @@ export class ProfileComponent implements OnInit {
     });
   }
 
+  public makeAppointment() {
+    if (this.id !== null) {
+      this.appointmentService.changeProfessionalId(this.id);
+      this.router.navigate(['/appointment/new']);
+    }
+  }
   public show() {
     if (this.toggle) {
       this.router.navigate(['edit'], { queryParams: { id: this.id, type: this.type} , relativeTo: this.route });

@@ -73,7 +73,7 @@ export class ProfessionalListComponent implements OnInit {
     });
 
     this.category = this.formBuilder.group({
-      Ctrl_1: [null, [Validators.required]],
+      Ctrl_1: ['all', [Validators.required]],
     });
 
     let res: any;
@@ -88,8 +88,10 @@ export class ProfessionalListComponent implements OnInit {
       },
       () => {
         this.proList = res.serverData;
+        this.filteredList = this.proList;
       }
     );
+  
   }
 
   onChange(val: HTMLElement) {
@@ -124,7 +126,7 @@ export class ProfessionalListComponent implements OnInit {
   }
 
   view(item: any) {
-    this.router.navigate(['../booking'], { queryParams: { id: item._id, type: item.userType } });
+    this.router.navigate(['./account'], { queryParams: { id: item._id, type: item.userType } });
   }
 }
 

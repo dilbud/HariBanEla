@@ -1,5 +1,5 @@
-<div class="App">
-   <aside class="sidebar left-sidebar">
+<div class="App row">
+   <aside class="sidebar left-sidebar" style="display: none;">
       <section *ngIf="!currentUser.id" class="join-chat">
         <h4>Join Chat</h4>
         <form (ngSubmit)="addUser()">
@@ -20,8 +20,11 @@
         <input type="text" class="newUser-input" [(ngModel)]="newUser" name="user-name" id="user-name" placeholder="Enter username">
       </form>
     </aside>
+    <!-- <main class="chat-window">
+      <p> nbo </p>
+    </main> -->
    
-    <main class="chat-window">
+    <aside class="col-md-3 right-sidebar ">
       <header class="chat-header">
         <h4 *ngIf="!currentRoom.name; else roomName">Chat</h4>
         <ng-template #roomName>
@@ -31,18 +34,41 @@
       </header>
       <section class="chat-session">
         <ul class="message-list">
-          <li class="user-message" *ngFor="let message of messages">
-            <span class="user-id">{{ message.senderId }}</span>
-            <span>{{ message.text }}</span>
+          <li class="user-message" [class.right]="currentUser.id == message.senderId" *ngFor="let message of messages">
+            <span class="user-id">{{ message.senderId }} </span>
+            <a *ngIf="message.attachment"  href ={{message.attachment.link}}>
+              <img 
+            class="image-attachment"
+            src="{{ message.attachment.link }}"
+            alt="{{ message.attachment.name }}"
+          />
+            </a>
+            
+          <!-- <iframe *ngIf="message.attachment" src="{{ message.attachment.link }}" width="80" height="210px"></iframe> -->
+            <span class="message">{{ message.text }}</span>
           </li>
         </ul>
       </section>
       <footer *ngIf="currentUser.id" class="chat-footer">
+        <div class="is-typing" *ngIf="usersWhoAreTyping.length > 0">
+          {{ usersWhoAreTyping.slice(0, 2).join(' and ') }} is typing
+        </div>
         <form class="message-form" (ngSubmit)='sendMessage()'>
-          <input class="message-input" placeholder="Type a message. Hit Enter to send" type="text" name="message" [(ngModel)]="newMessage" />
+          <div class='row'>
+            <input
+            class="file-input col-md-3"
+              type="file"
+              name="attachment"
+              accept="image/png, image/jpeg"
+              (change)="fileChangedHandler($event)"
+            />
+          <input class="message-input col-md-6" placeholder="Type a message. Hit Enter to send" type="text" name="message" (keyup)="sendTypingEvent()" [(ngModel)]="newMessage" />
+          <button class="send-message col-md-3" type="submit">Send</button>
+          </div>
+          
         </form>
       </footer>
-    </main>
+    </aside>
   
     <!-- <aside class="sidebar right-sidebar">
       <section class="room-section">
@@ -85,5 +111,5 @@
         </form>
       </section>
     </aside> -->
-  </div>
+  <!-- </div> -->
  

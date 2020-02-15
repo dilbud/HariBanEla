@@ -1,4 +1,3 @@
-
 import { userRouter } from './app/routes/users';
 import { chatRouter } from './app/routes/chat';
 import { categoryRouter } from './app/routes/category';
@@ -8,6 +7,7 @@ import { reportRouter } from './app/routes/report';
 import { edRouter } from './app/routes/ed';
 import { verifyProRouter } from './app/routes/verifyPro';
 import { tagRouter } from './app/routes/tag';
+import {environment} from './environments/environment'
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -23,20 +23,14 @@ const app = express();
 // app.use(logger('dev'));
 app.use(express.json());
 app.use(bodyParser.json());
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({ extended: false }));
 
 app.use(passport.initialize()); //
 app.use(passport.session()); //
 
 // folder access
-app.use(express.urlencoded({extended: false}));
-// app.use(cookieParser());
-// app.use(cors());
-// const distDir = __dirname + '/frontEnd/dist/frontEnd';
-// app.use(express.static(distDir));
-// // app.use(cors({
-// //   origin: 'http://localhost:4200',
-// // }));
+app.use(express.urlencoded({ extended: false }));
+
 dbConnection.connection();
 app.use('/api/chat', chatRouter);
 app.use('/api/category', categoryRouter);
@@ -49,7 +43,6 @@ app.use('/api/verifypro', verifyProRouter);
 app.use('/api/tag', tagRouter);
 app.use('/', express.static(path.join(process.cwd(), '//dist/apps/frontEnd')));
 app.get('/*', (req, res) => {
-
   res.sendFile(path.join(process.cwd() + '//dist/apps/frontEnd/index.html'));
 });
 

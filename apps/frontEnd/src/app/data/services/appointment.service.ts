@@ -1,8 +1,14 @@
 import { Injectable } from '@angular/core';
 import { environment } from '@env';
 import { BehaviorSubject, Observable, of, throwError } from 'rxjs';
-import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
+import {
+  HttpClient,
+  HttpHeaders,
+  HttpErrorResponse
+} from '@angular/common/http';
 import { catchError, map } from 'rxjs/operators';
+import { CookieService } from 'ngx-cookie-service';
+
 
 const apiUrl = environment.baseUrl + 'appointment';
 
@@ -10,11 +16,7 @@ const apiUrl = environment.baseUrl + 'appointment';
   providedIn: 'root'
 })
 export class AppointmentService {
-
-  private professionalId = new BehaviorSubject('');
-  currentProfessionalId = this.professionalId.asObservable();
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private cookieService: CookieService) {}
 
   // remove body so you don't have to deal with the body object
   private extractData(res: Response) {
@@ -31,16 +33,19 @@ export class AppointmentService {
       // The backend returned an unsuccessful response code.
       // The response body may contain clues as to what went wrong,
       console.error(
-        `Backend returned code ${error.status}, ` +
-        `body was: ${error.error}`);
+        `Backend returned code ${error.status}, ` + `body was: ${error.error}`
+      );
     }
     // return an observable with a user-facing error message
     return throwError('Something bad happened; please try again later.');
   }
- // Observerables
- changeProfessionalId(value: string) {
-  this.professionalId.next(value);
-}
+
+  changeProfessionalId(value: string) {
+    this.cookieService.set('hariBnEla-AProId', value,2);
+  }
+  getProfesionalId():string{
+    return this.cookieService.get('hariBnEla-AProId');
+  }
 
   // APIs
   getAppointmentById(id: string): Observable<any> {
@@ -49,59 +54,60 @@ export class AppointmentService {
       return of(0);
     }
     return this.http.get(url).pipe(
-      map(this.extractData), catchError(this.handleError));
+      map(this.extractData),
+      catchError(this.handleError)
+    );
   }
-  getAppointmentByUserId(id: string): Observable <any> {
+  getAppointmentByUserId(id: string): Observable<any> {
     const url = `${apiUrl}/user/${id}`;
     if (id == null) {
       return of(0);
     }
     return this.http.get(url).pipe(
-      map(this.extractData), catchError(this.handleError));
+      map(this.extractData),
+      catchError(this.handleError)
+    );
   }
-  getAppointmentByProfessionalId(id: string): Observable <any> {
+  getAppointmentByProfessionalId(id: string): Observable<any> {
     const url = `${apiUrl}/professional/${id}`;
     if (id == null) {
       return of(0);
     }
     return this.http.get(url).pipe(
-      map(this.extractData), catchError(this.handleError));
+      map(this.extractData),
+      catchError(this.handleError)
+    );
   }
 
   getAllAppointments(): Observable<any> {
-        return this.http.get(apiUrl).pipe(
-      map(this.extractData), catchError(this.handleError));
+    return this.http.get(apiUrl).pipe(
+      map(this.extractData),
+      catchError(this.handleError)
+    );
   }
   makeAppointment(data): Observable<any> {
-    return this.http.post(`${apiUrl}/new`, data)
-      .pipe(
-        catchError(this.handleError)
-      );
+    return this.http
+      .post(`${apiUrl}/new`, data)
+      .pipe(catchError(this.handleError));
   }
   acceptAppointment(id, data): Observable<any> {
-      if (id == null) {
+    if (id == null) {
       return of(0);
     }
-      return this.http.post(`${apiUrl}/accept/${id}`, data)
-      .pipe(
-        catchError(this.handleError)
-      );
+    return this.http
+      .post(`${apiUrl}/accept/${id}`, data)
+      .pipe(catchError(this.handleError));
   }
   paymentAppointment(id, data): Observable<any> {
     if (id == null) {
       return of(0);
     }
-    return this.http.post(`${apiUrl}/payment/${id}`, data)
-      .pipe(
-        catchError(this.handleError)
-      );
+    return this.http
+      .post(`${apiUrl}/payment/${id}`, data)
+      .pipe(catchError(this.handleError));
   }
   deleteAppointmentById(id: string): Observable<{}> {
     const url = `${apiUrl}/${id}`;
-    return this.http.delete(url)
-      .pipe(
-        catchError(this.handleError)
-      );
+    return this.http.delete(url).pipe(catchError(this.handleError));
   }
-
 }

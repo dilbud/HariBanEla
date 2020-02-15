@@ -1,5 +1,6 @@
 export class Answer {
-    _id: string;
+    // _id: string;
+    id: string;
     userId: string;
     body: string;
     votes: number;

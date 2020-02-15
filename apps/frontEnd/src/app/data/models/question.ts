@@ -1,4 +1,6 @@
 export class Question {
+  
+    // tslint:disable-next-line: variable-name
     _id: string;
     userId: string;
     title: string;

@@ -306,7 +306,7 @@ export class UserService  {
     const token = this.getToken();
     const decoded = this.decodeToken(token);
     if (decoded === null || decoded === undefined) {
-      this.logout();
+      // this.logout();
       return;
     } else {
       this.user = {
@@ -372,7 +372,7 @@ export class UserService  {
     localStorage.removeItem('token101');
   }
 
-  private decodeToken(
+  public decodeToken(
     token: string
   ): any  {
     if (token === null || token === undefined) {
