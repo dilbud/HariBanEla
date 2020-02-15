@@ -3,7 +3,6 @@ const jwt = require('jsonwebtoken');
 const key = 'df678g68g786fd88fd67g8fdfd8g7fd8g7';
 
 const social = (req, res, next) => {
-  console.log('create user ---------------------------');
   new user({
     firstName: req.body.firstName,
     lastName: req.body.lastName,
@@ -27,7 +26,12 @@ const social = (req, res, next) => {
         email: user.email,
         picURL: user.picURL,
         userType: user.userType,
-        category: user.category
+        category: user.category,
+        doc: user.doc,
+        pending: user.pending,
+        rate: user.rate,
+        paymentPerHour: user.paymentPerHour,
+        active: user.active
       }
       const token = jwt.sign({ id: user._id , userData: details}, key, { expiresIn: '2h' });
       res.status(200).json({
@@ -41,7 +45,12 @@ const social = (req, res, next) => {
           email: user.email,
           picURL: user.picURL,
           userType: user.userType,
-          category: user.category
+          category: user.category,
+          doc: user.doc,
+          pending: user.pending,
+          rate: user.rate,
+          paymentPerHour: user.paymentPerHour,
+          active: user.active
         }
       });
     }
@@ -49,7 +58,6 @@ const social = (req, res, next) => {
 };
 
 const socialLogin = (req, res) => {
-  console.log('login user ---------------------');
   user
     .findOne({ email: req.body.email })
     .select('-password')
@@ -57,6 +65,8 @@ const socialLogin = (req, res) => {
     .exec((err, user) => {
       if (err) {
         res.status(500).json({ msg: 'internal server error' });
+      } if (user.active === false) {
+        res.status(404).json({ msg: 'User blocked by Administrator' });
       } else if (user !== null) {
         details = {
           firstName: user.firstName,
@@ -65,7 +75,12 @@ const socialLogin = (req, res) => {
           email: user.email,
           picURL: user.picURL,
           userType: user.userType,
-          category: user.category
+          category: user.category,
+          doc: user.doc,
+          pending: user.pending,
+          rate: user.rate,
+          paymentPerHour: user.paymentPerHour,
+          active: user.active
         }
         const token = jwt.sign({ id: user._id, userData: details }, key, { expiresIn: '2h' });
         res.status(200).json({
@@ -79,7 +94,12 @@ const socialLogin = (req, res) => {
             email: user.email,
             picURL: user.picURL,
             userType: user.userType,
-            category: user.category
+            category: user.category,
+            doc: user.doc,
+            pending: user.pending,
+            rate: user.rate,
+            paymentPerHour: user.paymentPerHour,
+            active: user.active
           }
         });
       } else {

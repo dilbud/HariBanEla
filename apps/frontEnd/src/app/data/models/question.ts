@@ -5,6 +5,9 @@ export class Question {
     category: string;
     body: string;
     tags: any[];
+    answers: any[];
+    comments: any[];
+    createdAt: Date;
     views: number;
     votes: number;
 

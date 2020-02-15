@@ -10,6 +10,8 @@ const login = require('../controller/loginUser');
 const verify = require('../middleware/tokenVerify');
 const fechUser = require('../controller/fetchUser');
 const proProfile = require('../controller/proProfile');
+const allUser = require('../controller/allUser');
+const allPendingUser = require('../controller/allPendingUser');
 
 export const userRouter = express.Router();
 
@@ -19,4 +21,6 @@ userRouter.post('/login', login);
 userRouter.post('/getUserById', fechUser);
 userRouter.get('/proList', proProfile.list);
 userRouter.get('/proProfile', proProfile.get);
+userRouter.get('/allUser',allUser);
+userRouter.get('/allPendingUser',allPendingUser);
 

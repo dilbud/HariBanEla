@@ -1,0 +1,61 @@
+table {
+  width: 100%;
+}
+
+tr.detail-row {
+  height: 0;
+}
+
+tr.element-row:not(.expanded-row):hover {
+  background: #777;
+  cursor: context-menu;
+}
+
+tr.element-row:not(.expanded-row):active {
+  background: #efefef;
+  cursor: context-menu;
+}
+
+.element-row td {
+  border-bottom-width: 0;
+  cursor: context-menu;
+}
+
+.element-detail {
+  overflow: hidden;
+  display: flex;
+}
+
+.element-diagram {
+  min-width: 50vw;
+  border: 2px solid black;
+  padding: 8px;
+  font-weight: unset;
+  margin: 8px 0;
+  height: auto;
+}
+
+.element-symbol {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: normal;
+}
+
+
+
+.element-description-attribution {
+  opacity: 0.5;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td, th {
+  width: 25%;
+}
+
+.button {
+  margin: 8px;
+}

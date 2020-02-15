@@ -10,13 +10,13 @@
   <div mat-dialog-content>
     <form class="d-flex flex-column" [formGroup]="feedback">
       <mat-form-field>
-        <input matInput placeholder="Name" formControlName="Ctrl_1" >
+        <input spellcheck="false" matInput placeholder="Name" formControlName="Ctrl_1" >
       </mat-form-field>
       <mat-form-field>
-        <input matInput placeholder="Email" formControlName="Ctrl_2">
+        <input spellcheck="false" matInput placeholder="Email" formControlName="Ctrl_2">
       </mat-form-field>
       <mat-form-field>
-        <textarea matInput placeholder="Feedback" rows="4" formControlName="Ctrl_3"></textarea>
+        <textarea spellcheck="false" matInput placeholder="Feedback" rows="4" formControlName="Ctrl_3"></textarea>
       </mat-form-field>
     </form>
   </div>

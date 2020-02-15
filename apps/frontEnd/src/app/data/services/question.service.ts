@@ -42,9 +42,9 @@ export class QuestionService {
 
   voteQuestion(id, status, userId: string) {
     if (status == 1) {
-      return this.http.put(apiUrl + '/' + id + '/vote?vote=1', {userId});
+      return this.http.put(apiUrl + '/' + id + '/vote?vote=1', { userId });
     } else {
-      return this.http.put(apiUrl + '/' + id + '/vote?vote=0', {userId});
+      return this.http.put(apiUrl + '/' + id + '/vote?vote=0', { userId });
     }
 
   }
@@ -55,5 +55,9 @@ export class QuestionService {
 
   deleteQuestion(id) {
     return this.http.delete(apiUrl + '/' + id);
+  }
+
+  searchQuestions(searchInput: String) {
+    return this.http.put(apiUrl+'/search', {searchInput: searchInput});
   }
 }

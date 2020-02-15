@@ -7,8 +7,6 @@ import { ActivatedRoute, Params , Router } from '@angular/router';
   styleUrls: ['./profile-page.component.scss']
 })
 export class ProfilePageComponent implements OnInit {
-  // id = null;
-  // type: any;
 
   constructor(
     private router: Router,
@@ -16,10 +14,7 @@ export class ProfilePageComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    // this.route.queryParams.subscribe((queryParams: Params) => {
-    //   this.id = queryParams.id;
-    //   this.type = queryParams.type;
-    // });
+    
   }
 
 }

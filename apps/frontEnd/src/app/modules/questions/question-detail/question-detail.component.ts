@@ -42,8 +42,9 @@ export class QuestionDetailComponent implements OnInit {
   getUser() {
     this.isAuthenticated = this.userService.getIsAuth();
     this.user = this.userService.getUserData();
-    this.checkVote();
-
+    if(this.user){
+      this.checkVote();
+    }
     // console.log(this.user);
     this.userService.getAuthStatusListener()
       .subscribe((isAuthenticated: boolean) => {
@@ -59,6 +60,7 @@ export class QuestionDetailComponent implements OnInit {
     const id = this.route.snapshot.params.id;
     this.questionService.getQuestion(id).subscribe(res => {
       this.question = res;
+      // this.question.answers.sort((a, b) => (a.votes > b.votes) ? 1 : -1);
       this.getUser();
       this.getOwner();
 
@@ -118,6 +120,10 @@ export class QuestionDetailComponent implements OnInit {
 
   onCategory() {
     this.router.navigate([`/category/${this.question.category}`]);
+  }
+
+  viewProfile() {
+    this.router.navigate(['../../view'], { queryParams: { id: this.owner.id, type: this.owner.userType } });
   }
 
 }

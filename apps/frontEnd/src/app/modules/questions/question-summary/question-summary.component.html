@@ -1,34 +1,41 @@
-<div *ngIf="question" class="row shadow m-1 p-3">
-  <div class="col-2 row">
-    <div class="m-1 text-center">
-      {{question.votes}} <br>
-      <small>Votes</small>
+<mat-card>
+  <div *ngIf="question" class="row m-1 p-3">
+    <div class="col-2 row">
+      <div class="m-1 text-center">
+        {{question.votes}} <br>
+        <small>Votes</small>
+      </div>
+      <div class="m-1 text-center">
+        {{question.answers.length}} <br>
+        <small>Answers</small>
+      </div>
+      <div class="m-1 text-center">
+        {{question.views}} <br>
+        <small>Views</small>
+      </div>
     </div>
-    <div class="m-1 text-center">
-      {{question.answers.length}} <br>
-      <small>Answers</small>
-    </div>
-    <div class="m-1 text-center">
-      {{question.views}} <br>
-      <small>Views</small>
+    <div class="col-10">
+      <div>
+        <h4 id="title" style="word-wrap: break-word;" (click)="onQuestion()">{{question.title}}</h4>
+        <small style="word-wrap: break-word;">{{question.body | slice:0:250}}<span *ngIf="question.body.length>250">...
+            <a [routerLink]="['/questions',question._id]" routerLinkActive="router-link-active">Read More</a>
+          </span>
+        </small>
+      </div>
+      <div>
+        <mat-chip-list>
+          <span *ngFor="let tag of question.tags">
+            <mat-chip>{{tag}}</mat-chip>
+          </span>
+        </mat-chip-list>
+
+      </div>
+      <div class="text-right col-12"><small><span *ngIf="owner">
+            <a routerLink="/">
+              {{owner.firstName}} {{owner.lastName}}
+            </a>
+          </span></small></div>
     </div>
   </div>
-  <div class="col-10">
-    <div>
-      <h4 id="title" style="word-wrap: break-word;" (click)="onQuestion()">{{question.title}}</h4>
-      <small style="word-wrap: break-word;">{{question.body | slice:0:250}}<span *ngIf="question.body.length>250">...
-          <a [routerLink]="['/questions',question._id]" routerLinkActive="router-link-active">Read More</a>
-        </span>
-      </small>
-    </div>
-    <div>
-      <span class="rounded-pill bg-dark text-white m-1" *ngFor="let tag of question.tags"><small class="p-2">
-          {{tag.value}} </small></span>
-    </div>
-    <div class="text-right col-12"><small><span *ngIf="owner">
-          <a routerLink="/">
-            {{owner.firstName}} {{owner.lastName}}
-          </a>
-        </span></small></div>
-  </div>
-</div>
+</mat-card>
+<br>

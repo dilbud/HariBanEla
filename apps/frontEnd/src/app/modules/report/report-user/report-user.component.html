@@ -8,20 +8,14 @@
     </div>
   </div>
   <div mat-dialog-content>
-    <form class="d-flex flex-column">
+    <form class="d-flex flex-column" [formGroup]="reportUser">
       <mat-form-field>
-        <input matInput placeholder="Name">
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="Email">
-      </mat-form-field>
-      <mat-form-field>
-        <textarea matInput placeholder="Feedback" rows="4"></textarea>
+        <textarea spellcheck="false" matInput placeholder="Issue" rows="4" formControlName="Ctrl_1"></textarea>
       </mat-form-field>
     </form>
   </div>
     <div mat-dialog-actions class="mb-1 float-right">
       <a mat-button cdkFocusInitial class="visible"></a>
-      <button mat-button (click)="submit()" class="subbutt">Submit</button>
+      <button mat-button (click)="submit()" class="subbutt" [disabled]="!reportUser.valid">Submit</button>
     </div>
 </div>

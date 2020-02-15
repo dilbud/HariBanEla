@@ -4,4 +4,7 @@ export interface ReportData {
   name: string;
   email: string ;
   content: string ;
+  reportedUserId: string;
+  reportedUserName: string;
+  reportedPostId: string;
 }

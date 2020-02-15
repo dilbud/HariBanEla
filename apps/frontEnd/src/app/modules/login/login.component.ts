@@ -2,7 +2,6 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { LoginDComponent } from './login-d/login-d.component';
 import { UserService } from '../../data/services/user.service';
-import { LogoutDComponent } from './logout-d/logout-d.component';
 
 @Component({
   selector: 'app-login',
@@ -48,7 +47,6 @@ export class LoginComponent implements OnInit, OnDestroy {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('login data ', result);
       if (result === 'google') {
         this.toggle = true;
         this.userService.google();
@@ -57,13 +55,6 @@ export class LoginComponent implements OnInit, OnDestroy {
       if (result === 'facebook') {
         this.toggle = true;
         this.userService.facebook();
-        // setTimeout(() => {
-        //   if (this.UserService.getIsAuth()) {
-        //     this.mode = false;
-        //   } else {
-        //     this.loginDialog();
-        //   }
-        // }, 50000);
         return;
       }
       if (result === 'close') {
@@ -82,18 +73,6 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   logoutDialog(): void {
-
     this.userService.logout();
-    // const userName  = this.user.firstName + ' ' + this.user.lastName;
-    // const dialogRef = this.dialog.open(LogoutDComponent, {
-    //   width: '500px',
-    //   data: { name: userName }
-    // });
-    // dialogRef.afterClosed().subscribe(result => {
-    //   if (result != null && result === 'yes') {
-    //     this.UserService.logout();
-    //     this.mode = !this.UserService.getIsAuth(); // MUST CALL RXJX
-    //   }
-    // });
   }
 }

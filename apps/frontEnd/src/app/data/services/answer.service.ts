@@ -21,6 +21,10 @@ export class AnswerService {
     return this.http.delete(apiUrl + '/' + questionId + '/answers/' + answerId);
   }
 
+  acceptAnswer(questionId, answerId) {
+    return this.http.get(apiUrl + '/' + questionId + '/answers/' + answerId+'/accept');
+  }
+
   editAnswer(answer, questionId, answerId) {
     return this.http.put(apiUrl + '/' + questionId + '/answers/' + answerId, answer);
   }

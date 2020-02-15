@@ -37,6 +37,9 @@ export class FeedbackComponent implements OnInit {
         email: this.getEmail(),
         type: 'feedback' ,
         userId: this.getUserId(),
+        reportedPostId: 'null',
+        reportedUserId: 'null',
+        reportedUserName: 'null'
       };
       this.dialogRef.close(this.reportData);
     }

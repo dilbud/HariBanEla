@@ -14,9 +14,8 @@ export class QuestionSummaryComponent implements OnInit {
   owner;
 
   constructor(private userService: UserService, private router: Router) { }
-
   ngOnInit() {
-    console.log(this.question);
+    // console.log(this.question);
     this.getOwner();
   }
 
@@ -30,6 +29,10 @@ export class QuestionSummaryComponent implements OnInit {
 
   onQuestion() {
     this.router.navigate(['/questions', this.question._id]);
+  }
+
+  viewProfile() {
+    this.router.navigate(['../../view'], { queryParams: { id: this.owner.id, type: this.owner.userType } });
   }
 
 }

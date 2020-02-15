@@ -33,6 +33,9 @@ export class ResetPasswordComponent implements OnInit {
         email: this.reset.value.Ctrl_1,
         type: 'resetPassword',
         userId: 'null',
+        reportedPostId: 'null',
+        reportedUserId: 'null',
+        reportedUserName: 'null'
       };
       this.dialogRef.close(this.reportData);
     }

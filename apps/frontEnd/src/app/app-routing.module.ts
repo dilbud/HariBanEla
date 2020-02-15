@@ -18,6 +18,7 @@ import { ProfilePageComponent } from './modules/profile-page/profile-page.compon
 import { ProfilePageBaseComponent } from './modules/profile-page-base/profile-page-base.component';
 import { BookingComponent } from './modules/booking/booking.component';
 import { from } from 'rxjs';
+import { ProfileViewComponent } from '@modules/profile-view/profile-view.component';
 
 const routes: Routes = [
   {
@@ -87,6 +88,8 @@ const routes: Routes = [
   },
 
   { path: 'booking', component: BookingComponent, canActivate: [AuthGuardService] },
+
+  { path: 'view', component: ProfileViewComponent, canActivate: [AuthGuardService] },
 
   { path: '**', component: QuestionListComponent },
 ];

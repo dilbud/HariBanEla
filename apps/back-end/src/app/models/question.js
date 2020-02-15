@@ -21,7 +21,8 @@ const answerSchema = mongoose.Schema({
         required: true
     },
     userId: {
-        type: String
+        type: String,
+        required: true
     },
     votes: {
         type: Number,
@@ -40,6 +41,10 @@ const answerSchema = mongoose.Schema({
     },
     createdAt: {
         type: Date,
+        required: true
+    },
+    isAccepted: {
+        type: Boolean,
         required: true
     }
 });
