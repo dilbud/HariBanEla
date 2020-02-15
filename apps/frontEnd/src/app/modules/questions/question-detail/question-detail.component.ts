@@ -122,4 +122,8 @@ export class QuestionDetailComponent implements OnInit {
     this.router.navigate([`/category/${this.question.category}`]);
   }
 
+  viewProfile() {
+    this.router.navigate(['../../view'], { queryParams: { id: this.owner.id, type: this.owner.userType } });
+  }
+
 }

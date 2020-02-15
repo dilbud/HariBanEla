@@ -1,0 +1,66 @@
+<mat-form-field>
+  <mat-label>Filter</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia">
+</mat-form-field>
+
+<div class="mat-elevation-z8">
+
+  <table mat-table [dataSource]="dataSource" multiTemplateDataRows matSort>
+
+    <ng-container matColumnDef="no">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> No </th>
+      <td mat-cell *matCellDef="let row"> {{row.no}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+      <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="cat">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Category </th>
+      <td mat-cell *matCellDef="let row"> {{row.cat}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+      <td mat-cell *matCellDef="let row"> {{row.email}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="expandedDetail">
+      <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplay.length">
+        <div class="element-detail" [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
+          <div class="element-diagram">
+            <div class="d-flex ">
+              <img src="{{ element.row.picURL }}" alt="Avatar" class="m-0 propic" />
+              <div class="d-flex flex-column b pl-sm-2 pl-md-5">
+                <div class="c">
+                  <h3>
+                    <span class="c1">{{ element.row.firstName }}</span
+                    ><span class="c2">{{ element.row.lastName }}</span>
+                  </h3>
+                </div>
+                <div class="d">{{ element.row.address === "null" ? "" : element.row.address }}</div>
+                <div class="e">{{ element.row.email }}</div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex align-self-end  justify-content-center button">
+            <button mat-raised-button (click)="accept(element.row)" class="ml-2" matTooltip="Accept user">Accept</button>
+            <button mat-raised-button (click)="reject(element.row)" class="ml-2" matTooltip="Reject user">Reject</button>
+            <button mat-raised-button class="ml-2" ngxClipboard [cbContent]="element.row.email" matTooltip="copy email">Copy</button>
+          </div>
+        </div>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+    <tr mat-row *matRowDef="let element; columns: columnsToDisplay;" class="element-row"
+      [class.expanded-row]="expandedElement === element"
+      (click)="expandedElement = expandedElement === element ? null : element">
+    </tr>
+    <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="detail-row"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</div>

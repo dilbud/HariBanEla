@@ -4,6 +4,10 @@ import { chatRouter } from './app/routes/chat';
 import { categoryRouter } from './app/routes/category';
 import { appointmentRouter } from './app/routes/appointment';
 import { questionRouter } from './app/routes/questions';
+import { reportRouter } from './app/routes/report';
+import { edRouter } from './app/routes/ed';
+import { verifyProRouter } from './app/routes/verifyPro';
+import { tagRouter } from './app/routes/tag';
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -39,15 +43,16 @@ app.use('/api/category', categoryRouter);
 app.use('/api/user', userRouter);
 app.use('/api/appointment', appointmentRouter);
 app.use('/api/questions', questionRouter);
-app.use('/', express.static(path.join(process.cwd(),'//dist/apps/frontEnd')));
+app.use('/api/report',  reportRouter);
+app.use('/api/ed', edRouter);
+app.use('/api/verifypro', verifyProRouter);
+app.use('/api/tag', tagRouter);
+app.use('/', express.static(path.join(process.cwd(), '//dist/apps/frontEnd')));
 app.get('/*', (req, res) => {
 
   res.sendFile(path.join(process.cwd() + '//dist/apps/frontEnd/index.html'));
 });
 
-// app.get('/api', (req, res) => {
-//   res.send({ message: 'Welcome to server!' });
-// });
 
 const port = process.env.port || 3333;
 const server = app.listen(port, () => {

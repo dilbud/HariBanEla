@@ -51,7 +51,6 @@ export class ProfileComponent implements OnInit {
     if (this.user.userType === 'gen') {
       return 'General';
     }
-    console.log('*************************** ', this.user);
     return this.user.userType;
   }
 
@@ -62,7 +61,6 @@ export class ProfileComponent implements OnInit {
         this.user = this.userService.getUserData();
       });
     } else if ( this.type === 'pro') {
-      console.log('get pro user ==================');
       let res: any;
       this.userService.getProProfile(this.id).subscribe(
         response => {
@@ -78,7 +76,6 @@ export class ProfileComponent implements OnInit {
         }
       );
     } else {
-      console.log('get any user ==================');
       let res: any;
       this.userService.getUserDataById(this.id).subscribe(
         response => {

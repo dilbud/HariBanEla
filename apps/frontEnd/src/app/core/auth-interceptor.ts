@@ -6,7 +6,6 @@ import {
 import { Injectable } from '@angular/core';
 
 import { UserService } from '../data/services/user.service';
-import { AlertService } from '../data/services/alert.service';
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {

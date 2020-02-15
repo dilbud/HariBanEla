@@ -16,6 +16,10 @@ import { UserService } from '../../data/services/user.service';
 export class ReportComponent implements OnInit {
 
   @Input() path: number;
+  @Input() reportedPostId: string;
+  @Input() reportedUserId: string;
+  @Input() reportedUserName: string;
+
   private reportData: ReportData;
   private user = null;
   public isAuth = false;
@@ -31,6 +35,7 @@ export class ReportComponent implements OnInit {
 
   ngOnInit() {
     this.user = this.userService.getUserData();
+    this.isAuth = this.userService.getIsAuth();
     this.userService.getAuthStatusListener().subscribe((isAuth: boolean) => {
       this.user = this.userService.getUserData();
       this.isAuth = isAuth;
@@ -64,7 +69,8 @@ export class ReportComponent implements OnInit {
 
     resetPasswordDialogRef.afterClosed().subscribe(result => {
       if (result != null) {
-        this.reportService.sendResetPassword(result);
+        this.reportData = result;
+        this.reportService.sendResetPassword(this.reportData);
       }
     });
   }
@@ -75,6 +81,9 @@ export class ReportComponent implements OnInit {
       data: {
         path: this.path,
         user: this.user === null ? null : this.user,
+        reportedPostId: this.reportedPostId,
+        reportedUserId: this.reportedUserId,
+        reportedUserName: this.reportedUserName
        }
     });
 
@@ -90,6 +99,9 @@ export class ReportComponent implements OnInit {
       data: {
         path: this.path,
         user: this.user === null ? null : this.user,
+        reportedPostId: this.reportedPostId,
+        reportedUserId: this.reportedUserId,
+        reportedUserName: this.reportedUserName
        }
     });
 

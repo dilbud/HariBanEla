@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from 'app/data/services/user.service';
 import { AppointmentService } from 'app/data/services/appointment.service';
 import { QuestionService } from 'app/data/services/question.service';
-
+import { MatTabChangeEvent } from '@angular/material/tabs';
 
 @Component({
   selector: 'app-profile-page-base',
@@ -10,6 +10,11 @@ import { QuestionService } from 'app/data/services/question.service';
   styleUrls: ['./profile-page-base.component.scss']
 })
 export class ProfilePageBaseComponent implements OnInit {
+
+
+  feedbackView = false;
+  reportUserView = false;
+  reportPostView = false;
 
   isAdmin = false;
   isPro = false;
@@ -21,7 +26,7 @@ export class ProfilePageBaseComponent implements OnInit {
   constructor(
     private userService: UserService,
     private appointmentService: AppointmentService,
-    private questionService: QuestionService
+    private questionService: QuestionService,
   ) { }
 
   ngOnInit() {
@@ -38,13 +43,8 @@ export class ProfilePageBaseComponent implements OnInit {
     if (this.user.userType === 'gen') {
       this.isGen = true;
     }
-
-    this.appointmentService.getAppointmentByUserId('5dd0c48507c02c294c25b261').subscribe(result => {
-      this.appointments = result;
-      console.log('xxxxxxxxxxxx', this.appointments);
-    });
-
-    // this.questionService.get
   }
+
+
 
 }

@@ -31,6 +31,14 @@
                   <a class="actionLink" [routerLink] routerLinkActive="router-link-active"
                     (click)="onDelete()">Delete</a>
                 </span>
+              </span>
+            </div>
+            <div *ngIf="owner" class="col-4">
+              <img class="profilePhoto" (click)="viewProfile()" src="{{owner.picURL}}">
+              <small>
+                <a (click)="viewProfile()">
+                  {{owner?.firstName}} {{owner?.lastName}}
+                </a>
               </small>
             </div>
             <p style="word-wrap: break-word;">{{question.body}}</p>
