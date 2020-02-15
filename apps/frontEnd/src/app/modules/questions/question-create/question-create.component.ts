@@ -31,7 +31,7 @@ export class QuestionCreateComponent implements OnInit {
   separatorKeysCodes: number[] = [ENTER, COMMA];
   tagCtrl = new FormControl();
   filteredtags: Observable<string[]>;
-  alltags: string[] = ['Apple', 'Lemon', 'Lime', 'Orange', 'Strawberry'];
+  alltags: string[] = ['NodeJs','Angular','Express','git','MongoDb'];
 
   @ViewChild('tagInput', {static: false}) tagInput: ElementRef<HTMLInputElement>;
   @ViewChild('auto', {static: false}) matAutocomplete: MatAutocomplete;

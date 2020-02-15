@@ -254,7 +254,7 @@ questionRouter.put('/:questionId/answers/:answerId', async (req, res) => {
 
 // Vote answer
 questionRouter.put('/:questionId/answers/:answerId/vote', async (req, res) => {
-  console.log(req.body);
+  // console.log(req.body);
   const vote = { userId: req.body.userId };
   try {
     const questionId = req.params.questionId;
@@ -262,10 +262,11 @@ questionRouter.put('/:questionId/answers/:answerId/vote', async (req, res) => {
     const received = await Question.findById(questionId);
     for (const answer of received.answers) {
       if (answer._id == answerId) {
-        console.log(answer);
-        answerIndex = received.answers.indexOf(answer);
+        // console.log(answer);
+        const answerIndex = received.answers.indexOf(answer);
         let index = -1;
         let unVote = false;
+        // console.log(index);
         for (const voter of answer.voters) {
           if (voter.userId == req.body.userId) {
             index = answer.voters.indexOf(voter);
@@ -304,7 +305,7 @@ questionRouter.put('/:questionId/answers/:answerId/vote', async (req, res) => {
           answer.voters.splice(index, 1);
         }
         console.log(unVote);
-
+        console.log(answer);
         // console.log(received);
         if (unVote == false) {
           answer.voters.push(vote);
