@@ -3251,3 +3251,4 @@
 {"message":"200 -  View a categories. - /api/category - GET - ::ffff:127.0.0.1","level":"info"}
 {"message":"200 -Viewed appointments of a professional. - /api/appointment/professional/5dd17e4d3c6f863e94a3bb8b - GET - ::ffff:127.0.0.1","level":"info"}
 {"message":"200 -  View a categories. - /api/category - GET - ::ffff:127.0.0.1","level":"info"}
+{"message":"200 -booking  View a appointment. - /api/appointment/5dd0cb1f55f5083f4c17e8fb - GET - ::1","level":"info"}

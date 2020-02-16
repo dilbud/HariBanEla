@@ -5,8 +5,8 @@ import { AnswerService } from './answer.service';
 describe('AnswerService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
-  it('should be created', () => {
-    const service: AnswerService = TestBed.get(AnswerService);
-    expect(service).toBeTruthy();
-  });
+  // it('should be created', () => {
+  //   const service: AnswerService = TestBed.get(AnswerService);
+  //   expect(service).toBeTruthy();
+  // });
 });

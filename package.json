@@ -6,7 +6,7 @@
     "start": "ng serve back-end",
     "build": "ng build",
     "test": "ng test",
-    "lint": "nx workspace-lint && ng lint",
+    "lint": "nx workspace-lint && ng lint --fix && ng lint --force=true ",
     "e2e": "ng e2e",
     "nx": "nx",
     "affected:apps": "nx affected:apps",
