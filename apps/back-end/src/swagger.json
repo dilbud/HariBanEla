@@ -1,0 +1,245 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "HariBnEla",
+    "description": "Econsulting platform",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "servers": [
+    {
+      "url": "/api/",
+      "description": "express"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Appointment",
+      "description": "API for appointment in the system"
+    }
+  ],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths": {
+    "/appointments": {
+      "get": {
+        "tags": ["appointments"],
+        "summary": "Get all appointments in system",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/appointments"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": ["appointments"],
+        "summary": "Create a new appointment in system",
+        "requestBody": {
+          "description": "appointment Object",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/appointment"
+              }
+            }
+          }
+        },
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/appointment"
+            }
+          },
+          "400": {
+            "description": "Failed. Bad post data."
+          }
+        }
+      }
+    },
+    "/appointments/{id}": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "description": "ID of the appointments that we want to match",
+          "type": "string"
+        }
+      ],
+      "get": {
+        "tags": ["appointments"],
+        "summary": "Get appointment with given ID",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "Appointments with id",
+            "schema": {
+              "$ref": "#/definitions/id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/appointment"
+            }
+          },
+          "404": {
+            "description": "Failed. Appointments not found."
+          }
+        }
+      },
+      "put": {
+        "summary": "Update appointment with given ID",
+        "tags": ["appointments"],
+        "requestBody": {
+          "description": "Appointments Object",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/appointment"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "Appointments with new values of properties",
+            "schema": {
+              "$ref": "#/definitions/id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/appointment"
+            }
+          },
+          "400": {
+            "description": "Failed. Bad post data."
+          },
+          "404": {
+            "description": "Failed. Appointments not found."
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete Appointments with given ID",
+        "tags": ["appointments"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "Delete Appointments with id",
+            "schema": {
+              "$ref": "#/definitions/id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/id"
+            }
+          },
+          "404": {
+            "description": "Failed. Appointments not found."
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "id": {
+      "properties": {
+        "uuid": {
+          "type": "string"
+        }
+      }
+    },
+    "appointment": {
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "String"
+        },
+        "userEmail": {
+          "type": "String"
+        },
+        "userName": {
+          "type": "String"
+        },
+        "professionalId": {
+          "type": "String"
+        },
+        "professionalEmail": {
+          "type": "String"
+        },
+        "professionalName": {
+          "type": "String"
+        },
+        "subject": {
+          "type": "String"
+        },
+        "description": {
+          "type": "String"
+        },
+        "startTime": {
+          "type": "Date"
+        },
+        "endTime": {
+          "type": "Date"
+        },
+        "duration": {
+          "type": "Number"
+        },
+        "status": {
+          "type": "String"
+        },
+        "chatUrl": {
+          "type": "String"
+        },
+        "paymentStatus": {
+          "type": "String"
+        },
+        "paymentAmount": {
+          "type": "Number"
+        },
+        "paymentUrl": {
+          "type": "String"
+        }
+      }
+    },
+    "appointments": {
+      "type": "object",
+      "properties": {
+        "appointments": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/appointment"
+          }
+        }
+      }
+    }
+  }
+}

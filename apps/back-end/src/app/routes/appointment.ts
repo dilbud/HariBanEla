@@ -12,6 +12,29 @@ const chatkit = new Chatkit.default({
 export const appointmentRouter = express.Router();
 
 /* GET ALL BOOKINGS */
+/**
+ * @swagger
+ *
+ * /login:
+ *   post:
+ *     description: Login to the application
+ *     produces:
+ *       - application/json
+ *     parameters:
+ *       - name: username
+ *         description: Username to use for login.
+ *         in: formData
+ *         required: true
+ *         type: string
+ *       - name: password
+ *         description: User's password.
+ *         in: formData
+ *         required: true
+ *         type: string
+ *     responses:
+ *       200:
+ *         description: login
+ */
 
 appointmentRouter.get('/', async function(req, res, next) {
   try {
@@ -674,7 +697,7 @@ appointmentRouter.post('/accept/:id', async function(req, res, next) {
     );
     let msg;
     if (appointment.status === 'Accepted') {
-       msg = {
+      msg = {
         to: appointment.professionalEmail,
         from: 'Appointmet@haribnela.lk',
         subject: 'Payment Details',
@@ -1179,7 +1202,7 @@ appointmentRouter.post('/accept/:id', async function(req, res, next) {
       };
     }
     if (appointment.status === 'Rejected') {
-       msg = {
+      msg = {
         to: appointment.professionalEmail,
         from: 'Appointmet@haribnela.lk',
         subject: 'Payment Details',
@@ -2719,7 +2742,9 @@ appointmentRouter.post('/payment/:id', async function(req, res, next) {
     sgMail.send(msgUser, function(err, info) {
       if (err) {
         winston.error(
-          `${err.status || 500} - ${err.message} - ${req.originalUrl} - ${req.method} - ${req.ip}`
+          `${err.status || 500} - ${err.message} - ${req.originalUrl} - ${
+            req.method
+          } - ${req.ip}`
         );
         return;
       }
@@ -2730,15 +2755,15 @@ appointmentRouter.post('/payment/:id', async function(req, res, next) {
     sgMail.send(msgPro, function(err, info) {
       if (err) {
         winston.error(
-          `${err.status || 500} - ${err.message} - ${req.originalUrl} - ${req.method} - ${req.ip}`
+          `${err.status || 500} - ${err.message} - ${req.originalUrl} - ${
+            req.method
+          } - ${req.ip}`
         );
         return;
       }
       winston.info(
         `200 - Email has been Sent to Professional. -  ${req.originalUrl} - ${req.method} - ${req.ip}`
       );
-
-
     });
     res.json({ success: true, msg: 'Email has been Sent.' });
   } catch (error) {

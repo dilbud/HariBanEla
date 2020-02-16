@@ -5,16 +5,17 @@ dist: trusty
 sudo: required
 branches:
   only:
-  - master
-  - develop
+    - master
+    - develop
 before_script:
   - npm install -g @angular/cli
 script:
-- ng lint 
-- ng test frontEnd 
-- ng test back-end
-- ng build frontEnd --prod
-- ng build back-end--prod 
+  - ng lint --fix
+  - ng lint --force=true
+  - ng test frontEnd
+  - ng test back-end
+  - ng build frontEnd --prod
+  - ng build back-end --prod
 
 deploy:
   provider: heroku
