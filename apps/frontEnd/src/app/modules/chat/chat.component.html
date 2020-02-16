@@ -1,76 +1,123 @@
 <div class="App row">
-   <aside class="sidebar left-sidebar" style="display: none;">
-      <section *ngIf="!currentUser.id" class="join-chat">
-        <h4>Join Chat</h4>
-        <form (ngSubmit)="addUser()">
-          <input placeholder="Enter your username" type="text" name="userid" [(ngModel)]="userId" />
-        </form>
-      </section>
-      <section *ngIf="currentUser.id" class="room-members">
-        <h4>Users</h4>
-        <ul class="user-list">
-          <li *ngFor="let user of roomUsers">
-            <span class="presence {{ user.presence.state }}"></span>
-            <span>{{ user.name }}</span>
-          </li>
-        </ul>
-      </section>
-      <form *ngIf="currentRoom.isPrivate" (ngSubmit)="addUserToRoom()">
-        <label for="user-name">Add user to {{ currentRoom.name }}</label>
-        <input type="text" class="newUser-input" [(ngModel)]="newUser" name="user-name" id="user-name" placeholder="Enter username">
+  <aside class="sidebar left-sidebar" style="display: none;">
+    <section *ngIf="!currentUser.id" class="join-chat">
+      <h4>Join Chat</h4>
+      <form (ngSubmit)="addUser()">
+        <input
+          placeholder="Enter your username"
+          type="text"
+          name="userid"
+          [(ngModel)]="userId"
+        />
       </form>
-    </aside>
-    <!-- <main class="chat-window">
+    </section>
+    <section *ngIf="currentUser.id" class="room-members">
+      <h4>Users</h4>
+      <ul class="user-list">
+        <li *ngFor="let user of roomUsers">
+          <span class="presence {{ user.presence.state }}"></span>
+          <span>{{ user.name }}</span>
+        </li>
+      </ul>
+    </section>
+    <form *ngIf="currentRoom.isPrivate" (ngSubmit)="addUserToRoom()">
+      <label for="user-name">Add user to {{ currentRoom.name }}</label>
+      <input
+        type="text"
+        class="newUser-input"
+        [(ngModel)]="newUser"
+        name="user-name"
+        id="user-name"
+        placeholder="Enter username"
+      />
+    </form>
+  </aside>
+  <!-- <main class="chat-window">
       <p> nbo </p>
     </main> -->
-   
-    <aside class="col-md-3 right-sidebar ">
-      <header class="chat-header">
-        <h4 *ngIf="!currentRoom.name; else roomName">Chat</h4>
-        <ng-template #roomName>
-          <h4>{{ currentRoom.name }}</h4>
-        </ng-template>
-        <span class="participants"></span>
-      </header>
-      <section class="chat-session">
-        <ul class="message-list">
-          <li class="user-message" [class.right]="currentUser.id == message.senderId" *ngFor="let message of messages">
-            <span class="user-id">{{ message.senderId }} </span>
-            <a *ngIf="message.attachment"  href ={{message.attachment.link}}>
-              <img 
-            class="image-attachment"
-            src="{{ message.attachment.link }}"
-            alt="{{ message.attachment.name }}"
-          />
+
+  <aside class="col-md-3 right-sidebar ">
+    <header class="chat-header">
+      <h4 *ngIf="!currentRoom.name; else roomName">Chat</h4>
+      <ng-template #roomName>
+        <h4>{{ currentRoom.name }}</h4>
+      </ng-template>
+      <span class="participants"></span>
+    </header>
+    <section class="chat-session">
+      <!-- <ng-scrollbar class="virtual-scroll" thumbClass="white-scrollbars">
+        <cdk-virtual-scroll-viewport scrollViewport itemSize="50" class="example-viewport">
+          <div *cdkVirtualFor="let item of items" class="example-item">{{item}}</div>
+        </cdk-virtual-scroll-viewport> -->
+      <!-- <ul>
+          <cdk-virtual-scroll-viewport scrollViewport itemSize="50" class="example-viewport">
+        
+            <div *cdkVirtualFor="let message of messages"  class="user-message"
+            [class.right]="currentUser.id == message.senderId">   <span class="user-id">{{ message.senderId }} </span>
+            <a *ngIf="message.attachment" href="{{ message.attachment.link }}">
+              <img
+                class="image-attachment"
+                src="{{ message.attachment.link }}"
+                alt="{{ message.attachment.name }}"
+              />
             </a>
-            
-          <!-- <iframe *ngIf="message.attachment" src="{{ message.attachment.link }}" width="80" height="210px"></iframe> -->
-            <span class="message">{{ message.text }}</span>
-          </li>
+            <span class="message">{{ message.text }}</span></div>
+          </cdk-virtual-scroll-viewport>
         </ul>
-      </section>
-      <footer *ngIf="currentUser.id" class="chat-footer">
-        <div class="is-typing" *ngIf="usersWhoAreTyping.length > 0">
-          {{ usersWhoAreTyping.slice(0, 2).join(' and ') }} is typing
-        </div>
-        <form class="message-form" (ngSubmit)='sendMessage()'>
-          <div class='row'>
-            <input
-            class="file-input col-md-3"
-              type="file"
-              name="attachment"
-              accept="image/png, image/jpeg"
-              (change)="fileChangedHandler($event)"
+      -->
+
+      <!-- </ng-scrollbar> -->
+      <ul class="message-list">
+        <li
+          class="user-message"
+          [class.right]="currentUser.id == message.senderId"
+          *ngFor="let message of messages"
+        >
+          <span class="user-id">{{ message.senderId }} </span>
+          <a *ngIf="message.attachment" href="{{ message.attachment.link }}">
+            <img
+              class="image-attachment"
+              src="{{ message.attachment.link }}"
+              alt="{{ message.attachment.name }}"
             />
-          <input class="message-input col-md-6" placeholder="Type a message. Hit Enter to send" type="text" name="message" (keyup)="sendTypingEvent()" [(ngModel)]="newMessage" />
-          <button class="send-message col-md-3" type="submit">Send</button>
-          </div>
-          
-        </form>
-      </footer>
-    </aside>
-  
-    <!-- <aside class="sidebar right-sidebar">
+          </a>
+
+          <!-- <iframe *ngIf="message.attachment" src="{{ message.attachment.link }}" width="80" height="210px"></iframe> -->
+          <span class="message">{{ message.text }}</span>
+        </li>
+      </ul>
+    </section>
+    <footer *ngIf="currentUser.id" class="chat-footer">
+      <div class="is-typing" *ngIf="usersWhoAreTyping.length > 0">
+        {{ usersWhoAreTyping.slice(0, 2).join(' and ') }} is typing
+      </div>
+      <form class="message-form" (ngSubmit)="sendMessage()">
+        <div class="row" style="height: 3em;">
+          <input
+            class="message-input col-md-6"
+            placeholder="Type a message. Hit Enter to send"
+            type="text"
+            name="message"
+            (keyup)="sendTypingEvent()"
+            [(ngModel)]="newMessage"
+          />
+          <input
+            class="file-input"
+            id="file"
+            type="file"
+            name="attachment"
+            accept="image/png, image/jpeg"
+            (change)="fileChangedHandler($event)"
+            width="auto"
+          />
+          <span><label for="file"><i class="fas fa-paperclip upload-file text-secondary"></i></label></span>
+          <button class="send-message col-md-2" type="submit">Send</button>
+        </div>
+      </form>
+    </footer>
+  </aside>
+  <app-video class="col-md-12"></app-video>
+  <!-- <aside class="sidebar right-sidebar">
       <section class="room-section">
         <section *ngIf="currentUser.id" class="user-rooms">
             <h4>Rooms</h4>
@@ -112,4 +159,4 @@
       </section>
     </aside> -->
   <!-- </div> -->
- 
+</div>

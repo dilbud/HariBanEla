@@ -56,9 +56,11 @@ import { ProfessionalListTableComponent } from './modules/professional-list-tabl
 import { RatingStarComponent } from './modules/rating-star/rating-star.component';
 import { ClipboardModule } from 'ngx-clipboard';
 import { TagComponent } from './modules/tag/tag.component';
-
+import { NgxAgoraModule } from 'ngx-agora';
 import {CookieService} from 'ngx-cookie-service';
-
+import { VideoComponent } from './modules/video/video.component';
+import { environment } from '@env' ;
+// import { NgScrollbarModule } from 'ngx-scrollbar';
 
 
 @NgModule({
@@ -104,7 +106,8 @@ import {CookieService} from 'ngx-cookie-service';
     ViewReportedPostComponent,
     ProfessionalListTableComponent,
     RatingStarComponent,
-    TagComponent
+    TagComponent,
+    VideoComponent
   ],
 
   imports: [
@@ -129,6 +132,8 @@ import {CookieService} from 'ngx-cookie-service';
     DlDateTimeDateModule,
     DlDateTimePickerModule,
     ClipboardModule,
+    NgxAgoraModule.forRoot({ AppID: environment.agora.appId }),
+    // NgScrollbarModule
 
   ],
   providers: [

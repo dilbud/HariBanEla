@@ -1,0 +1,16 @@
+
+<div class="row background">
+    <div [id]="localCallId" class="local"></div>
+
+    <div *ngFor="let callId of remoteCalls" [id]="callId" class="remote "></div>
+    <div class="" *ngIf="!remote"></div>
+    <div class="container" style="text-align: center;position: absolute; margin-right: auto; left: 50%;bottom: 150px;width: auto;">     
+      <!-- <div class="d-flex p-3" style="z-index: 1; position: absolute; top: 70vh;"> -->
+        <div class="d-flex p-3" style="z-index: 1; position: absolute;">
+        <div class="callButton" *ngIf="!started" (click)="start()" style="z-index: 1000;"></div>
+    
+        <div class="declineButton" *ngIf="started" (click)="leave()" style="z-index: 1000;"></div>
+      </div>
+    </div>
+
+</div>
