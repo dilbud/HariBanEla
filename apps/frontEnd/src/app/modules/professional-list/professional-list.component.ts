@@ -1,4 +1,11 @@
-import { Component, OnInit, Input, ViewChild, SimpleChanges, OnChanges } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  ViewChild,
+  SimpleChanges,
+  OnChanges
+} from '@angular/core';
 import { ServerData } from '../../data/models/serverData';
 import { UserService } from '../../data/services/user.service';
 import { AlertService } from 'app/data/services/alert.service';
@@ -28,7 +35,6 @@ export interface RowData {
   styleUrls: ['./professional-list.component.scss']
 })
 export class ProfessionalListComponent implements OnInit {
-
   category: FormGroup;
 
   proList: ServerData[] = null;
@@ -48,32 +54,31 @@ export class ProfessionalListComponent implements OnInit {
     private formBuilder: FormBuilder,
     private userService: UserService,
     private alertService: AlertService,
-    private router: Router,
-  ) { }
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.proList = [];
     this.filteredList = [];
     this.allUserTable = [];
 
-
-    this.categoryService.getAllCategories().subscribe(val => {
-      const arryList: any = val.map((v: any) => {
-        return {
-          value: v._id,
-          viewValue: v.name, };
-      });
-      this.fields = arryList;
-      this.fields.push({value: 'all', viewValue: 'All'});
-    },
-    err => {},
-    () => {
-
-
-    });
+    this.categoryService.getAllCategories().subscribe(
+      val => {
+        const arryList: any = val.map((v: any) => {
+          return {
+            value: v._id,
+            viewValue: v.name
+          };
+        });
+        this.fields = arryList;
+        this.fields.push({ value: 'all', viewValue: 'All' });
+      },
+      err => {},
+      () => {}
+    );
 
     this.category = this.formBuilder.group({
-      Ctrl_1: ['all', [Validators.required]],
+      Ctrl_1: ['all', [Validators.required]]
     });
 
     let res: any;
@@ -91,17 +96,16 @@ export class ProfessionalListComponent implements OnInit {
         this.filteredList = this.proList;
       }
     );
-  
   }
 
-  onChange(val: HTMLElement) {
-    if ( this.category.value.Ctrl_1 === 'all') {
+  onChange() {
+    if (this.category.value.Ctrl_1 === 'all') {
       this.filteredList = this.proList.filter(val => {
-        return (val.active);
+        return val.active;
       });
     } else {
       this.filteredList = this.proList.filter(val => {
-        return (val.category === this.category.value.Ctrl_1) && (val.active);
+        return val.category === this.category.value.Ctrl_1 && val.active;
       });
     }
 
@@ -113,7 +117,6 @@ export class ProfessionalListComponent implements OnInit {
     this.dataSource = new MatTableDataSource(this.allUserTable);
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
-
   }
 
   applyFilter(event: Event) {
@@ -126,8 +129,8 @@ export class ProfessionalListComponent implements OnInit {
   }
 
   view(item: any) {
-    this.router.navigate(['./account'], { queryParams: { id: item._id, type: item.userType } });
+    this.router.navigate(['./account'], {
+      queryParams: { id: item._id, type: item.userType }
+    });
   }
 }
-
-
