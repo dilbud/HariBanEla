@@ -1,8 +1,12 @@
-<form #answerForm="ngForm" (ngSubmit)="onAnswer(); answerForm.reset()">
-  <div class="form-group mt-3">
+<form #answerForm="ngForm" (ngSubmit)="onAnswer()">
+  <div class="form-group mt-3" novalidate>
     <label for="answerBody">Add Answer</label>
-    <textarea style="height: 200px;" type="text" class="form-control" [(ngModel)]="answerModel.body" name="answerBody" id="answerBody"
-      placeholder="Enter your Answer"></textarea>
+    <textarea style="height: 200px;" type="text" class="form-control" [(ngModel)]="answerModel.body"
+      #bodyModel="ngModel" name="answerBody" id="answerBody" placeholder="Enter your Answer" required></textarea>
+    <small *ngIf="submitted && bodyModel.invalid" class="error">
+      Answer is required
+    </small>
+    <br>
     <button mat-raised-button color="primary" type="submit">Post your Answer</button>
   </div>
 </form>

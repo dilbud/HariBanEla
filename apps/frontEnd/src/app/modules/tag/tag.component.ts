@@ -8,7 +8,7 @@ import { VerifyProService } from '../../data/services/verify-pro.service';
 import { ServerData } from '../../data/models/serverData';
 import { Router } from '@angular/router';
 import { AlertService } from 'app/data/services/alert.service';
-import {animate, state, style, transition, trigger} from '@angular/animations';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 
 export interface Field {
   value: string;
@@ -27,8 +27,8 @@ export interface RowData {
   styleUrls: ['./tag.component.scss'],
   animations: [
     trigger('detailExpand', [
-      state('collapsed', style({height: '0px', minHeight: '0'})),
-      state('expanded', style({height: '*'})),
+      state('collapsed', style({ height: '0px', minHeight: '0' })),
+      state('expanded', style({ height: '*' })),
       transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
     ]),
   ],
@@ -55,7 +55,7 @@ export class TagComponent implements OnInit {
 
   ngOnInit() {
     let res: any;
-    this.tagService.getAllTag().subscribe(
+    this.tagService.getAllTags().subscribe(
       result => {
         res = result;
       },

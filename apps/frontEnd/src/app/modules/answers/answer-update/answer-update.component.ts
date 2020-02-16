@@ -16,22 +16,24 @@ export class AnswerUpdateComponent implements OnInit {
   question;
   questionModel = new Question();
   answerModel = new Answer();
+  submitted: boolean;
 
   constructor(
     private questionService: QuestionService,
     private answerService: AnswerService,
     private router: Router,
     private route: ActivatedRoute
-  ) {}
+  ) { }
 
   ngOnInit() {
+    this.submitted = false;
     this.getQuestion();
   }
 
   getQuestion() {
     this.questionId = this.route.snapshot.params.questionId;
     this.answerId = this.route.snapshot.params.answerId;
-    // console.log(this.questionId);
+    console.log('ddd ' + this.answerId);
     this.questionService.getQuestion(this.questionId).subscribe(
       res => {
         this.question = res;
@@ -40,10 +42,14 @@ export class AnswerUpdateComponent implements OnInit {
         this.questionModel.body = this.question.body;
 
         for (const answer of this.question.answers) {
-          if (answer.id === this.answerId) {
+          // console.log(this.question);
+          if (answer._id === this.answerId) {
             this.answerModel = answer;
+            break;
           }
         }
+        console.log(this.answerModel);
+
       },
       err => {
         console.log(err);
@@ -52,14 +58,19 @@ export class AnswerUpdateComponent implements OnInit {
   }
 
   onAnswer() {
-    this.answerService
-      .editAnswer(this.answerModel, this.questionId, this.answerId)
-      .subscribe(
-        data => {
-          console.log('Success', data);
-          this.router.navigate([`/questions/${this.questionId}`]);
-        },
-        error => console.log('Error', error)
-      );
+    this.submitted = true;
+    if (this.answerModel.body) {
+      this.answerService
+        .editAnswer(this.answerModel, this.questionId, this.answerId)
+        .subscribe(
+          data => {
+            console.log('Success', data);
+            this.router.navigate([`/questions/${this.questionId}`]);
+          },
+          error => console.log('Error', error)
+        );
+    }
+
+
   }
 }

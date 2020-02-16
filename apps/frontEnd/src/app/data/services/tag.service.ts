@@ -17,7 +17,7 @@ export class TagService {
 
   public createTag(data: string) {
     let res: any;
-    this.http.post(this.apiUrl + '/create', {value: data}).subscribe(
+    this.http.post(this.apiUrl + '/create', { value: data }).subscribe(
       response => {
         res = response;
       },
@@ -34,7 +34,7 @@ export class TagService {
 
   public updateTag(idVal: string, valueVal: string) {
     let res: any;
-    this.http.post(this.apiUrl + '/update', {id: idVal, value: valueVal}).subscribe(
+    this.http.post(this.apiUrl + '/update', { id: idVal, value: valueVal }).subscribe(
       response => {
         res = response;
       },
@@ -49,7 +49,7 @@ export class TagService {
     );
   }
 
-  public getAllTag() {
+  public getAllTags() {
     return this.http.get(this.apiUrl + '/getalltag');
   }
 }
