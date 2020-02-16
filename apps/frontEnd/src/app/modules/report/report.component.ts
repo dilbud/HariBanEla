@@ -107,6 +107,7 @@ export class ReportComponent implements OnInit {
 
     reportUserDialogRef.afterClosed().subscribe(result => {
       if (result != null) {
+        console.log(result);
         this.reportService.sendReportUser(result);
       }
     });

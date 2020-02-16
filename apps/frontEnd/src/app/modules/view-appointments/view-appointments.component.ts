@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild , Input} from '@angular/core';
+import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { ServerData } from '../../data/models/serverData';
 import { AppointmentService } from '../../data/services/appointment.service';
 import { MatPaginator } from '@angular/material/paginator';
@@ -9,7 +9,13 @@ import { CategoryService } from '../../data/services/category.service';
 import { VerifyProService } from '../../data/services/verify-pro.service';
 import { Router } from '@angular/router';
 import { AlertService } from 'app/data/services/alert.service';
-import {animate, state, style, transition, trigger} from '@angular/animations';
+import {
+  animate,
+  state,
+  style,
+  transition,
+  trigger
+} from '@angular/animations';
 
 export interface Field {
   value: string;
@@ -19,7 +25,8 @@ export interface Field {
 export interface RowData {
   no: string;
   name: string;
-  cat: string;
+  subject: string;
+  // date: string;
   email: string;
   row: any;
 }
@@ -30,27 +37,37 @@ export interface RowData {
   styleUrls: ['./view-appointments.component.scss'],
   animations: [
     trigger('detailExpand', [
-      state('collapsed', style({height: '0px', minHeight: '0'})),
-      state('expanded', style({height: '*'})),
-      transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
-    ]),
-  ],
-
+      state('collapsed', style({ height: '0px', minHeight: '0' })),
+      state('expanded', style({ height: '*' })),
+      transition(
+        'expanded <=> collapsed',
+        animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')
+      )
+    ])
+  ]
 })
 export class ViewAppointmentsComponent implements OnInit {
-
   @Input() user: ServerData;
   List: any[] = [];
   FilterList: any[] = [];
   allUser: any[] = [];
-  allUserTable: any[] = [];
+  allAppTable: any[] = [];
   fields: Field[] = [];
+
+  time = 'up';
 
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   @ViewChild(MatSort, { static: true }) sort: MatSort;
 
   dataSource: MatTableDataSource<RowData>;
-  columnsToDisplay = ['no', 'name', 'cat', 'email'];
+  columnsToDisplay = [
+    'no',
+    'name',
+    'subject',
+    // 'date',
+    'email'
+  ];
+
   expandedElement: RowData | null;
 
   constructor(
@@ -60,75 +77,73 @@ export class ViewAppointmentsComponent implements OnInit {
     private router: Router,
     private categoryService: CategoryService,
     private verifyProService: VerifyProService
-  ) { }
+  ) {}
 
   ngOnInit() {
     if (this.user.userType === 'pro') {
-      this.appointmentService.getAppointmentByProfessionalId('5dd17e4d3c6f863e94a3bb8b').subscribe(result => {
-        this.List = result;
-        this.filter('up');
-      });
+      this.appointmentService
+        .getAppointmentByProfessionalId('5dd17e4d3c6f863e94a3bb8b')
+        .subscribe(
+          result => {
+            this.List = result;
+          },
+          err => {},
+          () => {
+            this.filter('up');
+            this.createTableRow();
+          }
+        );
     }
     if (this.user.userType === 'gen') {
-      this.appointmentService.getAppointmentByUserId('5dd22ab5e00872228c0b757b').subscribe(result => {
-        this.List = result;
-        this.filter('up');
-      });
-    }
-
-    let res1: any;
-    this.categoryService.getAllCategories().subscribe(
-      result => {
-        res1 = result;
-      },
-      err => {
-      },
-      () => {
-        const arryList: any = res1.map((v: any) => {
-          return {
-            value: v._id,
-            viewValue: v.name,
-          };
-        });
-        this.fields = arryList;
-        let res2: any;
-        this.userService.getAllPendingUser().subscribe(
-          response => {
-            res2 = response;
+      this.appointmentService
+        .getAppointmentByUserId('5dd22ab5e00872228c0b757b')
+        .subscribe(
+          result => {
+            this.List = result;
           },
-          error => {
-            this.alertService.setAlert(error.error.msg);
-            this.alertService.showAlert();
-          },
+          err => {},
           () => {
-            this.allUser = res2.serverData;
-            this.allUser.forEach((val, index) => {
-              console.log(this.fields);
-              let singleUser: RowData = {
-                no: (index + 1).toString(),
-                name: val.firstName + ' ' + val.lastName,
-                cat: this.fields.filter((item: Field) => (item.value === val.category)).map((item: Field) => item.viewValue)[0],
-                email: val.email.toString(),
-                row: val
-              };
-              this.allUserTable.push(singleUser);
-            });
-            this.dataSource = new MatTableDataSource(this.allUserTable);
-            this.dataSource.paginator = this.paginator;
-            this.dataSource.sort = this.sort;
-          });
-      });
+            this.filter('up');
+            this.createTableRow();
+          }
+        );
+    }
+  }
+  private createTableRow() {
+    this.FilterList.forEach((val, index) => {
+      console.log(this.fields);
+      let single: RowData = {
+        no: (index + 1).toString(),
+        name: val.professionalName,
+        subject: val.subject,
+        // date: this.formatDate(val.createdAt.toString()),
+        email: val.professionalEmail.toString(),
+        row: val
+      };
+      this.allAppTable.push(single);
+    });
 
-
+    console.log('app', this.allAppTable);
+    this.dataSource = new MatTableDataSource(this.allAppTable);
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
   }
 
-  filter(val: any) {
+  reInit(val: any) {
+    this.time = val;
+    this.FilterList = [];
+    this.allAppTable = [];
+    this.filter(this.time);
+    this.createTableRow();
+  }
+
+  private filter(val: any) {
     if (val === 'past') {
       this.FilterList = this.List.filter(value => {
-        return  Date.parse(value.endTime) <= Date.now();
+        return Date.parse(value.endTime) <= Date.now();
       });
     }
-    if ( val === 'up') {
+    if (val === 'up') {
       this.FilterList = this.List.filter(value => {
         return Date.parse(value.startTime) >= Date.now();
       });
@@ -144,14 +159,18 @@ export class ViewAppointmentsComponent implements OnInit {
     }
   }
 
-  accept(val: any) {
-    this.verifyProService.acceptPro(val._id);
-    console.log(val);
-    this.ngOnInit();
+  view(val: any) {
+    this.router.navigate([`/appointment/${val._id}`]);
+    this.reInit(this.time);
   }
 
-  reject(val: any) {
-    this.verifyProService.rejectPro(val._id);
-    console.log(val);
+  call(val: any) {
+    // this.router.navigate([`/questions/${val._id}`]);
+    this.reInit(this.time);
+  }
+
+  payment(val: any) {
+    this.router.navigate([`/payment/${val._id}`]);
+    this.reInit(this.time);
   }
 }

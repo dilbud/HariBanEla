@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild, SimpleChanges, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, SimpleChanges, OnChanges, ChangeDetectorRef } from '@angular/core';
 import { ServerData } from '../../data/models/serverData';
 import { UserService } from '../../data/services/user.service';
 import { AlertService } from 'app/data/services/alert.service';
@@ -49,50 +49,64 @@ export class ProfessionalListComponent implements OnInit {
     private userService: UserService,
     private alertService: AlertService,
     private router: Router,
+    private changeDetectorRefs: ChangeDetectorRef
   ) { }
 
   ngOnInit() {
     this.proList = [];
     this.filteredList = [];
     this.allUserTable = [];
-
+    let res1: any;
+    this.category = this.formBuilder.group({
+      Ctrl_1: ['all', [Validators.required]],
+    });
 
     this.categoryService.getAllCategories().subscribe(val => {
-      const arryList: any = val.map((v: any) => {
+      res1 = val;
+    },
+    err => {},
+    () => {
+      const arryList: any = res1.map((v: any) => {
         return {
           value: v._id,
           viewValue: v.name, };
       });
       this.fields = arryList;
       this.fields.push({value: 'all', viewValue: 'All'});
-    },
-    err => {},
-    () => {
-
+      let res2: any;
+      this.userService.getProList().subscribe(
+        response => {
+          res2 = response;
+        },
+        error => {
+          this.alertService.setAlert('Something wrong !');
+          this.alertService.setAlert(error.error.msg);
+          this.alertService.showAlert();
+        },
+        () => {
+          this.proList = res2.serverData;
+          this.proList.forEach((val, index) => {
+            let singleUser: RowData = {
+              no: (index + 1).toString(),
+              name: val.firstName + ' ' + val.lastName,
+              cat: this.fields.filter((item: Field) => (item.value === val.category)).map((item: Field) => item.viewValue)[0],
+              rate: val.rate.toString(),
+              row: val
+            };
+            this.allUserTable.push(singleUser);
+          });
+          console.log('pro tab ', this.allUserTable);
+          this.dataSource = new MatTableDataSource(this.allUserTable);
+          this.dataSource.paginator = this.paginator;
+          this.dataSource.sort = this.sort;
+        }
+      );
 
     });
-
-    this.category = this.formBuilder.group({
-      Ctrl_1: [null, [Validators.required]],
-    });
-
-    let res: any;
-    this.userService.getProList().subscribe(
-      response => {
-        res = response;
-      },
-      error => {
-        this.alertService.setAlert('Something wrong !');
-        this.alertService.setAlert(error.error.msg);
-        this.alertService.showAlert();
-      },
-      () => {
-        this.proList = res.serverData;
-      }
-    );
   }
 
-  onChange(val: HTMLElement) {
+  onChange() {
+    this.allUserTable = [];
     if ( this.category.value.Ctrl_1 === 'all') {
       this.filteredList = this.proList.filter(val => {
         return (val.active);
@@ -107,10 +121,20 @@ export class ProfessionalListComponent implements OnInit {
       this.alertService.setAlert('professionals not available');
       this.alertService.showAlert();
     }
-
+    this.filteredList.forEach((val, index) => {
+      let singleUser: RowData = {
+        no: (index + 1).toString(),
+        name: val.firstName + ' ' + val.lastName,
+        cat: this.fields.filter((item: Field) => (item.value === val.category)).map((item: Field) => item.viewValue)[0],
+        rate: val.rate.toString(),
+        row: val
+      };
+      this.allUserTable.push(singleUser);
+    });
     this.dataSource = new MatTableDataSource(this.allUserTable);
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
+    this.changeDetectorRefs.markForCheck();
 
   }
 

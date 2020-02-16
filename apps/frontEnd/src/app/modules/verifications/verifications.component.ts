@@ -61,6 +61,9 @@ export class VerificationsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.allUser = [];
+    this.allUserTable = [];
+    this.fields = [];
     let res1: any;
     this.categoryService.getAllCategories().subscribe(
       result => {
@@ -116,13 +119,12 @@ export class VerificationsComponent implements OnInit {
 
   accept(val: any) {
     this.verifyProService.acceptPro(val._id);
-    console.log(val);
     this.ngOnInit();
   }
 
   reject(val: any) {
     this.verifyProService.rejectPro(val._id);
-    console.log(val);
+    this.ngOnInit();
   }
 
 }

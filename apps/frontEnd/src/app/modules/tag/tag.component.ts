@@ -37,7 +37,6 @@ export class TagComponent implements OnInit {
 
   row: RowData[] = [];
 
-
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   @ViewChild(MatSort, { static: true }) sort: MatSort;
 
@@ -54,6 +53,7 @@ export class TagComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.row = [];
     let res: any;
     this.tagService.getAllTag().subscribe(
       result => {
@@ -62,7 +62,8 @@ export class TagComponent implements OnInit {
       err => {
       },
       () => {
-        const arryList: RowData[] = res.map((v: any, index: number) => {
+        console.log('dshfhdgfhd', res.serverData);
+        const arryList: RowData[] = res.serverData.map((v: any, index: number) => {
           return {
             no: (index + 1).toString(),
             id: v._id,
@@ -87,10 +88,13 @@ export class TagComponent implements OnInit {
 
   create(val: any) {
     this.tagService.createTag(val);
+    this.ngOnInit();
   }
 
   update(val: any, id: any) {
-    this.tagService.updateTag(id, val);
+    this.tagService.updateTags(id, val);
+    this.ngOnInit();
+
   }
 
 }

@@ -3,7 +3,7 @@ const sgMail = require('../config/sendGrid').sgMail;
 const user = require("../models/userModel");
 var generator = require('generate-password');
 
-const feedback = (req, res, next) => {
+const feedbackSet = (req, res, next) => {
   new report({
     type: req.body.type,
     userId: req.body.userId,
@@ -19,7 +19,47 @@ const feedback = (req, res, next) => {
   });
 }
 
-const resetPassword = (req, res, next) => {
+const feedbackGet = (req, res, next) => {
+  report.find({type: 'feedback'},{ useFindAndModify: false }, (err, data) => {
+    if (err) {
+      return res.status(500).json({ msg: "internal server error" });
+    } else {
+      res.status(200).json({
+        msg: "ok",
+        serverData: data
+      });
+    }
+  });
+
+
+}
+
+const feedbackDelete = (req, res, next) => {
+  report.findByIdAndRemove(
+    req.body.id,
+    (err, data) => {
+      if (err) {
+        res.status(500).json({ msg: 'internal server error' });
+      } else {
+        if (data !== null) {
+          res.status(200).json({ msg: 'feedback remove' });
+        } else {
+          res.status(404).json({ msg: 'feedback does not exist' });
+        }
+      }
+    }
+  );
+}
+
+
+
+
+
+
+
+
+
+const setPassword = (req, res, next) => {
   var password = generator.generate(
     {
       length: 10,
@@ -47,7 +87,7 @@ const resetPassword = (req, res, next) => {
   });
 }
 
-const reportPost = (req, res, next) => {
+const setPost = (req, res, next) => {
   new report({
     type: req.body.type,
     userId: req.body.userId,
@@ -66,7 +106,10 @@ const reportPost = (req, res, next) => {
   });
 }
 
-const reportUser = (req, res, next) => {
+
+
+
+const setUser = (req, res, next) => {
   new report({
     type: req.body.type,
     userId: req.body.userId,
@@ -85,4 +128,39 @@ const reportUser = (req, res, next) => {
   });
 }
 
-module.exports = { feedback: feedback, resetPassword: resetPassword, reportPost: reportPost, reportUser: reportUser };
+const getReportUser = (req, res, next) => {
+  report.find({type: 'reportUser'},{ useFindAndModify: false }, (err, data) => {
+    if (err) {
+      return res.status(500).json({ msg: "internal server error" });
+    } else {
+      res.status(200).json({
+        msg: "ok",
+        serverData: data
+      });
+    }
+  });
+}
+
+
+
+
+
+module.exports = {
+
+
+  feedbackSet: feedbackSet,
+  feedbackGet: feedbackGet,
+  feedbackDelete: feedbackDelete,
+
+
+
+  password: setPassword,
+  reportPost: setPost,
+
+
+
+
+  reportUser: setUser,
+  getReportUser: getReportUser
+
+};

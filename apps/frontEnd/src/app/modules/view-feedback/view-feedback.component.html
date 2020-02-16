@@ -1,1 +1,49 @@
-<p>view-feedback works!</p>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Filter Or Add Category</mat-label>
+    <input matInput (keyup)="applyFilter($event)" #f placeholder="Ex. Mia">
+  </mat-form-field>
+
+
+<div class="mat-elevation-z8">
+
+  <table mat-table [dataSource]="dataSource" multiTemplateDataRows matSort>
+
+    <ng-container matColumnDef="no">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> No </th>
+      <td mat-cell *matCellDef="let row"> {{row.no}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+      <td mat-cell *matCellDef="let row" > {{row.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+      <td mat-cell *matCellDef="let row" > {{row.email}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="expandedDetail">
+      <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplay.length">
+        <div class="element-detail" [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
+          <div class="w-100 d-flex flex-column justify-content-center">
+            <div >{{element.row.content}}</div>
+            <div><button mat-raised-button (click)="delete(element.row._id)" class="ml-2" matTooltip="Reject user">Delete</button></div>
+          </div>
+        </div>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+    <tr mat-row *matRowDef="let element; columns: columnsToDisplay;" class="element-row"
+      [class.expanded-row]="expandedElement === element"
+      (click)="expandedElement = expandedElement === element ? null : element"
+      ngxClipboard [cbContent]="element.name" matTooltip="copy name">
+    </tr>
+    <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="detail-row"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</div>

@@ -5,28 +5,33 @@ const createTag = (req, res, next) => {
     name: req.body.value
   }).save((err, user) => {
     if (err) {
-      if (err.errors.email.kind && err.errors.email.kind === 'unique') {
+      if (err.errors.name.kind && err.errors.name.kind === 'unique') {
         res.status(404).json({ msg: 'Tag already added' });
       } else {
         res.status(500).json({ msg: 'internal server error' });
       }
     } else {
-      res.status(200).json({msg: 'created'});
+      res.status(200).json({msg: 'tag created'});
     }
   });
 }
 
 const updateTag = (req, res, next) => {
+  console.log('xxxxxxx', req.body.id , req.body.value);
   tag.findByIdAndUpdate(
     req.body.id,
     {name: req.body.value},
     { new: true, useFindAndModify: false},
-    (err, user) => {
+    (err, data) => {
       if (err) {
-          return res.status(500).json({ msg: 'internal server error' });
+        if (err.errors.name.kind && err.errors.name.kind === 'unique') {
+          res.status(404).json({ msg: 'Tag already added' });
+        } else {
+          res.status(500).json({ msg: 'internal server error' });
+        }
       } else {
         if (data !== null) {
-          res.status(200).json({ msg: 'tag Added' });
+          res.status(200).json({ msg: 'tag update' });
         } else {
           res.status(404).json({ msg: 'tag does not exist' });
         }

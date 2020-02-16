@@ -115,16 +115,6 @@ export class ViewQuestionsComponent implements OnInit {
     }
   }
 
-  accept(val: any) {
-    this.verifyProService.acceptPro(val._id);
-    console.log(val);
-    this.ngOnInit();
-  }
-
-  reject(val: any) {
-    this.verifyProService.rejectPro(val._id);
-    console.log(val);
-  }
 }
 
 

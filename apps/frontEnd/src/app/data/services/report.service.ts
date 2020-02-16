@@ -17,7 +17,7 @@ export class ReportService {
 
   public sendFeedBack(data: ReportData) {
     let res: any;
-    this.http.post(this.apiUrl + '/feedback', data).subscribe(
+    this.http.post(this.apiUrl + '/setfeedback', data).subscribe(
       response => {
         res = response;
       },
@@ -31,16 +31,38 @@ export class ReportService {
       }
     );
   }
-  public getFeedBack(data: ReportData) {
-    this.http.post(this.apiUrl + '/getFeedback', data).subscribe(
-      response => {
-      },
-      error => {
-      },
-      () => {
-      }
-    );
+  public getFeedBack() {
+    return this.http.get(this.apiUrl + '/getfeedback');
   }
+
+  public deleteFeedBack(data: any) {
+    console.log(data);
+    return this.http.post(this.apiUrl + '/deletefeedback', data);
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   public sendResetPassword(data: ReportData) {
     let res: any;
@@ -59,27 +81,44 @@ export class ReportService {
     );
   }
 
+
+
+
+
+
+
   public sendReportUser(data: ReportData) {
-    console.log('dhfhjdfjjhf',data);
+    let res: any;
     this.http.post(this.apiUrl + '/reportUser', data).subscribe(
       response => {
+        res = response;
       },
       error => {
+        this.alertService.setAlert(error.error.msg);
+        this.alertService.showAlert();
       },
       () => {
+        this.alertService.setAlert(res.msg);
+        this.alertService.showAlert();
       }
     );
   }
-  public getReportUser(data: ReportData) {
-    this.http.post(this.apiUrl + '/getReportUser', data).subscribe(
-      response => {
-      },
-      error => {
-      },
-      () => {
-      }
-    );
+
+
+  public getReportUser() {
+    return this.http.get(this.apiUrl + '/getReportUser');
   }
+
+
+
+
+
+
+
+
+
+
+
 
   public sendReportPost(data: ReportData) {
     this.http.post(this.apiUrl + '/reportPost', data).subscribe(

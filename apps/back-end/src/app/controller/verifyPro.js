@@ -14,9 +14,9 @@ const acc = (req, res, next) => {
           return res.status(500).json({ msg: 'internal server error' });
         }
       } else {
-        if (data !== null) {
+        if (user !== null) {
           const msg = {
-            to: data.email,
+            to: user.email,
             from: 'buddikadilan3@gmail.com',
             subject: 'Sending with Twilio SendGrid is Fun',
             text: 'and easy to do anywhere, even with Node.js',
@@ -45,9 +45,9 @@ const rej = (req, res, next) => {
           return res.status(500).json({ msg: 'internal server error' });
         }
       } else {
-        if (data !== null) {
+        if (user !== null) {
           const msg = {
-            to: data.email,
+            to: user.email,
             from: 'buddikadilan3@gmail.com',
             subject: 'Sending with Twilio SendGrid is Fun',
             text: 'and easy to do anywhere, even with Node.js',

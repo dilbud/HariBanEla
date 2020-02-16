@@ -21,7 +21,7 @@
     <ng-container matColumnDef="title">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Title </th>
       <td mat-cell *matCellDef="let row">
-        <span style="word-wrap: break-word;">{{row.title | slice:0:30}}</span> <span *ngIf="row.title.length > 30">...</span>
+        <span style="word-wrap: break-word;">{{row.title | slice:0:40}}</span> <span *ngIf="row.title.length > 40">...</span>
       </td>
     </ng-container>
 
