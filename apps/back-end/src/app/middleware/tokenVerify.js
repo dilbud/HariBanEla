@@ -11,7 +11,6 @@ const verify = (req, res, next) => {
         res.status(401).json({msg: 'please login or signup'})
       } else {
           const decoded = jwt.decode(token);
-          console.log('decoded token ----', decoded);
           next();
       }
     });

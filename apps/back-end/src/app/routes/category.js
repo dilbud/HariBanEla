@@ -37,6 +37,7 @@ categoryRouter.get('/:id', async function(req, res, next) {
 //   CREATE NEW CATEGORY
 categoryRouter.post('/', async function(req, res, next) {
   try {
+    console.log(req.body)
     const category = await Category.create(req.body);
     winston.info(`200 - created a new category. - ${req.originalUrl} - ${req.method} - ${req.ip}`);
     res.json(category);

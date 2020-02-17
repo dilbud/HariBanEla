@@ -1,9 +1,15 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["polyfills"],{
 
 /***/ "../../node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js":
+<<<<<<< HEAD
 /*!*****************************************************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js ***!
   \*****************************************************************************************************************************************/
+=======
+/*!**********************************************************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js ***!
+  \**********************************************************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -24,9 +30,15 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/a-function.js":
+<<<<<<< HEAD
 /*!*********************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/a-function.js ***!
   \*********************************************************************************************/
+=======
+/*!**************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/a-function.js ***!
+  \**************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -40,9 +52,15 @@ module.exports = function (it) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/a-possible-prototype.js":
+<<<<<<< HEAD
 /*!*******************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/a-possible-prototype.js ***!
   \*******************************************************************************************************/
+=======
+/*!************************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/a-possible-prototype.js ***!
+  \************************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -58,9 +76,15 @@ module.exports = function (it) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/an-instance.js":
+<<<<<<< HEAD
 /*!**********************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/an-instance.js ***!
   \**********************************************************************************************/
+=======
+/*!***************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/an-instance.js ***!
+  \***************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -74,9 +98,15 @@ module.exports = function (it, Constructor, name) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/an-object.js":
+<<<<<<< HEAD
 /*!********************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/an-object.js ***!
   \********************************************************************************************/
+=======
+/*!*************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/an-object.js ***!
+  \*************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -92,9 +122,15 @@ module.exports = function (it) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/array-includes.js":
+<<<<<<< HEAD
 /*!*************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/array-includes.js ***!
   \*************************************************************************************************/
+=======
+/*!******************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/array-includes.js ***!
+  \******************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -135,9 +171,15 @@ module.exports = {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/array-iteration.js":
+<<<<<<< HEAD
 /*!**************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/array-iteration.js ***!
   \**************************************************************************************************/
+=======
+/*!*******************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/array-iteration.js ***!
+  \*******************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -211,9 +253,15 @@ module.exports = {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/array-species-create.js":
+<<<<<<< HEAD
 /*!*******************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/array-species-create.js ***!
   \*******************************************************************************************************/
+=======
+/*!************************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/array-species-create.js ***!
+  \************************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -242,9 +290,15 @@ module.exports = function (originalArray, length) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/call-with-safe-iteration-closing.js":
+<<<<<<< HEAD
 /*!*******************************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/call-with-safe-iteration-closing.js ***!
   \*******************************************************************************************************************/
+=======
+/*!************************************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/call-with-safe-iteration-closing.js ***!
+  \************************************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -266,9 +320,15 @@ module.exports = function (iterator, fn, value, ENTRIES) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/check-correctness-of-iteration.js":
+<<<<<<< HEAD
 /*!*****************************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/check-correctness-of-iteration.js ***!
   \*****************************************************************************************************************/
+=======
+/*!**********************************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/check-correctness-of-iteration.js ***!
+  \**********************************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -315,9 +375,15 @@ module.exports = function (exec, SKIP_CLOSING) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/classof-raw.js":
+<<<<<<< HEAD
 /*!**********************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/classof-raw.js ***!
   \**********************************************************************************************/
+=======
+/*!***************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/classof-raw.js ***!
+  \***************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -331,9 +397,15 @@ module.exports = function (it) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/classof.js":
+<<<<<<< HEAD
 /*!******************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/classof.js ***!
   \******************************************************************************************/
+=======
+/*!***********************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/classof.js ***!
+  \***********************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -368,9 +440,15 @@ module.exports = TO_STRING_TAG_SUPPORT ? classofRaw : function (it) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/collection-strong.js":
+<<<<<<< HEAD
 /*!****************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/collection-strong.js ***!
   \****************************************************************************************************/
+=======
+/*!*********************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/collection-strong.js ***!
+  \*********************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -566,9 +644,15 @@ module.exports = {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/collection-weak.js":
+<<<<<<< HEAD
 /*!**************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/collection-weak.js ***!
   \**************************************************************************************************/
+=======
+/*!*******************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/collection-weak.js ***!
+  \*******************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -699,9 +783,15 @@ module.exports = {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/collection.js":
+<<<<<<< HEAD
 /*!*********************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/collection.js ***!
   \*********************************************************************************************/
+=======
+/*!**************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/collection.js ***!
+  \**************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -810,9 +900,15 @@ module.exports = function (CONSTRUCTOR_NAME, wrapper, common) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/copy-constructor-properties.js":
+<<<<<<< HEAD
 /*!**************************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/copy-constructor-properties.js ***!
   \**************************************************************************************************************/
+=======
+/*!*******************************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/copy-constructor-properties.js ***!
+  \*******************************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -835,9 +931,15 @@ module.exports = function (target, source) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/correct-prototype-getter.js":
+<<<<<<< HEAD
 /*!***********************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/correct-prototype-getter.js ***!
   \***********************************************************************************************************/
+=======
+/*!****************************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/correct-prototype-getter.js ***!
+  \****************************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -853,9 +955,15 @@ module.exports = !fails(function () {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/create-iterator-constructor.js":
+<<<<<<< HEAD
 /*!**************************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/create-iterator-constructor.js ***!
   \**************************************************************************************************************/
+=======
+/*!*******************************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/create-iterator-constructor.js ***!
+  \*******************************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -881,9 +989,15 @@ module.exports = function (IteratorConstructor, NAME, next) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/create-non-enumerable-property.js":
+<<<<<<< HEAD
 /*!*****************************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/create-non-enumerable-property.js ***!
   \*****************************************************************************************************************/
+=======
+/*!**********************************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/create-non-enumerable-property.js ***!
+  \**********************************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -902,9 +1016,15 @@ module.exports = DESCRIPTORS ? function (object, key, value) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/create-property-descriptor.js":
+<<<<<<< HEAD
 /*!*************************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/create-property-descriptor.js ***!
   \*************************************************************************************************************/
+=======
+/*!******************************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/create-property-descriptor.js ***!
+  \******************************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -921,9 +1041,15 @@ module.exports = function (bitmap, value) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/define-iterator.js":
+<<<<<<< HEAD
 /*!**************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/define-iterator.js ***!
   \**************************************************************************************************/
+=======
+/*!*******************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/define-iterator.js ***!
+  \*******************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1023,9 +1149,15 @@ module.exports = function (Iterable, NAME, IteratorConstructor, next, DEFAULT, I
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/descriptors.js":
+<<<<<<< HEAD
 /*!**********************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/descriptors.js ***!
   \**********************************************************************************************/
+=======
+/*!***************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/descriptors.js ***!
+  \***************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1040,9 +1172,15 @@ module.exports = !fails(function () {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/document-create-element.js":
+<<<<<<< HEAD
 /*!**********************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/document-create-element.js ***!
   \**********************************************************************************************************/
+=======
+/*!***************************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/document-create-element.js ***!
+  \***************************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1061,9 +1199,15 @@ module.exports = function (it) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/enum-bug-keys.js":
+<<<<<<< HEAD
 /*!************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/enum-bug-keys.js ***!
   \************************************************************************************************/
+=======
+/*!*****************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/enum-bug-keys.js ***!
+  \*****************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1082,9 +1226,15 @@ module.exports = [
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/export.js":
+<<<<<<< HEAD
 /*!*****************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/export.js ***!
   \*****************************************************************************************/
+=======
+/*!**********************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/export.js ***!
+  \**********************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1147,9 +1297,15 @@ module.exports = function (options, source) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/fails.js":
+<<<<<<< HEAD
 /*!****************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/fails.js ***!
   \****************************************************************************************/
+=======
+/*!*********************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/fails.js ***!
+  \*********************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1165,9 +1321,15 @@ module.exports = function (exec) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/freezing.js":
+<<<<<<< HEAD
 /*!*******************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/freezing.js ***!
   \*******************************************************************************************/
+=======
+/*!************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/freezing.js ***!
+  \************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1181,9 +1343,15 @@ module.exports = !fails(function () {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/function-bind-context.js":
+<<<<<<< HEAD
 /*!********************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/function-bind-context.js ***!
   \********************************************************************************************************/
+=======
+/*!*************************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/function-bind-context.js ***!
+  \*************************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1216,9 +1384,15 @@ module.exports = function (fn, that, length) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/get-built-in.js":
+<<<<<<< HEAD
 /*!***********************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/get-built-in.js ***!
   \***********************************************************************************************/
+=======
+/*!****************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/get-built-in.js ***!
+  \****************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1238,9 +1412,15 @@ module.exports = function (namespace, method) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/get-iterator-method.js":
+<<<<<<< HEAD
 /*!******************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/get-iterator-method.js ***!
   \******************************************************************************************************/
+=======
+/*!***********************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/get-iterator-method.js ***!
+  \***********************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1260,9 +1440,15 @@ module.exports = function (it) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/global.js":
+<<<<<<< HEAD
 /*!*****************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/global.js ***!
   \*****************************************************************************************/
+=======
+/*!**********************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/global.js ***!
+  \**********************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1284,9 +1470,15 @@ module.exports =
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/has.js":
+<<<<<<< HEAD
 /*!**************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/has.js ***!
   \**************************************************************************************/
+=======
+/*!*******************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/has.js ***!
+  \*******************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1300,9 +1492,15 @@ module.exports = function (it, key) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/hidden-keys.js":
+<<<<<<< HEAD
 /*!**********************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/hidden-keys.js ***!
   \**********************************************************************************************/
+=======
+/*!***************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/hidden-keys.js ***!
+  \***************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1312,9 +1510,15 @@ module.exports = {};
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/html.js":
+<<<<<<< HEAD
 /*!***************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/html.js ***!
   \***************************************************************************************/
+=======
+/*!********************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/html.js ***!
+  \********************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1326,9 +1530,15 @@ module.exports = getBuiltIn('document', 'documentElement');
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/ie8-dom-define.js":
+<<<<<<< HEAD
 /*!*************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/ie8-dom-define.js ***!
   \*************************************************************************************************/
+=======
+/*!******************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/ie8-dom-define.js ***!
+  \******************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1347,9 +1557,15 @@ module.exports = !DESCRIPTORS && !fails(function () {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/indexed-object.js":
+<<<<<<< HEAD
 /*!*************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/indexed-object.js ***!
   \*************************************************************************************************/
+=======
+/*!******************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/indexed-object.js ***!
+  \******************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1371,9 +1587,15 @@ module.exports = fails(function () {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/inherit-if-required.js":
+<<<<<<< HEAD
 /*!******************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/inherit-if-required.js ***!
   \******************************************************************************************************/
+=======
+/*!***********************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/inherit-if-required.js ***!
+  \***********************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1399,9 +1621,15 @@ module.exports = function ($this, dummy, Wrapper) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/inspect-source.js":
+<<<<<<< HEAD
 /*!*************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/inspect-source.js ***!
   \*************************************************************************************************/
+=======
+/*!******************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/inspect-source.js ***!
+  \******************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1422,9 +1650,15 @@ module.exports = store.inspectSource;
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/internal-metadata.js":
+<<<<<<< HEAD
 /*!****************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/internal-metadata.js ***!
   \****************************************************************************************************/
+=======
+/*!*********************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/internal-metadata.js ***!
+  \*********************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1494,9 +1728,15 @@ hiddenKeys[METADATA] = true;
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/internal-state.js":
+<<<<<<< HEAD
 /*!*************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/internal-state.js ***!
   \*************************************************************************************************/
+=======
+/*!******************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/internal-state.js ***!
+  \******************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1566,9 +1806,15 @@ module.exports = {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/is-array-iterator-method.js":
+<<<<<<< HEAD
 /*!***********************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/is-array-iterator-method.js ***!
   \***********************************************************************************************************/
+=======
+/*!****************************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/is-array-iterator-method.js ***!
+  \****************************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1587,9 +1833,15 @@ module.exports = function (it) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/is-array.js":
+<<<<<<< HEAD
 /*!*******************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/is-array.js ***!
   \*******************************************************************************************/
+=======
+/*!************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/is-array.js ***!
+  \************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1605,9 +1857,15 @@ module.exports = Array.isArray || function isArray(arg) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/is-forced.js":
+<<<<<<< HEAD
 /*!********************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/is-forced.js ***!
   \********************************************************************************************/
+=======
+/*!*************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/is-forced.js ***!
+  \*************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1637,9 +1895,15 @@ module.exports = isForced;
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/is-object.js":
+<<<<<<< HEAD
 /*!********************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/is-object.js ***!
   \********************************************************************************************/
+=======
+/*!*************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/is-object.js ***!
+  \*************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1651,9 +1915,15 @@ module.exports = function (it) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/is-pure.js":
+<<<<<<< HEAD
 /*!******************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/is-pure.js ***!
   \******************************************************************************************/
+=======
+/*!***********************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/is-pure.js ***!
+  \***********************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1663,9 +1933,15 @@ module.exports = false;
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/iterate.js":
+<<<<<<< HEAD
 /*!******************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/iterate.js ***!
   \******************************************************************************************/
+=======
+/*!***********************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/iterate.js ***!
+  \***********************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1717,9 +1993,15 @@ iterate.stop = function (result) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/iterators-core.js":
+<<<<<<< HEAD
 /*!*************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/iterators-core.js ***!
   \*************************************************************************************************/
+=======
+/*!******************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/iterators-core.js ***!
+  \******************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1766,9 +2048,15 @@ module.exports = {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/iterators.js":
+<<<<<<< HEAD
 /*!********************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/iterators.js ***!
   \********************************************************************************************/
+=======
+/*!*************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/iterators.js ***!
+  \*************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1778,9 +2066,15 @@ module.exports = {};
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/native-symbol.js":
+<<<<<<< HEAD
 /*!************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/native-symbol.js ***!
   \************************************************************************************************/
+=======
+/*!*****************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/native-symbol.js ***!
+  \*****************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1796,9 +2090,15 @@ module.exports = !!Object.getOwnPropertySymbols && !fails(function () {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/native-weak-map.js":
+<<<<<<< HEAD
 /*!**************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/native-weak-map.js ***!
   \**************************************************************************************************/
+=======
+/*!*******************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/native-weak-map.js ***!
+  \*******************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1813,9 +2113,15 @@ module.exports = typeof WeakMap === 'function' && /native code/.test(inspectSour
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/object-create.js":
+<<<<<<< HEAD
 /*!************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/object-create.js ***!
   \************************************************************************************************/
+=======
+/*!*****************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/object-create.js ***!
+  \*****************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1902,9 +2208,15 @@ module.exports = Object.create || function create(O, Properties) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/object-define-properties.js":
+<<<<<<< HEAD
 /*!***********************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/object-define-properties.js ***!
   \***********************************************************************************************************/
+=======
+/*!****************************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/object-define-properties.js ***!
+  \****************************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1929,9 +2241,15 @@ module.exports = DESCRIPTORS ? Object.defineProperties : function defineProperti
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/object-define-property.js":
+<<<<<<< HEAD
 /*!*********************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/object-define-property.js ***!
   \*********************************************************************************************************/
+=======
+/*!**************************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/object-define-property.js ***!
+  \**************************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1960,9 +2278,15 @@ exports.f = DESCRIPTORS ? nativeDefineProperty : function defineProperty(O, P, A
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/object-get-own-property-descriptor.js":
+<<<<<<< HEAD
 /*!*********************************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/object-get-own-property-descriptor.js ***!
   \*********************************************************************************************************************/
+=======
+/*!**************************************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/object-get-own-property-descriptor.js ***!
+  \**************************************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1991,9 +2315,15 @@ exports.f = DESCRIPTORS ? nativeGetOwnPropertyDescriptor : function getOwnProper
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/object-get-own-property-names.js":
+<<<<<<< HEAD
 /*!****************************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/object-get-own-property-names.js ***!
   \****************************************************************************************************************/
+=======
+/*!*********************************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/object-get-own-property-names.js ***!
+  \*********************************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2012,9 +2342,15 @@ exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/object-get-own-property-symbols.js":
+<<<<<<< HEAD
 /*!******************************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/object-get-own-property-symbols.js ***!
   \******************************************************************************************************************/
+=======
+/*!***********************************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/object-get-own-property-symbols.js ***!
+  \***********************************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2024,9 +2360,15 @@ exports.f = Object.getOwnPropertySymbols;
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/object-get-prototype-of.js":
+<<<<<<< HEAD
 /*!**********************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/object-get-prototype-of.js ***!
   \**********************************************************************************************************/
+=======
+/*!***************************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/object-get-prototype-of.js ***!
+  \***************************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2052,9 +2394,15 @@ module.exports = CORRECT_PROTOTYPE_GETTER ? Object.getPrototypeOf : function (O)
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/object-keys-internal.js":
+<<<<<<< HEAD
 /*!*******************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/object-keys-internal.js ***!
   \*******************************************************************************************************/
+=======
+/*!************************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/object-keys-internal.js ***!
+  \************************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2080,9 +2428,15 @@ module.exports = function (object, names) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/object-keys.js":
+<<<<<<< HEAD
 /*!**********************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/object-keys.js ***!
   \**********************************************************************************************/
+=======
+/*!***************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/object-keys.js ***!
+  \***************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2099,9 +2453,15 @@ module.exports = Object.keys || function keys(O) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/object-property-is-enumerable.js":
+<<<<<<< HEAD
 /*!****************************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/object-property-is-enumerable.js ***!
   \****************************************************************************************************************/
+=======
+/*!*********************************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/object-property-is-enumerable.js ***!
+  \*********************************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2124,9 +2484,15 @@ exports.f = NASHORN_BUG ? function propertyIsEnumerable(V) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/object-set-prototype-of.js":
+<<<<<<< HEAD
 /*!**********************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/object-set-prototype-of.js ***!
   \**********************************************************************************************************/
+=======
+/*!***************************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/object-set-prototype-of.js ***!
+  \***************************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2159,9 +2525,15 @@ module.exports = Object.setPrototypeOf || ('__proto__' in {} ? function () {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/own-keys.js":
+<<<<<<< HEAD
 /*!*******************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/own-keys.js ***!
   \*******************************************************************************************/
+=======
+/*!************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/own-keys.js ***!
+  \************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2181,9 +2553,15 @@ module.exports = getBuiltIn('Reflect', 'ownKeys') || function ownKeys(it) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/path.js":
+<<<<<<< HEAD
 /*!***************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/path.js ***!
   \***************************************************************************************/
+=======
+/*!********************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/path.js ***!
+  \********************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2195,9 +2573,15 @@ module.exports = global;
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/redefine-all.js":
+<<<<<<< HEAD
 /*!***********************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/redefine-all.js ***!
   \***********************************************************************************************/
+=======
+/*!****************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/redefine-all.js ***!
+  \****************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2212,9 +2596,15 @@ module.exports = function (target, src, options) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/redefine.js":
+<<<<<<< HEAD
 /*!*******************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/redefine.js ***!
   \*******************************************************************************************/
+=======
+/*!************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/redefine.js ***!
+  \************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2257,9 +2647,15 @@ var TEMPLATE = String(String).split('String');
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/reflect-metadata.js":
+<<<<<<< HEAD
 /*!***************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/reflect-metadata.js ***!
   \***************************************************************************************************/
+=======
+/*!********************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/reflect-metadata.js ***!
+  \********************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2323,9 +2719,15 @@ module.exports = {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/require-object-coercible.js":
+<<<<<<< HEAD
 /*!***********************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/require-object-coercible.js ***!
   \***********************************************************************************************************/
+=======
+/*!****************************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/require-object-coercible.js ***!
+  \****************************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2340,9 +2742,15 @@ module.exports = function (it) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/set-global.js":
+<<<<<<< HEAD
 /*!*********************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/set-global.js ***!
   \*********************************************************************************************/
+=======
+/*!**************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/set-global.js ***!
+  \**************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2361,9 +2769,15 @@ module.exports = function (key, value) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/set-species.js":
+<<<<<<< HEAD
 /*!**********************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/set-species.js ***!
   \**********************************************************************************************/
+=======
+/*!***************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/set-species.js ***!
+  \***************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2392,9 +2806,15 @@ module.exports = function (CONSTRUCTOR_NAME) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/set-to-string-tag.js":
+<<<<<<< HEAD
 /*!****************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/set-to-string-tag.js ***!
   \****************************************************************************************************/
+=======
+/*!*********************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/set-to-string-tag.js ***!
+  \*********************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2414,9 +2834,15 @@ module.exports = function (it, TAG, STATIC) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/shared-key.js":
+<<<<<<< HEAD
 /*!*********************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/shared-key.js ***!
   \*********************************************************************************************/
+=======
+/*!**************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/shared-key.js ***!
+  \**************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2433,9 +2859,15 @@ module.exports = function (key) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/shared-store.js":
+<<<<<<< HEAD
 /*!***********************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/shared-store.js ***!
   \***********************************************************************************************/
+=======
+/*!****************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/shared-store.js ***!
+  \****************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2451,9 +2883,15 @@ module.exports = store;
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/shared.js":
+<<<<<<< HEAD
 /*!*****************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/shared.js ***!
   \*****************************************************************************************/
+=======
+/*!**********************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/shared.js ***!
+  \**********************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2472,9 +2910,15 @@ var store = __webpack_require__(/*! ../internals/shared-store */ "../../node_mod
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/to-absolute-index.js":
+<<<<<<< HEAD
 /*!****************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/to-absolute-index.js ***!
   \****************************************************************************************************/
+=======
+/*!*********************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/to-absolute-index.js ***!
+  \*********************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2495,9 +2939,15 @@ module.exports = function (index, length) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/to-indexed-object.js":
+<<<<<<< HEAD
 /*!****************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/to-indexed-object.js ***!
   \****************************************************************************************************/
+=======
+/*!*********************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/to-indexed-object.js ***!
+  \*********************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2513,9 +2963,15 @@ module.exports = function (it) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/to-integer.js":
+<<<<<<< HEAD
 /*!*********************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/to-integer.js ***!
   \*********************************************************************************************/
+=======
+/*!**************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/to-integer.js ***!
+  \**************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2532,9 +2988,15 @@ module.exports = function (argument) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/to-length.js":
+<<<<<<< HEAD
 /*!********************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/to-length.js ***!
   \********************************************************************************************/
+=======
+/*!*************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/to-length.js ***!
+  \*************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2552,9 +3014,15 @@ module.exports = function (argument) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/to-object.js":
+<<<<<<< HEAD
 /*!********************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/to-object.js ***!
   \********************************************************************************************/
+=======
+/*!*************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/to-object.js ***!
+  \*************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2570,9 +3038,15 @@ module.exports = function (argument) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/to-primitive.js":
+<<<<<<< HEAD
 /*!***********************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/to-primitive.js ***!
   \***********************************************************************************************/
+=======
+/*!****************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/to-primitive.js ***!
+  \****************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2595,9 +3069,15 @@ module.exports = function (input, PREFERRED_STRING) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/to-string-tag-support.js":
+<<<<<<< HEAD
 /*!********************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/to-string-tag-support.js ***!
   \********************************************************************************************************/
+=======
+/*!*************************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/to-string-tag-support.js ***!
+  \*************************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2614,9 +3094,15 @@ module.exports = String(test) === '[object z]';
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/uid.js":
+<<<<<<< HEAD
 /*!**************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/uid.js ***!
   \**************************************************************************************/
+=======
+/*!*******************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/uid.js ***!
+  \*******************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2631,9 +3117,15 @@ module.exports = function (key) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/use-symbol-as-uid.js":
+<<<<<<< HEAD
 /*!****************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/use-symbol-as-uid.js ***!
   \****************************************************************************************************/
+=======
+/*!*********************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/use-symbol-as-uid.js ***!
+  \*********************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2649,9 +3141,15 @@ module.exports = NATIVE_SYMBOL
 /***/ }),
 
 /***/ "../../node_modules/core-js/internals/well-known-symbol.js":
+<<<<<<< HEAD
 /*!****************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/well-known-symbol.js ***!
   \****************************************************************************************************/
+=======
+/*!*********************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/well-known-symbol.js ***!
+  \*********************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2677,9 +3175,15 @@ module.exports = function (name) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/modules/es.map.js":
+<<<<<<< HEAD
 /*!***************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.map.js ***!
   \***************************************************************************************/
+=======
+/*!********************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.map.js ***!
+  \********************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2698,9 +3202,15 @@ module.exports = collection('Map', function (init) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/modules/es.set.js":
+<<<<<<< HEAD
 /*!***************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.set.js ***!
   \***************************************************************************************/
+=======
+/*!********************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.set.js ***!
+  \********************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2719,9 +3229,15 @@ module.exports = collection('Set', function (init) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/modules/es.weak-map.js":
+<<<<<<< HEAD
 /*!********************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.weak-map.js ***!
   \********************************************************************************************/
+=======
+/*!*************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.weak-map.js ***!
+  \*************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2798,9 +3314,15 @@ if (NATIVE_WEAK_MAP && IS_IE11) {
 /***/ }),
 
 /***/ "../../node_modules/core-js/modules/esnext.reflect.define-metadata.js":
+<<<<<<< HEAD
 /*!***************************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/esnext.reflect.define-metadata.js ***!
   \***************************************************************************************************************/
+=======
+/*!********************************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/esnext.reflect.define-metadata.js ***!
+  \********************************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2824,9 +3346,15 @@ $({ target: 'Reflect', stat: true }, {
 /***/ }),
 
 /***/ "../../node_modules/core-js/modules/esnext.reflect.delete-metadata.js":
+<<<<<<< HEAD
 /*!***************************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/esnext.reflect.delete-metadata.js ***!
   \***************************************************************************************************************/
+=======
+/*!********************************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/esnext.reflect.delete-metadata.js ***!
+  \********************************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2856,9 +3384,15 @@ $({ target: 'Reflect', stat: true }, {
 /***/ }),
 
 /***/ "../../node_modules/core-js/modules/esnext.reflect.get-metadata-keys.js":
+<<<<<<< HEAD
 /*!*****************************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/esnext.reflect.get-metadata-keys.js ***!
   \*****************************************************************************************************************/
+=======
+/*!**********************************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/esnext.reflect.get-metadata-keys.js ***!
+  \**********************************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2900,9 +3434,15 @@ $({ target: 'Reflect', stat: true }, {
 /***/ }),
 
 /***/ "../../node_modules/core-js/modules/esnext.reflect.get-metadata.js":
+<<<<<<< HEAD
 /*!************************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/esnext.reflect.get-metadata.js ***!
   \************************************************************************************************************/
+=======
+/*!*****************************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/esnext.reflect.get-metadata.js ***!
+  \*****************************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2935,9 +3475,15 @@ $({ target: 'Reflect', stat: true }, {
 /***/ }),
 
 /***/ "../../node_modules/core-js/modules/esnext.reflect.get-own-metadata-keys.js":
+<<<<<<< HEAD
 /*!*********************************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/esnext.reflect.get-own-metadata-keys.js ***!
   \*********************************************************************************************************************/
+=======
+/*!**************************************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/esnext.reflect.get-own-metadata-keys.js ***!
+  \**************************************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2961,9 +3507,15 @@ $({ target: 'Reflect', stat: true }, {
 /***/ }),
 
 /***/ "../../node_modules/core-js/modules/esnext.reflect.get-own-metadata.js":
+<<<<<<< HEAD
 /*!****************************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/esnext.reflect.get-own-metadata.js ***!
   \****************************************************************************************************************/
+=======
+/*!*********************************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/esnext.reflect.get-own-metadata.js ***!
+  \*********************************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2987,9 +3539,15 @@ $({ target: 'Reflect', stat: true }, {
 /***/ }),
 
 /***/ "../../node_modules/core-js/modules/esnext.reflect.has-metadata.js":
+<<<<<<< HEAD
 /*!************************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/esnext.reflect.has-metadata.js ***!
   \************************************************************************************************************/
+=======
+/*!*****************************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/esnext.reflect.has-metadata.js ***!
+  \*****************************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3021,9 +3579,15 @@ $({ target: 'Reflect', stat: true }, {
 /***/ }),
 
 /***/ "../../node_modules/core-js/modules/esnext.reflect.has-own-metadata.js":
+<<<<<<< HEAD
 /*!****************************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/esnext.reflect.has-own-metadata.js ***!
   \****************************************************************************************************************/
+=======
+/*!*********************************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/esnext.reflect.has-own-metadata.js ***!
+  \*********************************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3047,9 +3611,15 @@ $({ target: 'Reflect', stat: true }, {
 /***/ }),
 
 /***/ "../../node_modules/core-js/modules/esnext.reflect.metadata.js":
+<<<<<<< HEAD
 /*!********************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/esnext.reflect.metadata.js ***!
   \********************************************************************************************************/
+=======
+/*!*************************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/esnext.reflect.metadata.js ***!
+  \*************************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3074,9 +3644,15 @@ $({ target: 'Reflect', stat: true }, {
 /***/ }),
 
 /***/ "../../node_modules/core-js/proposals/reflect-metadata.js":
+<<<<<<< HEAD
 /*!***************************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/proposals/reflect-metadata.js ***!
   \***************************************************************************************************/
+=======
+/*!********************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/proposals/reflect-metadata.js ***!
+  \********************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3094,9 +3670,15 @@ __webpack_require__(/*! ../modules/esnext.reflect.metadata */ "../../node_module
 /***/ }),
 
 /***/ "../../node_modules/tslib/tslib.es6.js":
+<<<<<<< HEAD
 /*!********************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/tslib/tslib.es6.js ***!
   \********************************************************************************/
+=======
+/*!*************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/tslib/tslib.es6.js ***!
+  \*************************************************************************/
+>>>>>>> feature/profile-view
 /*! exports provided: __extends, __assign, __rest, __decorate, __param, __metadata, __awaiter, __generator, __exportStar, __values, __read, __spread, __spreadArrays, __await, __asyncGenerator, __asyncDelegator, __asyncValues, __makeTemplateObject, __importStar, __importDefault */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -3323,9 +3905,15 @@ function __importDefault(mod) {
 /***/ }),
 
 /***/ "../../node_modules/zone.js/dist/zone-evergreen.js":
+<<<<<<< HEAD
 /*!********************************************************************************************!*\
   !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/zone.js/dist/zone-evergreen.js ***!
   \********************************************************************************************/
+=======
+/*!*************************************************************************************!*\
+  !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/zone.js/dist/zone-evergreen.js ***!
+  \*************************************************************************************/
+>>>>>>> feature/profile-view
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -6460,6 +7048,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 2:
+<<<<<<< HEAD
 /*!******************************************************************************************************************************************************************!*\
   !*** multi ./src/polyfills.ts C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js ***!
   \******************************************************************************************************************************************************************/
@@ -6468,6 +7057,16 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__(/*! C:\Users\Reaper\Desktop\gp new\HariBnEla\apps\frontEnd\src\polyfills.ts */"./src/polyfills.ts");
 module.exports = __webpack_require__(/*! C:\Users\Reaper\Desktop\gp new\HariBnEla\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\jit-polyfills.js */"../../node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js");
+=======
+/*!***********************************************************************************************************************************************************!*\
+  !*** multi ./src/polyfills.ts D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js ***!
+  \***********************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! D:\PROJECT\vscode\GROUP\HariBnEla\apps\frontEnd\src\polyfills.ts */"./src/polyfills.ts");
+module.exports = __webpack_require__(/*! D:\PROJECT\vscode\GROUP\HariBnEla\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\jit-polyfills.js */"../../node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js");
+>>>>>>> feature/profile-view
 
 
 /***/ })

@@ -14,7 +14,6 @@ import { UserService } from '../../data/services/user.service';
   styleUrls: ['./report.component.scss']
 })
 export class ReportComponent implements OnInit {
-
   @Input() path: number;
   @Input() reportedPostId: string;
   @Input() reportedUserId: string;
@@ -30,8 +29,8 @@ export class ReportComponent implements OnInit {
     private reportUserDialog: MatDialog,
     private reportPostDialog: MatDialog,
     private reportService: ReportService,
-    private userService: UserService,
-    ) { }
+    private userService: UserService
+  ) {}
 
   ngOnInit() {
     this.user = this.userService.getUserData();
@@ -47,7 +46,7 @@ export class ReportComponent implements OnInit {
       width: '500px',
       data: {
         path: this.path,
-        user: this.user === null ? null : this.user,
+        user: this.user === null ? null : this.user
       }
     });
 
@@ -60,12 +59,16 @@ export class ReportComponent implements OnInit {
   }
 
   resetPassword(): void {
-    const resetPasswordDialogRef = this.resetPasswordDialog.open(ResetPasswordComponent, {
-      width: '400px', height: '30em',
-      data: {
-        path: this.path,
-       }
-    });
+    const resetPasswordDialogRef = this.resetPasswordDialog.open(
+      ResetPasswordComponent,
+      {
+        width: '400px',
+        height: '30em',
+        data: {
+          path: this.path
+        }
+      }
+    );
 
     resetPasswordDialogRef.afterClosed().subscribe(result => {
       if (result != null) {
@@ -76,16 +79,19 @@ export class ReportComponent implements OnInit {
   }
 
   reportPost(): void {
-    const reportPostDialogRef = this.reportPostDialog.open(ReportPostComponent, {
-      width: '500px',
-      data: {
-        path: this.path,
-        user: this.user === null ? null : this.user,
-        reportedPostId: this.reportedPostId,
-        reportedUserId: this.reportedUserId,
-        reportedUserName: this.reportedUserName
-       }
-    });
+    const reportPostDialogRef = this.reportPostDialog.open(
+      ReportPostComponent,
+      {
+        width: '500px',
+        data: {
+          path: this.path,
+          user: this.user === null ? null : this.user,
+          reportedPostId: this.reportedPostId,
+          reportedUserId: this.reportedUserId,
+          reportedUserName: this.reportedUserName
+        }
+      }
+    );
 
     reportPostDialogRef.afterClosed().subscribe(result => {
       if (result != null) {
@@ -94,22 +100,25 @@ export class ReportComponent implements OnInit {
     });
   }
   reportUser(): void {
-    const reportUserDialogRef = this.reportUserDialog.open(ReportUserComponent, {
-      width: '500px',
-      data: {
-        path: this.path,
-        user: this.user === null ? null : this.user,
-        reportedPostId: this.reportedPostId,
-        reportedUserId: this.reportedUserId,
-        reportedUserName: this.reportedUserName
-       }
-    });
+    const reportUserDialogRef = this.reportUserDialog.open(
+      ReportUserComponent,
+      {
+        width: '500px',
+        data: {
+          path: this.path,
+          user: this.user === null ? null : this.user,
+          reportedPostId: this.reportedPostId,
+          reportedUserId: this.reportedUserId,
+          reportedUserName: this.reportedUserName
+        }
+      }
+    );
 
     reportUserDialogRef.afterClosed().subscribe(result => {
       if (result != null) {
+        console.log(result);
         this.reportService.sendReportUser(result);
       }
     });
   }
-
 }

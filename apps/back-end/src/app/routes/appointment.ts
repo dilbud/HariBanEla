@@ -680,6 +680,7 @@ appointmentRouter.post('/new', async function(req, res, next) {
 appointmentRouter.post('/accept/:id', async function(req, res, next) {
   try {
     const appointment = await Appointment.findById(req.params.id);
+    console.log(req.body);
     if (req.body.status == 'Accepted') {
       appointment.status = 'Accepted';
       appointment.paymentUrl =
@@ -2765,7 +2766,7 @@ appointmentRouter.post('/payment/:id', async function(req, res, next) {
         `200 - Email has been Sent to Professional. -  ${req.originalUrl} - ${req.method} - ${req.ip}`
       );
     });
-    res.json({ success: true, msg: 'Email has been Sent.' });
+    res.json(appointment);
   } catch (error) {
     winston.error(
       `${error.status || 500} - ${error.message} - ${req.originalUrl} - ${

@@ -1,9 +1,10 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UserService } from 'app/data/services/user.service';
-import { ActivatedRoute, Params , Router } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { AlertService } from 'app/data/services/alert.service';
-import {AppointmentService} from 'app/data/services/appointment.service'
+import { AppointmentService } from 'app/data/services/appointment.service';
+import { CategoryService } from 'app/data/services/category.service';
 
 @Component({
   selector: 'app-profile',
@@ -21,7 +22,8 @@ export class ProfileComponent implements OnInit {
     private appointmentService: AppointmentService,
     private route: ActivatedRoute,
     private alertService: AlertService,
-    private router: Router
+    private router: Router,
+    private categoryService: CategoryService
   ) {}
 
   ngOnInit() {
@@ -40,11 +42,16 @@ export class ProfileComponent implements OnInit {
   }
   public show() {
     if (this.toggle) {
-      this.router.navigate(['edit'], { queryParams: { id: this.id, type: this.type} , relativeTo: this.route });
+      this.router.navigate(['edit'], {
+        queryParams: { id: this.id, type: this.type },
+        relativeTo: this.route
+      });
     } else {
-      this.router.navigate(['account'], { queryParams: { id: this.id, type: this.type} });
+      this.router.navigate(['account'], {
+        queryParams: { id: this.id, type: this.type }
+      });
     }
-    this.toggle = this.toggle ? false : true ; // home and edit icon
+    this.toggle = this.toggle ? false : true; // home and edit icon
   }
 
   public getUserType() {
@@ -66,7 +73,7 @@ export class ProfileComponent implements OnInit {
       this.userService.getAuthStatusListener().subscribe((isAuth: boolean) => {
         this.user = this.userService.getUserData();
       });
-    } else if ( this.type === 'pro') {
+    } else if (this.type === 'pro') {
       let res: any;
       this.userService.getProProfile(this.id).subscribe(
         response => {

@@ -1,4 +1,4 @@
-import { } from '@angular/core';
+import {} from '@angular/core';
 import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
@@ -9,7 +9,13 @@ import { VerifyProService } from '../../data/services/verify-pro.service';
 import { ServerData } from '../../data/models/serverData';
 import { Router } from '@angular/router';
 import { AlertService } from 'app/data/services/alert.service';
-import { animate, state, style, transition, trigger } from '@angular/animations';
+import {
+  animate,
+  state,
+  style,
+  transition,
+  trigger
+} from '@angular/animations';
 import { QuestionService } from '../../data/services/question.service';
 
 export interface Field {
@@ -33,12 +39,14 @@ export interface RowData {
     trigger('detailExpand', [
       state('collapsed', style({ height: '0px', minHeight: '0' })),
       state('expanded', style({ height: '*' })),
-      transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
-    ]),
-  ],
+      transition(
+        'expanded <=> collapsed',
+        animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')
+      )
+    ])
+  ]
 })
 export class ViewQuestionsComponent implements OnInit {
-
   @Input() user: ServerData;
   list: any;
   sorted: any[] = [];
@@ -59,14 +67,14 @@ export class ViewQuestionsComponent implements OnInit {
     private userService: UserService,
     private categoryService: CategoryService,
     private verifyProService: VerifyProService
-  ) { }
+  ) {}
 
   ngOnInit() {
     this.questionService.getQuestionsOfUser(this.user.id).subscribe(
       result => {
         this.list = result;
       },
-      err => { },
+      err => {},
       () => {
         this.sorted = this.list.sort((a: any, b: any) => {
           return Date.parse(b.createdAt) - Date.parse(a.createdAt);
@@ -76,7 +84,7 @@ export class ViewQuestionsComponent implements OnInit {
           let singleUser: RowData = {
             no: (index + 1).toString(),
             cat: val.category,
-            title: val.title ,
+            title: val.title,
             date: this.formatDate(val.createdAt.toString()),
             row: val
           };
@@ -85,7 +93,8 @@ export class ViewQuestionsComponent implements OnInit {
         this.dataSource = new MatTableDataSource(this.allUserTable);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
-      });
+      }
+    );
   }
 
   formatDate(date: string) {
@@ -97,7 +106,7 @@ export class ViewQuestionsComponent implements OnInit {
       month = '0' + month;
     }
     if (day.length < 2) {
-            day = '0' + day;
+      day = '0' + day;
     }
     return [year, month, day].join('-');
   }
@@ -114,41 +123,8 @@ export class ViewQuestionsComponent implements OnInit {
       this.dataSource.paginator.firstPage();
     }
   }
-
-  accept(val: any) {
-    this.verifyProService.acceptPro(val._id);
-    console.log(val);
-    this.ngOnInit();
-  }
-
-  reject(val: any) {
-    this.verifyProService.rejectPro(val._id);
-    console.log(val);
-  }
 }
 
-
-
-
-
-
-
-
-
 export class VerificationsComponent implements OnInit {
-
-
-
-
-
-
-
-  ngOnInit() {
-
-  }
-
-
-
-
-
+  ngOnInit() {}
 }

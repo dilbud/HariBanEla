@@ -9,7 +9,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./reset-password.component.scss']
 })
 export class ResetPasswordComponent implements OnInit {
-
   private reportData: ReportData;
   reset: FormGroup;
 
@@ -17,7 +16,7 @@ export class ResetPasswordComponent implements OnInit {
     private formBuilder: FormBuilder,
     public dialogRef: MatDialogRef<ResetPasswordComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
-  ) { }
+  ) {}
 
   ngOnInit() {
     this.reset = this.formBuilder.group({

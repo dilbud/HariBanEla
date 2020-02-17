@@ -38,8 +38,6 @@ tr.element-row:not(.expanded-row):active {
   line-height: normal;
 }
 
-
-
 .element-description-attribution {
   opacity: 0.5;
 }
@@ -49,7 +47,8 @@ tr.element-row:not(.expanded-row):active {
   width: 100%;
 }
 
-td, th {
+td,
+th {
   width: 25%;
 }
 
@@ -59,7 +58,6 @@ td, th {
 
 .card {
   width: 100%;
-
 }
 
 .header {
@@ -72,7 +70,6 @@ img {
   height: auto;
   margin-right: 0px;
 }
-
 
 .b {
   margin-top: 20px;
@@ -87,18 +84,15 @@ img {
 .c2 {
   margin-right: 5px;
 }
-.button{
-  background: #48b02c;
-  padding: 1em 4em;
+.button {
   color: #fff;
   width: 20em;
   border: none;
   text-align: center;
   margin: auto;
-    margin-top: 4em !important;
- }
+}
 
- a.editbutt#butticon:hover {
+a.editbutt#butticon:hover {
   background-color: rgba(199, 198, 198, 0.699);
 }
 
@@ -110,8 +104,6 @@ a.editbutt#butticon {
   line-height: 50px;
   width: 56px;
   height: 56px;
-
-
 }
 
 a.editbutt#butticon i.editicon {

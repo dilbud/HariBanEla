@@ -1,6 +1,7 @@
+<div class="button" (click)="toggle ? loginDialog() : null" *ngIf="mode">
+    Login
+</div>
 
-
-<div class="button" >
-    <a  *ngIf="mode"  (click)="toggle ? loginDialog() : null">Login</a>
-    <a  *ngIf="!mode" (click)="logoutDialog()">Logout</a>
+<div class="button" (click)="logoutDialog()" *ngIf="!mode">
+    Logout
 </div>

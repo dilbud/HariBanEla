@@ -40,7 +40,7 @@
           </div>
         </mat-tab>
         <mat-tab  label="Users">
-          <div class=" pt-3">
+          <div class="pv pt-3">
             <app-users></app-users>
           </div>
         </mat-tab>
@@ -62,10 +62,14 @@
   <mat-card class="card p-0 ">
     <mat-tab-group class="profile" id="tab2" mat-align-tabs="center" >
         <mat-tab  label="Questions">
-          <app-view-questions [user]="user"></app-view-questions>
+          <div class="pv pt-3">
+            <app-view-questions [user]="user"></app-view-questions>
+          </div>
         </mat-tab>
         <mat-tab label="Appointments">
-          <app-view-appointments [user]="user" ></app-view-appointments>
+          <div class="pv pt-3">
+            <app-view-appointments [user]="user" ></app-view-appointments>
+          </div>
         </mat-tab>
     </mat-tab-group>
   </mat-card>

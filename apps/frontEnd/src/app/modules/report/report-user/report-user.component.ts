@@ -1,8 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ReportData } from 'app/data/models/reportData';
-import { FormBuilder, FormGroup, Validators  } from '@angular/forms';
-
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-report-user',
@@ -10,7 +9,6 @@ import { FormBuilder, FormGroup, Validators  } from '@angular/forms';
   styleUrls: ['./report-user.component.scss']
 })
 export class ReportUserComponent implements OnInit {
-
   private reportData: ReportData;
   reportUser: FormGroup;
 
@@ -18,11 +16,11 @@ export class ReportUserComponent implements OnInit {
     private formBuilder: FormBuilder,
     public dialogRef: MatDialogRef<ReportUserComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
-    ) {}
+  ) {}
 
   ngOnInit() {
     this.reportUser = this.formBuilder.group({
-      Ctrl_1: [ null, [Validators.required]]
+      Ctrl_1: [null, [Validators.required]]
     });
   }
 
@@ -31,11 +29,11 @@ export class ReportUserComponent implements OnInit {
       content: this.getContent(),
       name: this.getName(),
       email: this.getEmail(),
-      type: 'reportUser' ,
+      type: 'reportUser',
       userId: this.getUserId(),
       reportedPostId: this.data.reportedPostId,
       reportedUserId: this.data.reportedUserId,
-      reportedUserName: this.data.reportedUserName,
+      reportedUserName: this.data.reportedUserName
     };
     this.dialogRef.close(this.reportData);
   }
@@ -66,5 +64,4 @@ export class ReportUserComponent implements OnInit {
       return this.data.user.id;
     }
   }
-
 }

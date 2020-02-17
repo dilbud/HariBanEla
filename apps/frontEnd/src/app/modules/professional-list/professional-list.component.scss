@@ -1,4 +1,4 @@
-div.container.prolist{
+div.container.prolist {
   height: 40vh;
 }
 
@@ -6,11 +6,9 @@ div.container.prolist{
 //   margin-top: 110px  !important;
 // }
 
-
 .prolist .select {
   width: 200px !important;
 }
-
 
 .prolist table {
   width: 100%;
@@ -21,6 +19,7 @@ div.container.prolist{
   width: 100%;
 }
 
-.prolist td, th {
+.prolist td,
+th {
   width: 25%;
 }

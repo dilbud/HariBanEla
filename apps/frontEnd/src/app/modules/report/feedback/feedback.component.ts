@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ReportData } from 'app/data/models/reportData';
-import { FormBuilder, FormGroup, Validators  } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-feedback',
@@ -9,7 +9,6 @@ import { FormBuilder, FormGroup, Validators  } from '@angular/forms';
   styleUrls: ['./feedback.component.scss']
 })
 export class FeedbackComponent implements OnInit {
-
   private reportData: ReportData;
   feedback: FormGroup;
 
@@ -17,25 +16,31 @@ export class FeedbackComponent implements OnInit {
     private formBuilder: FormBuilder,
     public dialogRef: MatDialogRef<FeedbackComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
-    ) {}
+  ) {}
 
   ngOnInit() {
     this.feedback = this.formBuilder.group({
-      Ctrl_1: [ this.data.user === null ? '' : this.data.user.firstName + ' ' + this.data.user.lastName , [Validators.required]],
-      Ctrl_2: [ this.data.user === null ? '' : this.data.user.email , [Validators.required, Validators.email]],
+      Ctrl_1: [
+        this.data.user === null
+          ? ''
+          : this.data.user.firstName + ' ' + this.data.user.lastName,
+        [Validators.required]
+      ],
+      Ctrl_2: [
+        this.data.user === null ? '' : this.data.user.email,
+        [Validators.required, Validators.email]
+      ],
       Ctrl_3: ['', [Validators.required]]
     });
   }
 
-
   submit() {
-
     if (this.feedback.valid) {
       this.reportData = {
         content: this.getContent(),
         name: this.getName(),
         email: this.getEmail(),
-        type: 'feedback' ,
+        type: 'feedback',
         userId: this.getUserId(),
         reportedPostId: 'null',
         reportedUserId: 'null',
@@ -76,5 +81,4 @@ export class FeedbackComponent implements OnInit {
       return this.data.user.id;
     }
   }
-
 }

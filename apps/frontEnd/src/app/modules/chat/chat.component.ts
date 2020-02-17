@@ -43,6 +43,7 @@ export class ChatComponent implements OnInit {
 
   ngOnInit() {
     this.appointmentId = this.route.snapshot.params.id;
+     let items = Array.from({length: 1000}, (v, k) => k + 1);
     this.user = this.userService.getUserData();
     this.userService.getAuthStatusListener().subscribe((isAuth: boolean) => {
       this.user = this.userService.getUserData();

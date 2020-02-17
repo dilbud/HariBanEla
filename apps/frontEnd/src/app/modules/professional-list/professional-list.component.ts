@@ -4,7 +4,8 @@ import {
   Input,
   ViewChild,
   SimpleChanges,
-  OnChanges
+  OnChanges,
+  ChangeDetectorRef
 } from '@angular/core';
 import { ServerData } from '../../data/models/serverData';
 import { UserService } from '../../data/services/user.service';
@@ -54,17 +55,26 @@ export class ProfessionalListComponent implements OnInit {
     private formBuilder: FormBuilder,
     private userService: UserService,
     private alertService: AlertService,
-    private router: Router
+    private router: Router,
+    private changeDetectorRefs: ChangeDetectorRef
   ) {}
 
   ngOnInit() {
     this.proList = [];
     this.filteredList = [];
     this.allUserTable = [];
+    let res1: any;
+    this.category = this.formBuilder.group({
+      Ctrl_1: ['all', [Validators.required]]
+    });
 
     this.categoryService.getAllCategories().subscribe(
       val => {
-        const arryList: any = val.map((v: any) => {
+        res1 = val;
+      },
+      err => {},
+      () => {
+        const arryList: any = res1.map((v: any) => {
           return {
             value: v._id,
             viewValue: v.name
@@ -72,33 +82,42 @@ export class ProfessionalListComponent implements OnInit {
         });
         this.fields = arryList;
         this.fields.push({ value: 'all', viewValue: 'All' });
-      },
-      err => {},
-      () => {}
-    );
-
-    this.category = this.formBuilder.group({
-      Ctrl_1: ['all', [Validators.required]]
-    });
-
-    let res: any;
-    this.userService.getProList().subscribe(
-      response => {
-        res = response;
-      },
-      error => {
-        this.alertService.setAlert('Something wrong !');
-        this.alertService.setAlert(error.error.msg);
-        this.alertService.showAlert();
-      },
-      () => {
-        this.proList = res.serverData;
-        this.filteredList = this.proList;
+        let res2: any;
+        this.userService.getProList().subscribe(
+          response => {
+            res2 = response;
+          },
+          error => {
+            this.alertService.setAlert('Something wrong !');
+            this.alertService.setAlert(error.error.msg);
+            this.alertService.showAlert();
+          },
+          () => {
+            this.proList = res2.serverData;
+            this.proList.forEach((val, index) => {
+              let singleUser: RowData = {
+                no: (index + 1).toString(),
+                name: val.firstName + ' ' + val.lastName,
+                cat: this.fields
+                  .filter((item: Field) => item.value === val.category)
+                  .map((item: Field) => item.viewValue)[0],
+                rate: val.rate.toString(),
+                row: val
+              };
+              this.allUserTable.push(singleUser);
+            });
+            console.log('pro tab ', this.allUserTable);
+            this.dataSource = new MatTableDataSource(this.allUserTable);
+            this.dataSource.paginator = this.paginator;
+            this.dataSource.sort = this.sort;
+          }
+        );
       }
     );
   }
 
   onChange() {
+    this.allUserTable = [];
     if (this.category.value.Ctrl_1 === 'all') {
       this.filteredList = this.proList.filter(val => {
         return val.active;
@@ -113,10 +132,22 @@ export class ProfessionalListComponent implements OnInit {
       this.alertService.setAlert('professionals not available');
       this.alertService.showAlert();
     }
-
+    this.filteredList.forEach((val, index) => {
+      let singleUser: RowData = {
+        no: (index + 1).toString(),
+        name: val.firstName + ' ' + val.lastName,
+        cat: this.fields
+          .filter((item: Field) => item.value === val.category)
+          .map((item: Field) => item.viewValue)[0],
+        rate: val.rate.toString(),
+        row: val
+      };
+      this.allUserTable.push(singleUser);
+    });
     this.dataSource = new MatTableDataSource(this.allUserTable);
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
+    this.changeDetectorRefs.markForCheck();
   }
 
   applyFilter(event: Event) {
@@ -129,7 +160,7 @@ export class ProfessionalListComponent implements OnInit {
   }
 
   view(item: any) {
-    this.router.navigate(['./account'], {
+    this.router.navigate(['../view'], {
       queryParams: { id: item._id, type: item.userType }
     });
   }

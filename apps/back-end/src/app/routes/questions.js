@@ -19,9 +19,10 @@ questionRouter.post('/', async (req, res) => {
   // console.log(question);
   try {
     const saved = await question.save();
-    res.json(saved);
+    res.json(true);
   } catch (error) {
-    res.json({ Emessage: error });
+    console.log(error);
+    res.json({ message: false });
   }
 });
 
@@ -89,7 +90,7 @@ questionRouter.get('/:id', async (req, res) => {
 
 // Vote question
 questionRouter.put('/:id/vote', async (req, res) => {
-   const vote = { userId: req.body.userId }; 
+  const vote = { userId: req.body.userId };
   try {
     const id = req.params.id;
     const received = await Question.findById(id);
@@ -153,7 +154,7 @@ questionRouter.put('/:id', async (req, res) => {
     const saved = await Question.findByIdAndUpdate(id, question, { new: true });
     res.json(saved);
   } catch (error) {
-    res.json({ Emessage: error });
+    res.json({ message: false });
   }
 });
 
@@ -169,7 +170,7 @@ questionRouter.delete('/:id', async (req, res) => {
 
 // Add answer
 questionRouter.put('/:id/answers', async (req, res) => {
-  // console.log(req);
+  console.log(req.id);
   const answer = {
     body: req.body.body,
     userId: req.body.userId,
@@ -177,14 +178,15 @@ questionRouter.put('/:id/answers', async (req, res) => {
     createdAt: Date.now(),
     isAccepted: false
   };
+  console.log(answer);
   try {
     const id = req.params.id;
     const parent = await Question.findById(id);
     parent.answers.push(answer);
     const saved = await parent.save();
-    res.json(saved);
+    res.json(true);
   } catch (error) {
-    res.json({ Emessage: error });
+    res.json({ message: false });
   }
 });
 
@@ -193,7 +195,7 @@ questionRouter.delete('/:questionId/answers/:answerId', async (req, res) => {
   try {
     const questionId = req.params.questionId;
     const answerId = req.params.answerId;
-    let index=-1;
+    let index = -1;
     // console.log(questionId);
     // console.log(answerId);
     const parent = await Question.findById(questionId);
@@ -223,7 +225,7 @@ questionRouter.get('/:questionId/answers/:answerId/accept', async (req, res) => 
     const parent = await Question.findById(questionId);
     for (const answer of parent.answers) {
       if (answerId == answer._id) {
-        answer.isAccepted=true;
+        answer.isAccepted = true;
         break;
       }
     }

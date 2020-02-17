@@ -5,8 +5,7 @@
       <div class="d-flex flex-column b pl-sm-2 pl-md-5">
         <div class="c">
           <h3>
-            <span class="c1">{{ user.firstName }}</span
-            ><span class="c2">{{ user.lastName }}</span>
+            <span class="c1">{{ user.firstName }}</span><span class="c2">{{ user.lastName }}</span>
           </h3>
         </div>
         <div class="d">{{ user.address === "null" ? "" : user.address }}</div>
@@ -14,14 +13,19 @@
         <div class="f">
           <span>{{getUserType()}}</span>
         </div>
+
       </div>
-      <div   *ngIf="user.userType === 'pro' ? true : false" class ="button col-md-3" (click)="makeAppointment()"> Book Now</div>
-      <div
-        *ngIf="user.userType === 'admin' ? false : true"
-        class="ml-auto align-self-end d-none d-md-block d-lg-block"
-      >
+
+      <div *ngIf="(user.userType === 'pro' ? true : false) && (type == 'current' ? false : true)"
+        class="button col-md-3" (click)="makeAppointment()"> Book
+        Now
+      </div>
+
+
+      <div *ngIf="user.userType === 'admin' ? false : true" class="ml-auto align-self-end d-none d-md-block d-lg-block">
         <div *ngIf="type == 'current' ? false : true">
-          <app-report [path]="3" [reportedPostId]="'null'" [reportedUserId]="user.id" [reportedUserName]="user.firstName + ' ' + user.lastName" matTooltip="report user"></app-report>
+          <app-report [path]="3" [reportedPostId]="'null'" [reportedUserId]="user.id"
+            [reportedUserName]="user.firstName + ' ' + user.lastName" matTooltip="report user"></app-report>
         </div>
         <div *ngIf="type == 'current' ? true : false">
           <a mat-icon-button (click)="show()" class="editbutt" id="butticon2">
@@ -33,4 +37,3 @@
     </div>
   </mat-card>
 </div>
-
