@@ -2467,3 +2467,35 @@ const addUsersToRoom = function (clientId, professionalId, room) {
         .then(() => console.log('added'))
         .catch(err => console.error(err));
 };
+{"message":"200 -  View a categories. - /api/category - GET - ::ffff:127.0.0.1","level":"info"}
+{"message":"200 -Viewed appointments of a user. - /api/appointment/user/5e49846227765d3994b0dfa2 - GET - ::ffff:127.0.0.1","level":"info"}
+{"message":"200 -booking  View a appointment. - /api/appointment/5e4a0ff04c02093a740c1f98 - GET - ::ffff:127.0.0.1","level":"info"}
+{"message":"200 -Viewed appointments of a user. - /api/appointment/user/5e49846227765d3994b0dfa2 - GET - ::ffff:127.0.0.1","level":"info"}
+{"message":"200 -  View a categories. - /api/category - GET - ::ffff:127.0.0.1","level":"info"}
+{"error":{},"level":"error","message":"uncaughtException: Cannot read property 'send' of undefined\nTypeError: Cannot read property 'send' of undefined\n    at D:\\PROJECT\\vscode\\GROUP\\HariBnEla\\dist\\apps\\back-end\\webpack:\\apps\\back-end\\src\\app\\controller\\report.js:554:18\n    at D:\\PROJECT\\vscode\\GROUP\\HariBnEla\\node_modules\\mongoose\\lib\\model.js:4827:16\n    at D:\\PROJECT\\vscode\\GROUP\\HariBnEla\\node_modules\\mongoose\\lib\\query.js:2869:28\n    at processTicksAndRejections (internal/process/task_queues.js:75:11)","stack":"TypeError: Cannot read property 'send' of undefined\n    at D:\\PROJECT\\vscode\\GROUP\\HariBnEla\\dist\\apps\\back-end\\webpack:\\apps\\back-end\\src\\app\\controller\\report.js:554:18\n    at D:\\PROJECT\\vscode\\GROUP\\HariBnEla\\node_modules\\mongoose\\lib\\model.js:4827:16\n    at D:\\PROJECT\\vscode\\GROUP\\HariBnEla\\node_modules\\mongoose\\lib\\query.js:2869:28\n    at processTicksAndRejections (internal/process/task_queues.js:75:11)","exception":true,"date":"Mon Feb 17 2020 11:20:53 GMT+0530 (India Standard Time)","process":{"pid":7524,"uid":null,"gid":null,"cwd":"D:\\PROJECT\\vscode\\GROUP\\HariBnEla","execPath":"D:\\nodejs\\node.exe","version":"v12.14.0","argv":["D:\\nodejs\\node.exe","D:\\PROJECT\\vscode\\GROUP\\HariBnEla\\dist\\apps\\back-end\\main.js"],"memoryUsage":{"rss":55189504,"heapTotal":28397568,"heapUsed":26329768,"external":19969035}},"os":{"loadavg":[0,0,0],"uptime":15651},"trace":[{"column":18,"file":"D:\\PROJECT\\vscode\\GROUP\\HariBnEla\\dist\\apps\\back-end\\webpack:\\apps\\back-end\\src\\app\\controller\\report.js","function":null,"line":554,"method":null,"native":false},{"column":16,"file":"D:\\PROJECT\\vscode\\GROUP\\HariBnEla\\node_modules\\mongoose\\lib\\model.js","function":null,"line":4827,"method":null,"native":false},{"column":28,"file":"D:\\PROJECT\\vscode\\GROUP\\HariBnEla\\node_modules\\mongoose\\lib\\query.js","function":null,"line":2869,"method":null,"native":false},{"column":11,"file":"internal/process/task_queues.js","function":"processTicksAndRejections","line":75,"method":null,"native":false}]}
+{"message":"200 -  View a categories. - /api/category - GET - ::ffff:127.0.0.1","level":"info"}
+{"message":"200 -Viewed appointments of a user. - /api/appointment/user/5e49846227765d3994b0dfa2 - GET - ::ffff:127.0.0.1","level":"info"}
+{"message":"200 -  View a categories. - /api/category - GET - ::ffff:127.0.0.1","level":"info"}
+{"message":"200 -  View a categories. - /api/category - GET - ::ffff:127.0.0.1","level":"info"}
+{"message":"200 - created a new appointment. - /api/appointment/new - POST - ::ffff:127.0.0.1","level":"info"}
+{"message":"200 - Email has been Sent. -  /api/appointment/new - POST - ::ffff:127.0.0.1","level":"info"}
+{"message":"200 -Viewed appointments of a professional. - /api/appointment/professional/5e4802681ec7da3e6835c5ee - GET - ::ffff:127.0.0.1","level":"info"}
+{"message":"200 -booking  View a appointment. - /api/appointment/5e4a2d0c67bdff2afc2a38e1 - GET - ::ffff:127.0.0.1","level":"info"}
+{"message":"200 - appointment updated. - /api/appointment/accept/5e4a2d0c67bdff2afc2a38e1 - POST - ::ffff:127.0.0.1","level":"info"}
+{"message":"200 - Email has been Sent. -  /api/appointment/accept/5e4a2d0c67bdff2afc2a38e1 - POST - ::ffff:127.0.0.1","level":"info"}
+{"message":"200 -Viewed appointments of a professional. - /api/appointment/professional/5e4802681ec7da3e6835c5ee - GET - ::ffff:127.0.0.1","level":"info"}
+{"message":"200 -Viewed appointments of a user. - /api/appointment/user/5e49846227765d3994b0dfa2 - GET - ::ffff:127.0.0.1","level":"info"}
+{"message":"200 -booking  View a appointment. - /api/appointment/5e4a2d0c67bdff2afc2a38e1 - GET - ::ffff:127.0.0.1","level":"info"}
+{"message":"200 - appointment updated. - /api/appointment/payment/5e4a2d0c67bdff2afc2a38e1 - POST - ::ffff:127.0.0.1","level":"info"}
+{"message":"200 - Email has been Sent to user. -  /api/appointment/payment/5e4a2d0c67bdff2afc2a38e1 - POST - ::ffff:127.0.0.1","level":"info"}
+{"message":"200 - Email has been Sent to Professional. -  /api/appointment/payment/5e4a2d0c67bdff2afc2a38e1 - POST - ::ffff:127.0.0.1","level":"info"}
+{"message":"200 -Viewed appointments of a user. - /api/appointment/user/5e49846227765d3994b0dfa2 - GET - ::ffff:127.0.0.1","level":"info"}
+{"message":"200 -booking  View a appointment. - /api/appointment/5e4a2d0c67bdff2afc2a38e1 - GET - ::ffff:127.0.0.1","level":"info"}
+{"message":"200 -  View a categories. - /api/category - GET - ::ffff:127.0.0.1","level":"info"}
+{"message":"200 -  View a categories. - /api/category - GET - ::ffff:127.0.0.1","level":"info"}
+{"message":"200 -  View a categories. - /api/category - GET - ::ffff:127.0.0.1","level":"info"}
+{"message":"200 -Viewed appointments of a user. - /api/appointment/user/5e49846227765d3994b0dfa2 - GET - ::ffff:127.0.0.1","level":"info"}
+{"message":"200 -  View a categories. - /api/category - GET - ::ffff:127.0.0.1","level":"info"}
+{"message":"200 -  View a categories. - /api/category - GET - ::ffff:127.0.0.1","level":"info"}
+{"message":"200 -  View a categories. - /api/category - GET - ::ffff:127.0.0.1","level":"info"}
+{"message":"200 -  View a categories. - /api/category - GET - ::ffff:127.0.0.1","level":"info"}
