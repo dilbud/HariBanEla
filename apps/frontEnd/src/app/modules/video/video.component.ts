@@ -139,6 +139,7 @@ export class VideoComponent implements OnInit {
         console.log('Leave channel failed');
       }
     );
+    this.started = false;
   }
   start() {
     this.client = this.ngxAgoraService.createClient({

@@ -26,23 +26,24 @@ export class NavbarComponent implements OnInit {
     });
     this.isAuthenticated = this.userService.getIsAuth();
     this.user = this.userService.getUserData();
+    console.log(this.user);
     this.userService.getAuthStatusListener()
       .subscribe((isAuthenticated: boolean) => {
         this.isAuthenticated = isAuthenticated;
         this.user = this.userService.getUserData();
         // this.mode = !this.isAuthenticated;
       });
-      this.questionService.questionList().subscribe(res => {
-        this.questions = res;
-      }, err => {
-        console.log(err);
-      });
+    this.questionService.questionList().subscribe(res => {
+      this.questions = res;
+    }, err => {
+      console.log(err);
+    });
   }
 
   onSearch() {
     if (this.searchInput != '') {
       // console.log(this.searchInput);
-      this.searchResults=this.questions.filter(question=>{
+      this.searchResults = this.questions.filter(question => {
         return question.title.toLowerCase().includes(this.searchInput.toLowerCase());
       });
 

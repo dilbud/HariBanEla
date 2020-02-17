@@ -49,7 +49,11 @@
     <div class="wrap row">
       <div class="col-md-4 col-4">
         <img *ngIf="isAuthenticated" class="profilePhoto  mt-1 mr-2" (click)="view()" src="{{user.picURL}}">
+        <div *ngIf="user.userType==pro" class="row" style="margin-top: 5px; margin-left: 3px;">
+          <small class="text-primary"><b>PRO</b></small>
+        </div>
       </div>
+
       <div class="col-md-8 col-8">
         <app-login></app-login>
       </div>
