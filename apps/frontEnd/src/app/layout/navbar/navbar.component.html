@@ -5,11 +5,12 @@
   <!-- Search Bar -->
   <div class="col-5 col-md-5">
     <mat-form-field floatLabel="never" style="width: 100%;">
-      <input matInput [matAutocomplete]="auto" [(ngModel)]="searchInput" placeholder="Search" style="width: 93%;" (keyup)="onSearch()">
+      <input matInput [matAutocomplete]="auto" [(ngModel)]="searchInput" placeholder="Search" style="width: 93%;"
+        (keyup)="onSearch()">
       <a style="cursor: pointer;" (click)="onSearch()"><i class="fas fa-search pl-3"></i></a>
       <mat-autocomplete #auto="matAutocomplete">
         <mat-option [routerLink]="['/questions', searchResult._id]" *ngFor="let searchResult of searchResults">
-          <a id="title" style="word-wrap: break-word;" >{{searchResult.title}}</a>
+          <a id="title" style="word-wrap: break-word;">{{searchResult.title}}</a>
         </mat-option>
       </mat-autocomplete>
     </mat-form-field>
@@ -21,7 +22,8 @@
 
   <!-- Menu -->
   <nav class="navbar navbar-expand-md navbar-light col-4 col-md-4 ">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse menu" id="navbarSupportedContent">
@@ -30,15 +32,16 @@
           <a class="nav-link" routerLink="/ask">Ask Question</a>
         </li>
         <li ngbDropdown class="nav-item">
-          <a class="nav-link" id="categoryDropdown" ngbDropdownToggle>Categories</a>
+          <a class="nav-link" id="categoryDropdown" ngbDropdownToggle style="cursor: pointer;">Categories</a>
           <div ngbDropdownMenu aria-labelledby="categoryDropdown">
-            <button ngbDropdownItem *ngFor="let category of categories" (click)="onCategory(category.name)" routerLinkActive="router-link-active" >{{category.name}}</button>
+            <button ngbDropdownItem *ngFor="let category of categories"
+              (click)="onCategory(category.name)">{{category.name}}</button>
           </div>
         </li>
         <li class="nav-item">
-          <div class="nav-link " routerLink="/professionals">Making Booking</div>
+          <a class="nav-link " routerLink="/professionals">Making Booking</a>
         </li>
-        
+
       </ul>
     </div>
   </nav>
@@ -48,7 +51,7 @@
         <img *ngIf="isAuthenticated" class="profilePhoto  mt-1 mr-2" (click)="view()" src="{{user.picURL}}">
       </div>
       <div class="col-md-8 col-8">
-        <app-login ></app-login>
+        <app-login></app-login>
       </div>
     </div>
   </div>

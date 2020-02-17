@@ -106,29 +106,29 @@ export class QuestionCreateComponent implements OnInit {
 
   onQuestion() {
     this.submitted = true;
-    if (!this.id) {
-      this.questionService.questionCreate(this.questionModel).subscribe(
-        data => {
-          console.log('Success created', data);
-          this.success = data;
-          // console.log(this.success);
-          if (this.success === true) {
-            this.router.navigate([`/questions`]);
-          }
-        },
-        error => console.log('Error', error)
-      );
-    } else {
-      this.questionService.questionUpdate(this.questionModel).subscribe(
-        data => {
-          console.log('Success', data);
-          this.success = data;
-          if (this.success) {
+    if (this.questionModel.title && this.questionModel.category && this.questionModel.body) {
+      if (!this.id) {
+        this.questionService.questionCreate(this.questionModel).subscribe(
+          data => {
+            console.log('Success created', data);
+            this.success = data;
+            // console.log(this.success);
+            if (this.success === true) {
+              this.router.navigate([`/questions`]);
+            }
+          },
+          error => console.log('Error', error)
+        );
+      } else {
+        this.questionService.questionUpdate(this.questionModel).subscribe(
+          data => {
+            console.log('Success', data);
+            this.success = data;
             this.router.navigate([`/questions/${this.id}`]);
-          }
-        },
-        error => console.log('Error', error)
-      );
+          },
+          error => console.log('Error', error)
+        );
+      }
     }
   }
 
