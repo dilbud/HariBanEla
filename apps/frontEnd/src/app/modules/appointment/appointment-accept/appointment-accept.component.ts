@@ -64,6 +64,7 @@ export class AppointmentAcceptComponent implements OnInit {
     this.appointmentService
       .acceptAppointment(this.appointmentId, this.status)
       .subscribe(res => {
+        console.log(res);
         this.redirect.navigate(['/profile']);
       });
   }

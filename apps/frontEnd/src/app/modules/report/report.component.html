@@ -8,19 +8,24 @@
   <mat-icon>favorite</mat-icon>
 </button> -->
 
-
 <div [ngSwitch]="path">
   <div *ngSwitchCase="0">
-    <a (click)="feedback()" >Feedback</a>
+    <a (click)="feedback()">Feedback</a>
   </div>
   <div *ngSwitchCase="1">
-    <a (click)="resetPassword()" >reset password</a>
+    <a (click)="resetPassword()">reset password</a>
   </div>
   <div *ngSwitchCase="2">
-    <a *ngIf="isAuth" (click)="reportPost()" >report post</a>
+    <a *ngIf="isAuth" (click)="reportPost()">report post</a>
   </div>
   <div *ngSwitchCase="3">
-    <a mat-icon-button *ngIf="isAuth" (click)="reportUser()" class="editbutt" id="butticon1">
+    <a
+      mat-icon-button
+      *ngIf="isAuth"
+      (click)="reportUser()"
+      class="editbutt"
+      id="butticon1"
+    >
       <i class="editicon material-icons"> report </i>
     </a>
   </div>

@@ -37,7 +37,6 @@ export class AppointmentPaymentComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-
     this.appointmentId = this.route.snapshot.params.id;
     this.appointmentService.getAppointmentById(this.appointmentId).subscribe(
       res => {
@@ -90,17 +89,17 @@ export class AppointmentPaymentComponent implements OnInit {
           const order = await actions.order.capture();
           console.log(order);
           // tslint:disable-next-line: prefer-const
-          let body: any;
-          body.paymentStatus = 'Paid';
+
+          let paymentStatus = 'Paid';
           this.appointmentService
-            .paymentAppointment(this.appointmentId, body)
+            .paymentAppointment(this.appointmentId, paymentStatus)
             .subscribe(res => {
               if (res.paymentStatus === 'Paid') {
                 this.toastrService.success(
                   'Hari Bn Ela',
                   'Payment has been made sucessfully. Check your email for the communication portal link'
                 );
-                this.redirect.navigate(['/profile']);
+                this.redirect.navigate(['/']);
               }
             });
         },

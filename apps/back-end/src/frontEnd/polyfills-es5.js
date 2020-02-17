@@ -7,9 +7,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["polyfills-es5"], {
   /***/
   "../../node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-jit-polyfills.js":
+<<<<<<< HEAD
   /*!*********************************************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-jit-polyfills.js ***!
     \*********************************************************************************************************************************************/
+=======
+  /*!**************************************************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-jit-polyfills.js ***!
+    \**************************************************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no exports provided */
 
@@ -44,9 +50,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js":
+<<<<<<< HEAD
   /*!*****************************************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js ***!
     \*****************************************************************************************************************************************/
+=======
+  /*!**********************************************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js ***!
+    \**********************************************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no exports provided */
 
@@ -1094,9 +1106,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js":
+<<<<<<< HEAD
   /*!*****************************************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js ***!
     \*****************************************************************************************************************************************/
+=======
+  /*!**********************************************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js ***!
+    \**********************************************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no exports provided */
 
@@ -1131,9 +1149,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/es/date/index.js":
+<<<<<<< HEAD
   /*!**************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/es/date/index.js ***!
     \**************************************************************************************/
+=======
+  /*!*******************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/es/date/index.js ***!
+    \*******************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -1169,9 +1193,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/es/math/index.js":
+<<<<<<< HEAD
   /*!**************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/es/math/index.js ***!
     \**************************************************************************************/
+=======
+  /*!*******************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/es/math/index.js ***!
+    \*******************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -1259,9 +1289,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/es/number/index.js":
+<<<<<<< HEAD
   /*!****************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/es/number/index.js ***!
     \****************************************************************************************/
+=======
+  /*!*********************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/es/number/index.js ***!
+    \*********************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -1325,9 +1361,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/es/reflect/index.js":
+<<<<<<< HEAD
   /*!*****************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/es/reflect/index.js ***!
     \*****************************************************************************************/
+=======
+  /*!**********************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/es/reflect/index.js ***!
+    \**********************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -1395,9 +1437,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/es/symbol/index.js":
+<<<<<<< HEAD
   /*!****************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/es/symbol/index.js ***!
     \****************************************************************************************/
+=======
+  /*!*********************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/es/symbol/index.js ***!
+    \*********************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -1489,9 +1537,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/a-function.js":
+<<<<<<< HEAD
   /*!*********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/a-function.js ***!
     \*********************************************************************************************/
+=======
+  /*!**************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/a-function.js ***!
+    \**************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -1510,9 +1564,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/a-possible-prototype.js":
+<<<<<<< HEAD
   /*!*******************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/a-possible-prototype.js ***!
     \*******************************************************************************************************/
+=======
+  /*!************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/a-possible-prototype.js ***!
+    \************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -1535,9 +1595,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/add-to-unscopables.js":
+<<<<<<< HEAD
   /*!*****************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/add-to-unscopables.js ***!
     \*****************************************************************************************************/
+=======
+  /*!**********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/add-to-unscopables.js ***!
+    \**********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -1576,9 +1642,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/advance-string-index.js":
+<<<<<<< HEAD
   /*!*******************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/advance-string-index.js ***!
     \*******************************************************************************************************/
+=======
+  /*!************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/advance-string-index.js ***!
+    \************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -1601,9 +1673,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/an-instance.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/an-instance.js ***!
     \**********************************************************************************************/
+=======
+  /*!***************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/an-instance.js ***!
+    \***************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -1622,9 +1700,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/an-object.js":
+<<<<<<< HEAD
   /*!********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/an-object.js ***!
     \********************************************************************************************/
+=======
+  /*!*************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/an-object.js ***!
+    \*************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -1647,9 +1731,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/array-copy-within.js":
+<<<<<<< HEAD
   /*!****************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/array-copy-within.js ***!
     \****************************************************************************************************/
+=======
+  /*!*********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/array-copy-within.js ***!
+    \*********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -1705,9 +1795,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/array-fill.js":
+<<<<<<< HEAD
   /*!*********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/array-fill.js ***!
     \*********************************************************************************************/
+=======
+  /*!**************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/array-fill.js ***!
+    \**************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -1751,9 +1847,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/array-for-each.js":
+<<<<<<< HEAD
   /*!*************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/array-for-each.js ***!
     \*************************************************************************************************/
+=======
+  /*!******************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/array-for-each.js ***!
+    \******************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -1787,9 +1889,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/array-from.js":
+<<<<<<< HEAD
   /*!*********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/array-from.js ***!
     \*********************************************************************************************/
+=======
+  /*!**************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/array-from.js ***!
+    \**************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -1868,9 +1976,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/array-includes.js":
+<<<<<<< HEAD
   /*!*************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/array-includes.js ***!
     \*************************************************************************************************/
+=======
+  /*!******************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/array-includes.js ***!
+    \******************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -1921,9 +2035,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/array-iteration.js":
+<<<<<<< HEAD
   /*!**************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/array-iteration.js ***!
     \**************************************************************************************************/
+=======
+  /*!*******************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/array-iteration.js ***!
+    \*******************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -2028,9 +2148,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/array-last-index-of.js":
+<<<<<<< HEAD
   /*!******************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/array-last-index-of.js ***!
     \******************************************************************************************************/
+=======
+  /*!***********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/array-last-index-of.js ***!
+    \***********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -2092,9 +2218,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/array-method-has-species-support.js":
+<<<<<<< HEAD
   /*!*******************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/array-method-has-species-support.js ***!
     \*******************************************************************************************************************/
+=======
+  /*!************************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/array-method-has-species-support.js ***!
+    \************************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -2137,9 +2269,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/array-method-is-strict.js":
+<<<<<<< HEAD
   /*!*********************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/array-method-is-strict.js ***!
     \*********************************************************************************************************/
+=======
+  /*!**************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/array-method-is-strict.js ***!
+    \**************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -2166,9 +2304,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/array-method-uses-to-length.js":
+<<<<<<< HEAD
   /*!**************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/array-method-uses-to-length.js ***!
     \**************************************************************************************************************/
+=======
+  /*!*******************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/array-method-uses-to-length.js ***!
+    \*******************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -2218,9 +2362,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/array-reduce.js":
+<<<<<<< HEAD
   /*!***********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/array-reduce.js ***!
     \***********************************************************************************************/
+=======
+  /*!****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/array-reduce.js ***!
+    \****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -2288,9 +2438,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/array-species-create.js":
+<<<<<<< HEAD
   /*!*******************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/array-species-create.js ***!
     \*******************************************************************************************************/
+=======
+  /*!************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/array-species-create.js ***!
+    \************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -2331,9 +2487,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/call-with-safe-iteration-closing.js":
+<<<<<<< HEAD
   /*!*******************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/call-with-safe-iteration-closing.js ***!
     \*******************************************************************************************************************/
+=======
+  /*!************************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/call-with-safe-iteration-closing.js ***!
+    \************************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -2359,9 +2521,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/check-correctness-of-iteration.js":
+<<<<<<< HEAD
   /*!*****************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/check-correctness-of-iteration.js ***!
     \*****************************************************************************************************************/
+=======
+  /*!**********************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/check-correctness-of-iteration.js ***!
+    \**********************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -2429,9 +2597,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/classof-raw.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/classof-raw.js ***!
     \**********************************************************************************************/
+=======
+  /*!***************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/classof-raw.js ***!
+    \***************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -2448,9 +2622,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/classof.js":
+<<<<<<< HEAD
   /*!******************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/classof.js ***!
     \******************************************************************************************/
+=======
+  /*!***********************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/classof.js ***!
+    \***********************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -2495,9 +2675,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/collection-strong.js":
+<<<<<<< HEAD
   /*!****************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/collection-strong.js ***!
     \****************************************************************************************************/
+=======
+  /*!*********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/collection-strong.js ***!
+    \*********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -2747,9 +2933,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/collection-weak.js":
+<<<<<<< HEAD
   /*!**************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/collection-weak.js ***!
     \**************************************************************************************************/
+=======
+  /*!*******************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/collection-weak.js ***!
+    \*******************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -2902,9 +3094,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/collection.js":
+<<<<<<< HEAD
   /*!*********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/collection.js ***!
     \*********************************************************************************************/
+=======
+  /*!**************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/collection.js ***!
+    \**************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -3056,9 +3254,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/copy-constructor-properties.js":
+<<<<<<< HEAD
   /*!**************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/copy-constructor-properties.js ***!
     \**************************************************************************************************************/
+=======
+  /*!*******************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/copy-constructor-properties.js ***!
+    \*******************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -3096,9 +3300,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/correct-is-regexp-logic.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/correct-is-regexp-logic.js ***!
     \**********************************************************************************************************/
+=======
+  /*!***************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/correct-is-regexp-logic.js ***!
+    \***************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -3132,9 +3342,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/correct-prototype-getter.js":
+<<<<<<< HEAD
   /*!***********************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/correct-prototype-getter.js ***!
     \***********************************************************************************************************/
+=======
+  /*!****************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/correct-prototype-getter.js ***!
+    \****************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -3157,9 +3373,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/create-html.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/create-html.js ***!
     \**********************************************************************************************/
+=======
+  /*!***************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/create-html.js ***!
+    \***************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -3184,9 +3406,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/create-iterator-constructor.js":
+<<<<<<< HEAD
   /*!**************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/create-iterator-constructor.js ***!
     \**************************************************************************************************************/
+=======
+  /*!*******************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/create-iterator-constructor.js ***!
+    \*******************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -3233,9 +3461,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/create-non-enumerable-property.js":
+<<<<<<< HEAD
   /*!*****************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/create-non-enumerable-property.js ***!
     \*****************************************************************************************************************/
+=======
+  /*!**********************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/create-non-enumerable-property.js ***!
+    \**********************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -3264,9 +3498,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/create-property-descriptor.js":
+<<<<<<< HEAD
   /*!*************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/create-property-descriptor.js ***!
     \*************************************************************************************************************/
+=======
+  /*!******************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/create-property-descriptor.js ***!
+    \******************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -3286,9 +3526,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/create-property.js":
+<<<<<<< HEAD
   /*!**************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/create-property.js ***!
     \**************************************************************************************************/
+=======
+  /*!*******************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/create-property.js ***!
+    \*******************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -3318,9 +3564,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/date-to-iso-string.js":
+<<<<<<< HEAD
   /*!*****************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/date-to-iso-string.js ***!
     \*****************************************************************************************************/
+=======
+  /*!**********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/date-to-iso-string.js ***!
+    \**********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -3360,9 +3612,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/date-to-primitive.js":
+<<<<<<< HEAD
   /*!****************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/date-to-primitive.js ***!
     \****************************************************************************************************/
+=======
+  /*!*********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/date-to-primitive.js ***!
+    \*********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -3391,9 +3649,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/define-iterator.js":
+<<<<<<< HEAD
   /*!**************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/define-iterator.js ***!
     \**************************************************************************************************/
+=======
+  /*!*******************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/define-iterator.js ***!
+    \*******************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -3552,9 +3816,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/define-well-known-symbol.js":
+<<<<<<< HEAD
   /*!***********************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/define-well-known-symbol.js ***!
     \***********************************************************************************************************/
+=======
+  /*!****************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/define-well-known-symbol.js ***!
+    \****************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -3588,9 +3858,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/descriptors.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/descriptors.js ***!
     \**********************************************************************************************/
+=======
+  /*!***************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/descriptors.js ***!
+    \***************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -3613,9 +3889,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/document-create-element.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/document-create-element.js ***!
     \**********************************************************************************************************/
+=======
+  /*!***************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/document-create-element.js ***!
+    \***************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -3642,9 +3924,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/dom-iterables.js":
+<<<<<<< HEAD
   /*!************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/dom-iterables.js ***!
     \************************************************************************************************/
+=======
+  /*!*****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/dom-iterables.js ***!
+    \*****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -3690,9 +3978,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/engine-is-ios.js":
+<<<<<<< HEAD
   /*!************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/engine-is-ios.js ***!
     \************************************************************************************************/
+=======
+  /*!*****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/engine-is-ios.js ***!
+    \*****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -3708,9 +4002,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/engine-user-agent.js":
+<<<<<<< HEAD
   /*!****************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/engine-user-agent.js ***!
     \****************************************************************************************************/
+=======
+  /*!*********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/engine-user-agent.js ***!
+    \*********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -3726,9 +4026,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/engine-v8-version.js":
+<<<<<<< HEAD
   /*!****************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/engine-v8-version.js ***!
     \****************************************************************************************************/
+=======
+  /*!*********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/engine-v8-version.js ***!
+    \*********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -3765,9 +4071,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/enum-bug-keys.js":
+<<<<<<< HEAD
   /*!************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/enum-bug-keys.js ***!
     \************************************************************************************************/
+=======
+  /*!*****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/enum-bug-keys.js ***!
+    \*****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -3780,9 +4092,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/export.js":
+<<<<<<< HEAD
   /*!*****************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/export.js ***!
     \*****************************************************************************************/
+=======
+  /*!**********************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/export.js ***!
+    \**********************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -3875,9 +4193,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/fails.js":
+<<<<<<< HEAD
   /*!****************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/fails.js ***!
     \****************************************************************************************/
+=======
+  /*!*********************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/fails.js ***!
+    \*********************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -3896,9 +4220,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/fix-regexp-well-known-symbol-logic.js":
+<<<<<<< HEAD
   /*!*********************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/fix-regexp-well-known-symbol-logic.js ***!
     \*********************************************************************************************************************/
+=======
+  /*!**************************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/fix-regexp-well-known-symbol-logic.js ***!
+    \**************************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -4069,9 +4399,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/freezing.js":
+<<<<<<< HEAD
   /*!*******************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/freezing.js ***!
     \*******************************************************************************************/
+=======
+  /*!************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/freezing.js ***!
+    \************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -4089,9 +4425,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/function-bind-context.js":
+<<<<<<< HEAD
   /*!********************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/function-bind-context.js ***!
     \********************************************************************************************************/
+=======
+  /*!*************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/function-bind-context.js ***!
+    \*************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -4140,9 +4482,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/function-bind.js":
+<<<<<<< HEAD
   /*!************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/function-bind.js ***!
     \************************************************************************************************/
+=======
+  /*!*****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/function-bind.js ***!
+    \*****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -4198,9 +4546,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/get-built-in.js":
+<<<<<<< HEAD
   /*!***********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/get-built-in.js ***!
     \***********************************************************************************************/
+=======
+  /*!****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/get-built-in.js ***!
+    \****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -4227,9 +4581,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/get-iterator-method.js":
+<<<<<<< HEAD
   /*!******************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/get-iterator-method.js ***!
     \******************************************************************************************************/
+=======
+  /*!***********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/get-iterator-method.js ***!
+    \***********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -4258,9 +4618,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/global.js":
+<<<<<<< HEAD
   /*!*****************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/global.js ***!
     \*****************************************************************************************/
+=======
+  /*!**********************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/global.js ***!
+    \**********************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -4279,9 +4645,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/has.js":
+<<<<<<< HEAD
   /*!**************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/has.js ***!
     \**************************************************************************************/
+=======
+  /*!*******************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/has.js ***!
+    \*******************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -4298,9 +4670,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/hidden-keys.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/hidden-keys.js ***!
     \**********************************************************************************************/
+=======
+  /*!***************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/hidden-keys.js ***!
+    \***************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -4312,9 +4690,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/host-report-errors.js":
+<<<<<<< HEAD
   /*!*****************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/host-report-errors.js ***!
     \*****************************************************************************************************/
+=======
+  /*!**********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/host-report-errors.js ***!
+    \**********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -4337,9 +4721,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/html.js":
+<<<<<<< HEAD
   /*!***************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/html.js ***!
     \***************************************************************************************/
+=======
+  /*!********************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/html.js ***!
+    \********************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -4355,9 +4745,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/ie8-dom-define.js":
+<<<<<<< HEAD
   /*!*************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/ie8-dom-define.js ***!
     \*************************************************************************************************/
+=======
+  /*!******************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/ie8-dom-define.js ***!
+    \******************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -4388,9 +4784,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/indexed-object.js":
+<<<<<<< HEAD
   /*!*************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/indexed-object.js ***!
     \*************************************************************************************************/
+=======
+  /*!******************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/indexed-object.js ***!
+    \******************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -4418,9 +4820,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/inherit-if-required.js":
+<<<<<<< HEAD
   /*!******************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/inherit-if-required.js ***!
     \******************************************************************************************************/
+=======
+  /*!***********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/inherit-if-required.js ***!
+    \***********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -4448,9 +4856,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/inspect-source.js":
+<<<<<<< HEAD
   /*!*************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/inspect-source.js ***!
     \*************************************************************************************************/
+=======
+  /*!******************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/inspect-source.js ***!
+    \******************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -4474,9 +4888,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/internal-metadata.js":
+<<<<<<< HEAD
   /*!****************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/internal-metadata.js ***!
     \****************************************************************************************************/
+=======
+  /*!*********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/internal-metadata.js ***!
+    \*********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -4571,9 +4991,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/internal-state.js":
+<<<<<<< HEAD
   /*!*************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/internal-state.js ***!
     \*************************************************************************************************/
+=======
+  /*!******************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/internal-state.js ***!
+    \******************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -4674,9 +5100,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/is-array-iterator-method.js":
+<<<<<<< HEAD
   /*!***********************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/is-array-iterator-method.js ***!
     \***********************************************************************************************************/
+=======
+  /*!****************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/is-array-iterator-method.js ***!
+    \****************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -4702,9 +5134,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/is-array.js":
+<<<<<<< HEAD
   /*!*******************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/is-array.js ***!
     \*******************************************************************************************/
+=======
+  /*!************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/is-array.js ***!
+    \************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -4725,9 +5163,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/is-forced.js":
+<<<<<<< HEAD
   /*!********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/is-forced.js ***!
     \********************************************************************************************/
+=======
+  /*!*************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/is-forced.js ***!
+    \*************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -4757,9 +5201,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/is-integer.js":
+<<<<<<< HEAD
   /*!*********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/is-integer.js ***!
     \*********************************************************************************************/
+=======
+  /*!**************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/is-integer.js ***!
+    \**************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -4781,9 +5231,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/is-object.js":
+<<<<<<< HEAD
   /*!********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/is-object.js ***!
     \********************************************************************************************/
+=======
+  /*!*************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/is-object.js ***!
+    \*************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -4798,9 +5254,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/is-pure.js":
+<<<<<<< HEAD
   /*!******************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/is-pure.js ***!
     \******************************************************************************************/
+=======
+  /*!***********************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/is-pure.js ***!
+    \***********************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -4812,9 +5274,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/is-regexp.js":
+<<<<<<< HEAD
   /*!********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/is-regexp.js ***!
     \********************************************************************************************/
+=======
+  /*!*************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/is-regexp.js ***!
+    \*************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -4845,9 +5313,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/iterate.js":
+<<<<<<< HEAD
   /*!******************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/iterate.js ***!
     \******************************************************************************************/
+=======
+  /*!***********************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/iterate.js ***!
+    \***********************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -4923,9 +5397,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/iterators-core.js":
+<<<<<<< HEAD
   /*!*************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/iterators-core.js ***!
     \*************************************************************************************************/
+=======
+  /*!******************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/iterators-core.js ***!
+    \******************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -4988,9 +5468,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/iterators.js":
+<<<<<<< HEAD
   /*!********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/iterators.js ***!
     \********************************************************************************************/
+=======
+  /*!*************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/iterators.js ***!
+    \*************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -5002,9 +5488,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/math-expm1.js":
+<<<<<<< HEAD
   /*!*********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/math-expm1.js ***!
     \*********************************************************************************************/
+=======
+  /*!**************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/math-expm1.js ***!
+    \**************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -5024,9 +5516,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/math-fround.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/math-fround.js ***!
     \**********************************************************************************************/
+=======
+  /*!***************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/math-fround.js ***!
+    \***************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -5066,9 +5564,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/math-log1p.js":
+<<<<<<< HEAD
   /*!*********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/math-log1p.js ***!
     \*********************************************************************************************/
+=======
+  /*!**************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/math-log1p.js ***!
+    \**************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -5086,9 +5590,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/math-sign.js":
+<<<<<<< HEAD
   /*!********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/math-sign.js ***!
     \********************************************************************************************/
+=======
+  /*!*************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/math-sign.js ***!
+    \*************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -5106,9 +5616,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/microtask.js":
+<<<<<<< HEAD
   /*!********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/microtask.js ***!
     \********************************************************************************************/
+=======
+  /*!*************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/microtask.js ***!
+    \*************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -5223,9 +5739,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/native-promise-constructor.js":
+<<<<<<< HEAD
   /*!*************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/native-promise-constructor.js ***!
     \*************************************************************************************************************/
+=======
+  /*!******************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/native-promise-constructor.js ***!
+    \******************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -5241,9 +5763,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/native-symbol.js":
+<<<<<<< HEAD
   /*!************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/native-symbol.js ***!
     \************************************************************************************************/
+=======
+  /*!*****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/native-symbol.js ***!
+    \*****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -5263,9 +5791,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/native-weak-map.js":
+<<<<<<< HEAD
   /*!**************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/native-weak-map.js ***!
     \**************************************************************************************************/
+=======
+  /*!*******************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/native-weak-map.js ***!
+    \*******************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -5286,9 +5820,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/new-promise-capability.js":
+<<<<<<< HEAD
   /*!*********************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/new-promise-capability.js ***!
     \*********************************************************************************************************/
+=======
+  /*!**************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/new-promise-capability.js ***!
+    \**************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -5321,9 +5861,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/not-a-regexp.js":
+<<<<<<< HEAD
   /*!***********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/not-a-regexp.js ***!
     \***********************************************************************************************/
+=======
+  /*!****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/not-a-regexp.js ***!
+    \****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -5346,9 +5892,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/number-is-finite.js":
+<<<<<<< HEAD
   /*!***************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/number-is-finite.js ***!
     \***************************************************************************************************/
+=======
+  /*!********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/number-is-finite.js ***!
+    \********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -5370,9 +5922,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/number-parse-float.js":
+<<<<<<< HEAD
   /*!*****************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/number-parse-float.js ***!
     \*****************************************************************************************************/
+=======
+  /*!**********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/number-parse-float.js ***!
+    \**********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -5404,9 +5962,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/number-parse-int.js":
+<<<<<<< HEAD
   /*!***************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/number-parse-int.js ***!
     \***************************************************************************************************/
+=======
+  /*!********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/number-parse-int.js ***!
+    \********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -5438,9 +6002,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/object-assign.js":
+<<<<<<< HEAD
   /*!************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/object-assign.js ***!
     \************************************************************************************************/
+=======
+  /*!*****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/object-assign.js ***!
+    \*****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -5534,9 +6104,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/object-create.js":
+<<<<<<< HEAD
   /*!************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/object-create.js ***!
     \************************************************************************************************/
+=======
+  /*!*****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/object-create.js ***!
+    \*****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -5658,9 +6234,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/object-define-properties.js":
+<<<<<<< HEAD
   /*!***********************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/object-define-properties.js ***!
     \***********************************************************************************************************/
+=======
+  /*!****************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/object-define-properties.js ***!
+    \****************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -5702,9 +6284,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/object-define-property.js":
+<<<<<<< HEAD
   /*!*********************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/object-define-property.js ***!
     \*********************************************************************************************************/
+=======
+  /*!**************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/object-define-property.js ***!
+    \**************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -5747,9 +6335,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/object-get-own-property-descriptor.js":
+<<<<<<< HEAD
   /*!*********************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/object-get-own-property-descriptor.js ***!
     \*********************************************************************************************************************/
+=======
+  /*!**************************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/object-get-own-property-descriptor.js ***!
+    \**************************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -5801,9 +6395,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/object-get-own-property-names-external.js":
+<<<<<<< HEAD
   /*!*************************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/object-get-own-property-names-external.js ***!
     \*************************************************************************************************************************/
+=======
+  /*!******************************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/object-get-own-property-names-external.js ***!
+    \******************************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -5838,9 +6438,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/object-get-own-property-names.js":
+<<<<<<< HEAD
   /*!****************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/object-get-own-property-names.js ***!
     \****************************************************************************************************************/
+=======
+  /*!*********************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/object-get-own-property-names.js ***!
+    \*********************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -5866,9 +6472,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/object-get-own-property-symbols.js":
+<<<<<<< HEAD
   /*!******************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/object-get-own-property-symbols.js ***!
     \******************************************************************************************************************/
+=======
+  /*!***********************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/object-get-own-property-symbols.js ***!
+    \***********************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -5880,9 +6492,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/object-get-prototype-of.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/object-get-prototype-of.js ***!
     \**********************************************************************************************************/
+=======
+  /*!***************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/object-get-prototype-of.js ***!
+    \***************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -5923,9 +6541,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/object-keys-internal.js":
+<<<<<<< HEAD
   /*!*******************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/object-keys-internal.js ***!
     \*******************************************************************************************************/
+=======
+  /*!************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/object-keys-internal.js ***!
+    \************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -5972,9 +6596,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/object-keys.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/object-keys.js ***!
     \**********************************************************************************************/
+=======
+  /*!***************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/object-keys.js ***!
+    \***************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -5999,9 +6629,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/object-property-is-enumerable.js":
+<<<<<<< HEAD
   /*!****************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/object-property-is-enumerable.js ***!
     \****************************************************************************************************************/
+=======
+  /*!*********************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/object-property-is-enumerable.js ***!
+    \*********************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -6026,9 +6662,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/object-set-prototype-of.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/object-set-prototype-of.js ***!
     \**********************************************************************************************************/
+=======
+  /*!***************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/object-set-prototype-of.js ***!
+    \***************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -6072,9 +6714,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/object-to-string.js":
+<<<<<<< HEAD
   /*!***************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/object-to-string.js ***!
     \***************************************************************************************************/
+=======
+  /*!********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/object-to-string.js ***!
+    \********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -6100,9 +6748,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/own-keys.js":
+<<<<<<< HEAD
   /*!*******************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/own-keys.js ***!
     \*******************************************************************************************/
+=======
+  /*!************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/own-keys.js ***!
+    \************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -6136,9 +6790,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/path.js":
+<<<<<<< HEAD
   /*!***************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/path.js ***!
     \***************************************************************************************/
+=======
+  /*!********************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/path.js ***!
+    \********************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -6154,9 +6814,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/perform.js":
+<<<<<<< HEAD
   /*!******************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/perform.js ***!
     \******************************************************************************************/
+=======
+  /*!***********************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/perform.js ***!
+    \***********************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -6181,9 +6847,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/promise-resolve.js":
+<<<<<<< HEAD
   /*!**************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/promise-resolve.js ***!
     \**************************************************************************************************/
+=======
+  /*!*******************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/promise-resolve.js ***!
+    \*******************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -6215,9 +6887,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/redefine-all.js":
+<<<<<<< HEAD
   /*!***********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/redefine-all.js ***!
     \***********************************************************************************************/
+=======
+  /*!****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/redefine-all.js ***!
+    \****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -6240,9 +6918,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/redefine.js":
+<<<<<<< HEAD
   /*!*******************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/redefine.js ***!
     \*******************************************************************************************/
+=======
+  /*!************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/redefine.js ***!
+    \************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -6303,9 +6987,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/reflect-metadata.js":
+<<<<<<< HEAD
   /*!***************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/reflect-metadata.js ***!
     \***************************************************************************************************/
+=======
+  /*!********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/reflect-metadata.js ***!
+    \********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -6386,9 +7076,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/regexp-exec-abstract.js":
+<<<<<<< HEAD
   /*!*******************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/regexp-exec-abstract.js ***!
     \*******************************************************************************************************/
+=======
+  /*!************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/regexp-exec-abstract.js ***!
+    \************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -6429,9 +7125,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/regexp-exec.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/regexp-exec.js ***!
     \**********************************************************************************************/
+=======
+  /*!***************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/regexp-exec.js ***!
+    \***************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -6535,9 +7237,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/regexp-flags.js":
+<<<<<<< HEAD
   /*!***********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/regexp-flags.js ***!
     \***********************************************************************************************/
+=======
+  /*!****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/regexp-flags.js ***!
+    \****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -6568,9 +7276,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/regexp-sticky-helpers.js":
+<<<<<<< HEAD
   /*!********************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/regexp-sticky-helpers.js ***!
     \********************************************************************************************************/
+=======
+  /*!*************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/regexp-sticky-helpers.js ***!
+    \*************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -6605,9 +7319,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/require-object-coercible.js":
+<<<<<<< HEAD
   /*!***********************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/require-object-coercible.js ***!
     \***********************************************************************************************************/
+=======
+  /*!****************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/require-object-coercible.js ***!
+    \****************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -6625,9 +7345,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/same-value.js":
+<<<<<<< HEAD
   /*!*********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/same-value.js ***!
     \*********************************************************************************************/
+=======
+  /*!**************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/same-value.js ***!
+    \**************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -6645,9 +7371,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/set-global.js":
+<<<<<<< HEAD
   /*!*********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/set-global.js ***!
     \*********************************************************************************************/
+=======
+  /*!**************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/set-global.js ***!
+    \**************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -6676,9 +7408,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/set-species.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/set-species.js ***!
     \**********************************************************************************************/
+=======
+  /*!***************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/set-species.js ***!
+    \***************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -6723,9 +7461,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/set-to-string-tag.js":
+<<<<<<< HEAD
   /*!****************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/set-to-string-tag.js ***!
     \****************************************************************************************************/
+=======
+  /*!*********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/set-to-string-tag.js ***!
+    \*********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -6759,9 +7503,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/shared-key.js":
+<<<<<<< HEAD
   /*!*********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/shared-key.js ***!
     \*********************************************************************************************/
+=======
+  /*!**************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/shared-key.js ***!
+    \**************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -6786,9 +7536,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/shared-store.js":
+<<<<<<< HEAD
   /*!***********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/shared-store.js ***!
     \***********************************************************************************************/
+=======
+  /*!****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/shared-store.js ***!
+    \****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -6810,9 +7566,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/shared.js":
+<<<<<<< HEAD
   /*!*****************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/shared.js ***!
     \*****************************************************************************************/
+=======
+  /*!**********************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/shared.js ***!
+    \**********************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -6838,9 +7600,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/species-constructor.js":
+<<<<<<< HEAD
   /*!******************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/species-constructor.js ***!
     \******************************************************************************************************/
+=======
+  /*!***********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/species-constructor.js ***!
+    \***********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -6872,9 +7640,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/string-html-forced.js":
+<<<<<<< HEAD
   /*!*****************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/string-html-forced.js ***!
     \*****************************************************************************************************/
+=======
+  /*!**********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/string-html-forced.js ***!
+    \**********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -6898,9 +7672,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/string-multibyte.js":
+<<<<<<< HEAD
   /*!***************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/string-multibyte.js ***!
     \***************************************************************************************************/
+=======
+  /*!********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/string-multibyte.js ***!
+    \********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -6940,9 +7720,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/string-pad.js":
+<<<<<<< HEAD
   /*!*********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/string-pad.js ***!
     \*********************************************************************************************/
+=======
+  /*!**************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/string-pad.js ***!
+    \**************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -6991,9 +7777,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/string-repeat.js":
+<<<<<<< HEAD
   /*!************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/string-repeat.js ***!
     \************************************************************************************************/
+=======
+  /*!*****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/string-repeat.js ***!
+    \*****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -7029,9 +7821,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/string-trim-forced.js":
+<<<<<<< HEAD
   /*!*****************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/string-trim-forced.js ***!
     \*****************************************************************************************************/
+=======
+  /*!**********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/string-trim-forced.js ***!
+    \**********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -7059,9 +7857,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/string-trim.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/string-trim.js ***!
     \**********************************************************************************************/
+=======
+  /*!***************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/string-trim.js ***!
+    \***************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -7104,9 +7908,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/task.js":
+<<<<<<< HEAD
   /*!***************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/task.js ***!
     \***************************************************************************************/
+=======
+  /*!********************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/task.js ***!
+    \********************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -7243,9 +8053,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/this-number-value.js":
+<<<<<<< HEAD
   /*!****************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/this-number-value.js ***!
     \****************************************************************************************************/
+=======
+  /*!*********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/this-number-value.js ***!
+    \*********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -7270,9 +8086,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/to-absolute-index.js":
+<<<<<<< HEAD
   /*!****************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/to-absolute-index.js ***!
     \****************************************************************************************************/
+=======
+  /*!*********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/to-absolute-index.js ***!
+    \*********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -7297,9 +8119,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/to-indexed-object.js":
+<<<<<<< HEAD
   /*!****************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/to-indexed-object.js ***!
     \****************************************************************************************************/
+=======
+  /*!*********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/to-indexed-object.js ***!
+    \*********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -7323,9 +8151,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/to-integer.js":
+<<<<<<< HEAD
   /*!*********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/to-integer.js ***!
     \*********************************************************************************************/
+=======
+  /*!**************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/to-integer.js ***!
+    \**************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -7344,9 +8178,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/to-length.js":
+<<<<<<< HEAD
   /*!********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/to-length.js ***!
     \********************************************************************************************/
+=======
+  /*!*************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/to-length.js ***!
+    \*************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -7368,9 +8208,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/to-object.js":
+<<<<<<< HEAD
   /*!********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/to-object.js ***!
     \********************************************************************************************/
+=======
+  /*!*************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/to-object.js ***!
+    \*************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -7391,9 +8237,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/to-primitive.js":
+<<<<<<< HEAD
   /*!***********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/to-primitive.js ***!
     \***********************************************************************************************/
+=======
+  /*!****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/to-primitive.js ***!
+    \****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -7421,9 +8273,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/to-string-tag-support.js":
+<<<<<<< HEAD
   /*!********************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/to-string-tag-support.js ***!
     \********************************************************************************************************/
+=======
+  /*!*************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/to-string-tag-support.js ***!
+    \*************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -7442,9 +8300,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/uid.js":
+<<<<<<< HEAD
   /*!**************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/uid.js ***!
     \**************************************************************************************/
+=======
+  /*!*******************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/uid.js ***!
+    \*******************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -7462,9 +8326,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/use-symbol-as-uid.js":
+<<<<<<< HEAD
   /*!****************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/use-symbol-as-uid.js ***!
     \****************************************************************************************************/
+=======
+  /*!*********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/use-symbol-as-uid.js ***!
+    \*********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -7482,9 +8352,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/well-known-symbol-wrapped.js":
+<<<<<<< HEAD
   /*!************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/well-known-symbol-wrapped.js ***!
     \************************************************************************************************************/
+=======
+  /*!*****************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/well-known-symbol-wrapped.js ***!
+    \*****************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -7500,9 +8376,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/well-known-symbol.js":
+<<<<<<< HEAD
   /*!****************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/well-known-symbol.js ***!
     \****************************************************************************************************/
+=======
+  /*!*********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/well-known-symbol.js ***!
+    \*********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -7549,9 +8431,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/internals/whitespaces.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/internals/whitespaces.js ***!
     \**********************************************************************************************/
+=======
+  /*!***************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/internals/whitespaces.js ***!
+    \***************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -7565,9 +8453,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.array.concat.js":
+<<<<<<< HEAD
   /*!************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.array.concat.js ***!
     \************************************************************************************************/
+=======
+  /*!*****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.array.concat.js ***!
+    \*****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -7679,9 +8573,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.array.copy-within.js":
+<<<<<<< HEAD
   /*!*****************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.array.copy-within.js ***!
     \*****************************************************************************************************/
+=======
+  /*!**********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.array.copy-within.js ***!
+    \**********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -7714,9 +8614,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.array.every.js":
+<<<<<<< HEAD
   /*!***********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.array.every.js ***!
     \***********************************************************************************************/
+=======
+  /*!****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.array.every.js ***!
+    \****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -7760,9 +8666,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.array.fill.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.array.fill.js ***!
     \**********************************************************************************************/
+=======
+  /*!***************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.array.fill.js ***!
+    \***************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -7795,9 +8707,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.array.filter.js":
+<<<<<<< HEAD
   /*!************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.array.filter.js ***!
     \************************************************************************************************/
+=======
+  /*!*****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.array.filter.js ***!
+    \*****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -7843,9 +8761,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.array.find-index.js":
+<<<<<<< HEAD
   /*!****************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.array.find-index.js ***!
     \****************************************************************************************************/
+=======
+  /*!*********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.array.find-index.js ***!
+    \*********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -7896,9 +8820,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.array.find.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.array.find.js ***!
     \**********************************************************************************************/
+=======
+  /*!***************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.array.find.js ***!
+    \***************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -7949,9 +8879,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.array.for-each.js":
+<<<<<<< HEAD
   /*!**************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.array.for-each.js ***!
     \**************************************************************************************************/
+=======
+  /*!*******************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.array.for-each.js ***!
+    \*******************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -7981,9 +8917,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.array.from.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.array.from.js ***!
     \**********************************************************************************************/
+=======
+  /*!***************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.array.from.js ***!
+    \***************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -8018,9 +8960,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.array.index-of.js":
+<<<<<<< HEAD
   /*!**************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.array.index-of.js ***!
     \**************************************************************************************************/
+=======
+  /*!*******************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.array.index-of.js ***!
+    \*******************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -8070,9 +9018,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.array.is-array.js":
+<<<<<<< HEAD
   /*!**************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.array.is-array.js ***!
     \**************************************************************************************************/
+=======
+  /*!*******************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.array.is-array.js ***!
+    \*******************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -8099,9 +9053,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.array.iterator.js":
+<<<<<<< HEAD
   /*!**************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.array.iterator.js ***!
     \**************************************************************************************************/
+=======
+  /*!*******************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.array.iterator.js ***!
+    \*******************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -8193,9 +9153,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.array.join.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.array.join.js ***!
     \**********************************************************************************************/
+=======
+  /*!***************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.array.join.js ***!
+    \***************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -8238,9 +9204,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.array.last-index-of.js":
+<<<<<<< HEAD
   /*!*******************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.array.last-index-of.js ***!
     \*******************************************************************************************************/
+=======
+  /*!************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.array.last-index-of.js ***!
+    \************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -8268,9 +9240,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.array.map.js":
+<<<<<<< HEAD
   /*!*********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.array.map.js ***!
     \*********************************************************************************************/
+=======
+  /*!**************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.array.map.js ***!
+    \**************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -8316,9 +9294,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.array.of.js":
+<<<<<<< HEAD
   /*!********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.array.of.js ***!
     \********************************************************************************************/
+=======
+  /*!*************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.array.of.js ***!
+    \*************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -8373,9 +9357,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.array.reduce-right.js":
+<<<<<<< HEAD
   /*!******************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.array.reduce-right.js ***!
     \******************************************************************************************************/
+=======
+  /*!***********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.array.reduce-right.js ***!
+    \***********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -8422,9 +9412,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.array.reduce.js":
+<<<<<<< HEAD
   /*!************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.array.reduce.js ***!
     \************************************************************************************************/
+=======
+  /*!*****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.array.reduce.js ***!
+    \*****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -8470,9 +9466,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.array.slice.js":
+<<<<<<< HEAD
   /*!***********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.array.slice.js ***!
     \***********************************************************************************************/
+=======
+  /*!****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.array.slice.js ***!
+    \****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -8575,9 +9577,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.array.some.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.array.some.js ***!
     \**********************************************************************************************/
+=======
+  /*!***************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.array.some.js ***!
+    \***************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -8621,9 +9629,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.array.sort.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.array.sort.js ***!
     \**********************************************************************************************/
+=======
+  /*!***************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.array.sort.js ***!
+    \***************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -8680,9 +9694,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.array.splice.js":
+<<<<<<< HEAD
   /*!************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.array.splice.js ***!
     \************************************************************************************************/
+=======
+  /*!*****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.array.splice.js ***!
+    \*****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -8807,9 +9827,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.date.now.js":
+<<<<<<< HEAD
   /*!********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.date.now.js ***!
     \********************************************************************************************/
+=======
+  /*!*************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.date.now.js ***!
+    \*************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -8834,9 +9860,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.date.to-iso-string.js":
+<<<<<<< HEAD
   /*!******************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.date.to-iso-string.js ***!
     \******************************************************************************************************/
+=======
+  /*!***********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.date.to-iso-string.js ***!
+    \***********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -8865,9 +9897,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.date.to-json.js":
+<<<<<<< HEAD
   /*!************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.date.to-json.js ***!
     \************************************************************************************************/
+=======
+  /*!*****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.date.to-json.js ***!
+    \*****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -8917,9 +9955,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.date.to-primitive.js":
+<<<<<<< HEAD
   /*!*****************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.date.to-primitive.js ***!
     \*****************************************************************************************************/
+=======
+  /*!**********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.date.to-primitive.js ***!
+    \**********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -8950,9 +9994,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.date.to-string.js":
+<<<<<<< HEAD
   /*!**************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.date.to-string.js ***!
     \**************************************************************************************************/
+=======
+  /*!*******************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.date.to-string.js ***!
+    \*******************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -8982,9 +10032,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.function.bind.js":
+<<<<<<< HEAD
   /*!*************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.function.bind.js ***!
     \*************************************************************************************************/
+=======
+  /*!******************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.function.bind.js ***!
+    \******************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -9011,9 +10067,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.function.has-instance.js":
+<<<<<<< HEAD
   /*!*********************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.function.has-instance.js ***!
     \*********************************************************************************************************/
+=======
+  /*!**************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.function.has-instance.js ***!
+    \**************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -9061,9 +10123,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.function.name.js":
+<<<<<<< HEAD
   /*!*************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.function.name.js ***!
     \*************************************************************************************************/
+=======
+  /*!******************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.function.name.js ***!
+    \******************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -9101,9 +10169,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.json.to-string-tag.js":
+<<<<<<< HEAD
   /*!******************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.json.to-string-tag.js ***!
     \******************************************************************************************************/
+=======
+  /*!***********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.json.to-string-tag.js ***!
+    \***********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -9125,9 +10199,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.map.js":
+<<<<<<< HEAD
   /*!***************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.map.js ***!
     \***************************************************************************************/
+=======
+  /*!********************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.map.js ***!
+    \********************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -9155,9 +10235,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.math.acosh.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.math.acosh.js ***!
     \**********************************************************************************************/
+=======
+  /*!***************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.math.acosh.js ***!
+    \***************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -9194,9 +10280,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.math.asinh.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.math.asinh.js ***!
     \**********************************************************************************************/
+=======
+  /*!***************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.math.asinh.js ***!
+    \***************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -9229,9 +10321,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.math.atanh.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.math.atanh.js ***!
     \**********************************************************************************************/
+=======
+  /*!***************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.math.atanh.js ***!
+    \***************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -9260,9 +10358,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.math.cbrt.js":
+<<<<<<< HEAD
   /*!*********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.math.cbrt.js ***!
     \*********************************************************************************************/
+=======
+  /*!**************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.math.cbrt.js ***!
+    \**************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -9293,9 +10397,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.math.clz32.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.math.clz32.js ***!
     \**********************************************************************************************/
+=======
+  /*!***************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.math.clz32.js ***!
+    \***************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -9323,9 +10433,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.math.cosh.js":
+<<<<<<< HEAD
   /*!*********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.math.cosh.js ***!
     \*********************************************************************************************/
+=======
+  /*!**************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.math.cosh.js ***!
+    \**************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -9359,9 +10475,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.math.expm1.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.math.expm1.js ***!
     \**********************************************************************************************/
+=======
+  /*!***************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.math.expm1.js ***!
+    \***************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -9389,9 +10511,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.math.fround.js":
+<<<<<<< HEAD
   /*!***********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.math.fround.js ***!
     \***********************************************************************************************/
+=======
+  /*!****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.math.fround.js ***!
+    \****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -9418,9 +10546,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.math.hypot.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.math.hypot.js ***!
     \**********************************************************************************************/
+=======
+  /*!***************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.math.hypot.js ***!
+    \***************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -9472,9 +10606,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.math.imul.js":
+<<<<<<< HEAD
   /*!*********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.math.imul.js ***!
     \*********************************************************************************************/
+=======
+  /*!**************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.math.imul.js ***!
+    \**************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -9514,9 +10654,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.math.log10.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.math.log10.js ***!
     \**********************************************************************************************/
+=======
+  /*!***************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.math.log10.js ***!
+    \***************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -9543,9 +10689,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.math.log1p.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.math.log1p.js ***!
     \**********************************************************************************************/
+=======
+  /*!***************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.math.log1p.js ***!
+    \***************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -9572,9 +10724,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.math.log2.js":
+<<<<<<< HEAD
   /*!*********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.math.log2.js ***!
     \*********************************************************************************************/
+=======
+  /*!**************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.math.log2.js ***!
+    \**************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -9601,9 +10759,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.math.sign.js":
+<<<<<<< HEAD
   /*!*********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.math.sign.js ***!
     \*********************************************************************************************/
+=======
+  /*!**************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.math.sign.js ***!
+    \**************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -9630,9 +10794,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.math.sinh.js":
+<<<<<<< HEAD
   /*!*********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.math.sinh.js ***!
     \*********************************************************************************************/
+=======
+  /*!**************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.math.sinh.js ***!
+    \**************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -9673,9 +10843,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.math.tanh.js":
+<<<<<<< HEAD
   /*!*********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.math.tanh.js ***!
     \*********************************************************************************************/
+=======
+  /*!**************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.math.tanh.js ***!
+    \**************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -9707,9 +10883,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.math.to-string-tag.js":
+<<<<<<< HEAD
   /*!******************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.math.to-string-tag.js ***!
     \******************************************************************************************************/
+=======
+  /*!***********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.math.to-string-tag.js ***!
+    \***********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -9727,9 +10909,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.math.trunc.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.math.trunc.js ***!
     \**********************************************************************************************/
+=======
+  /*!***************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.math.trunc.js ***!
+    \***************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -9756,9 +10944,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.number.constructor.js":
+<<<<<<< HEAD
   /*!******************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.number.constructor.js ***!
     \******************************************************************************************************/
+=======
+  /*!***********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.number.constructor.js ***!
+    \***********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -9907,9 +11101,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.number.epsilon.js":
+<<<<<<< HEAD
   /*!**************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.number.epsilon.js ***!
     \**************************************************************************************************/
+=======
+  /*!*******************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.number.epsilon.js ***!
+    \*******************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -9932,9 +11132,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.number.is-finite.js":
+<<<<<<< HEAD
   /*!****************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.number.is-finite.js ***!
     \****************************************************************************************************/
+=======
+  /*!*********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.number.is-finite.js ***!
+    \*********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -9961,9 +11167,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.number.is-integer.js":
+<<<<<<< HEAD
   /*!*****************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.number.is-integer.js ***!
     \*****************************************************************************************************/
+=======
+  /*!**********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.number.is-integer.js ***!
+    \**********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -9990,9 +11202,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.number.is-nan.js":
+<<<<<<< HEAD
   /*!*************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.number.is-nan.js ***!
     \*************************************************************************************************/
+=======
+  /*!******************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.number.is-nan.js ***!
+    \******************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -10018,9 +11236,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.number.is-safe-integer.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.number.is-safe-integer.js ***!
     \**********************************************************************************************************/
+=======
+  /*!***************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.number.is-safe-integer.js ***!
+    \***************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -10050,9 +11274,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.number.max-safe-integer.js":
+<<<<<<< HEAD
   /*!***********************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.number.max-safe-integer.js ***!
     \***********************************************************************************************************/
+=======
+  /*!****************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.number.max-safe-integer.js ***!
+    \****************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -10075,9 +11305,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.number.min-safe-integer.js":
+<<<<<<< HEAD
   /*!***********************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.number.min-safe-integer.js ***!
     \***********************************************************************************************************/
+=======
+  /*!****************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.number.min-safe-integer.js ***!
+    \****************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -10100,9 +11336,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.number.parse-float.js":
+<<<<<<< HEAD
   /*!******************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.number.parse-float.js ***!
     \******************************************************************************************************/
+=======
+  /*!***********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.number.parse-float.js ***!
+    \***********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -10130,9 +11372,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.number.parse-int.js":
+<<<<<<< HEAD
   /*!****************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.number.parse-int.js ***!
     \****************************************************************************************************/
+=======
+  /*!*********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.number.parse-int.js ***!
+    \*********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -10160,9 +11408,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.number.to-fixed.js":
+<<<<<<< HEAD
   /*!***************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.number.to-fixed.js ***!
     \***************************************************************************************************/
+=======
+  /*!********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.number.to-fixed.js ***!
+    \********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -10329,9 +11583,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.number.to-precision.js":
+<<<<<<< HEAD
   /*!*******************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.number.to-precision.js ***!
     \*******************************************************************************************************/
+=======
+  /*!************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.number.to-precision.js ***!
+    \************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -10375,9 +11635,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.object.assign.js":
+<<<<<<< HEAD
   /*!*************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.object.assign.js ***!
     \*************************************************************************************************/
+=======
+  /*!******************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.object.assign.js ***!
+    \******************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -10405,9 +11671,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.object.create.js":
+<<<<<<< HEAD
   /*!*************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.object.create.js ***!
     \*************************************************************************************************/
+=======
+  /*!******************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.object.create.js ***!
+    \******************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -10439,9 +11711,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.object.define-properties.js":
+<<<<<<< HEAD
   /*!************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.object.define-properties.js ***!
     \************************************************************************************************************/
+=======
+  /*!*****************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.object.define-properties.js ***!
+    \*****************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -10474,9 +11752,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.object.define-property.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.object.define-property.js ***!
     \**********************************************************************************************************/
+=======
+  /*!***************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.object.define-property.js ***!
+    \***************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -10509,9 +11793,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.object.freeze.js":
+<<<<<<< HEAD
   /*!*************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.object.freeze.js ***!
     \*************************************************************************************************/
+=======
+  /*!******************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.object.freeze.js ***!
+    \******************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -10558,9 +11848,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.object.get-own-property-descriptor.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.object.get-own-property-descriptor.js ***!
     \**********************************************************************************************************************/
+=======
+  /*!***************************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.object.get-own-property-descriptor.js ***!
+    \***************************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -10607,9 +11903,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.object.get-own-property-names.js":
+<<<<<<< HEAD
   /*!*****************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.object.get-own-property-names.js ***!
     \*****************************************************************************************************************/
+=======
+  /*!**********************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.object.get-own-property-names.js ***!
+    \**********************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -10644,9 +11946,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.object.get-prototype-of.js":
+<<<<<<< HEAD
   /*!***********************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.object.get-prototype-of.js ***!
     \***********************************************************************************************************/
+=======
+  /*!****************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.object.get-prototype-of.js ***!
+    \****************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -10692,9 +12000,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.object.is-extensible.js":
+<<<<<<< HEAD
   /*!********************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.object.is-extensible.js ***!
     \********************************************************************************************************/
+=======
+  /*!*************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.object.is-extensible.js ***!
+    \*************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -10732,9 +12046,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.object.is-frozen.js":
+<<<<<<< HEAD
   /*!****************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.object.is-frozen.js ***!
     \****************************************************************************************************/
+=======
+  /*!*********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.object.is-frozen.js ***!
+    \*********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -10772,9 +12092,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.object.is-sealed.js":
+<<<<<<< HEAD
   /*!****************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.object.is-sealed.js ***!
     \****************************************************************************************************/
+=======
+  /*!*********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.object.is-sealed.js ***!
+    \*********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -10812,9 +12138,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.object.is.js":
+<<<<<<< HEAD
   /*!*********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.object.is.js ***!
     \*********************************************************************************************/
+=======
+  /*!**************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.object.is.js ***!
+    \**************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -10841,9 +12173,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.object.keys.js":
+<<<<<<< HEAD
   /*!***********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.object.keys.js ***!
     \***********************************************************************************************/
+=======
+  /*!****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.object.keys.js ***!
+    \****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -10884,9 +12222,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.object.prevent-extensions.js":
+<<<<<<< HEAD
   /*!*************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.object.prevent-extensions.js ***!
     \*************************************************************************************************************/
+=======
+  /*!******************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.object.prevent-extensions.js ***!
+    \******************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -10933,9 +12277,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.object.seal.js":
+<<<<<<< HEAD
   /*!***********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.object.seal.js ***!
     \***********************************************************************************************/
+=======
+  /*!****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.object.seal.js ***!
+    \****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -10982,9 +12332,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.object.set-prototype-of.js":
+<<<<<<< HEAD
   /*!***********************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.object.set-prototype-of.js ***!
     \***********************************************************************************************************/
+=======
+  /*!****************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.object.set-prototype-of.js ***!
+    \****************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -11011,9 +12367,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.object.to-string.js":
+<<<<<<< HEAD
   /*!****************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.object.to-string.js ***!
     \****************************************************************************************************/
+=======
+  /*!*********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.object.to-string.js ***!
+    \*********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -11044,9 +12406,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.parse-float.js":
+<<<<<<< HEAD
   /*!***********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.parse-float.js ***!
     \***********************************************************************************************/
+=======
+  /*!****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.parse-float.js ***!
+    \****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -11073,9 +12441,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.parse-int.js":
+<<<<<<< HEAD
   /*!*********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.parse-int.js ***!
     \*********************************************************************************************/
+=======
+  /*!**************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.parse-int.js ***!
+    \**************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -11102,9 +12476,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.promise.js":
+<<<<<<< HEAD
   /*!*******************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.promise.js ***!
     \*******************************************************************************************/
+=======
+  /*!************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.promise.js ***!
+    \************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -11616,9 +12996,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.reflect.apply.js":
+<<<<<<< HEAD
   /*!*************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.reflect.apply.js ***!
     \*************************************************************************************************/
+=======
+  /*!******************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.reflect.apply.js ***!
+    \******************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -11670,9 +13056,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.reflect.construct.js":
+<<<<<<< HEAD
   /*!*****************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.reflect.construct.js ***!
     \*****************************************************************************************************/
+=======
+  /*!**********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.reflect.construct.js ***!
+    \**********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -11781,9 +13173,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.reflect.define-property.js":
+<<<<<<< HEAD
   /*!***********************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.reflect.define-property.js ***!
     \***********************************************************************************************************/
+=======
+  /*!****************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.reflect.define-property.js ***!
+    \****************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -11848,9 +13246,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.reflect.delete-property.js":
+<<<<<<< HEAD
   /*!***********************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.reflect.delete-property.js ***!
     \***********************************************************************************************************/
+=======
+  /*!****************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.reflect.delete-property.js ***!
+    \****************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -11884,9 +13288,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.reflect.get-own-property-descriptor.js":
+<<<<<<< HEAD
   /*!***********************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.reflect.get-own-property-descriptor.js ***!
     \***********************************************************************************************************************/
+=======
+  /*!****************************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.reflect.get-own-property-descriptor.js ***!
+    \****************************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -11924,9 +13334,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.reflect.get-prototype-of.js":
+<<<<<<< HEAD
   /*!************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.reflect.get-prototype-of.js ***!
     \************************************************************************************************************/
+=======
+  /*!*****************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.reflect.get-prototype-of.js ***!
+    \*****************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -11964,9 +13380,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.reflect.get.js":
+<<<<<<< HEAD
   /*!***********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.reflect.get.js ***!
     \***********************************************************************************************/
+=======
+  /*!****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.reflect.get.js ***!
+    \****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -12019,9 +13441,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.reflect.has.js":
+<<<<<<< HEAD
   /*!***********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.reflect.has.js ***!
     \***********************************************************************************************/
+=======
+  /*!****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.reflect.has.js ***!
+    \****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -12046,9 +13474,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.reflect.is-extensible.js":
+<<<<<<< HEAD
   /*!*********************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.reflect.is-extensible.js ***!
     \*********************************************************************************************************/
+=======
+  /*!**************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.reflect.is-extensible.js ***!
+    \**************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -12079,9 +13513,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.reflect.own-keys.js":
+<<<<<<< HEAD
   /*!****************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.reflect.own-keys.js ***!
     \****************************************************************************************************/
+=======
+  /*!*********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.reflect.own-keys.js ***!
+    \*********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -12108,9 +13548,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.reflect.prevent-extensions.js":
+<<<<<<< HEAD
   /*!**************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.reflect.prevent-extensions.js ***!
     \**************************************************************************************************************/
+=======
+  /*!*******************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.reflect.prevent-extensions.js ***!
+    \*******************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -12156,9 +13602,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.reflect.set-prototype-of.js":
+<<<<<<< HEAD
   /*!************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.reflect.set-prototype-of.js ***!
     \************************************************************************************************************/
+=======
+  /*!*****************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.reflect.set-prototype-of.js ***!
+    \*****************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -12203,9 +13655,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.reflect.set.js":
+<<<<<<< HEAD
   /*!***********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.reflect.set.js ***!
     \***********************************************************************************************/
+=======
+  /*!****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.reflect.set.js ***!
+    \****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -12300,9 +13758,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.regexp.constructor.js":
+<<<<<<< HEAD
   /*!******************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.regexp.constructor.js ***!
     \******************************************************************************************************/
+=======
+  /*!***********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.regexp.constructor.js ***!
+    \***********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -12440,9 +13904,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.regexp.exec.js":
+<<<<<<< HEAD
   /*!***********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.regexp.exec.js ***!
     \***********************************************************************************************/
+=======
+  /*!****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.regexp.exec.js ***!
+    \****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -12470,9 +13940,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.regexp.flags.js":
+<<<<<<< HEAD
   /*!************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.regexp.flags.js ***!
     \************************************************************************************************/
+=======
+  /*!*****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.regexp.flags.js ***!
+    \*****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -12508,9 +13984,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.regexp.to-string.js":
+<<<<<<< HEAD
   /*!****************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.regexp.to-string.js ***!
     \****************************************************************************************************/
+=======
+  /*!*********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.regexp.to-string.js ***!
+    \*********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -12564,9 +14046,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.set.js":
+<<<<<<< HEAD
   /*!***************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.set.js ***!
     \***************************************************************************************/
+=======
+  /*!********************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.set.js ***!
+    \********************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -12594,9 +14082,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.string.anchor.js":
+<<<<<<< HEAD
   /*!*************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.string.anchor.js ***!
     \*************************************************************************************************/
+=======
+  /*!******************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.string.anchor.js ***!
+    \******************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -12632,9 +14126,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.string.big.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.string.big.js ***!
     \**********************************************************************************************/
+=======
+  /*!***************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.string.big.js ***!
+    \***************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -12670,9 +14170,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.string.blink.js":
+<<<<<<< HEAD
   /*!************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.string.blink.js ***!
     \************************************************************************************************/
+=======
+  /*!*****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.string.blink.js ***!
+    \*****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -12708,9 +14214,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.string.bold.js":
+<<<<<<< HEAD
   /*!***********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.string.bold.js ***!
     \***********************************************************************************************/
+=======
+  /*!****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.string.bold.js ***!
+    \****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -12746,9 +14258,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.string.code-point-at.js":
+<<<<<<< HEAD
   /*!********************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.string.code-point-at.js ***!
     \********************************************************************************************************/
+=======
+  /*!*************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.string.code-point-at.js ***!
+    \*************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -12779,9 +14297,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.string.ends-with.js":
+<<<<<<< HEAD
   /*!****************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.string.ends-with.js ***!
     \****************************************************************************************************/
+=======
+  /*!*********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.string.ends-with.js ***!
+    \*********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -12849,9 +14373,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.string.fixed.js":
+<<<<<<< HEAD
   /*!************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.string.fixed.js ***!
     \************************************************************************************************/
+=======
+  /*!*****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.string.fixed.js ***!
+    \*****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -12887,9 +14417,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.string.fontcolor.js":
+<<<<<<< HEAD
   /*!****************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.string.fontcolor.js ***!
     \****************************************************************************************************/
+=======
+  /*!*********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.string.fontcolor.js ***!
+    \*********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -12925,9 +14461,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.string.fontsize.js":
+<<<<<<< HEAD
   /*!***************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.string.fontsize.js ***!
     \***************************************************************************************************/
+=======
+  /*!********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.string.fontsize.js ***!
+    \********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -12963,9 +14505,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.string.from-code-point.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.string.from-code-point.js ***!
     \**********************************************************************************************************/
+=======
+  /*!***************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.string.from-code-point.js ***!
+    \***************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -13011,9 +14559,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.string.includes.js":
+<<<<<<< HEAD
   /*!***************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.string.includes.js ***!
     \***************************************************************************************************/
+=======
+  /*!********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.string.includes.js ***!
+    \********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -13055,9 +14609,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.string.italics.js":
+<<<<<<< HEAD
   /*!**************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.string.italics.js ***!
     \**************************************************************************************************/
+=======
+  /*!*******************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.string.italics.js ***!
+    \*******************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -13093,9 +14653,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.string.iterator.js":
+<<<<<<< HEAD
   /*!***************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.string.iterator.js ***!
     \***************************************************************************************************/
+=======
+  /*!********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.string.iterator.js ***!
+    \********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -13148,9 +14714,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.string.link.js":
+<<<<<<< HEAD
   /*!***********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.string.link.js ***!
     \***********************************************************************************************/
+=======
+  /*!****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.string.link.js ***!
+    \****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -13186,9 +14758,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.string.match.js":
+<<<<<<< HEAD
   /*!************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.string.match.js ***!
     \************************************************************************************************/
+=======
+  /*!*****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.string.match.js ***!
+    \*****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -13257,9 +14835,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.string.raw.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.string.raw.js ***!
     \**********************************************************************************************/
+=======
+  /*!***************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.string.raw.js ***!
+    \***************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -13303,9 +14887,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.string.repeat.js":
+<<<<<<< HEAD
   /*!*************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.string.repeat.js ***!
     \*************************************************************************************************/
+=======
+  /*!******************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.string.repeat.js ***!
+    \******************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -13332,9 +14922,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.string.replace.js":
+<<<<<<< HEAD
   /*!**************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.string.replace.js ***!
     \**************************************************************************************************/
+=======
+  /*!*******************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.string.replace.js ***!
+    \*******************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -13515,9 +15111,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.string.search.js":
+<<<<<<< HEAD
   /*!*************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.string.search.js ***!
     \*************************************************************************************************/
+=======
+  /*!******************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.string.search.js ***!
+    \******************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -13572,9 +15174,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.string.small.js":
+<<<<<<< HEAD
   /*!************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.string.small.js ***!
     \************************************************************************************************/
+=======
+  /*!*****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.string.small.js ***!
+    \*****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -13610,9 +15218,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.string.split.js":
+<<<<<<< HEAD
   /*!************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.string.split.js ***!
     \************************************************************************************************/
+=======
+  /*!*****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.string.split.js ***!
+    \*****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -13775,9 +15389,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.string.starts-with.js":
+<<<<<<< HEAD
   /*!******************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.string.starts-with.js ***!
     \******************************************************************************************************/
+=======
+  /*!***********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.string.starts-with.js ***!
+    \***********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -13843,9 +15463,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.string.strike.js":
+<<<<<<< HEAD
   /*!*************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.string.strike.js ***!
     \*************************************************************************************************/
+=======
+  /*!******************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.string.strike.js ***!
+    \******************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -13881,9 +15507,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.string.sub.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.string.sub.js ***!
     \**********************************************************************************************/
+=======
+  /*!***************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.string.sub.js ***!
+    \***************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -13919,9 +15551,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.string.sup.js":
+<<<<<<< HEAD
   /*!**********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.string.sup.js ***!
     \**********************************************************************************************/
+=======
+  /*!***************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.string.sup.js ***!
+    \***************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -13957,9 +15595,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.string.trim.js":
+<<<<<<< HEAD
   /*!***********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.string.trim.js ***!
     \***********************************************************************************************/
+=======
+  /*!****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.string.trim.js ***!
+    \****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -13995,9 +15639,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.symbol.async-iterator.js":
+<<<<<<< HEAD
   /*!*********************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.symbol.async-iterator.js ***!
     \*********************************************************************************************************/
+=======
+  /*!**************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.symbol.async-iterator.js ***!
+    \**************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -14015,9 +15665,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.symbol.description.js":
+<<<<<<< HEAD
   /*!******************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.symbol.description.js ***!
     \******************************************************************************************************/
+=======
+  /*!***********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.symbol.description.js ***!
+    \***********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -14099,9 +15755,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.symbol.has-instance.js":
+<<<<<<< HEAD
   /*!*******************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.symbol.has-instance.js ***!
     \*******************************************************************************************************/
+=======
+  /*!************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.symbol.has-instance.js ***!
+    \************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -14119,9 +15781,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.symbol.is-concat-spreadable.js":
+<<<<<<< HEAD
   /*!***************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.symbol.is-concat-spreadable.js ***!
     \***************************************************************************************************************/
+=======
+  /*!********************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.symbol.is-concat-spreadable.js ***!
+    \********************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -14139,9 +15807,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.symbol.iterator.js":
+<<<<<<< HEAD
   /*!***************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.symbol.iterator.js ***!
     \***************************************************************************************************/
+=======
+  /*!********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.symbol.iterator.js ***!
+    \********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -14159,9 +15833,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.symbol.js":
+<<<<<<< HEAD
   /*!******************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.symbol.js ***!
     \******************************************************************************************/
+=======
+  /*!***********************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.symbol.js ***!
+    \***********************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -14640,9 +16320,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.symbol.match-all.js":
+<<<<<<< HEAD
   /*!****************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.symbol.match-all.js ***!
     \****************************************************************************************************/
+=======
+  /*!*********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.symbol.match-all.js ***!
+    \*********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -14659,9 +16345,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.symbol.match.js":
+<<<<<<< HEAD
   /*!************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.symbol.match.js ***!
     \************************************************************************************************/
+=======
+  /*!*****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.symbol.match.js ***!
+    \*****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -14679,9 +16371,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.symbol.replace.js":
+<<<<<<< HEAD
   /*!**************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.symbol.replace.js ***!
     \**************************************************************************************************/
+=======
+  /*!*******************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.symbol.replace.js ***!
+    \*******************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -14699,9 +16397,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.symbol.search.js":
+<<<<<<< HEAD
   /*!*************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.symbol.search.js ***!
     \*************************************************************************************************/
+=======
+  /*!******************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.symbol.search.js ***!
+    \******************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -14719,9 +16423,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.symbol.species.js":
+<<<<<<< HEAD
   /*!**************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.symbol.species.js ***!
     \**************************************************************************************************/
+=======
+  /*!*******************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.symbol.species.js ***!
+    \*******************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -14739,9 +16449,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.symbol.split.js":
+<<<<<<< HEAD
   /*!************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.symbol.split.js ***!
     \************************************************************************************************/
+=======
+  /*!*****************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.symbol.split.js ***!
+    \*****************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -14759,9 +16475,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.symbol.to-primitive.js":
+<<<<<<< HEAD
   /*!*******************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.symbol.to-primitive.js ***!
     \*******************************************************************************************************/
+=======
+  /*!************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.symbol.to-primitive.js ***!
+    \************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -14779,9 +16501,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.symbol.to-string-tag.js":
+<<<<<<< HEAD
   /*!********************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.symbol.to-string-tag.js ***!
     \********************************************************************************************************/
+=======
+  /*!*************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.symbol.to-string-tag.js ***!
+    \*************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -14799,9 +16527,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.symbol.unscopables.js":
+<<<<<<< HEAD
   /*!******************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.symbol.unscopables.js ***!
     \******************************************************************************************************/
+=======
+  /*!***********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.symbol.unscopables.js ***!
+    \***********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -14819,9 +16553,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/es.weak-map.js":
+<<<<<<< HEAD
   /*!********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/es.weak-map.js ***!
     \********************************************************************************************/
+=======
+  /*!*************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/es.weak-map.js ***!
+    \*************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -14930,9 +16670,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/esnext.reflect.define-metadata.js":
+<<<<<<< HEAD
   /*!***************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/esnext.reflect.define-metadata.js ***!
     \***************************************************************************************************************/
+=======
+  /*!********************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/esnext.reflect.define-metadata.js ***!
+    \********************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -14970,9 +16716,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/esnext.reflect.delete-metadata.js":
+<<<<<<< HEAD
   /*!***************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/esnext.reflect.delete-metadata.js ***!
     \***************************************************************************************************************/
+=======
+  /*!********************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/esnext.reflect.delete-metadata.js ***!
+    \********************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -15016,9 +16768,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/esnext.reflect.get-metadata-keys.js":
+<<<<<<< HEAD
   /*!*****************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/esnext.reflect.get-metadata-keys.js ***!
     \*****************************************************************************************************************/
+=======
+  /*!**********************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/esnext.reflect.get-metadata-keys.js ***!
+    \**********************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -15084,9 +16842,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/esnext.reflect.get-metadata.js":
+<<<<<<< HEAD
   /*!************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/esnext.reflect.get-metadata.js ***!
     \************************************************************************************************************/
+=======
+  /*!*****************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/esnext.reflect.get-metadata.js ***!
+    \*****************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -15137,9 +16901,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/esnext.reflect.get-own-metadata-keys.js":
+<<<<<<< HEAD
   /*!*********************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/esnext.reflect.get-own-metadata-keys.js ***!
     \*********************************************************************************************************************/
+=======
+  /*!**************************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/esnext.reflect.get-own-metadata-keys.js ***!
+    \**************************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -15177,9 +16947,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/esnext.reflect.get-own-metadata.js":
+<<<<<<< HEAD
   /*!****************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/esnext.reflect.get-own-metadata.js ***!
     \****************************************************************************************************************/
+=======
+  /*!*********************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/esnext.reflect.get-own-metadata.js ***!
+    \*********************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -15217,9 +16993,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/esnext.reflect.has-metadata.js":
+<<<<<<< HEAD
   /*!************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/esnext.reflect.has-metadata.js ***!
     \************************************************************************************************************/
+=======
+  /*!*****************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/esnext.reflect.has-metadata.js ***!
+    \*****************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -15269,9 +17051,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/esnext.reflect.has-own-metadata.js":
+<<<<<<< HEAD
   /*!****************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/esnext.reflect.has-own-metadata.js ***!
     \****************************************************************************************************************/
+=======
+  /*!*********************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/esnext.reflect.has-own-metadata.js ***!
+    \*********************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -15309,9 +17097,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/esnext.reflect.metadata.js":
+<<<<<<< HEAD
   /*!********************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/esnext.reflect.metadata.js ***!
     \********************************************************************************************************/
+=======
+  /*!*************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/esnext.reflect.metadata.js ***!
+    \*************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -15348,9 +17142,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/web.dom-collections.for-each.js":
+<<<<<<< HEAD
   /*!*************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/web.dom-collections.for-each.js ***!
     \*************************************************************************************************************/
+=======
+  /*!******************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/web.dom-collections.for-each.js ***!
+    \******************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -15388,9 +17188,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/modules/web.dom-collections.iterator.js":
+<<<<<<< HEAD
   /*!*************************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/modules/web.dom-collections.iterator.js ***!
     \*************************************************************************************************************/
+=======
+  /*!******************************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/modules/web.dom-collections.iterator.js ***!
+    \******************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -15452,9 +17258,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/core-js/proposals/reflect-metadata.js":
+<<<<<<< HEAD
   /*!***************************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/core-js/proposals/reflect-metadata.js ***!
     \***************************************************************************************************/
+=======
+  /*!********************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/core-js/proposals/reflect-metadata.js ***!
+    \********************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -15501,9 +17313,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/regenerator-runtime/runtime.js":
+<<<<<<< HEAD
   /*!********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/regenerator-runtime/runtime.js ***!
     \********************************************************************************************/
+=======
+  /*!*************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/regenerator-runtime/runtime.js ***!
+    \*************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -16220,9 +18038,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/tslib/tslib.es6.js":
+<<<<<<< HEAD
   /*!********************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/tslib/tslib.es6.js ***!
     \********************************************************************************/
+=======
+  /*!*************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/tslib/tslib.es6.js ***!
+    \*************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! exports provided: __extends, __assign, __rest, __decorate, __param, __metadata, __awaiter, __generator, __exportStar, __values, __read, __spread, __spreadArrays, __await, __asyncGenerator, __asyncDelegator, __asyncValues, __makeTemplateObject, __importStar, __importDefault */
 
@@ -16778,9 +18602,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/zone.js/dist/zone-evergreen.js":
+<<<<<<< HEAD
   /*!********************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/zone.js/dist/zone-evergreen.js ***!
     \********************************************************************************************/
+=======
+  /*!*************************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/zone.js/dist/zone-evergreen.js ***!
+    \*************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -20379,9 +22209,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/zone.js/dist/zone-legacy.js":
+<<<<<<< HEAD
   /*!*****************************************************************************************!*\
     !*** C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/zone.js/dist/zone-legacy.js ***!
     \*****************************************************************************************/
+=======
+  /*!**********************************************************************************!*\
+    !*** D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/zone.js/dist/zone-legacy.js ***!
+    \**********************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
@@ -20887,16 +22723,26 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   1:
+<<<<<<< HEAD
   /*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
     !*** multi C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js zone.js/dist/zone-legacy C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js C:/Users/Reaper/Desktop/gp new/HariBnEla/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-jit-polyfills.js ./src/polyfills.ts ***!
     \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+=======
+  /*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+    !*** multi D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js zone.js/dist/zone-legacy D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js D:/PROJECT/vscode/GROUP/HariBnEla/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-jit-polyfills.js ./src/polyfills.ts ***!
+    \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+>>>>>>> feature/profile-view
 
   /*! no static exports found */
 
   /***/
   function _(module, exports, __webpack_require__) {
     __webpack_require__(
+<<<<<<< HEAD
     /*! C:\Users\Reaper\Desktop\gp new\HariBnEla\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\es5-polyfills.js */
+=======
+    /*! D:\PROJECT\vscode\GROUP\HariBnEla\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\es5-polyfills.js */
+>>>>>>> feature/profile-view
     "../../node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js");
 
     __webpack_require__(
@@ -20904,6 +22750,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     "../../node_modules/zone.js/dist/zone-legacy.js");
 
     __webpack_require__(
+<<<<<<< HEAD
     /*! C:\Users\Reaper\Desktop\gp new\HariBnEla\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\jit-polyfills.js */
     "../../node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js");
 
@@ -20913,6 +22760,17 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     module.exports = __webpack_require__(
     /*! C:\Users\Reaper\Desktop\gp new\HariBnEla\apps\frontEnd\src\polyfills.ts */
+=======
+    /*! D:\PROJECT\vscode\GROUP\HariBnEla\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\jit-polyfills.js */
+    "../../node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js");
+
+    __webpack_require__(
+    /*! D:\PROJECT\vscode\GROUP\HariBnEla\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\es5-jit-polyfills.js */
+    "../../node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-jit-polyfills.js");
+
+    module.exports = __webpack_require__(
+    /*! D:\PROJECT\vscode\GROUP\HariBnEla\apps\frontEnd\src\polyfills.ts */
+>>>>>>> feature/profile-view
     "./src/polyfills.ts");
     /***/
   }

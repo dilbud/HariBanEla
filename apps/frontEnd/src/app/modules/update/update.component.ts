@@ -9,14 +9,12 @@ export interface Field {
   viewValue: string;
 }
 
-
 @Component({
   selector: 'app-update',
   templateUrl: './update.component.html',
   styleUrls: ['./update.component.scss']
 })
 export class UpdateComponent implements OnInit {
-
   isLinear = true;
   formName: FormGroup;
   formAddress: FormGroup;
@@ -24,6 +22,7 @@ export class UpdateComponent implements OnInit {
   formPassword: FormGroup;
   formUserType: FormGroup;
   formUserProCat: FormGroup;
+  formUserProAmount: FormGroup;
   private user: any = null;
 
   fields: Field[] = null;
@@ -32,21 +31,19 @@ export class UpdateComponent implements OnInit {
     private categoryService: CategoryService,
     private formBuilder: FormBuilder,
     public userService: UserService
-  ) { }
+  ) {}
 
   ngOnInit() {
-
     this.user = this.userService.getUserData();
-    this.userService.getAuthStatusListener()
-      .subscribe((isAuth: boolean) => {
-        this.user = this.userService.getUserData();
-      });
+    this.userService.getAuthStatusListener().subscribe((isAuth: boolean) => {
+      this.user = this.userService.getUserData();
+    });
 
     this.categoryService.getAllCategories().subscribe(val => {
       const arryList: any = val.map((v: any) => {
         return {
           value: v._id,
-          viewValue: v.name,
+          viewValue: v.name
         };
       });
       this.fields = arryList;
@@ -57,7 +54,10 @@ export class UpdateComponent implements OnInit {
       Ctrl_2: [this.user.lastName, [Validators.required]]
     });
     this.formAddress = this.formBuilder.group({
-      Ctrl_1: [this.user.address === 'null' ? '' : this.user.address, [Validators.required]]
+      Ctrl_1: [
+        this.user.address === 'null' ? '' : this.user.address,
+        [Validators.required]
+      ]
     });
     this.formEmail = this.formBuilder.group({
       Ctrl_1: [{ value: this.user.email, disabled: true }, [Validators.email]]
@@ -71,23 +71,42 @@ export class UpdateComponent implements OnInit {
     this.formUserProCat = this.formBuilder.group({
       Ctrl_1: [
         {
-          value: this.user.userType === 'pro' ? this.user.category : this.user.category,
+          value:
+            this.user.userType === 'pro'
+              ? this.user.category
+              : this.user.category,
           disabled: this.user.userType === 'pro' ? false : true
         },
-        [Validators.required]]
+        [Validators.required]
+      ]
+    });
+    this.formUserProAmount = this.formBuilder.group({
+      Ctrl_1: [
+        {
+          value:
+            this.user.userType === 'pro'
+              ? this.user.paymentPerHour
+              : this.user.paymentPerHour,
+          disabled: this.user.userType === 'pro' ? false : true
+        },
+        [Validators.required]
+      ]
     });
     this.onChange();
   }
-
 
   onChange() {
     this.formUserType.get('Ctrl_1').valueChanges.subscribe(val => {
       if (val === 'pro') {
         this.formUserProCat.get('Ctrl_1').enable();
+        this.formUserProAmount.get('Ctrl_1').enable();
         this.formUserProCat.get('Ctrl_1').setValue(this.user.category);
+        this.formUserProAmount.get('Ctrl_1').setValue(this.user.paymentPerHour);
       } else {
         this.formUserProCat.get('Ctrl_1').disable();
+        this.formUserProAmount.get('Ctrl_1').disable();
         this.formUserProCat.get('Ctrl_1').setValue('null');
+        this.formUserProAmount.get('Ctrl_1').setValue(0);
       }
     });
   }
@@ -107,8 +126,9 @@ export class UpdateComponent implements OnInit {
       const password = this.formPassword.value.Ctrl_1;
       const userType = this.formUserType.value.Ctrl_1;
       const picURL = 'null';
-      const paymentPerHour = 1000;
-      const category = userType === 'gen' ? 'null' : this.formUserProCat.value.Ctrl_1;
+      const paymentPerHour = this.formUserProAmount.value.Ctrl_1;
+      const category =
+        userType === 'gen' ? 'null' : this.formUserProCat.value.Ctrl_1;
 
       const data: UserData = {
         firstName,
@@ -121,6 +141,7 @@ export class UpdateComponent implements OnInit {
         paymentPerHour,
         category
       };
+      console.log(data);
       this.userService.updateUser(data);
     } else {
       alert('submission fail');

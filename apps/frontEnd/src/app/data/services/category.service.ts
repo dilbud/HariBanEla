@@ -49,6 +49,7 @@ export class CategoryService  {
       map(this.extractData), catchError(this.handleError));
   }
   addCategory(data): Observable<any> {
+    console.log(data);
     return this.http.post(apiUrl, data)
       .pipe(
         catchError(this.handleError)

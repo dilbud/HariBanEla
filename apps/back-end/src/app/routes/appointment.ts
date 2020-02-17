@@ -657,6 +657,7 @@ appointmentRouter.post('/new', async function(req, res, next) {
 appointmentRouter.post('/accept/:id', async function(req, res, next) {
   try {
     const appointment = await Appointment.findById(req.params.id);
+    console.log(req.body);
     if (req.body.status == 'Accepted') {
       appointment.status = 'Accepted';
       appointment.paymentUrl =
@@ -674,7 +675,7 @@ appointmentRouter.post('/accept/:id', async function(req, res, next) {
     );
     let msg;
     if (appointment.status === 'Accepted') {
-       msg = {
+      msg = {
         to: appointment.professionalEmail,
         from: 'Appointmet@haribnela.lk',
         subject: 'Payment Details',
@@ -1179,7 +1180,7 @@ appointmentRouter.post('/accept/:id', async function(req, res, next) {
       };
     }
     if (appointment.status === 'Rejected') {
-       msg = {
+      msg = {
         to: appointment.professionalEmail,
         from: 'Appointmet@haribnela.lk',
         subject: 'Payment Details',
@@ -2719,7 +2720,9 @@ appointmentRouter.post('/payment/:id', async function(req, res, next) {
     sgMail.send(msgUser, function(err, info) {
       if (err) {
         winston.error(
-          `${err.status || 500} - ${err.message} - ${req.originalUrl} - ${req.method} - ${req.ip}`
+          `${err.status || 500} - ${err.message} - ${req.originalUrl} - ${
+            req.method
+          } - ${req.ip}`
         );
         return;
       }
@@ -2730,17 +2733,17 @@ appointmentRouter.post('/payment/:id', async function(req, res, next) {
     sgMail.send(msgPro, function(err, info) {
       if (err) {
         winston.error(
-          `${err.status || 500} - ${err.message} - ${req.originalUrl} - ${req.method} - ${req.ip}`
+          `${err.status || 500} - ${err.message} - ${req.originalUrl} - ${
+            req.method
+          } - ${req.ip}`
         );
         return;
       }
       winston.info(
         `200 - Email has been Sent to Professional. -  ${req.originalUrl} - ${req.method} - ${req.ip}`
       );
-
-
     });
-    res.json({ success: true, msg: 'Email has been Sent.' });
+    res.json(appointment);
   } catch (error) {
     winston.error(
       `${error.status || 500} - ${error.message} - ${req.originalUrl} - ${

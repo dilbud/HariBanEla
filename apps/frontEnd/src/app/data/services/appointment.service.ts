@@ -9,7 +9,6 @@ import {
 import { catchError, map } from 'rxjs/operators';
 import { CookieService } from 'ngx-cookie-service';
 
-
 const apiUrl = environment.baseUrl + 'appointment';
 
 @Injectable({
@@ -41,9 +40,9 @@ export class AppointmentService {
   }
 
   changeProfessionalId(value: string) {
-    this.cookieService.set('hariBnEla-AProId', value,2);
+    this.cookieService.set('hariBnEla-AProId', value, 2);
   }
-  getProfesionalId():string{
+  getProfesionalId(): string {
     return this.cookieService.get('hariBnEla-AProId');
   }
 
@@ -90,20 +89,22 @@ export class AppointmentService {
       .post(`${apiUrl}/new`, data)
       .pipe(catchError(this.handleError));
   }
-  acceptAppointment(id, data): Observable<any> {
+  acceptAppointment(id, status): Observable<any> {
     if (id == null) {
       return of(0);
     }
+    console.log(status, 'data');
     return this.http
-      .post(`${apiUrl}/accept/${id}`, data)
+      .post(`${apiUrl}/accept/${id}`, { status })
       .pipe(catchError(this.handleError));
   }
-  paymentAppointment(id, data): Observable<any> {
+  paymentAppointment(id, paymentStatus): Observable<any> {
     if (id == null) {
       return of(0);
     }
+    console.log(paymentStatus, 'payment');
     return this.http
-      .post(`${apiUrl}/payment/${id}`, data)
+      .post(`${apiUrl}/payment/${id}`, { paymentStatus })
       .pipe(catchError(this.handleError));
   }
   deleteAppointmentById(id: string): Observable<{}> {

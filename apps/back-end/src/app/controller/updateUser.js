@@ -1,28 +1,59 @@
 const jwt = require('jsonwebtoken');
-
 const user = require('../models/userModel');
+const sgMail = require('../config/sendGrid').sgMail;
 
 const key = 'df678g68g786fd88fd67g8fdfd8g7fd8g7';
 
 module.exports = (req, res, next) => {
-  let query
-  if(req.body.query.password === "12345678") {
-    query = {
-      firstName: req.body.query.firstName,
-      lastName: req.body.query.lastName,
-      address: req.body.query.address,
-      userType: req.body.query.userType,
-      category: req.body.query.category
-    };
-  } else{
-    query = {
-      firstName: req.body.query.firstName,
-      lastName: req.body.query.lastName,
-      address: req.body.query.address,
-      password: req.body.query.password,
-      userType: req.body.query.userType,
-      category: req.body.query.category
-    };
+  let query;
+  if (req.body.query.password === '12345678') {
+    if (req.body.query.userType === 'gen') {
+      query = {
+        firstName: req.body.query.firstName,
+        lastName: req.body.query.lastName,
+        address: req.body.query.address,
+        userType: req.body.query.userType,
+        category: req.body.query.category,
+        paymentPerHour: req.body.query.paymentPerHour,
+        pending: false
+      };
+    }
+    if (req.body.query.userType === 'pro') {
+      query = {
+        firstName: req.body.query.firstName,
+        lastName: req.body.query.lastName,
+        address: req.body.query.address,
+        userType: 'gen',
+        category: req.body.query.category,
+        paymentPerHour: req.body.query.paymentPerHour,
+        pending: true
+      };
+    }
+  } else {
+    if (req.body.query.userType === 'gen') {
+      query = {
+        firstName: req.body.query.firstName,
+        lastName: req.body.query.lastName,
+        address: req.body.query.address,
+        password: req.body.query.password,
+        userType: req.body.query.userType,
+        category: req.body.query.category,
+        paymentPerHour: req.body.query.paymentPerHour,
+        pending: false
+      };
+    }
+    if (req.body.query.userType === 'pro') {
+      query = {
+        firstName: req.body.query.firstName,
+        lastName: req.body.query.lastName,
+        address: req.body.query.address,
+        password: req.body.query.password,
+        userType: 'gen',
+        category: req.body.query.category,
+        paymentPerHour: req.body.query.paymentPerHour,
+        pending: true
+      };
+    }
   }
 
   let id = req.body.id;
@@ -43,6 +74,18 @@ module.exports = (req, res, next) => {
           return res.status(500).json({ msg: 'internal server error' });
         }
       } else {
+        console.log('xxxxxxxxxxxxxxxxxxxxxxx ', user);
+
+        if (user.pending === true && user.userType === 'gen') {
+          const msg = {
+            to: user.email,
+            from: 'Administrator@haribnela.lk',
+            subject: 'Sending with Twilio SendGrid is Fun',
+            text: 'and easy to do anywhere, even with Node.js',
+            html: 'pleace attach document with this email'
+          };
+          //sgMail.send(msg);
+        }
         details = {
           firstName: user.firstName,
           lastName: user.lastName,
@@ -56,8 +99,10 @@ module.exports = (req, res, next) => {
           rate: user.rate,
           paymentPerHour: user.paymentPerHour,
           active: user.active
-        }
-        const token = jwt.sign({ id: user._id, userData: details }, key, { expiresIn: '2h' });
+        };
+        const token = jwt.sign({ id: user._id, userData: details }, key, {
+          expiresIn: '2h'
+        });
         res.status(200).json({
           msg: 'ok',
           token: token,

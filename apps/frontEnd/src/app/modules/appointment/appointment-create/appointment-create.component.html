@@ -10,26 +10,14 @@
       <div class="col-md-12 col-sm-12">
         <h4>{{ professionalName }}</h4>
       </div>
-      <form
-        class="col-md-12"
-        [formGroup]="appointmentForm"
-        (ngSubmit)="makeAppointment(appointmentForm.value)"
-        novalidate
-      >
+      <form class="col-md-12" [formGroup]="appointmentForm" (ngSubmit)="makeAppointment(appointmentForm.value)"
+        novalidate>
         <div class="row">
           <div class="left col-md-4">
             <div class="form-group">
               <span class="label">Subject: </span>
-              <input
-                id="form_name"
-                class="input"
-                type="text"
-                formControlName="subject"
-                placeholder="subject"
-                [(ngModel)]="subject"
-                required
-                minlength="3"
-              />
+              <input id="form_name" class="input" type="text" formControlName="subject" placeholder="subject"
+                [(ngModel)]="subject" required minlength="3" />
               <div *ngIf="submitted && f.subject.errors">
                 <div class="error" *ngIf="f.subject.errors.required">
                   subject is required
@@ -38,23 +26,14 @@
             </div>
             <div class="form-group">
               <span class="label">Description: </span>
-              <textarea
-                class="input"
-                rows="4"
-                id="form_name"
-                type="text"
-                formControlName="description"
-                placeholder="description"
-                [(ngModel)]="description"
-                required
-                minlength="3"
-              ></textarea>
+              <textarea class="input" rows="4" id="form_name" type="text" formControlName="description"
+                placeholder="description" [(ngModel)]="description" required minlength="3"></textarea>
             </div>
             <div *ngIf="submitted && f.description.errors">
-            <div class="error" *ngIf="f.description.errors.required">
-              description is required
+              <div class="error" *ngIf="f.description.errors.required">
+                description is required
+              </div>
             </div>
-          </div>
           </div>
         </div>
         <div class="row">
@@ -63,40 +42,26 @@
             <!-- <input id="form_name"  class="input" type="datetime-local" formControlName="startTime" placeholder="Start Time" [(ngModel)]="startTime" required
                       minlength="3"> -->
             {{ startTime | date: 'hh mm aaa EEE dd MMM yyy' }}
-            <dl-date-time-picker
-              maxView="year"
-              minView="minute"
-              startView="day"
-              minuteStep="30"
-              formControlName="startTime"
-              [(ngModel)]="startTime"
-              (change)="calculatePayment()"
-            >
+            <dl-date-time-picker maxView="year" minView="minute" startView="day" minuteStep="30"
+              formControlName="startTime" [(ngModel)]="startTime" (change)="calculatePayment()">
             </dl-date-time-picker>
             <div *ngIf="submitted && f.description.errors">
-            <div class="error" *ngIf="f.startTime.errors.required">
-              startTime is required
-            </div>
+              <div class="error" *ngIf="f.startTime.errors.required">
+                startTime is required
+              </div>
             </div>
           </div>
           <div class="form-group col-md-6">
             <span class="label">End Time </span>
             {{ endTime | date: 'hh mm aaa EEE dd MMM yyy' }}
-            <dl-date-time-picker
-              maxView="year"
-              minView="minute"
-              startView="day"
-              minuteStep="30"
-              formControlName="endTime"
-              [(ngModel)]="endTime"
-              (change)="calculatePayment()"
-            ></dl-date-time-picker>
+            <dl-date-time-picker maxView="year" minView="minute" startView="day" minuteStep="30"
+              formControlName="endTime" [(ngModel)]="endTime" (change)="calculatePayment()"></dl-date-time-picker>
             <!-- <input id="form_name"class="input" type="datetime-local" formControlName="endTime" placeholder="End Time" [(ngModel)]="endTime" required
                         minlength="3"> -->
-                        <div *ngIf="submitted && f.endTime.errors">
-            <div class="error" *ngIf="f.endTime.errors.required">
-              endTime is required
-            </div>
+            <div *ngIf="submitted && f.endTime.errors">
+              <div class="error" *ngIf="f.endTime.errors.required">
+                endTime is required
+              </div>
             </div>
           </div>
         </div>
@@ -104,16 +69,11 @@
           <span class="label">Duration: </span>{{ duration || 0 }} hrs
         </div>
         <div class="col-md-12 col-sm-12" style="padding: 1.5em 0;">
-          <span class="label">Payment Amount: </span
-          >{{ paymentAmount || 0 | currency: 'LKR' }}
+          <span class="label">Payment Amount: </span>{{ (paymentAmount || 0) | currency: 'USD' }}
         </div>
 
         <div class="form-group" style="margin: auto;">
-          <button
-            type="submit"
-           
-            class="col-md-12 button"
-          >
+          <button type="submit" [disabled]="!appointmentForm.valid" class="col-md-12 button">
             Make the Appointment
           </button>
         </div>

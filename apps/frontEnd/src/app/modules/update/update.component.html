@@ -23,7 +23,8 @@
           <form [formGroup]="formAddress">
             <ng-template matStepLabel>Fill out your Address</ng-template>
             <mat-form-field>
-              <textarea matInput placeholder="Address" formControlName="Ctrl_1" > </textarea>
+              <textarea matInput placeholder="Address" formControlName="Ctrl_1">
+              </textarea>
             </mat-form-field>
             <div>
               <button mat-button matStepperPrevious>Back</button>
@@ -59,21 +60,20 @@
         </mat-step>
         <!-- user type -->
         <mat-step [stepControl]="formUserType">
-            <form [formGroup]="formUserType">
-              <ng-template matStepLabel>Fill out user Type</ng-template>
-              <mat-form-field>
-                  <mat-label>Select an option</mat-label>
-                  <mat-select  formControlName="Ctrl_1" disableOptionCentering>
-                    <mat-option value="gen">General User</mat-option>
-                    <mat-option value="pro">Professional</mat-option>
-
-                  </mat-select>
-                </mat-form-field>
-              <div>
-                <button mat-button matStepperPrevious>Back</button>
-                <button mat-button matStepperNext>Next</button>
-              </div>
-            </form>
+          <form [formGroup]="formUserType">
+            <ng-template matStepLabel>Fill out user Type</ng-template>
+            <mat-form-field>
+              <mat-label>Select an option</mat-label>
+              <mat-select formControlName="Ctrl_1" disableOptionCentering>
+                <mat-option value="gen">General User</mat-option>
+                <mat-option value="pro">Professional</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
         </mat-step>
         <!-- pro details -->
         <!-- pro user category -->
@@ -84,7 +84,7 @@
               <mat-label>select category</mat-label>
               <mat-select class="select" formControlName="Ctrl_1" disableOptionCentering>
                 <mat-option *ngFor="let field of fields" [value]="field.value">
-                  {{field.viewValue}}
+                  {{ field.viewValue }}
                 </mat-option>
               </mat-select>
             </mat-form-field>
@@ -93,8 +93,21 @@
               <button mat-button matStepperNext>Next</button>
             </div>
           </form>
-      </mat-step>
-      <!-- validate document as image -->
+        </mat-step>
+
+
+        <mat-step [stepControl]="formUserProAmount">
+          <form [formGroup]="formUserProAmount">
+            <ng-template matStepLabel>Add User charge pre Hour</ng-template>
+            <mat-form-field>
+              <input matInput placeholder="Amount" type="number" formControlName="Ctrl_1" />
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+        <!-- validate document as image -->
         <!-- done -->
         <mat-step>
           <ng-template matStepLabel>Done</ng-template>

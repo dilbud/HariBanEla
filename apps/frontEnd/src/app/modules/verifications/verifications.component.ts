@@ -8,8 +8,13 @@ import { VerifyProService } from '../../data/services/verify-pro.service';
 import { ServerData } from '../../data/models/serverData';
 import { Router } from '@angular/router';
 import { AlertService } from 'app/data/services/alert.service';
-import {animate, state, style, transition, trigger} from '@angular/animations';
-
+import {
+  animate,
+  state,
+  style,
+  transition,
+  trigger
+} from '@angular/animations';
 
 export interface Field {
   value: string;
@@ -30,19 +35,19 @@ export interface RowData {
   styleUrls: ['./verifications.component.scss'],
   animations: [
     trigger('detailExpand', [
-      state('collapsed', style({height: '0px', minHeight: '0'})),
-      state('expanded', style({height: '*'})),
-      transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
-    ]),
-  ],
+      state('collapsed', style({ height: '0px', minHeight: '0' })),
+      state('expanded', style({ height: '*' })),
+      transition(
+        'expanded <=> collapsed',
+        animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')
+      )
+    ])
+  ]
 })
-
 export class VerificationsComponent implements OnInit {
-
   allUser: any[] = [];
   allUserTable: any[] = [];
   fields: Field[] = [];
-
 
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   @ViewChild(MatSort, { static: true }) sort: MatSort;
@@ -51,28 +56,29 @@ export class VerificationsComponent implements OnInit {
   columnsToDisplay = ['no', 'name', 'cat', 'email'];
   expandedElement: RowData | null;
 
-
   constructor(
     private alertService: AlertService,
     private userService: UserService,
     private router: Router,
     private categoryService: CategoryService,
     private verifyProService: VerifyProService
-  ) { }
+  ) {}
 
   ngOnInit() {
+    this.allUser = [];
+    this.allUserTable = [];
+    this.fields = [];
     let res1: any;
     this.categoryService.getAllCategories().subscribe(
       result => {
         res1 = result;
       },
-      err => {
-      },
+      err => {},
       () => {
         const arryList: any = res1.map((v: any) => {
           return {
             value: v._id,
-            viewValue: v.name,
+            viewValue: v.name
           };
         });
         this.fields = arryList;
@@ -92,7 +98,9 @@ export class VerificationsComponent implements OnInit {
               let singleUser: RowData = {
                 no: (index + 1).toString(),
                 name: val.firstName + ' ' + val.lastName,
-                cat: this.fields.filter((item: Field) => (item.value === val.category)).map((item: Field) => item.viewValue)[0],
+                cat: this.fields
+                  .filter((item: Field) => item.value === val.category)
+                  .map((item: Field) => item.viewValue)[0],
                 email: val.email.toString(),
                 row: val
               };
@@ -101,8 +109,10 @@ export class VerificationsComponent implements OnInit {
             this.dataSource = new MatTableDataSource(this.allUserTable);
             this.dataSource.paginator = this.paginator;
             this.dataSource.sort = this.sort;
-          });
-      });
+          }
+        );
+      }
+    );
   }
 
   applyFilter(event: Event) {
@@ -116,13 +126,11 @@ export class VerificationsComponent implements OnInit {
 
   accept(val: any) {
     this.verifyProService.acceptPro(val._id);
-    console.log(val);
     this.ngOnInit();
   }
 
   reject(val: any) {
     this.verifyProService.rejectPro(val._id);
-    console.log(val);
+    this.ngOnInit();
   }
-
 }

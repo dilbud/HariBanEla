@@ -38,8 +38,6 @@ tr.element-row:not(.expanded-row):active {
   line-height: normal;
 }
 
-
-
 .element-description-attribution {
   opacity: 0.5;
 }
@@ -49,7 +47,8 @@ tr.element-row:not(.expanded-row):active {
   width: 100%;
 }
 
-td, th {
+td,
+th {
   width: 25%;
 }
 

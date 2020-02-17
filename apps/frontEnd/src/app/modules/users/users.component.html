@@ -1,4 +1,4 @@
-<mat-form-field>
+<mat-form-field appearance="fill">
   <mat-label>Filter</mat-label>
   <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia">
 </mat-form-field>
@@ -22,6 +22,11 @@
     <ng-container matColumnDef="type">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Type </th>
       <td mat-cell *matCellDef="let row"> {{row.type}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="cat">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Category </th>
+      <td mat-cell *matCellDef="let row"> {{row.cat}} </td>
     </ng-container>
 
 
