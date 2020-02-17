@@ -12,6 +12,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class AnswerCreateComponent implements OnInit {
 
   answerModel = new Answer();
+  submitted: boolean;
+  success;
   @Input() questionId;
   @Input() user;
   @Output() refreshEvent = new EventEmitter();
@@ -23,17 +25,23 @@ export class AnswerCreateComponent implements OnInit {
     // if(!this.user){
     //   this.user = this.userService.getUserData();
     // }
+    this.submitted = false;
     this.answerModel.userId = this.user.id;
   }
 
   onAnswer() {
+    this.submitted = true;
+    console.log(this.answerModel);
     this.answerService.addAnswer(this.answerModel, this.questionId)
       .subscribe(
         data => {
           console.log('Success', data);
-          this.refreshEvent.emit();
-          // this.router.navigateByUrl(`/`, { skipLocationChange: true }).then(() =>
-          //   this.router.navigate([`/questions/${this.questionId}`]));
+          this.success = data;
+          if (this.success === true) {
+            this.answerModel.body = '';
+            this.submitted = false;
+            this.refreshEvent.emit();
+          }
         },
         error => console.log('Error', error)
       );

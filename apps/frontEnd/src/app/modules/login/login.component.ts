@@ -17,12 +17,13 @@ export class LoginComponent implements OnInit, OnDestroy {
   user = null;
   toggle = true; // disable login link
 
-  constructor(private dialog: MatDialog, private userService: UserService) { }
+  constructor(private dialog: MatDialog, private userService: UserService) {}
 
   ngOnInit() {
     this.isAuthenticated = this.userService.getIsAuth();
     this.user = this.userService.getUserData();
-    this.userService.getAuthStatusListener()
+    this.userService
+      .getAuthStatusListener()
       .subscribe((isAuthenticated: boolean) => {
         this.isAuthenticated = isAuthenticated;
         this.user = this.userService.getUserData();
@@ -42,7 +43,8 @@ export class LoginComponent implements OnInit, OnDestroy {
   loginDialog(): void {
     this.toggle = false;
     const dialogRef = this.dialog.open(LoginDComponent, {
-      width: '400px', height: '30em',
+      width: '400px',
+      height: '30em',
       data: { email: this.email, password: this.password }
     });
 
@@ -68,11 +70,11 @@ export class LoginComponent implements OnInit, OnDestroy {
         this.userService.login(this.email, this.password);
         return;
       }
-
     });
   }
 
   logoutDialog(): void {
+    this.mode = true;
     this.userService.logout();
   }
 }

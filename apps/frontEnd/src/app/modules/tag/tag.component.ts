@@ -63,7 +63,7 @@ export class TagComponent implements OnInit {
   ngOnInit() {
     this.row = [];
     let res: any;
-    this.tagService.getAllTag().subscribe(
+    this.tagService.getAllTags().subscribe(
       result => {
         res = result;
       },

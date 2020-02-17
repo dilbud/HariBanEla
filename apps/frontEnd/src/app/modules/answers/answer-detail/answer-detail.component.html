@@ -11,14 +11,15 @@
       <a (click)="voteAnswer(0)">
         <i style="cursor:pointer;" [ngClass]="{'text-primary' : votedUpDown==2}" class="fa fa-caret-down fa-3x"></i>
       </a>
-        <span style="color: darkgrey;" [ngClass]="{'text-success': answer.isAccepted}">
-          <span *ngIf="question.userId==user.id && !answer.isAccepted">
-            <i style="cursor:pointer;" class="fas fa-check fa-2x" (click)="onAccept()"></i>
-          </span>
-          <span *ngIf="(question.userId==user.id && answer.isAccepted) || (question.userId!=user.id && answer.isAccepted)">
-            <i class="fas fa-check fa-2x"></i>
-          </span>
-      </span>
+      <div style="color: darkgrey;" [ngClass]="{'text-success': answer.isAccepted}">
+        <span *ngIf="question.userId==user.id && !answer.isAccepted">
+          <i style="cursor:pointer;" class="fas fa-check fa-2x" (click)="onAccept()"></i>
+        </span>
+        <span
+          *ngIf="(question.userId==user.id && answer.isAccepted) || (question.userId!=user.id && answer.isAccepted)">
+          <i class="fas fa-check fa-2x"></i>
+        </span>
+      </div>
     </div>
     <div class="col-11">
       <div>

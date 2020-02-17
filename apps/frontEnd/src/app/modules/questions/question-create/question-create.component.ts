@@ -13,6 +13,7 @@ import {
 import { MatChipInputEvent } from '@angular/material/chips';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
+import { TagService } from 'app/data/services/tag.service';
 
 @Component({
   selector: 'app-question-create',
@@ -26,6 +27,9 @@ export class QuestionCreateComponent implements OnInit {
   id: string;
   user;
   userId: string;
+  submitted: boolean;
+  success;
+  receivedTags: any;
 
   visible = true;
   selectable = true;
@@ -33,7 +37,7 @@ export class QuestionCreateComponent implements OnInit {
   separatorKeysCodes: number[] = [ENTER, COMMA];
   tagCtrl = new FormControl();
   filteredtags: Observable<string[]>;
-  alltags: string[] = ['NodeJs', 'Angular', 'Express', 'git', 'MongoDb'];
+  alltags: string[] = [];
 
   @ViewChild('tagInput', { static: false }) tagInput: ElementRef<
     HTMLInputElement
@@ -43,12 +47,14 @@ export class QuestionCreateComponent implements OnInit {
   constructor(
     private categoryService: CategoryService,
     private questionService: QuestionService,
+    private tagService: TagService,
     private userService: UserService,
     private route: ActivatedRoute,
     private router: Router
   ) {}
 
   ngOnInit() {
+    this.submitted = false;
     this.id = this.route.snapshot.params.id;
     if (this.id) {
       this.getQuestion();
@@ -58,13 +64,24 @@ export class QuestionCreateComponent implements OnInit {
       this.categories = res;
     });
 
-    this.questionModel.tags = [];
-    this.filteredtags = this.tagCtrl.valueChanges.pipe(
-      startWith(null),
-      map((tag: string | null) =>
-        tag ? this._filter(tag) : this.alltags.slice()
-      )
-    );
+    this.tagService.getAllTags().subscribe(res => {
+      console.log(res);
+      this.receivedTags = res;
+      console.log(this.receivedTags.serverData);
+      this.receivedTags.serverData.forEach(tag => {
+        this.alltags.push(tag.name);
+      });
+      console.log(this.alltags);
+      if (!this.id) {
+        this.questionModel.tags = [];
+      }
+      this.filteredtags = this.tagCtrl.valueChanges.pipe(
+        startWith(null),
+        map((tag: string | null) =>
+          tag ? this._filter(tag) : this.alltags.slice()
+        )
+      );
+    });
 
     this.user = this.userService.getUserData();
     this.questionModel.userId = this.user.id;
@@ -73,13 +90,14 @@ export class QuestionCreateComponent implements OnInit {
   getQuestion() {
     this.questionService.getQuestion(this.id).subscribe(
       res => {
-        // console.log(res);
+        console.log(res);
         this.question = res;
         this.questionModel._id = this.question._id;
         this.questionModel.title = this.question.title;
         this.questionModel.body = this.question.body;
         this.questionModel.category = this.question.category;
         this.questionModel.tags = this.question.tags;
+        console.log(this.questionModel.tags);
       },
       err => {
         console.log(err);
@@ -88,22 +106,34 @@ export class QuestionCreateComponent implements OnInit {
   }
 
   onQuestion() {
-    if (!this.id) {
-      this.questionService.questionCreate(this.questionModel).subscribe(
-        data => {
-          console.log('Success created', data);
-          this.router.navigate([`/questions`]);
-        },
-        error => console.log('Error', error)
-      );
-    } else {
-      this.questionService.questionUpdate(this.questionModel).subscribe(
-        data => {
-          console.log('Success', data);
-          this.router.navigate([`/questions/${this.id}`]);
-        },
-        error => console.log('Error', error)
-      );
+    this.submitted = true;
+    if (
+      this.questionModel.title &&
+      this.questionModel.category &&
+      this.questionModel.body
+    ) {
+      if (!this.id) {
+        this.questionService.questionCreate(this.questionModel).subscribe(
+          data => {
+            console.log('Success created', data);
+            this.success = data;
+            // console.log(this.success);
+            if (this.success === true) {
+              this.router.navigate([`/questions`]);
+            }
+          },
+          error => console.log('Error', error)
+        );
+      } else {
+        this.questionService.questionUpdate(this.questionModel).subscribe(
+          data => {
+            console.log('Success', data);
+            this.success = data;
+            this.router.navigate([`/questions/${this.id}`]);
+          },
+          error => console.log('Error', error)
+        );
+      }
     }
   }
 
@@ -112,7 +142,11 @@ export class QuestionCreateComponent implements OnInit {
     const value = event.value;
 
     // Add our tag
-    if ((value || '').trim()) {
+    if (
+      (value || '').trim() &&
+      !this.questionModel.tags.includes(value.trim()) &&
+      this.alltags.includes(value.trim())
+    ) {
       this.questionModel.tags.push(value.trim());
     }
 
@@ -133,7 +167,13 @@ export class QuestionCreateComponent implements OnInit {
   }
 
   selected(event: MatAutocompleteSelectedEvent): void {
-    this.questionModel.tags.push(event.option.viewValue);
+    if (
+      !this.questionModel.tags.includes(
+        event.option.viewValue && this.alltags.includes(event.option.viewValue)
+      )
+    ) {
+      this.questionModel.tags.push(event.option.viewValue);
+    }
     this.tagInput.nativeElement.value = '';
     this.tagCtrl.setValue(null);
   }
