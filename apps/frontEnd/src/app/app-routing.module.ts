@@ -16,7 +16,6 @@ import { ProfessionalListComponent } from '@modules/professional-list/profession
 import { ChatComponent } from '@modules/chat/chat.component';
 import { ProfilePageComponent } from './modules/profile-page/profile-page.component';
 import { ProfilePageBaseComponent } from './modules/profile-page-base/profile-page-base.component';
-
 import { from } from 'rxjs';
 import { ProfileViewComponent } from '@modules/profile-view/profile-view.component';
 
@@ -88,8 +87,7 @@ const routes: Routes = [
       { path: 'edit', component: UpdateComponent }
     ]
   },
-
-  // { path: 'booking', component: BookingComponent, canActivate: [AuthGuardService] },
+   // { path: 'booking', component: BookingComponent, canActivate: [AuthGuardService] },
 
   { path: 'view', component: ProfileViewComponent, canActivate: [AuthGuardService] },
 
