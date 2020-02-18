@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ReportData } from 'app/data/models/reportData';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-report-post',
@@ -9,13 +10,19 @@ import { ReportData } from 'app/data/models/reportData';
 })
 export class ReportPostComponent implements OnInit {
   private reportData: ReportData;
+  reportPost: FormGroup;
 
   constructor(
+    private formBuilder: FormBuilder,
     public dialogRef: MatDialogRef<ReportPostComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.reportPost = this.formBuilder.group({
+      Ctrl_1: [null, [Validators.required]]
+    });
+  }
 
   submit() {
     this.reportData = {
@@ -34,7 +41,7 @@ export class ReportPostComponent implements OnInit {
     this.dialogRef.close(null);
   }
   private getContent(): string {
-    return 'dfd';
+    return this.reportPost.value.Ctrl_1;
   }
   private getName(): string {
     if (this.data.user === null) {

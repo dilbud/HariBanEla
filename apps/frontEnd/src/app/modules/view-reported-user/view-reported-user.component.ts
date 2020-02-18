@@ -91,7 +91,7 @@ export class ViewReportedUserComponent implements OnInit {
     }
   }
 
-  create(val: any) {}
-
-  update(val: any, id: any) {}
+  delete(val: any) {
+    this.reportService.deleteReportUser(val);
+  }
 }

@@ -90,4 +90,12 @@ export class ViewReportedPostComponent implements OnInit {
       this.dataSource.paginator.firstPage();
     }
   }
+
+  view(id: any) {
+    this.router.navigate(['/questions', id]);
+  }
+
+  delete(id: any) {
+    this.reportService.deleteReportPost(id);
+  }
 }

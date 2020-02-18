@@ -14,6 +14,7 @@ export interface RowData {
   name: string;
   type: string;
   cat: string;
+  email: string;
   rate: string;
   state: string;
   row: any;
@@ -44,6 +45,7 @@ export class UsersComponent implements OnInit {
     'name',
     'type',
     'cat',
+    'email',
     'rate',
     'state',
     'id'
@@ -140,6 +142,7 @@ export class UsersComponent implements OnInit {
                 cat: this.fields
                   .filter((item: Field) => item.value === val.category)
                   .map((item: Field) => item.viewValue)[0],
+                email: val.email,
                 rate: val.rate.toString(),
                 state: val.active === true ? 'Enabled' : 'Disabled',
                 row: val

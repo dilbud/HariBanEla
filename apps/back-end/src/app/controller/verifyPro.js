@@ -1,4 +1,7 @@
-const sgMail = require('../config/sendGrid').sgMail;
+const sgMail = require('@sendgrid/mail');
+sgMail.setApiKey(
+  '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'
+);
 const user = require('../models/userModel');
 
 const acc = (req, res, next) => {
@@ -409,7 +412,7 @@ const acc = (req, res, next) => {
                           <tbody><tr>
                             <td>
                               <div class="text" style="padding: 0 3em; text-align: center;">
-                                <h2>Your Password Is Reset Successfuly</h2>
+                                <h2>Your proposal is Accepted</h2>
                               </div>
                             </td>
                             </tr>
@@ -918,7 +921,7 @@ const rej = (req, res, next) => {
                           <tbody><tr>
                             <td>
                               <div class="text" style="padding: 0 3em; text-align: center;">
-                                <h2>Your Password Is Reset Successfuly</h2>
+                                <h2>Your proposal is Rejected</h2>
                               </div>
                             </td>
                             </tr>

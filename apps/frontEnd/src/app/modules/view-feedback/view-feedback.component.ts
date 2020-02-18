@@ -94,9 +94,7 @@ export class ViewFeedbackComponent implements OnInit {
 
   delete(id: any) {
     console.log(id);
-    this.reportService.deleteFeedBack(id).subscribe(val => {
-      console.log(val);
-    });
+    this.reportService.deleteFeedBack(id);
     this.ngOnInit();
   }
 }

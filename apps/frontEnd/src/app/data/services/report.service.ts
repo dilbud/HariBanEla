@@ -32,8 +32,20 @@ export class ReportService {
   }
 
   public deleteFeedBack(data: any) {
-    console.log(data);
-    return this.http.post(this.apiUrl + '/deletefeedback', data);
+    let res: any;
+    this.http.post(this.apiUrl + '/deletefeedback', { id: data }).subscribe(
+      response => {
+        res = response;
+      },
+      error => {
+        this.alertService.setAlert(error.error.msg);
+        this.alertService.showAlert();
+      },
+      () => {
+        this.alertService.setAlert(res.msg);
+        this.alertService.showAlert();
+      }
+    );
   }
 
   public sendResetPassword(data: ReportData) {
@@ -75,11 +87,57 @@ export class ReportService {
   }
 
   public sendReportPost(data: ReportData) {
-    this.http
-      .post(this.apiUrl + '/reportPost', data)
-      .subscribe(response => {}, error => {}, () => {});
+    let res: any;
+    this.http.post(this.apiUrl + '/reportPost', data).subscribe(
+      response => {
+        res = response;
+      },
+      error => {
+        this.alertService.setAlert(error.error.msg);
+        this.alertService.showAlert();
+      },
+      () => {
+        this.alertService.setAlert(res.msg);
+        this.alertService.showAlert();
+      }
+    );
   }
   public getReportPost() {
     return this.http.get(this.apiUrl + '/getReportPost');
+  }
+
+  deleteReportPost(val: any) {
+    let res: any;
+    this.http.post(this.apiUrl + '/deleteReportPost', { id: val }).subscribe(
+      response => {
+        res = response;
+      },
+      error => {
+        this.alertService.setAlert(error.error.msg);
+        this.alertService.showAlert();
+      },
+      () => {
+        this.alertService.setAlert(res.msg);
+        this.alertService.showAlert();
+      }
+    );
+  }
+
+
+  deleteReportUser(val: any) {
+    let res: any;
+    this.http.post(this.apiUrl + '/deleteReportUser', { id: val }).subscribe(
+      response => {
+        res = response;
+      },
+      error => {
+        this.alertService.setAlert(error.error.msg);
+        this.alertService.showAlert();
+      },
+      () => {
+        this.alertService.setAlert(res.msg);
+        this.alertService.showAlert();
+      }
+    );
   }
 }

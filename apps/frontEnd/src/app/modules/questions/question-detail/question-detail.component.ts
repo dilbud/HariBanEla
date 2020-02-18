@@ -18,6 +18,7 @@ export class QuestionDetailComponent implements OnInit {
   isAuthenticated = false;
   votedUpDown = 0; // not=0, up=1 down=2
   qs;
+  idq;
 
   constructor(
     private questionService: QuestionService,
@@ -28,7 +29,6 @@ export class QuestionDetailComponent implements OnInit {
 
   ngOnInit() {
     this.getQuestion();
-
     // this.interval = setInterval(() => {
     //   this.refreshQuestion();
     // }, 600000);
@@ -48,7 +48,7 @@ export class QuestionDetailComponent implements OnInit {
   getUser() {
     this.isAuthenticated = this.userService.getIsAuth();
     this.user = this.userService.getUserData();
-    if(this.user){
+    if (this.user) {
       this.checkVote();
     }
     // console.log(this.user);
@@ -64,16 +64,19 @@ export class QuestionDetailComponent implements OnInit {
 
   getQuestion() {
     const id = this.route.snapshot.params.id;
-    this.questionService.getQuestion(id).subscribe(res => {
-      this.question = res;
-      // this.question.answers.sort((a, b) => (a.votes > b.votes) ? 1 : -1);
-      this.getUser();
-      this.getOwner();
+    this.questionService.getQuestion(id).subscribe(
+      res => {
+        this.question = res;
+        // this.question.answers.sort((a, b) => (a.votes > b.votes) ? 1 : -1);
+        this.getUser();
+        this.getOwner();
 
-      console.log(this.question);
-    }, err => {
-      console.log(err);
-    });
+        console.log(this.question);
+      },
+      err => {
+        console.log(err);
+      }
+    );
   }
 
   checkVote() {
@@ -138,7 +141,8 @@ export class QuestionDetailComponent implements OnInit {
   }
 
   viewProfile() {
-    this.router.navigate(['../../view'], { queryParams: { id: this.owner.id, type: this.owner.userType } });
+    this.router.navigate(['../../view'], {
+      queryParams: { id: this.owner.id, type: this.owner.userType }
+    });
   }
-
 }

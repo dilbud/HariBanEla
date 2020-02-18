@@ -16,11 +16,10 @@ const allPendingUser = require('../controller/allPendingUser');
 export const userRouter = express.Router();
 
 userRouter.post('/update', verify, update);
-userRouter.post('/create', create.social , create.login);
+userRouter.post('/create', create.social, create.login);
 userRouter.post('/login', login);
 userRouter.post('/getUserById', fechUser);
 userRouter.get('/proList', proProfile.list);
-userRouter.get('/proProfile', proProfile.get);
-userRouter.get('/allUser',allUser);
-userRouter.get('/allPendingUser',allPendingUser);
-
+userRouter.get('/proProfile', verify, proProfile.get);
+userRouter.get('/allUser', verify, allUser);
+userRouter.get('/allPendingUser', verify, allPendingUser);

@@ -1,7 +1,11 @@
 const report = require('../models/reportModel');
-const sgMail = require('../config/sendGrid').sgMail;
 const user = require('../models/userModel');
 var generator = require('generate-password');
+
+const sgMail = require('@sendgrid/mail');
+sgMail.setApiKey(
+  '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'
+);
 
 const feedbackSet = (req, res, next) => {
   new report({
@@ -37,7 +41,7 @@ const feedbackGet = (req, res, next) => {
 };
 
 const feedbackDelete = (req, res, next) => {
-  report.findByIdAndRemove(req.body.id, (err, data) => {
+  report.findByIdAndDelete(req.body.id, (err, data) => {
     if (err) {
       res.status(500).json({ msg: 'internal server error' });
     } else {
@@ -56,6 +60,7 @@ const setPassword = (req, res, next) => {
     numbers: true
   });
   const email = req.body.email;
+  console.log(email);
   user.findOneAndUpdate(
     { email: email },
     { password: password },
@@ -79,13 +84,9 @@ const setPassword = (req, res, next) => {
                 <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
                 <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
                 <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
-
-
                 <link href="./resetpassword_files/css" rel="stylesheet">
-
                 <!-- CSS Reset : BEGIN -->
             <style>
-
             html,
             body {
                 margin: 0 auto !important;
@@ -94,25 +95,21 @@ const setPassword = (req, res, next) => {
                 width: 100% !important;
                 background: #f1f1f1;
             }
-
             /* What it does: Stops email clients resizing small text. */
             * {
                 -ms-text-size-adjust: 100%;
                 -webkit-text-size-adjust: 100%;
             }
-
             /* What it does: Centers email on Android 4.4 */
             div[style*="margin: 16px 0"] {
                 margin: 0 !important;
             }
-
             /* What it does: Stops Outlook from adding extra spacing to tables. */
             table,
             td {
                 mso-table-lspace: 0pt !important;
                 mso-table-rspace: 0pt !important;
             }
-
             /* What it does: Fixes webkit padding issue. */
             table {
                 border-spacing: 0 !important;
@@ -120,17 +117,14 @@ const setPassword = (req, res, next) => {
                 table-layout: fixed !important;
                 margin: 0 auto !important;
             }
-
             /* What it does: Uses a better rendering method when resizing images in IE. */
             img {
                 -ms-interpolation-mode:bicubic;
             }
-
             /* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
             a {
                 text-decoration: none;
             }
-
             /* What it does: A work-around for email clients meddling in triggered links. */
             *[x-apple-data-detectors],  /* iOS */
             .unstyle-auto-detected-links *,
@@ -144,26 +138,21 @@ const setPassword = (req, res, next) => {
                 font-weight: inherit !important;
                 line-height: inherit !important;
             }
-
             /* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
             .a6S {
                 display: none !important;
                 opacity: 0.01 !important;
             }
-
             /* What it does: Prevents Gmail from changing the text color in conversation threads. */
             .im {
                 color: inherit !important;
             }
-
             /* If the above doesn't work, add a .g-img class to any image in question. */
             img.g-img + div {
                 display: none !important;
             }
-
             /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
             /* Create one of these media queries for each additional viewport size you'd like to fix */
-
             /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
             @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
                 u ~ div .email-container {
@@ -182,18 +171,13 @@ const setPassword = (req, res, next) => {
                     min-width: 414px !important;
                 }
             }
-
             </style>
-
                 <!-- CSS Reset : END -->
-
                 <!-- Progressive Enhancements : BEGIN -->
             <style>
-
             .primary{
               background: #f3a333;
             }
-
             .bg_white{
               background: #ffffff;
             }
@@ -209,7 +193,6 @@ const setPassword = (req, res, next) => {
             .email-section{
               padding:2.5em;
             }
-
             /*BUTTON*/
             .btn{
               padding: 10px 15px;
@@ -219,15 +202,11 @@ const setPassword = (req, res, next) => {
               background: #f3a333;
               color: #ffffff;
             }
-
-
-
             h1,h2,h3,h4,h5,h6{
               font-family: 'Playfair Display', serif;
               color: #000000;
               margin-top: 0;
             }
-
             body{
               font-family: 'Montserrat', sans-serif;
               font-weight: 400;
@@ -235,15 +214,12 @@ const setPassword = (req, res, next) => {
               line-height: 1.8;
               color: rgba(0,0,0,.4);
             }
-
             a{
               color: #f3a333;
             }
-
             table{
             }
             /*LOGO*/
-
             .logo h1{
               margin: 0;
             }
@@ -254,13 +230,11 @@ const setPassword = (req, res, next) => {
               text-transform: uppercase;
               font-family: 'Montserrat', sans-serif;
             }
-
             /*HERO*/
             .hero{
               position: relative;
             }
             .hero img{
-
             }
             .hero .text{
               color: rgba(255,255,255,.8);
@@ -270,8 +244,6 @@ const setPassword = (req, res, next) => {
               font-size: 30px;
               margin-bottom: 0;
             }
-
-
             /*HEADING SECTION*/
             .heading-section{
             }
@@ -301,7 +273,6 @@ const setPassword = (req, res, next) => {
               background: #f3a333;
               margin: 0 auto;
             }
-
             .heading-section-white{
               color: rgba(255,255,255,.8);
             }
@@ -322,15 +293,11 @@ const setPassword = (req, res, next) => {
               letter-spacing: 2px;
               color: rgba(255,255,255,.4);
             }
-
-
             .icon{
               text-align: center;
             }
             .icon img{
             }
-
-
             /*SERVICES*/
             .text-services{
               padding: 10px 10px 0;
@@ -339,23 +306,18 @@ const setPassword = (req, res, next) => {
             .text-services h3{
               font-size: 20px;
             }
-
             /*BLOG*/
             .text-services .meta{
               text-transform: uppercase;
               font-size: 14px;
             }
-
             /*TESTIMONY*/
             .text-testimony .name{
               margin: 0;
             }
             .text-testimony .position{
               color: rgba(0,0,0,.3);
-
             }
-
-
             /*VIDEO*/
             .img{
               width: 100%;
@@ -378,9 +340,6 @@ const setPassword = (req, res, next) => {
               left: 50%;
               margin-left: -25px;
             }
-
-
-
             /*COUNTER*/
             .counter-text{
               text-align: center;
@@ -396,13 +355,9 @@ const setPassword = (req, res, next) => {
               color: rgba(255,255,255,.9);
               font-size: 13px;
             }
-
-
             /*FOOTER*/
-
             .footer{
               color: rgba(255,255,255,.5);
-
             }
             .footer .heading{
               color: #ffffff;
@@ -419,27 +374,18 @@ const setPassword = (req, res, next) => {
             .footer ul li a{
               color: rgba(255,255,255,1);
             }
-
-
             @media screen and (max-width: 500px) {
-
               .icon{
                 text-align: left;
               }
-
               .text-services{
                 padding-left: 0;
                 padding-right: 20px;
                 text-align: left;
               }
-
             }
-
             </style>
-
-
             </head>
-
             <body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #222222;">
               <center style="width: 100%; background-color: #f1f1f1;">
                 <div style="display: none; font-size: 1px;max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
@@ -510,7 +456,6 @@ const setPassword = (req, res, next) => {
                                               <li><span class="text">+94 392 3929</span></li>
                                             </ul>
                                 </td>
-
                               </tr>
                             </tbody></table>
                           </td>
@@ -545,14 +490,17 @@ const setPassword = (req, res, next) => {
                       </td>
                   </tr>
                 </tbody></table>
-
                 </div>
               </center>
-
             </body></body>`
           };
-          sgMail.send(msg);
-          res.status(200).json({ msg: 'check email box' });
+          sgMail.send(msg, function(err, info) {
+            if (err) {
+              console.log('jasdjhasdh', err);
+            } else {
+              res.status(200).json({ msg: 'check email box' });
+            }
+          });
         } else {
           res.status(404).json({ msg: 'user does not exist' });
         }
@@ -596,6 +544,19 @@ const getPost = (req, res, next) => {
     }
   );
 };
+const deletePost = (req, res, next) => {
+  report.findByIdAndDelete(req.body.id, (err, data) => {
+    if (err) {
+      res.status(500).json({ msg: 'internal server error' });
+    } else {
+      if (data !== null) {
+        res.status(200).json({ msg: 'post Report remove' });
+      } else {
+        res.status(404).json({ msg: 'report does not exist' });
+      }
+    }
+  });
+};
 
 const setUser = (req, res, next) => {
   new report({
@@ -633,15 +594,32 @@ const getReportUser = (req, res, next) => {
   );
 };
 
+const deleteReportUser = (req, res, next) => {
+  report.findByIdAndDelete(req.body.id, (err, data) => {
+    if (err) {
+      res.status(500).json({ msg: 'internal server error' });
+    } else {
+      if (data !== null) {
+        res.status(200).json({ msg: 'User Report remove' });
+      } else {
+        res.status(404).json({ msg: 'report does not exist' });
+      }
+    }
+  });
+};
+
 module.exports = {
   feedbackSet: feedbackSet,
   feedbackGet: feedbackGet,
   feedbackDelete: feedbackDelete,
 
   password: setPassword,
+
   reportPost: setPost,
   getReportPost: getPost,
+  deleteReportPost: deletePost,
 
   reportUser: setUser,
-  getReportUser: getReportUser
+  getReportUser: getReportUser,
+  deleteReportUser: deleteReportUser
 };

@@ -1,5 +1,8 @@
 const user = require('../models/userModel');
-const sgMail = require('../config/sendGrid').sgMail;
+const sgMail = require('@sendgrid/mail');
+sgMail.setApiKey(
+  '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'
+);
 
 deactivate = (req, res, next) => {
   user.findByIdAndUpdate(
