@@ -63,7 +63,7 @@ export class UpdateComponent implements OnInit {
       Ctrl_1: [{ value: this.user.email, disabled: true }, [Validators.email]]
     });
     this.formPassword = this.formBuilder.group({
-      Ctrl_1: ['12345678', [Validators.required, Validators.minLength(8)]]
+      Ctrl_1: ['x12345678', [Validators.required, Validators.minLength(8)]]
     });
     this.formUserType = this.formBuilder.group({
       Ctrl_1: [this.user.userType, [Validators.required]]

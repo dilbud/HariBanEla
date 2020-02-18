@@ -1,14 +1,21 @@
 const user = require('../models/userModel');
 const jwt = require('jsonwebtoken');
 const key = 'df678g68g786fd88fd67g8fdfd8g7fd8g7';
+var generator = require('generate-password');
+var SHA256 = require('crypto-js/sha256');
 
 const social = (req, res, next) => {
+  var password = generator.generate({
+    length: 10,
+    numbers: true
+  });
+
   new user({
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     address: req.body.address,
     email: req.body.email,
-    password: 'null',
+    password: SHA256(password).toString(),
     picURL: req.body.picURL,
     userType: req.body.userType
   }).save((err, user) => {
@@ -32,8 +39,10 @@ const social = (req, res, next) => {
         rate: user.rate,
         paymentPerHour: user.paymentPerHour,
         active: user.active
-      }
-      const token = jwt.sign({ id: user._id , userData: details}, key, { expiresIn: '2h' });
+      };
+      const token = jwt.sign({ id: user._id, userData: details }, key, {
+        expiresIn: '2h'
+      });
       res.status(200).json({
         msg: 'created',
         token: token,
@@ -65,7 +74,8 @@ const socialLogin = (req, res) => {
     .exec((err, user) => {
       if (err) {
         res.status(500).json({ msg: 'internal server error' });
-      } if (user.active === false) {
+      }
+      if (user.active === false) {
         res.status(404).json({ msg: 'User blocked by Administrator' });
       } else if (user !== null) {
         details = {
@@ -81,8 +91,10 @@ const socialLogin = (req, res) => {
           rate: user.rate,
           paymentPerHour: user.paymentPerHour,
           active: user.active
-        }
-        const token = jwt.sign({ id: user._id, userData: details }, key, { expiresIn: '2h' });
+        };
+        const token = jwt.sign({ id: user._id, userData: details }, key, {
+          expiresIn: '2h'
+        });
         res.status(200).json({
           msg: 'exist',
           token: token,

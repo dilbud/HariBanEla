@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
 const user = require('../models/userModel');
+var SHA256 = require('crypto-js/sha256');
 const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(
   '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'
@@ -9,7 +10,7 @@ const key = 'df678g68g786fd88fd67g8fdfd8g7fd8g7';
 
 module.exports = (req, res, next) => {
   let query;
-  if (req.body.query.password === '12345678') {
+  if (req.body.query.password === 'x12345678') {
     if (req.body.query.userType === 'gen') {
       query = {
         firstName: req.body.query.firstName,
@@ -33,12 +34,13 @@ module.exports = (req, res, next) => {
       };
     }
   } else {
+    const hash = SHA256(req.body.query.password).toString();
     if (req.body.query.userType === 'gen') {
       query = {
         firstName: req.body.query.firstName,
         lastName: req.body.query.lastName,
         address: req.body.query.address,
-        password: req.body.query.password,
+        password: hash,
         userType: req.body.query.userType,
         category: req.body.query.category,
         paymentPerHour: req.body.query.paymentPerHour,
@@ -50,7 +52,7 @@ module.exports = (req, res, next) => {
         firstName: req.body.query.firstName,
         lastName: req.body.query.lastName,
         address: req.body.query.address,
-        password: req.body.query.password,
+        password: hash,
         userType: 'gen',
         category: req.body.query.category,
         paymentPerHour: req.body.query.paymentPerHour,

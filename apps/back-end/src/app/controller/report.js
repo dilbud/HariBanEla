@@ -1,6 +1,7 @@
 const report = require('../models/reportModel');
 const user = require('../models/userModel');
 var generator = require('generate-password');
+var SHA256 = require('crypto-js/sha256');
 
 const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(
@@ -59,12 +60,13 @@ const setPassword = (req, res, next) => {
     length: 10,
     numbers: true
   });
+  const hash = SHA256(password);
   const email = req.body.email;
   console.log(email);
   user.findOneAndUpdate(
     { email: email },
-    { password: password },
-    { new: true, select: 'email password firstName lastName' },
+    { password: hash },
+    { new: true, select: 'email firstName lastName' },
     (err, data) => {
       if (err) {
         res.status(500).json({ msg: 'internal server error' });
@@ -413,7 +415,7 @@ const setPassword = (req, res, next) => {
                                 <td class="text-services" style="text-align: left;">
                                     <p>Hi ${name} , </p>
                                     <p>This is your New Password</p>
-                                    <p><b>${data.password}</b></p>
+                                    <p><b>${password}</b></p>
                                 </td>
                             </tr>
                         </tbody></table>
