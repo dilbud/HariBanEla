@@ -43,9 +43,9 @@ app.use('/api/report', reportRouter);
 app.use('/api/ed', edRouter);
 app.use('/api/verifypro', verifyProRouter);
 app.use('/api/tag', tagRouter);
-app.use('/', express.static(path.join(process.cwd(), '//dist/apps/frontEnd')));
+app.use('/', express.static(path.join(process.cwd(), '/dist/apps/frontEnd')));
 app.get('/*', (req, res) => {
-  res.sendFile(path.join(process.cwd() + '//dist/apps/frontEnd/index.html'));
+  res.sendFile(path.join(process.cwd() + '/dist/apps/frontEnd/index.html'));
 });
 
 const port = process.env.port || 3333;
