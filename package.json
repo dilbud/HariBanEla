@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve back-end",
-    "build": "ng build",
+    "start": "node ./dist/apps/back-end/main.js",
+    "build": "ng build frontEnd --prod && ng build back-end",
     "test": "ng test",
     "lint": "nx workspace-lint && ng lint --fix && ng lint --force=true ",
     "e2e": "ng e2e",
