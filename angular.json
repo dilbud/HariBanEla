@@ -10,18 +10,18 @@
           "style": "scss"
         }
       },
-      "root": "apps\\frontEnd",
-      "sourceRoot": "apps\\frontEnd\\src",
+      "root": "apps/frontEnd",
+      "sourceRoot": "apps/frontEnd/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist\\apps\\frontEnd",
+            "outputPath": "dist/apps/frontEnd",
             "index": "apps/frontEnd/src/index.html",
             "main": "apps/frontEnd/src/main.ts",
             "polyfills": "apps/frontEnd/src/polyfills.ts",
-            "tsConfig": "apps\\frontEnd\\tsconfig.app.json",
+            "tsConfig": "apps/frontEnd/tsconfig.app.json",
             "aot": false,
             "assets": [
               "apps/frontEnd/src/favicon.ico",
@@ -70,7 +70,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "frontEnd:build",
-            "proxyConfig": "apps\\frontEnd/proxy.conf.json"
+            "proxyConfig": "apps/frontEnd/proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -89,8 +89,8 @@
           "options": {
             "main": "apps/frontEnd/src/test.ts",
             "polyfills": "apps/frontEnd/src/polyfills.ts",
-            "tsConfig": "apps\\frontEnd\\tsconfig.spec.json",
-            "karmaConfig": "apps\\frontEnd\\karma.conf.js",
+            "tsConfig": "apps/frontEnd/tsconfig.spec.json",
+            "karmaConfig": "apps/frontEnd/karma.conf.js",
             "assets": [
               "apps/frontEnd/src/favicon.ico",
               "apps/frontEnd/src/assets"
@@ -106,8 +106,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "apps\\frontEnd\\tsconfig.app.json",
-              "apps\\frontEnd\\tsconfig.spec.json"
+              "apps/frontEnd/tsconfig.app.json",
+              "apps/frontEnd/tsconfig.spec.json"
             ],
             "exclude": ["**/node_modules/**"]
           }
@@ -116,12 +116,12 @@
     },
     "frontEnd-e2e": {
       "projectType": "application",
-      "root": "apps\\frontEnd-e2e",
+      "root": "apps/frontEnd-e2e",
       "architect": {
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "apps\\frontEnd-e2e\\protractor.conf.js",
+            "protractorConfig": "apps/frontEnd-e2e/protractor.conf.js",
             "devServerTarget": "frontEnd:serve"
           },
           "configurations": {
@@ -133,7 +133,7 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": "apps\\frontEnd-e2e\\tsconfig.json",
+            "tsConfig": "apps/frontEnd-e2e/tsconfig.json",
             "exclude": ["**/node_modules/**"]
           }
         }

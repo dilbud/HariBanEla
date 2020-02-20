@@ -3276,3 +3276,9 @@ const addUsersToRoom = function (clientId, professionalId, room) {
 {"message":"200 -  View a categories. - /api/category - GET - ::ffff:127.0.0.1","level":"info"}
 {"message":"200 -  View a categories. - /api/category - GET - ::ffff:127.0.0.1","level":"info"}
 {"message":"200 -  View a categories. - /api/category - GET - ::ffff:127.0.0.1","level":"info"}
+{"message":"200 -  View a categories. - /api/category - GET - ::ffff:127.0.0.1","level":"info"}
+{"message":"200 -  View a categories. - /api/category - GET - ::1","level":"info"}
+{"message":"200 -  View a categories. - /api/category - GET - ::1","level":"info"}
+{"message":"200 -  View a categories. - /api/category - GET - ::1","level":"info"}
+{"message":"200 -  View a categories. - /api/category - GET - ::1","level":"info"}
+{"message":"200 -  View a categories. - /api/category - GET - ::1","level":"info"}
