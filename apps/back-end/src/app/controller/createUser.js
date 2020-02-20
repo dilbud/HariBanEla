@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const key = 'df678g68g786fd88fd67g8fdfd8g7fd8g7';
 var generator = require('generate-password');
 var SHA256 = require('crypto-js/sha256');
-
+// create Account with social login
 const social = (req, res, next) => {
   var password = generator.generate({
     length: 10,
@@ -21,6 +21,7 @@ const social = (req, res, next) => {
   }).save((err, user) => {
     if (err) {
       if (err.errors.email.kind && err.errors.email.kind === 'unique') {
+        // if already have account then login with social
         next();
       } else {
         res.status(500).json({ msg: 'internal server error' });
@@ -65,7 +66,7 @@ const social = (req, res, next) => {
     }
   });
 };
-
+// social login
 const socialLogin = (req, res) => {
   user
     .findOne({ email: req.body.email })

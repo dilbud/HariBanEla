@@ -8,12 +8,9 @@ describe('ProfileComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProfileComponent ],
-      schemas: [
-        CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA
-      ],
-    })
-    .compileComponents();
+      declarations: [ProfileComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

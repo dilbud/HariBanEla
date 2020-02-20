@@ -16,9 +16,14 @@ export class LoginComponent implements OnInit, OnDestroy {
   isAuthenticated = false;
   user = null;
   toggle = true; // disable login link
-
+  /**
+   * @param  {MatDialog} privatedialog
+   * @param  {UserService} privateuserService
+   */
   constructor(private dialog: MatDialog, private userService: UserService) {}
 
+  /**
+   */
   ngOnInit() {
     this.isAuthenticated = this.userService.getIsAuth();
     this.user = this.userService.getUserData();
@@ -31,15 +36,25 @@ export class LoginComponent implements OnInit, OnDestroy {
       });
     this.mode = !this.isAuthenticated;
   }
-
+  /**
+   * when destroy component
+   * RxJs unsubscribe auth listener
+   */
   ngOnDestroy() {
     this.userService.getAuthStatusListener().unsubscribe();
   }
-
-  nothing() {
-    alert('state ' + this.toggle);
-    return;
-  }
+  /**
+   *
+   */
+  // nothing() {
+  //   alert('state ' + this.toggle);
+  //   return;
+  // }
+  /**
+   * open popup dialog
+   * and
+   * handle close data
+   */
   loginDialog(): void {
     this.toggle = false;
     const dialogRef = this.dialog.open(LoginDComponent, {
@@ -72,7 +87,10 @@ export class LoginComponent implements OnInit, OnDestroy {
       }
     });
   }
-
+  /**
+   * call user service
+   * logout user
+   */
   logoutDialog(): void {
     this.mode = true;
     this.userService.logout();

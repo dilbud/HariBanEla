@@ -8,12 +8,9 @@ describe('ReportUserComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ReportUserComponent ],
-      schemas: [
-        CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA
-      ],
-    })
-    .compileComponents();
+      declarations: [ReportUserComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

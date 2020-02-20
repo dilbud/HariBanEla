@@ -8,9 +8,8 @@ describe('ProfessionalListTableComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProfessionalListTableComponent ]
-    })
-    .compileComponents();
+      declarations: [ProfessionalListTableComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

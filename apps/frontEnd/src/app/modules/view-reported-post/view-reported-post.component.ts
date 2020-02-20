@@ -47,7 +47,13 @@ export class ViewReportedPostComponent implements OnInit {
   dataSource: MatTableDataSource<RowData>;
   columnsToDisplay = ['no', 'name', 'email'];
   expandedElement: RowData | null;
-
+  /**
+   * @param  {AlertService} privatealertService
+   * @param  {UserService} privateuserService
+   * @param  {Router} privaterouter
+   * @param  {ReportService} privatereportService
+   * @param  {VerifyProService} privateverifyProService
+   */
   constructor(
     private alertService: AlertService,
     private userService: UserService,
@@ -55,7 +61,9 @@ export class ViewReportedPostComponent implements OnInit {
     private reportService: ReportService,
     private verifyProService: VerifyProService
   ) {}
-
+  /**
+   * init set table  row
+   */
   ngOnInit() {
     this.row = [];
     let res: any;
@@ -66,7 +74,7 @@ export class ViewReportedPostComponent implements OnInit {
       err => {},
       () => {
         res.serverData.forEach((val, index) => {
-          let singleUser: RowData = {
+          const singleUser: RowData = {
             no: (index + 1).toString(),
             name: val.name,
             email: val.email,
@@ -81,7 +89,10 @@ export class ViewReportedPostComponent implements OnInit {
       }
     );
   }
-
+  /**
+   * @param  {Event} event
+   * filter post
+   */
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();

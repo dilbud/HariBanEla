@@ -8,12 +8,9 @@ describe('QuestionSummaryComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ QuestionSummaryComponent ],
-      schemas: [
-        CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA
-      ],
-    })
-    .compileComponents();
+      declarations: [QuestionSummaryComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

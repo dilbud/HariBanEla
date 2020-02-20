@@ -4,23 +4,13 @@ import { AppComponent } from './app.component';
 import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { AuthService, AuthServiceConfig } from 'angularx-social-login';
 
-
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      providers: [
-        AuthService,AuthServiceConfig
-      ],
-      declarations: [
-        AppComponent,
-       
-      ],
-      schemas: [
-        CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA
-      ],
+      imports: [RouterTestingModule],
+      providers: [AuthService, AuthServiceConfig],
+      declarations: [AppComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]
     }).compileComponents();
   }));
 
@@ -29,5 +19,4 @@ describe('AppComponent', () => {
   //   const app = fixture.debugElement.componentInstance;
   //   expect(app).toBeTruthy();
   // });
-
 });

@@ -1,6 +1,13 @@
 import { ServerData } from 'app/data/models/serverData';
 import { Router } from '@angular/router';
-import { Component, OnInit, Input, ViewChild, SimpleChanges, OnChanges } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  ViewChild,
+  SimpleChanges,
+  OnChanges
+} from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -23,7 +30,6 @@ export interface Field {
   styleUrls: ['./professional-list-table.component.scss']
 })
 export class ProfessionalListTableComponent implements OnInit, OnChanges {
-
   @Input() filteredList: ServerData[];
   @Input() fields: Field[];
 
@@ -35,17 +41,16 @@ export class ProfessionalListTableComponent implements OnInit, OnChanges {
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   @ViewChild(MatSort, { static: true }) sort: MatSort;
 
-
-  constructor(
-    private router: Router,
-  ) { }
+  constructor(private router: Router) {}
 
   ngOnInit() {
     this.filteredList.forEach((val, index) => {
-      let singleUser: RowData = {
+      const singleUser: RowData = {
         no: (index + 1).toString(),
         name: val.firstName + ' ' + val.lastName,
-        cat: this.fields.filter((item: Field) => (item.value === val.category)).map((item: Field) => item.viewValue)[0],
+        cat: this.fields
+          .filter((item: Field) => item.value === val.category)
+          .map((item: Field) => item.viewValue)[0],
         rate: val.rate.toString(),
         row: val
       };
@@ -55,7 +60,6 @@ export class ProfessionalListTableComponent implements OnInit, OnChanges {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
   }
-
 
   ngOnChanges(changes: SimpleChanges) {
     console.log(changes.filteredList.currentValue);
@@ -72,12 +76,8 @@ export class ProfessionalListTableComponent implements OnInit, OnChanges {
   }
 
   view(item: any) {
-    this.router.navigate(['../booking'], { queryParams: { id: item._id, type: item.userType } });
+    this.router.navigate(['../booking'], {
+      queryParams: { id: item._id, type: item.userType }
+    });
   }
-
 }
-
-
-
-
-

@@ -8,9 +8,7 @@ const apiUrl = environment.baseUrl + 'questions';
   providedIn: 'root'
 })
 export class AnswerService {
-
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   addAnswer(answer, id: string) {
     console.log(answer);
@@ -22,19 +20,29 @@ export class AnswerService {
   }
 
   acceptAnswer(questionId, answerId) {
-    return this.http.get(apiUrl + '/' + questionId + '/answers/' + answerId+'/accept');
+    return this.http.get(
+      apiUrl + '/' + questionId + '/answers/' + answerId + '/accept'
+    );
   }
 
   editAnswer(answer, questionId, answerId) {
-    return this.http.put(apiUrl + '/' + questionId + '/answers/' + answerId, answer);
+    return this.http.put(
+      apiUrl + '/' + questionId + '/answers/' + answerId,
+      answer
+    );
   }
 
   voteAnswer(questionId, answerId, status, userId: string) {
     if (status === 1) {
-      return this.http.put(apiUrl + '/' + questionId + '/answers/' + answerId + '/vote?vote=1', {userId});
+      return this.http.put(
+        apiUrl + '/' + questionId + '/answers/' + answerId + '/vote?vote=1',
+        { userId }
+      );
     } else {
-      return this.http.put(apiUrl + '/' + questionId + '/answers/' + answerId + '/vote?vote=0', {userId});
+      return this.http.put(
+        apiUrl + '/' + questionId + '/answers/' + answerId + '/vote?vote=0',
+        { userId }
+      );
     }
   }
-
 }

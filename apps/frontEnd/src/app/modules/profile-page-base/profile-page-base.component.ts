@@ -10,8 +10,6 @@ import { MatTabChangeEvent } from '@angular/material/tabs';
   styleUrls: ['./profile-page-base.component.scss']
 })
 export class ProfilePageBaseComponent implements OnInit {
-
-
   feedbackView = false;
   reportUserView = false;
   reportPostView = false;
@@ -22,13 +20,19 @@ export class ProfilePageBaseComponent implements OnInit {
   user = null;
 
   appointments: any[] = null;
-
+  /**
+   * @param  {UserService} privateuserService
+   * @param  {AppointmentService} privateappointmentService
+   * @param  {QuestionService} privatequestionService
+   */
   constructor(
     private userService: UserService,
     private appointmentService: AppointmentService,
-    private questionService: QuestionService,
-  ) { }
-
+    private questionService: QuestionService
+  ) {}
+  /**
+   * when component init set user type
+   */
   ngOnInit() {
     this.user = this.userService.getUserData();
     this.userService.getAuthStatusListener().subscribe((isAuth: boolean) => {
@@ -44,7 +48,4 @@ export class ProfilePageBaseComponent implements OnInit {
       this.isGen = true;
     }
   }
-
-
-
 }

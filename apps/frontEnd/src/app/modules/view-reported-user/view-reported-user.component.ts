@@ -47,7 +47,13 @@ export class ViewReportedUserComponent implements OnInit {
   dataSource: MatTableDataSource<RowData>;
   columnsToDisplay = ['no', 'name', 'email'];
   expandedElement: RowData | null;
-
+  /**
+   * @param  {AlertService} privatealertService
+   * @param  {UserService} privateuserService
+   * @param  {Router} privaterouter
+   * @param  {ReportService} privatereportService
+   * @param  {VerifyProService} privateverifyProService
+   */
   constructor(
     private alertService: AlertService,
     private userService: UserService,
@@ -55,7 +61,9 @@ export class ViewReportedUserComponent implements OnInit {
     private reportService: ReportService,
     private verifyProService: VerifyProService
   ) {}
-
+  /**
+   * when init get all reported user
+   */
   ngOnInit() {
     this.row = [];
     let res: any;
@@ -66,7 +74,7 @@ export class ViewReportedUserComponent implements OnInit {
       err => {},
       () => {
         res.serverData.forEach((val, index) => {
-          let singleUser: RowData = {
+          const singleUser: RowData = {
             no: (index + 1).toString(),
             name: val.name,
             email: val.email,
@@ -81,7 +89,10 @@ export class ViewReportedUserComponent implements OnInit {
       }
     );
   }
-
+  /**
+   * @param  {Event} event
+   * filter category
+   */
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -90,7 +101,10 @@ export class ViewReportedUserComponent implements OnInit {
       this.dataSource.paginator.firstPage();
     }
   }
-
+  /**
+   * @param  {any} val
+   * delete row
+   */
   delete(val: any) {
     this.reportService.deleteReportUser(val);
   }

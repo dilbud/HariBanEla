@@ -1,9 +1,10 @@
+<!-- filter post -->
 <mat-form-field appearance="fill">
-  <mat-label>Filter Or Add Category</mat-label>
+  <mat-label>Filter Or Add post</mat-label>
   <input matInput (keyup)="applyFilter($event)" #f placeholder="Ex. Mia">
 </mat-form-field>
 
-
+<!-- view table -->
 <div class="mat-elevation-z8">
 
   <table mat-table [dataSource]="dataSource" multiTemplateDataRows matSort>

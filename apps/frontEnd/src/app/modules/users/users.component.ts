@@ -133,7 +133,7 @@ export class UsersComponent implements OnInit {
             console.log(this.fields, 'jhdfjhsdfhds');
             this.allUser = res.serverData;
             this.allUser.forEach((val, index) => {
-              let singleUser: RowData = {
+              const singleUser: RowData = {
                 no: (index + 1).toString(),
                 name: val.firstName + ' ' + val.lastName,
                 type: this.userTypes

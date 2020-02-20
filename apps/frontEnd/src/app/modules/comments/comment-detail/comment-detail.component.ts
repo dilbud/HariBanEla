@@ -10,27 +10,34 @@ import { Router } from '@angular/router';
   styleUrls: ['./comment-detail.component.scss']
 })
 export class CommentDetailComponent implements OnInit {
-
   @Input() comment;
   owner;
 
-  constructor(private commentService: CommentService, private userService: UserService, private router: Router) { }
+  constructor(
+    private commentService: CommentService,
+    private userService: UserService,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.getOwner();
   }
 
   getOwner() {
-    this.userService.getUserDataById(this.comment.userId).subscribe(res => {
-      this.owner = res.serverData;
-      // console.log(this.owner);
-    }, err => {
-      console.log(err);
-    });
+    this.userService.getUserDataById(this.comment.userId).subscribe(
+      res => {
+        this.owner = res.serverData;
+        // console.log(this.owner);
+      },
+      err => {
+        console.log(err);
+      }
+    );
   }
 
   viewProfile() {
-    this.router.navigate(['../../view'], { queryParams: { id: this.owner.id, type: this.owner.userType } });
+    this.router.navigate(['../../view'], {
+      queryParams: { id: this.owner.id, type: this.owner.userType }
+    });
   }
-
 }

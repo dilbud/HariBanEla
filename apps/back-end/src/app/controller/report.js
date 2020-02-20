@@ -7,7 +7,7 @@ const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(
   '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'
 );
-
+// set feedback
 const feedbackSet = (req, res, next) => {
   new report({
     type: req.body.type,
@@ -24,6 +24,7 @@ const feedbackSet = (req, res, next) => {
   });
 };
 
+// get all feedback
 const feedbackGet = (req, res, next) => {
   report.find(
     { type: 'feedback' },
@@ -40,7 +41,7 @@ const feedbackGet = (req, res, next) => {
     }
   );
 };
-
+// delete feedback
 const feedbackDelete = (req, res, next) => {
   report.findByIdAndDelete(req.body.id, (err, data) => {
     if (err) {
@@ -55,6 +56,7 @@ const feedbackDelete = (req, res, next) => {
   });
 };
 
+// reset password
 const setPassword = (req, res, next) => {
   var password = generator.generate({
     length: 10,
@@ -510,7 +512,7 @@ const setPassword = (req, res, next) => {
     }
   );
 };
-
+// set reported post
 const setPost = (req, res, next) => {
   new report({
     type: req.body.type,
@@ -529,7 +531,7 @@ const setPost = (req, res, next) => {
     }
   });
 };
-
+// get all reported post
 const getPost = (req, res, next) => {
   report.find(
     { type: 'reportPost' },
@@ -546,6 +548,7 @@ const getPost = (req, res, next) => {
     }
   );
 };
+// delete reported post
 const deletePost = (req, res, next) => {
   report.findByIdAndDelete(req.body.id, (err, data) => {
     if (err) {
@@ -559,7 +562,7 @@ const deletePost = (req, res, next) => {
     }
   });
 };
-
+// set report user
 const setUser = (req, res, next) => {
   new report({
     type: req.body.type,
@@ -578,7 +581,7 @@ const setUser = (req, res, next) => {
     }
   });
 };
-
+// get all reported user
 const getReportUser = (req, res, next) => {
   report.find(
     { type: 'reportUser' },
@@ -595,7 +598,7 @@ const getReportUser = (req, res, next) => {
     }
   );
 };
-
+// delete reported user
 const deleteReportUser = (req, res, next) => {
   report.findByIdAndDelete(req.body.id, (err, data) => {
     if (err) {

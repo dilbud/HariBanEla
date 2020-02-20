@@ -9,9 +9,7 @@ const apiUrl = environment.baseUrl + 'questions';
   providedIn: 'root'
 })
 export class QuestionService {
-
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   questionCreate(question: Question) {
     // console.log(question);
@@ -25,7 +23,6 @@ export class QuestionService {
     } else {
       return this.http.get(apiUrl + '/category/' + category);
     }
-
   }
 
   getQuestion(id) {
@@ -42,11 +39,10 @@ export class QuestionService {
 
   voteQuestion(id, status, userId: string) {
     if (status === 1) {
-      return this.http.put(apiUrl + '/' + id + '/vote?vote=1', {userId});
+      return this.http.put(apiUrl + '/' + id + '/vote?vote=1', { userId });
     } else {
       return this.http.put(apiUrl + '/' + id + '/vote?vote=0', { userId });
     }
-
   }
 
   questionUpdate(question: Question) {
@@ -57,7 +53,7 @@ export class QuestionService {
     return this.http.delete(apiUrl + '/' + id);
   }
 
-  searchQuestions(searchInput: String) {
-    return this.http.put(apiUrl+'/search', {searchInput: searchInput});
+  searchQuestions(searchinput: string) {
+    return this.http.put(apiUrl + '/search', { searchInput: searchinput });
   }
 }

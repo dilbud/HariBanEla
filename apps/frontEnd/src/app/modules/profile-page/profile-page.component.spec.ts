@@ -8,15 +8,12 @@ describe('ProfilePageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProfilePageComponent ],
-      schemas: [
-
-      ],
+      declarations: [ProfilePageComponent],
+      schemas: []
       // providers:[
       //   Router
       // ]
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {

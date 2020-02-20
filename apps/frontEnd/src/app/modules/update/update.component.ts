@@ -26,13 +26,19 @@ export class UpdateComponent implements OnInit {
   private user: any = null;
 
   fields: Field[] = null;
-
+  /**
+   * @param  {CategoryService} privatecategoryService
+   * @param  {FormBuilder} privateformBuilder
+   * @param  {UserService} publicuserService
+   */
   constructor(
     private categoryService: CategoryService,
     private formBuilder: FormBuilder,
     public userService: UserService
   ) {}
-
+  /**
+   * init ,get user details and set form validation and
+   */
   ngOnInit() {
     this.user = this.userService.getUserData();
     this.userService.getAuthStatusListener().subscribe((isAuth: boolean) => {
@@ -94,7 +100,9 @@ export class UpdateComponent implements OnInit {
     });
     this.onChange();
   }
-
+  /**
+   * form validation pro and gen
+   */
   onChange() {
     this.formUserType.get('Ctrl_1').valueChanges.subscribe(val => {
       if (val === 'pro') {
@@ -110,7 +118,9 @@ export class UpdateComponent implements OnInit {
       }
     });
   }
-
+  /**
+   * validation and send data
+   */
   submit() {
     if (
       this.formName.valid &&

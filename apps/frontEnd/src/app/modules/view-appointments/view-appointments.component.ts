@@ -69,7 +69,14 @@ export class ViewAppointmentsComponent implements OnInit {
   ];
 
   expandedElement: RowData | null;
-
+  /**
+   * @param  {AppointmentService} privateappointmentService
+   * @param  {AlertService} privatealertService
+   * @param  {UserService} privateuserService
+   * @param  {Router} privaterouter
+   * @param  {CategoryService} privatecategoryService
+   * @param  {VerifyProService} privateverifyProService
+   */
   constructor(
     private appointmentService: AppointmentService,
     private alertService: AlertService,
@@ -78,7 +85,9 @@ export class ViewAppointmentsComponent implements OnInit {
     private categoryService: CategoryService,
     private verifyProService: VerifyProService
   ) {}
-
+  /**
+   * init set table row
+   */
   ngOnInit() {
     if (this.user.userType === 'pro') {
       this.appointmentService
@@ -107,10 +116,13 @@ export class ViewAppointmentsComponent implements OnInit {
       );
     }
   }
+  /**
+   * create table row
+   */
   private createTableRow() {
     this.FilterList.forEach((val, index) => {
       console.log(this.fields);
-      let single: RowData = {
+      const single: RowData = {
         no: (index + 1).toString(),
         name: val.professionalName,
         subject: val.subject,
@@ -126,7 +138,10 @@ export class ViewAppointmentsComponent implements OnInit {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
   }
-
+  /**
+   * @param  {any} val
+   * reinit
+   */
   reInit(val: any) {
     this.time = val;
     this.FilterList = [];
@@ -134,7 +149,9 @@ export class ViewAppointmentsComponent implements OnInit {
     this.filter(this.time);
     this.createTableRow();
   }
-
+  /**
+   * @param  {any} val
+   */
   private filter(val: any) {
     if (val === 'past') {
       this.FilterList = this.List.filter(value => {
@@ -147,7 +164,12 @@ export class ViewAppointmentsComponent implements OnInit {
       });
     }
   }
-
+  /**
+   * @param  {Event} event
+   */
+  /**
+   * @param  {Event} event
+   */
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -156,17 +178,26 @@ export class ViewAppointmentsComponent implements OnInit {
       this.dataSource.paginator.firstPage();
     }
   }
-
+  /**
+   * @param  {any} val
+   * view appointment
+   */
   view(val: any) {
     this.router.navigate([`/appointment/${val._id}`]);
     this.reInit(this.time);
   }
-
+  /**
+   * @param  {any} val
+   * get call
+   */
   call(val: any) {
     this.router.navigate([`/chat/${val._id}`]);
     this.reInit(this.time);
   }
-
+  /**
+   * @param  {any} val
+   * get payment
+   */
   payment(val: any) {
     this.router.navigate([`/payment/${val._id}`]);
     this.reInit(this.time);

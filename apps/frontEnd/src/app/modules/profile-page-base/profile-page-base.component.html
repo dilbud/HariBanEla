@@ -1,76 +1,81 @@
+<!-- admin base component -->
+
 <div class="container" *ngIf="isAdmin">
   <mat-card class="card p-0 ">
-    <mat-tab-group class="profile" id="tab1" mat-align-tabs="center" >
-        <mat-tab  label="Reports" >
-          <div class="reportList pt-3 align-self-center">
-            <mat-accordion >
-              <mat-expansion-panel (click)="feedbackView = true">
-                <mat-expansion-panel-header>
-                  <mat-panel-title>
-                    <span>Feedback</span>
-                  </mat-panel-title>
-                  <mat-panel-description></mat-panel-description>
-                </mat-expansion-panel-header>
-                <app-view-feedback *ngIf="feedbackView"></app-view-feedback>
-              </mat-expansion-panel>
-              <mat-expansion-panel (click)="reportPostView = true">
-                <mat-expansion-panel-header>
-                  <mat-panel-title>
-                    <span>Reported Posts</span>
-                  </mat-panel-title>
-                  <mat-panel-description></mat-panel-description>
-                </mat-expansion-panel-header>
-                <app-view-reported-post *ngIf="reportPostView"></app-view-reported-post>
-              </mat-expansion-panel>
-              <mat-expansion-panel (click)="reportUserView = true">
-                <mat-expansion-panel-header>
-                  <mat-panel-title>
-                    <span>Reported Users</span>
-                  </mat-panel-title>
-                  <mat-panel-description></mat-panel-description>
-                </mat-expansion-panel-header>
-                <app-view-reported-user *ngIf="reportUserView"></app-view-reported-user>
-              </mat-expansion-panel>
-            </mat-accordion>
-          </div>
-        </mat-tab>
-        <mat-tab label="Verifications">
-          <div class=" pv pt-3">
-            <app-verifications></app-verifications>
-          </div>
-        </mat-tab>
-        <mat-tab  label="Users">
-          <div class="pv pt-3">
-            <app-users></app-users>
-          </div>
-        </mat-tab>
-        <mat-tab  label="Category">
-          <div class=" pv pt-3">
-            <app-category></app-category>
-          </div>
-        </mat-tab>
-        <mat-tab  label="Tag">
-          <div class=" pv pt-3">
-            <app-tag></app-tag>
-          </div>
-        </mat-tab>
+    <mat-tab-group class="profile" id="tab1" mat-align-tabs="center">
+      <mat-tab label="Reports">
+        <div class="reportList pt-3 align-self-center">
+          <mat-accordion>
+            <mat-expansion-panel (click)="feedbackView = true">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <span>Feedback</span>
+                </mat-panel-title>
+                <mat-panel-description></mat-panel-description>
+              </mat-expansion-panel-header>
+              <app-view-feedback *ngIf="feedbackView"></app-view-feedback>
+            </mat-expansion-panel>
+            <mat-expansion-panel (click)="reportPostView = true">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <span>Reported Posts</span>
+                </mat-panel-title>
+                <mat-panel-description></mat-panel-description>
+              </mat-expansion-panel-header>
+              <app-view-reported-post *ngIf="reportPostView"></app-view-reported-post>
+            </mat-expansion-panel>
+            <mat-expansion-panel (click)="reportUserView = true">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <span>Reported Users</span>
+                </mat-panel-title>
+                <mat-panel-description></mat-panel-description>
+              </mat-expansion-panel-header>
+              <app-view-reported-user *ngIf="reportUserView"></app-view-reported-user>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+      </mat-tab>
+      <mat-tab label="Verifications">
+        <div class=" pv pt-3">
+          <app-verifications></app-verifications>
+        </div>
+      </mat-tab>
+      <mat-tab label="Users">
+        <div class="pv pt-3">
+          <app-users></app-users>
+        </div>
+      </mat-tab>
+      <mat-tab label="Category">
+        <div class=" pv pt-3">
+          <app-category></app-category>
+        </div>
+      </mat-tab>
+      <mat-tab label="Tag">
+        <div class=" pv pt-3">
+          <app-tag></app-tag>
+        </div>
+      </mat-tab>
     </mat-tab-group>
   </mat-card>
 </div>
 
+
+<!-- general profile base -->
+
 <div class="container" *ngIf="!isAdmin">
   <mat-card class="card p-0 ">
-    <mat-tab-group class="profile" id="tab2" mat-align-tabs="center" >
-        <mat-tab  label="Questions">
-          <div class="pv pt-3">
-            <app-view-questions [user]="user"></app-view-questions>
-          </div>
-        </mat-tab>
-        <mat-tab label="Appointments">
-          <div class="pv pt-3">
-            <app-view-appointments [user]="user" ></app-view-appointments>
-          </div>
-        </mat-tab>
+    <mat-tab-group class="profile" id="tab2" mat-align-tabs="center">
+      <mat-tab label="Questions">
+        <div class="pv pt-3">
+          <app-view-questions [user]="user"></app-view-questions>
+        </div>
+      </mat-tab>
+      <mat-tab label="Appointments">
+        <div class="pv pt-3">
+          <app-view-appointments [user]="user"></app-view-appointments>
+        </div>
+      </mat-tab>
     </mat-tab-group>
   </mat-card>
 </div>

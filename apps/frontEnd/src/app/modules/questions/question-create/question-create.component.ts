@@ -76,6 +76,7 @@ export class QuestionCreateComponent implements OnInit {
         this.questionModel.tags = [];
       }
       this.filteredtags = this.tagCtrl.valueChanges.pipe(
+        // tslint:disable-next-line: deprecation
         startWith(null),
         map((tag: string | null) =>
           tag ? this._filter(tag) : this.alltags.slice()

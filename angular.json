@@ -181,7 +181,7 @@
               "apps/back-end/tsconfig.app.json",
               "apps/back-end/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/back-end/**"]
+            "exclude": ["**/node_modules/**", "!apps/back-end/"]
           }
         },
         "test": {

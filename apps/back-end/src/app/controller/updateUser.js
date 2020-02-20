@@ -7,7 +7,7 @@ sgMail.setApiKey(
 );
 
 const key = 'df678g68g786fd88fd67g8fdfd8g7fd8g7';
-
+// update user
 module.exports = (req, res, next) => {
   let query;
   if (req.body.query.password === 'x12345678') {
@@ -84,7 +84,7 @@ module.exports = (req, res, next) => {
         if (user.pending === true && user.userType === 'gen') {
           const name = user.firstName + ' ' + user.lastName;
           const msg = {
-            to: data.email,
+            to: user.email,
             from: 'Administrator@haribnela.lk',
             subject: 'Send Document to HARIBANELA',
             text: 'your your professional document',

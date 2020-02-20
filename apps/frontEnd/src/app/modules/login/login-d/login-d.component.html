@@ -1,4 +1,5 @@
 <div class="container" style="padding-top: 1em;">
+  <!-- google social login -->
   <div style="margin-bottom: 1em;">
     <button class="m-1 button signButton btn-block" id="google" (click)="google()">
       <!-- <i class="icon ion-logo-google"></i> -->
@@ -6,6 +7,7 @@
       sign in with google
     </button>
   </div>
+  <!-- facebook social login -->
   <div style="margin-bottom: 1em;">
     <button class="button  signButton btn-block" id="facebook" (click)="facebook()">
       <i class="icon ion-logo-facebook m-1"></i>
@@ -13,6 +15,7 @@
       sign in with facebook
     </button>
   </div>
+  <!-- login form -->
   <form [formGroup]="login">
     <mat-form-field>
       <input spellcheck="false" matInput cdkFocusInitial type="email" formControlName="Ctrl_1" placeholder="Email">
@@ -21,6 +24,7 @@
       <input spellcheck="false" matInput type="password" formControlName="Ctrl_2" placeholder="Password">
     </mat-form-field>
   </form>
+  <!-- submit button -->
   <div style="margin-top: 2em;">
     <button (click)="send()" class="m-auto button loginButton" [disabled]="!login.valid">Log in</button>
     <div class="d-flex justify-content-end">

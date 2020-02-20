@@ -1,6 +1,7 @@
 <div class="container" *ngIf="user === null ? false : true">
   <mat-card class="card">
     <div class="d-flex ">
+      <!-- user details -->
       <img src="{{ user.picURL }}" alt="Avatar" class="m-0 propic" />
       <div class="d-flex flex-column b pl-sm-2 pl-md-5">
         <div class="c">
@@ -15,18 +16,19 @@
         </div>
 
       </div>
-
+      <!-- book button -->
       <div *ngIf="(user.userType === 'pro' ? true : false) && (type == 'current' ? false : true)"
         class="button col-md-3" (click)="makeAppointment()"> Book
         Now
       </div>
 
-
+      <!-- report button -->
       <div *ngIf="user.userType === 'admin' ? false : true" class="ml-auto align-self-end d-none d-md-block d-lg-block">
         <div *ngIf="type == 'current' ? false : true">
           <app-report [path]="3" [reportedPostId]="'null'" [reportedUserId]="user.id"
             [reportedUserName]="user.firstName + ' ' + user.lastName" matTooltip="report user"></app-report>
         </div>
+        <!-- home and edit icon button -->
         <div *ngIf="type == 'current' ? true : false">
           <a mat-icon-button (click)="show()" class="editbutt" id="butticon2">
             <i *ngIf="toggle" class="editicon material-icons" matTooltip="edit profile"> edit </i>

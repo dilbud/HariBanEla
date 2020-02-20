@@ -74,6 +74,19 @@
               <div>{{ element.row.professionalEmail }}</div>
             </div>
             <div class="d-flex w-100 align-content-center">
+              <div>
+                {{ 'user&nbsp;Name&nbsp;&nbsp;:&nbsp; &nbsp;' }}
+              </div>
+              <div>{{ element.row.userName }}</div>
+            </div>
+            <div class="d-flex w-100 align-content-center">
+              <div>
+                {{ 'User&nbsp;Email&nbsp;&nbsp;:&nbsp; &nbsp;' }}
+              </div>
+              <div>{{ element.row.userEmail }}</div>
+            </div>
+
+            <div class="d-flex w-100 align-content-center">
               <div>{{ 'Subject&nbsp;&nbsp;:&nbsp; &nbsp;' }}</div>
               <div>{{ element.row.subject }}</div>
             </div>
@@ -83,7 +96,7 @@
             </div>
             <div class="d-flex align-self-end  justify-content-center button">
               <button mat-raised-button (click)="view(element.row)" class="ml-2" matTooltip="View Appointment"
-                *ngIf="user.userType === 'pro'?true:false">
+                *ngIf="user.userType === 'pro' ? true : false">
                 View
               </button>
               <button mat-raised-button (click)="call(element.row)" class="ml-2" *ngIf="
@@ -96,7 +109,8 @@
               <button mat-raised-button (click)="payment(element.row)" class="ml-2" *ngIf="
                   !(element.row.status === 'Rejected') &&
                   element.row.paymentStatus === 'Pending' &&
-                  element.row.chatUrl === 'null'
+                  element.row.chatUrl === 'null' &&
+                  user.userType !== 'pro'
                 " matTooltip="Make Payment">
                 Payment
               </button>

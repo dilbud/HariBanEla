@@ -9,14 +9,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./comment-create.component.scss']
 })
 export class CommentCreateComponent implements OnInit {
-
   commentModel = new Comment();
   @Input() questionId;
   @Input() answerId;
   @Input() user;
   @Output() refreshEvent = new EventEmitter();
 
-  constructor(private commentService: CommentService, private router: Router) { }
+  constructor(private commentService: CommentService, private router: Router) {}
 
   ngOnInit() {
     this.commentModel.userId = this.user.id;
@@ -25,7 +24,8 @@ export class CommentCreateComponent implements OnInit {
   onComment(status) {
     if (status === 0) {
       console.log(this.commentModel);
-      this.commentService.addComment(this.commentModel, this.questionId)
+      this.commentService
+        .addComment(this.commentModel, this.questionId)
         .subscribe(
           data => {
             console.log('Success', data);
@@ -34,10 +34,11 @@ export class CommentCreateComponent implements OnInit {
             //   this.router.navigate([`/questions/${this.questionId}`]));
           },
           error => console.log('Error', error)
-      )
+        );
     } else {
-      console.log(this.questionId+' '+this.answerId);
-      this.commentService.addComment(this.commentModel, this.questionId, this.answerId)
+      console.log(this.questionId + ' ' + this.answerId);
+      this.commentService
+        .addComment(this.commentModel, this.questionId, this.answerId)
         .subscribe(
           data => {
             console.log('Success', data);

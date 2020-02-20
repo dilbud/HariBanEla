@@ -6,7 +6,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { AppointmentService } from 'app/data/services/appointment.service';
 import { UserService } from 'app/data/services/user.service';
 import { ChatService } from 'app/data/services/chat.service';
-import { HttpClient,} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 const apiUrl = environment.baseUrl + 'chat';
 @Component({
@@ -38,12 +38,12 @@ export class ChatComponent implements OnInit {
     private userService: UserService,
     private chatService: ChatService,
     private redirect: Router,
-    private http:HttpClient
+    private http: HttpClient
   ) {}
 
   ngOnInit() {
     this.appointmentId = this.route.snapshot.params.id;
-     let items = Array.from({length: 1000}, (v, k) => k + 1);
+    const items = Array.from({ length: 1000 }, (v, k) => k + 1);
     this.user = this.userService.getUserData();
     this.userService.getAuthStatusListener().subscribe((isAuth: boolean) => {
       this.user = this.userService.getUserData();
@@ -142,15 +142,15 @@ export class ChatComponent implements OnInit {
               }
               return 1;
             });
-          // },
-          // onUserStartedTyping: user => {
-          //   console.log('typing');
-          //   this.usersWhoAreTyping.push(user.name);
-          // },
-          // onUserStoppedTyping: user => {
-          //   this.usersWhoAreTyping = this.usersWhoAreTyping.filter(
-          //     username => username !== user.name
-          //   );
+            // },
+            // onUserStartedTyping: user => {
+            //   console.log('typing');
+            //   this.usersWhoAreTyping.push(user.name);
+            // },
+            // onUserStoppedTyping: user => {
+            //   this.usersWhoAreTyping = this.usersWhoAreTyping.filter(
+            //     username => username !== user.name
+            //   );
           }
         }
       })
@@ -168,7 +168,7 @@ export class ChatComponent implements OnInit {
     if (newMessage.trim() === '') {
       return;
     }
-    const messageObj =  {
+    const messageObj = {
       text: newMessage,
       roomId: `${currentRoom.id}`
     } as any;
@@ -206,8 +206,8 @@ export class ChatComponent implements OnInit {
     console.log(this.messages);
   }
 
-  download(link){
-    console.log("jrjrjjr")
-    return this.http.get(link)
+  download(link) {
+    console.log('jrjrjjr');
+    return this.http.get(link);
   }
 }

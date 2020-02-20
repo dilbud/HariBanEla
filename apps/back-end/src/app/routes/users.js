@@ -2,7 +2,7 @@
 // ghPu0CoJtAfloUCQ2OeGk31W
 
 const express = require('express');
-
+// user Router
 const user = require('../models/userModel');
 const update = require('../controller/updateUser');
 const create = require('../controller/createUser');

@@ -16,7 +16,14 @@ export class ProfileComponent implements OnInit {
   id = null;
   toggle = true; // home and edit icon
   type: any;
-
+  /**
+   * @param  {UserService} privateuserService
+   * @param  {AppointmentService} privateappointmentService
+   * @param  {ActivatedRoute} privateroute
+   * @param  {AlertService} privatealertService
+   * @param  {Router} privaterouter
+   * @param  {CategoryService} privatecategoryService
+   */
   constructor(
     private userService: UserService,
     private appointmentService: AppointmentService,
@@ -25,7 +32,9 @@ export class ProfileComponent implements OnInit {
     private router: Router,
     private categoryService: CategoryService
   ) {}
-
+  /**
+   * component init get id from url
+   */
   ngOnInit() {
     this.route.queryParams.subscribe((queryParams: Params) => {
       this.id = queryParams.id;
@@ -33,13 +42,18 @@ export class ProfileComponent implements OnInit {
       this.getUser();
     });
   }
-
+  /**
+   * navigate new appointment
+   */
   public makeAppointment() {
     if (this.id !== null) {
       this.appointmentService.changeProfessionalId(this.id);
       this.router.navigate(['/appointment/new']);
     }
   }
+  /**
+   * navigate to account
+   */
   public show() {
     if (this.toggle) {
       this.router.navigate(['edit'], {
@@ -53,7 +67,9 @@ export class ProfileComponent implements OnInit {
     }
     this.toggle = this.toggle ? false : true; // home and edit icon
   }
-
+  /**
+   * get user type long form
+   */
   public getUserType() {
     if (this.user.userType === 'admin') {
       return 'Administrator';
@@ -66,7 +82,9 @@ export class ProfileComponent implements OnInit {
     }
     return this.user.userType;
   }
-
+  /**
+   * get all user
+   */
   private getUser() {
     if (this.type === 'current') {
       this.user = this.userService.getUserData();
@@ -105,5 +123,4 @@ export class ProfileComponent implements OnInit {
       );
     }
   }
-
 }

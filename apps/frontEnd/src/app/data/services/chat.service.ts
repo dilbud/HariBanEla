@@ -42,7 +42,7 @@ export class ChatService {
 
   createRoom(data): Observable<any> {
     return this.http
-      .post(`${apiUrl}/createRoom/${data}`,{})
+      .post(`${apiUrl}/createRoom/${data}`, {})
       .pipe(catchError(this.handleError));
   }
 }

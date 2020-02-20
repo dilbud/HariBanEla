@@ -48,7 +48,13 @@ export class ViewFeedbackComponent implements OnInit {
   dataSource: MatTableDataSource<RowData>;
   columnsToDisplay = ['no', 'name', 'email'];
   expandedElement: RowData | null;
-
+  /**
+   * @param  {AlertService} privatealertService
+   * @param  {UserService} privateuserService
+   * @param  {Router} privaterouter
+   * @param  {ReportService} privatereportService
+   * @param  {VerifyProService} privateverifyProService
+   */
   constructor(
     private alertService: AlertService,
     private userService: UserService,
@@ -56,7 +62,9 @@ export class ViewFeedbackComponent implements OnInit {
     private reportService: ReportService,
     private verifyProService: VerifyProService
   ) {}
-
+  /**
+   * init set table row data
+   */
   ngOnInit() {
     this.row = [];
     let res: any;
@@ -68,7 +76,7 @@ export class ViewFeedbackComponent implements OnInit {
       () => {
         this.allReport = res.serverData;
         this.allReport.forEach((val, index) => {
-          let singleUser: RowData = {
+          const singleUser: RowData = {
             no: (index + 1).toString(),
             name: val.name,
             email: val.email,
@@ -82,7 +90,9 @@ export class ViewFeedbackComponent implements OnInit {
       }
     );
   }
-
+  /**
+   * @param  {Event} event
+   */
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -91,7 +101,9 @@ export class ViewFeedbackComponent implements OnInit {
       this.dataSource.paginator.firstPage();
     }
   }
-
+  /**
+   * @param  {any} id
+   */
   delete(id: any) {
     console.log(id);
     this.reportService.deleteFeedBack(id);

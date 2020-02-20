@@ -3,7 +3,7 @@ sgMail.setApiKey(
   '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'
 );
 const user = require('../models/userModel');
-
+// accept professional proposal
 const acc = (req, res, next) => {
   user.findByIdAndUpdate(
     req.body.id,
@@ -512,7 +512,7 @@ const acc = (req, res, next) => {
     }
   );
 };
-
+// reject professional proposal
 const rej = (req, res, next) => {
   user.findByIdAndUpdate(
     req.body.id,

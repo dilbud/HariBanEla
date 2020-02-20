@@ -59,7 +59,14 @@ export class ViewQuestionsComponent implements OnInit {
   dataSource: MatTableDataSource<RowData>;
   columnsToDisplay = ['no', 'cat', 'title', 'date'];
   expandedElement: RowData | null;
-
+  /**
+   * @param  {QuestionService} privatequestionService
+   * @param  {Router} privaterouter
+   * @param  {AlertService} privatealertService
+   * @param  {UserService} privateuserService
+   * @param  {CategoryService} privatecategoryService
+   * @param  {VerifyProService} privateverifyProService
+   */
   constructor(
     private questionService: QuestionService,
     private router: Router,
@@ -68,7 +75,9 @@ export class ViewQuestionsComponent implements OnInit {
     private categoryService: CategoryService,
     private verifyProService: VerifyProService
   ) {}
-
+  /**
+   * init init table row
+   */
   ngOnInit() {
     this.questionService.getQuestionsOfUser(this.user.id).subscribe(
       result => {
@@ -81,7 +90,7 @@ export class ViewQuestionsComponent implements OnInit {
         });
         this.sorted.forEach((val, index) => {
           console.log(this.fields);
-          let singleUser: RowData = {
+          const singleUser: RowData = {
             no: (index + 1).toString(),
             cat: val.category,
             title: val.title,
@@ -96,7 +105,9 @@ export class ViewQuestionsComponent implements OnInit {
       }
     );
   }
-
+  /**
+   * @param  {string} date
+   */
   formatDate(date: string) {
     const d = new Date(date);
     let month = '' + (d.getMonth() + 1);
@@ -123,8 +134,4 @@ export class ViewQuestionsComponent implements OnInit {
       this.dataSource.paginator.firstPage();
     }
   }
-}
-
-export class VerificationsComponent implements OnInit {
-  ngOnInit() {}
 }

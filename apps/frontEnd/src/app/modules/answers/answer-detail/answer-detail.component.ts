@@ -10,7 +10,6 @@ import { UserService } from 'app/data/services/user.service';
   styleUrls: ['./answer-detail.component.scss']
 })
 export class AnswerDetailComponent implements OnInit {
-
   @Input() question;
   @Input() answer;
   @Input() user;
@@ -45,39 +44,55 @@ export class AnswerDetailComponent implements OnInit {
   }
 
   onEdit() {
-    this.router.navigate(['/questions/' + this.question._id + '/' + this.answer._id + '/edit']);
+    this.router.navigate([
+      '/questions/' + this.question._id + '/' + this.answer._id + '/edit'
+    ]);
   }
 
   onDelete() {
-    this.answerService.deleteAnswer(this.question._id, this.answer._id).subscribe(res => {
-      this.refreshEvent.emit();
-      // this.router.navigateByUrl(`/`, { skipLocationChange: true }).then(() =>
-      // this.router.navigate([`/questions/${this.question._id}`]));
-    }, err => {
-      console.log(err);
-    });
+    this.answerService
+      .deleteAnswer(this.question._id, this.answer._id)
+      .subscribe(
+        res => {
+          this.refreshEvent.emit();
+          // this.router.navigateByUrl(`/`, { skipLocationChange: true }).then(() =>
+          // this.router.navigate([`/questions/${this.question._id}`]));
+        },
+        err => {
+          console.log(err);
+        }
+      );
     // this.router.navigate(['/questions/' + this.question._id]);
-
   }
 
-  onAccept(){
-    this.answerService.acceptAnswer(this.question._id, this.answer._id).subscribe(res => {
-      this.refreshEvent.emit();
-    }, err => {
-      console.log(err);
-    });
+  onAccept() {
+    this.answerService
+      .acceptAnswer(this.question._id, this.answer._id)
+      .subscribe(
+        res => {
+          this.refreshEvent.emit();
+        },
+        err => {
+          console.log(err);
+        }
+      );
   }
 
   voteAnswer(status) {
     const id = this.route.snapshot.params.id;
-    this.answerService.voteAnswer(this.question._id, this.answer._id, status, this.user.id).subscribe(res => {
-      console.log(res);
-      this.refreshEvent.emit();
-      // this.router.navigateByUrl(`/`, { skipLocationChange: true }).then(() =>
-      // this.router.navigate([`/questions/${this.question._id}`]));
-    }, err => {
-      console.log(err);
-    });
+    this.answerService
+      .voteAnswer(this.question._id, this.answer._id, status, this.user.id)
+      .subscribe(
+        res => {
+          console.log(res);
+          this.refreshEvent.emit();
+          // this.router.navigateByUrl(`/`, { skipLocationChange: true }).then(() =>
+          // this.router.navigate([`/questions/${this.question._id}`]));
+        },
+        err => {
+          console.log(err);
+        }
+      );
   }
 
   checkVote() {
@@ -98,7 +113,8 @@ export class AnswerDetailComponent implements OnInit {
   }
 
   viewProfile() {
-    this.router.navigate(['../../view'], { queryParams: { id: this.owner.id, type: this.owner.userType } });
+    this.router.navigate(['../../view'], {
+      queryParams: { id: this.owner.id, type: this.owner.userType }
+    });
   }
-
 }

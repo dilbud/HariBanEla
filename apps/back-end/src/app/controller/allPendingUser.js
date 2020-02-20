@@ -1,5 +1,5 @@
 const user = require('../models/userModel');
-
+// get all pending professional user
 module.exports = (req, res, next) => {
   user.find(
     { pending: true },

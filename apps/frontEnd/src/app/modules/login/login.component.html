@@ -1,7 +1,9 @@
+<!-- mode set one time click -->
+<!-- login -->
 <div class="button" (click)="toggle ? loginDialog() : null" *ngIf="mode">
-    Login
+  Login
 </div>
-
+<!-- logout -->
 <div class="button" (click)="logoutDialog()" *ngIf="!mode">
-    Logout
+  Logout
 </div>

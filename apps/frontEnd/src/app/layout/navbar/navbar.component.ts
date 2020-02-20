@@ -10,9 +10,9 @@ import { QuestionService } from 'app/data/services/question.service';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  questions;
+  questions: any;
   searchInput = '';
-  searchResults;
+  searchResults: any;
   categories: any[];
   isAuthenticated = false;
 
@@ -36,8 +36,8 @@ export class NavbarComponent implements OnInit {
           this.user = this.userService.getUserData();
           // this.mode = !this.isAuthenticated;
           this.questionService.questionList().subscribe(
-            res => {
-              this.questions = res;
+            resp => {
+              this.questions = resp;
             },
             err => {
               console.log(err);
@@ -48,7 +48,7 @@ export class NavbarComponent implements OnInit {
   }
 
   onSearch() {
-    if (this.searchInput != '') {
+    if (this.searchInput !== '') {
       // console.log(this.searchInput);
       this.searchResults = this.questions.filter(question => {
         return question.title

@@ -50,6 +50,15 @@ export class ProfessionalListComponent implements OnInit {
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   @ViewChild(MatSort, { static: true }) sort: MatSort;
 
+  /**
+   * @param  {CategoryService} privatecategoryService
+   * @param  {FormBuilder} privateformBuilder
+   * @param  {UserService} privateuserService
+   * @param  {AlertService} privatealertService
+   * @param  {Router} privaterouter
+   * @param  {ChangeDetectorRef} privatechangeDetectorRefs
+   */
+
   constructor(
     private categoryService: CategoryService,
     private formBuilder: FormBuilder,
@@ -59,6 +68,9 @@ export class ProfessionalListComponent implements OnInit {
     private changeDetectorRefs: ChangeDetectorRef
   ) {}
 
+  /**
+   * when component init filter all professional
+   */
   ngOnInit() {
     this.proList = [];
     this.filteredList = [];
@@ -95,7 +107,7 @@ export class ProfessionalListComponent implements OnInit {
           () => {
             this.proList = res2.serverData;
             this.proList.forEach((val, index) => {
-              let singleUser: RowData = {
+              const singleUser: RowData = {
                 no: (index + 1).toString(),
                 name: val.firstName + ' ' + val.lastName,
                 cat: this.fields
@@ -116,6 +128,9 @@ export class ProfessionalListComponent implements OnInit {
     );
   }
 
+  /**
+   * when select change filter professional
+   */
   onChange() {
     this.allUserTable = [];
     if (this.category.value.Ctrl_1 === 'all') {
@@ -133,7 +148,7 @@ export class ProfessionalListComponent implements OnInit {
       this.alertService.showAlert();
     }
     this.filteredList.forEach((val, index) => {
-      let singleUser: RowData = {
+      const singleUser: RowData = {
         no: (index + 1).toString(),
         name: val.firstName + ' ' + val.lastName,
         cat: this.fields
@@ -150,6 +165,9 @@ export class ProfessionalListComponent implements OnInit {
     this.changeDetectorRefs.markForCheck();
   }
 
+  /**
+   * @param  {Event} event
+   */
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -159,6 +177,9 @@ export class ProfessionalListComponent implements OnInit {
     }
   }
 
+  /**
+   * @param  {any} item
+   */
   view(item: any) {
     this.router.navigate(['../view'], {
       queryParams: { id: item._id, type: item.userType }

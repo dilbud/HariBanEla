@@ -55,7 +55,13 @@ export class VerificationsComponent implements OnInit {
   dataSource: MatTableDataSource<RowData>;
   columnsToDisplay = ['no', 'name', 'cat', 'email'];
   expandedElement: RowData | null;
-
+  /**
+   * @param  {AlertService} privatealertService
+   * @param  {UserService} privateuserService
+   * @param  {Router} privaterouter
+   * @param  {CategoryService} privatecategoryService
+   * @param  {VerifyProService} privateverifyProService
+   */
   constructor(
     private alertService: AlertService,
     private userService: UserService,
@@ -63,7 +69,9 @@ export class VerificationsComponent implements OnInit {
     private categoryService: CategoryService,
     private verifyProService: VerifyProService
   ) {}
-
+  /**
+   * set table row
+   */
   ngOnInit() {
     this.allUser = [];
     this.allUserTable = [];
@@ -95,7 +103,7 @@ export class VerificationsComponent implements OnInit {
             this.allUser = res2.serverData;
             this.allUser.forEach((val, index) => {
               console.log(this.fields);
-              let singleUser: RowData = {
+              const singleUser: RowData = {
                 no: (index + 1).toString(),
                 name: val.firstName + ' ' + val.lastName,
                 cat: this.fields
@@ -114,7 +122,10 @@ export class VerificationsComponent implements OnInit {
       }
     );
   }
-
+  /**
+   * @param  {Event} event
+   * filter
+   */
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -123,12 +134,18 @@ export class VerificationsComponent implements OnInit {
       this.dataSource.paginator.firstPage();
     }
   }
-
+  /**
+   * @param  {any} val
+   * accept professional
+   */
   accept(val: any) {
     this.verifyProService.acceptPro(val._id);
     this.ngOnInit();
   }
-
+  /**
+   * @param  {any} val
+   * reject professional
+   */
   reject(val: any) {
     this.verifyProService.rejectPro(val._id);
     this.ngOnInit();

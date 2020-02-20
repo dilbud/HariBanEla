@@ -3,7 +3,7 @@ const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(
   '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'
 );
-
+// deactivate user
 deactivate = (req, res, next) => {
   user.findByIdAndUpdate(
     req.body.id,
@@ -506,7 +506,7 @@ deactivate = (req, res, next) => {
     }
   );
 };
-
+// active user
 activate = (req, res, next) => {
   user.findByIdAndUpdate(
     req.body.id,

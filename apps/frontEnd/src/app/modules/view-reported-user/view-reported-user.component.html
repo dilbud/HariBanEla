@@ -1,8 +1,9 @@
+<!-- filer category -->
 <mat-form-field appearance="fill">
   <mat-label>Filter Or Add Category</mat-label>
   <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" />
 </mat-form-field>
-
+<!-- display table -->
 <div class="mat-elevation-z8">
   <table mat-table [dataSource]="dataSource" multiTemplateDataRows matSort>
     <ng-container matColumnDef="no">

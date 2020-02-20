@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 const user = require('../models/userModel');
 var SHA256 = require('crypto-js/sha256');
 const key = 'df678g68g786fd88fd67g8fdfd8g7fd8g7';
-
+// login with local email name password
 module.exports = (req, res) => {
   const hash = SHA256(req.body.password).toString();
   user

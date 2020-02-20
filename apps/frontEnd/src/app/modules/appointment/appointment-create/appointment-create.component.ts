@@ -48,7 +48,7 @@ export class AppointmentCreateComponent implements OnInit {
   public paymentAmount: number;
   public appointmentForm: FormGroup;
   public user: any;
-  public submitted: boolean
+  public submitted: boolean;
 
   constructor(
     private appointmentService: AppointmentService,
@@ -59,7 +59,7 @@ export class AppointmentCreateComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.submitted=false;
+    this.submitted = false;
     this.professionalId = this.appointmentService.getProfesionalId();
 
     this.userSerivce.getUserDataById(this.professionalId).subscribe(
@@ -83,19 +83,21 @@ export class AppointmentCreateComponent implements OnInit {
         description: [null, Validators.required],
         startTime: [null, Validators.required],
         endTime: [null, Validators.required]
-      },
+      }
       // {
       //   validator: validateDate('startTime', 'endTime')
       // }
     );
   }
-  get f() { return this.appointmentForm.controls; }
+  get f() {
+    return this.appointmentForm.controls;
+  }
 
   makeAppointment(form: NgForm) {
-    this.submitted=true;
+    this.submitted = true;
     if (this.appointmentForm.invalid) {
       return;
-  }
+    }
     console.log('ththt');
     const data = new Data();
     data.professionalId = this.professionalId;

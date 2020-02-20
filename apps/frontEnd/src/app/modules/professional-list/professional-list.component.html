@@ -8,10 +8,12 @@
 </div>
 <br>
 <br>
+<!-- select category -->
 <div class="container pl-4 catlist">
   <form [formGroup]="category">
     <mat-form-field class="w-50">
       <mat-label>select category</mat-label>
+      <!-- when select change call onChange -->
       <mat-select class="select" formControlName="Ctrl_1" (selectionChange)="onChange()" disableOptionCentering>
         <mat-option *ngFor="let field of fields" [value]="field.value">
           {{ field.viewValue }}
@@ -22,8 +24,9 @@
   </form>
 </div>
 
+<!-- mat table with search and sort -->
 <br>
-
+<!-- filter search -->
 <div class="container prolist" *ngIf="category.value.Ctrl_1 === null ? false : true">
   <mat-form-field appearance="fill">
     <mat-label>Filter</mat-label>
@@ -69,7 +72,7 @@
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
     </table>
-
+    <!-- pagination -->
     <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
   </div>
 </div>

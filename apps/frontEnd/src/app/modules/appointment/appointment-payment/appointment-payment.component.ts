@@ -90,7 +90,7 @@ export class AppointmentPaymentComponent implements OnInit {
           console.log(order);
           // tslint:disable-next-line: prefer-const
 
-          let paymentStatus = 'Paid';
+          const paymentStatus = 'Paid';
           this.appointmentService
             .paymentAppointment(this.appointmentId, paymentStatus)
             .subscribe(res => {
