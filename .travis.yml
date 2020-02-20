@@ -16,8 +16,7 @@ script:
   # - ng test back-end
   - ng build frontEnd --prod
   - ng build back-end --prod
-
-deploy:
-  provider: heroku
-  api_key: HEROKU_KEY
-  app: haribnela
+# deploy:
+#   provider: heroku
+#   api_key: HEROKU_KEY
+#   app: haribnela
