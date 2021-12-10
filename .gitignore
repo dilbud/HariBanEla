@@ -50,3 +50,5 @@ apps/back-end/src/environments/environment.ts
 apps/back-end/src/environments/environment.prod.ts
 apps/frontEnd/src/environments/environment.prod.ts
 apps/frontEnd/src/environments/environment.ts
+
+/dist/*
